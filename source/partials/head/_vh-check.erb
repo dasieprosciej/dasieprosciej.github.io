@@ -1,0 +1,28 @@
+<script>
+// 		 var dummy = document.createElement('_').style,
+// 		 units = ['vw', 'vh', 'vm'].filter(function(unit) {
+// 			 dummy.width = '';
+// 			 dummy.width = '10' + unit;
+// 			 return !dummy.width;
+// 		 });
+ 
+// 	 if(units.length) {
+// 		 document.documentElement.className += ' no-vh'
+// 	 }
+// </script>
+
+ <script>
+	!function () {
+        var dummy = document.createElement('_').style,
+		units = ['vw', 'vh', 'vm'].filter(function(unit) {
+			 dummy.width = '';
+			 dummy.width = '10' + unit;
+			 return !dummy.width;
+		 });
+ 
+	 	if(units.length) {
+			document.documentElement.className += ' vh'
+	 }
+    }()
+// </script>
+

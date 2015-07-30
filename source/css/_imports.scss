@@ -1,0 +1,54 @@
+//mixins and functions
+@import "mixins/functions";
+@import "mixins/mixins";
+
+//config
+@import "config";
+
+//reset
+@import "reset/reset";
+
+
+//fonts
+@import "base/fonts";
+
+
+// Site-wide styles
+@import "base/base";
+
+
+// Grid styles
+@import "base/grid";
+
+@import "layout";
+// Misc. HTML elements
+
+@import "base/animation";
+
+// Atmosphere
+@import "base/typography-headings";
+@import "base/typography-other";
+@import "base/links";
+@import "base/buttons";
+@import "base/forms";
+@import "base/tables";
+@import "base/icons";
+@import "base/tooltip";
+@import "base/validacje";
+@import "base/utilities";
+
+//other
+// @import "other/animate";
+
+//modules
+@import "modules/header";
+@import "modules/menu";
+@import "modules/home/hero";
+@import "modules/home/sections";
+@import "modules/blog/blog-index";
+@import "modules/uslugi";
+@import "modules/kto";
+@import "modules/footer";
+
+
+

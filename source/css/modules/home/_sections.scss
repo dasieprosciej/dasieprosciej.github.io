@@ -1,0 +1,92 @@
+
+
+.section-content {
+	padding: 5em 0;
+	@include mq($bp3){
+		padding: 7em 0;
+	} 
+	// max-width: 700px;
+	h3 {
+		// color:$gold-color;
+	}
+	p {
+		margin-bottom: 1em;
+	}
+	
+	// background: url(/images/sign.png) right center no-repeat;
+}
+
+.section-info {
+	h3 {
+		color:$gold-color;
+		font-weight: 300;
+	}
+}
+
+.section h2 {
+	font-weight: 300;
+	// font-size: 40px;
+
+	// text-align: center;
+	max-width: 1000px;
+	// margin-left: auto;
+	// margin-right: auto;
+	padding-bottom:2em;
+	line-height: 1.3;
+	color: $gold-color;
+}
+
+.headline-img{
+	background:#222 url(/images/people2_small.jpg) center center no-repeat;
+	background-size:cover;	
+	padding:5em 0;
+	
+	@include mq($bp2){
+		background:#222 url(/images/people2.jpg) center center no-repeat;
+		background-size:cover;	
+	} 
+	@include mq($bp3){
+		padding: 10em 0;
+	} 
+	h2 {
+		padding-bottom: 0;
+	}
+}
+
+.section-discover {
+	background:$heading-color;
+	@include mq($bp2){
+		background: $heading-color url(/images/ocean.jpg) left center no-repeat;
+		background-size: cover;	
+	} 
+	h2 {
+		// font-size: 60px;
+	}
+	p {
+		color:$white-color;
+	}
+}
+
+
+.section-content p,
+.section-content li,
+ {
+	max-width: 750px;
+	// font-size: 24px;
+}
+
+.section-content blockquote {
+	max-width: 700px;
+}
+
+.section-cta {
+	padding: 5em 0;
+	text-align: center;
+	p {
+		// font-size: 24px;
+		font-weight: 700;
+		max-width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

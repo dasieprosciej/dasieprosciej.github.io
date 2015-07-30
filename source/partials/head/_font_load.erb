@@ -1,0 +1,56 @@
+<script>
+
+(function() {
+ 
+   var files = ['css/fonts-dsp.css'];
+   
+   function getExtension(src) {
+      return src.split('.').pop();
+   }
+ 
+   function injectContent(content, type) {
+      if (type === 'css') {
+         var style = document.createElement('style');
+         document.head.appendChild(style);
+         if (style.styleSheet) {
+            style.styleSheet.cssText = content;
+         } else {
+            style.innerHTML = content;
+         }
+      } else if (type === 'svg') {
+         document.head.insertAdjacentHTML('beforeend', content);
+      }
+   }
+ 
+   function loadFile(file) {
+      var content = localStorage[file];
+      if (content) {
+         injectContent(content, getExtension(file));
+      } else {
+         window.addEventListener('load', function get() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', file, true);
+            xhr.addEventListener('load', function() {
+               if (xhr.readyState === 4) {
+                  injectContent(xhr.responseText, getExtension(file));
+                  localStorage[file] = xhr.responseText;
+               }
+            });
+            xhr.send();
+            window.removeEventListener('load', get);
+         });
+      }
+   }
+ 
+   if (window.localStorage) {
+      files.forEach(function(file) {
+         if (getExtension(file) === 'svg' && !document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Image', '1.1')) {
+            return;
+         }
+         loadFile(file);
+      });
+   }
+ 
+})();
+
+</script>

@@ -1,0 +1,130 @@
+.nav--main {
+	@include mq($bp2){
+		margin-left: 2em;	
+	} 
+	ul {
+		li {
+			display: block;
+			margin-bottom: 2em;
+			padding-left: 3em;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			@include mq($bp2){
+				margin-bottom: 0;
+				display: inline-block;
+
+			} 
+			a {
+				padding-left: 2px;
+				padding-right: 2px;
+				color:$white-color;
+				display: inline-block;
+				text-transform: uppercase;
+				@include mq($bp2){
+					text-transform: none;
+					color:$text-color;
+					display: block;
+				} 
+			}
+		}
+	}
+	ul,li {
+		line-height: 1;	
+	}
+
+}
+
+
+.nav--main {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	background:rgba(#111,.95);
+	// text-align: center;
+	padding:4em 1em;
+	transform:translateY(-110%);
+	transform: translate3d(0,-110%,0);
+	transition: transform 0.4s;
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	@include mq($bp2){
+		width: auto;
+		transform:none;
+		transition:none;
+		padding: 0;
+		background:transparent;
+		position: static;
+
+	}
+}
+
+.nav--main li:first-child {
+	@include mq($bp2) {
+		display: none;
+	} 
+}
+
+.show-menu .nav--main {
+	transform:translateY(0);
+	transform: translate3d(0,0,0);
+	transition: transform 0.8s;
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	@include mq($bp2){
+		transition:none;
+	}
+}
+
+
+#menu-link {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	// top: 17px;
+	z-index: 5;
+	@include mq($bp1){
+		right: 40px;
+	}
+	@include mq($bp2){
+		display: none;
+	}
+}
+
+#menu-link span {
+	font-family: $base-font-family;
+	text-transform: uppercase;
+}
+
+#menu-link span,
+.hamburger {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.hamburger div {
+	transform: translate3d(0, 0, 0);
+	transition: all .4s ease;
+	border-radius: 1px;
+	margin-left: 5px;
+	margin-bottom: 4px;
+	background: #fff;
+	height: 4px;
+	width: 28px;
+	background:$heading-color;
+}
+
+.show-menu .hamburger div {
+	&:nth-of-type(1) {
+		transform: rotate(45deg) translate3d(6px, 5px, 0);
+		background:#fff;
+	}
+	&:nth-of-type(2) {
+		opacity: 0;
+	}
+	&:nth-of-type(3) {
+		transform: rotate(-45deg) translate3d(6px, -5px, 0);
+		background:#fff;
+
+	}
+}

@@ -1,0 +1,176 @@
+//clearfix 
+.group {
+	@include clearfix;
+}
+
+
+.ct {	
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		// margin-left: 150px;
+		max-width:$max-width;
+		// width: 90%;
+		// padding-top: 10px;
+		padding-left:10px; 
+		padding-right: 10px;
+		
+		@include mq($bp1){
+			// padding-top: 20px;
+			padding-left:40px;
+			padding-right:40px;
+		}
+		@include mq($bp2){
+			// padding-left: 30px;
+			// padding-right: 30px;
+		}
+}
+
+@media all and (max-width: 1023px ) {
+    head {
+        font-family: menuscreen;
+        // display: none;
+    }
+}
+
+
+
+img {
+// width:100%;
+max-width : 100%; //pozniej zmienic na container
+border-width : 0;
+vertical-align : middle;
+-ms-interpolation-mode : bicubic; }
+
+.img-inline {
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+	
+	
+}
+
+.img-right {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	@include mq($bp1){
+		float: right;
+		// padding-left: 1.5em;
+		// margin-right: -150px;
+	}
+}
+
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
+.a-right {
+	text-align: right;
+}
+
+.a-center {
+	text-align: center;
+}
+
+
+hr {
+	display: block;
+	margin: 0;
+	margin-right: auto;
+	height:1px;
+	border:0;
+	width: 50px;
+	background:$gold-color;
+	margin-bottom: 1.5em;
+	// margin-top: 30px;
+	box-shadow:0 1px 0 #fff;
+	@include mq($bp1){
+		// width: 60px;
+		// height: 7px;
+	}
+}
+
+hr.inline {
+	display: inline-block;
+}
+
+strong {
+	// font-weight: 900;
+	// font-weight: 400;
+	// text-transform: uppercase;
+}
+
+
+.v-center {
+	// @include mq($bp1){
+		display: table;
+		width: 100%;
+	// }	
+}
+
+.v-centered {
+	// @include mq($bp1){
+		display: table-cell;
+		vertical-align: middle;
+	// }
+}
+
+
+::-webkit-input-placeholder {
+   color:#bbb;
+}
+
+// :-moz-placeholder { /* Firefox 18- */
+//    color:#aaa; 
+// }
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color:#bbb;
+}
+
+:-ms-input-placeholder {  
+   color:#bbb;
+}
+
+.nomg {
+	margin-bottom: 0;
+  }
+
+.bullet-list {
+	margin-top: 1em;
+	margin-bottom: 2em;
+	@include mq($bp2){
+		margin-bottom: 3em;
+	} 
+}
+.bullet-list li {
+	position: relative;
+	padding-left: 20px;
+	margin-bottom: .5em;
+
+	&:last-child {
+			margin-bottom: 0;
+		}
+	&:before {
+		content:'• ';
+		position: absolute;
+		left: 0;
+		color:$gold-color;
+	}
+}
+
+
+
+// .visuallyhidden {
+//     border: 0;
+//     clip: rect(0 0 0 0);
+//     height: 1px;
+//     margin: -1px;
+//     overflow: hidden;
+//     padding: 0;
+//     position: absolute;
+//     width: 1px;
+// }  

@@ -1,0 +1,30 @@
+@function em($target, $context: $base-font-size ) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context * 1em;
+}
+
+@function rem($pxWidth) {
+  @return $pxWidth / $base-font-size * 1rem;
+}
+
+
+//black and white with opacity
+//using transparent instead of opaque colors make your elements blend in together better, and your design more coherent.
+
+@function black($opacity){
+    @return rgba(0,0,0,$opacity)
+}
+@function white($opacity){
+    @return rgba(255,255,255,$opacity)
+}
+
+
+@function tint($color, $percent){
+  @return mix(white, $color, $percent);
+}
+
+// Add percentage of black to a color
+@function shade($color, $percent){
+  @return mix(black, $color, $percent);
+}
+

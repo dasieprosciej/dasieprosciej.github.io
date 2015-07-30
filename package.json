@@ -1,0 +1,15 @@
+{
+  "name": "middleman-build",
+  "version": "0.0.0",
+  "description": "A starter project",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "browser-sync": "^2.8.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-combine-media-queries": "^0.2.0",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-run-sequence": "^0.3.2",
+    "gulp-sass": "^2.0.4"
+  }
+}

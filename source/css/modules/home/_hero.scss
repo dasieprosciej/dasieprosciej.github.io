@@ -1,0 +1,26 @@
+.hero {
+	position: relative;
+	width: 100%;
+	height:calc(100% - 2rem);
+	min-height: 600px;
+	max-height: 900px;	
+	// background:url(../images/figury.svg) 90% 0% no-repeat;
+}
+
+.fixed-bottom{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+
+.headline-main {
+	padding-bottom: 3em;
+	@include mq($bp3) {
+		padding-bottom: 7em;
+	} 
+	h1 {
+		color:$heading-color;
+		padding-bottom: .5em;
+	}
+}

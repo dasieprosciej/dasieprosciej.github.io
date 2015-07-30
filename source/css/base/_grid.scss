@@ -1,0 +1,346 @@
+.u-full {
+  width: 100%;
+}
+
+.u-1of2 {
+  width: 50%;
+}
+
+.u-1of3 {
+  width: 33.3333%;
+}
+
+
+.u-2of3 {
+  width: 66.6667%;
+}
+
+.u-1of4 {
+  width: 25%;
+}
+
+.u-1of6 {
+  width: 16.6666%;
+}
+
+.u-3of4 {
+  width: 75%;
+}
+
+@include mq($bp1) {
+  .u-s-full {
+    width: 100%;
+  }
+  .u-s-1of2 {
+    width: 50%;
+  }
+  .u-s-1of3 {
+    width: 33.3333%;
+  }
+  .u-s-2of3 {
+    width: 66.6667%;
+  }
+  .u-s-1of4 {
+    width: 25%;
+  }
+  
+  .u-s-1of6 {
+  width: 16.6666%;
+  }
+
+  .u-s-3of4 {
+    width: 75%;
+  }
+}
+
+@include mq($bp2) {
+  .u-m-full {
+    width: 100%;
+  }
+  .u-m-1of2 {
+    width: 50%;
+  }
+  .u-m-1of3 {
+    width: 33.3333%;
+  }
+  .u-m-2of3 {
+    width: 66.6667%;
+  }
+  .u-m-1of4 {
+    width: 25%;
+  }
+  .u-m-1of6 {
+  width: 16.6666%;
+  }
+  .u-m-3of4 {
+    width: 75%;
+  }
+}
+
+@include mq($bp3) {
+  .u-l-full {
+    width: 100%;
+  }
+  .u-l-1of2 {
+    width: 50%;
+  }
+  .u-l-1of3 {
+    width: 33.3333%;
+  }
+  .u-l-2of3 {
+    width: 66.6667%;
+  }
+  .u-l-1of4 {
+    width: 25%;
+  }
+  .u-l-1of6 {
+  width: 16.6666%;
+  }
+  .u-l-3of4 {
+    width: 75%;
+  }
+}
+
+// -----------------
+
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@include mq($bp1) {
+  .grid-s {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@include mq($bp2) {
+  .grid-m {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+} 
+
+@include mq($bp3) {
+  .grid-l {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+} 
+
+
+
+
+.grid-cell {
+  // flex: 1;
+}
+
+.grid--flexCells > .grid-cell {
+  display: flex;
+}
+
+.grid--top {
+  align-items: flex-start;
+}
+
+.grid--bottom {
+  align-items: flex-end;
+}
+
+.grid--center {
+  align-items: center;
+}
+
+.grid--justifyCenter {
+  justify-content: center;
+}
+
+.grid-cell--top {
+  align-self: flex-start;
+}
+
+.grid-cell--bottom {
+  align-self: flex-end;
+}
+
+.grid-cell--center {
+  align-self: center;
+}
+
+.grid-cell--autoSize {
+  flex: none;
+}
+
+.grid--fit > .grid-cell {
+  flex: 1;
+}
+
+.grid--full > .grid-cell {
+  flex: 0 0 100%;
+}
+
+.grid--1of2 > .grid-cell {
+  flex: 0 0 50%;
+}
+
+.grid--1of3 > .grid-cell {
+  flex: 0 0 33.3333%;
+}
+
+.grid--1of4 > .grid-cell {
+  flex: 0 0 25%;
+}
+
+@include mq($bp1) 
+{
+  .grid-s--fit > .grid-cell {
+    flex: 1;
+  }
+  .grid-s--full > .grid-cell {
+    flex: 0 0 100%;
+  }
+  .grid-s--1of2 > .grid-cell {
+    flex: 0 0 50%;
+  }
+  .grid-s--1of3 > .grid-cell {
+    flex: 0 0 33.3333%;
+  }
+  .grid-s--1of4 > .grid-cell {
+    flex: 0 0 25%;
+  }
+}
+
+@include mq($bp2)  {
+  .grid-m--fit > .grid-cell {
+    flex: 1;
+  }
+  .grid-m--full > .grid-cell {
+    flex: 0 0 100%;
+  }
+  .grid-m--1of2 > .grid-cell {
+    flex: 0 0 50%;
+  }
+  .grid-m--1of3 > .grid-cell {
+    flex: 0 0 33.3333%;
+  }
+  .grid-m--1of4 > .grid-cell {
+    flex: 0 0 25%;
+  }
+}
+
+@include mq($bp3)  {
+  .grid-l--fit > .grid-cell {
+    flex: 1;
+  }
+  .grid-l--full > .grid-cell {
+    flex: 0 0 100%;
+  }
+  .grid-l--1of2 > .grid-cell {
+    flex: 0 0 50%;
+  }
+  .grid-l--1of3 > .grid-cell {
+    flex: 0 0 33.3333%;
+  }
+  .grid-l--1of4 > .grid-cell {
+    flex: 0 0 25%;
+  }
+}
+
+
+.grid--gutters {
+  margin: -1em 0 1em -1em;
+}
+.grid--gutters > .grid-cell {
+  padding: 1em 0 0 1em;
+}
+
+.grid--gutters-l {
+  margin: -1.5em 0 1.5em -1.5em;
+}
+.grid--gutters-l > .grid-cell {
+  padding: 1.5em 0 0 1.5em;
+}
+
+.grid--gutters-xl {
+  margin: -2em 0 2em -2em;
+}
+.grid--gutters-xl > .grid-cell {
+  padding: 2em 0 0 2em;
+}
+
+@include mq($bp1)  {
+  .grid-s--gutters {
+    margin: -1em 0 1em -1em;
+  }
+  .grid-s--gutters > .grid-cell {
+    padding: 1em 0 0 1em;
+  }
+  .grid-s--gutters-l {
+    margin: -1.5em 0 1.5em -1.5em;
+  }
+  .grid-s--gutters-l > .grid-cell {
+    padding: 1.5em 0 0 1.5em;
+  }
+  .grid-s--gutters-xl {
+    margin: -2em 0 2em -2em;
+  }
+  .grid-s--gutters-xl > .grid-cell {
+    padding: 2em 0 0 2em;
+  }
+}
+
+@include mq($bp2)  {
+  .grid-m--gutters {
+    margin: -1em 0 1em -1em;
+  }
+  .grid-m--gutters > .grid-cell {
+    padding: 1em 0 0 1em;
+  }
+  .grid-m--gutters-l {
+    margin: -1.5em 0 1.5em -1.5em;
+  }
+  .grid-m--gutters-l > .grid-cell {
+    padding: 1.5em 0 0 1.5em;
+  }
+  .grid-m--gutters-xl {
+    margin: -2em 0 2em -2em;
+  }
+  .grid-m--gutters-xl > .grid-cell {
+    padding: 2em 0 0 2em;
+  }
+}
+
+@include mq($bp3)  {
+  .grid-l--gutters {
+    margin: -1em 0 1em -1em;
+  }
+  .grid-l--gutters > .grid-cell {
+    padding: 1em 0 0 1em;
+  }
+  .grid-l--gutters-l {
+    margin: -1.5em 0 1.5em -1.5em;
+  }
+  .grid-l--gutters-l > .grid-cell {
+    padding: 1.5em 0 0 1.5em;
+  }
+  .grid-l--gutters-xl {
+    margin: -2em 0 2em -2em;
+  }
+  .grid-l--gutters-xl > .grid-cell {
+    padding: 2em 0 0 2em;
+  }
+}

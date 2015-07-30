@@ -1,0 +1,237 @@
+
+// Typography =============================================
+
+@mixin font-size($font-size: $base-font-size){
+font-size : #{$font-size}px;
+font-size : #{$font-size / $base-font-size}rem; }
+
+
+//clearfix
+@mixin clearfix {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+//wypoziomowanie pionowe child w parent np h1 w div, jesli np nie chce padding, to trzeba dac na child
+//w przykladzie na parent jest ustawiony jakis height, ale mozna sprawdzic czy bez tego tez bedzie hulac
+//znalezione w codrops tutorial
+@mixin poziom {
+  height:100%;
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height:100%;
+  }
+}
+
+
+// rgba z hex w srodku , odhaczyc jesli trzeba w IE (wtedy do uzycia PIE)
+@mixin rgba-bg($color, $opacity) {
+    background: $color;
+    background: rgba($color, $opacity);
+    // -pie-background: rgba($color, $opacity);
+    // @include PIE;
+}
+// @mixin PIE {
+//     behavior: url("#{$basepath}/css/pie.htc");
+// }
+
+@mixin rgba-text($color, $opacity) {
+    color: $color;
+    color: rgba($color, $opacity);
+  }
+
+
+//emboss box np. box-emboss(0.8, 0.05);
+@mixin box-emboss($opacity, $opacity2){
+    box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+
+//letterpress
+
+@mixin letterpress($opacity){
+    text-shadow:white($opacity) 0 1px 0;
+}
+
+
+//navigation list 
+@mixin navigation-list {
+    list-style-type:none;
+    // padding:0;
+    // margin:0;
+    overflow:hidden;
+    > li{
+        display:block;
+        float:left;
+        margin-right: 1em;
+        &:last-child{
+            margin-right:0px;
+        }
+    }
+}
+
+// @include media-query-bp(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
+// NOTE: This MUST be used from within a selectore for the parent reference to work
+// Otherwise, an error will be thrown on SASS compile. Love, Aaron.
+
+// @mixin mq($unit, $query1: min, $query2: width, $target: "") {
+//   $mqtarget: "";
+//   // Check if media queries are supported
+//   @if $media-queries-supported == true {
+//     @if $target != "" {
+//       @media #{$target} and (#{$query1}-#{$query2}: #{$unit}) {
+//         @content;
+//       }
+//     }
+//     @else {
+//       @media (#{$query1}-#{$query2}: #{$unit}) {
+//         @content
+//       }
+//     }
+//   }
+//   @else {
+//     #{$no-mq-classname} & {
+//       @content
+//     }
+//   }
+// }
+
+//media queries
+
+$fix-mqs: false !default;
+
+@mixin mq($width) {
+  @if $fix-mqs {
+    @if $fix-mqs >= $width {
+      @content; 
+    }
+  }
+  @else {
+    @media screen and (min-width: $width) {
+      @content;
+    }
+  }
+}
+@mixin mq-max($width) {
+  @if $fix-mqs {
+    @if $fix-mqs <= $width {
+      @content; 
+    }
+  }
+  @else {
+    @media screen and (max-width: $width) {
+      @content;
+    }
+  }
+}
+
+$old-ie: false !default;
+
+@mixin old-ie {
+  @if $old-ie {
+    @content;
+  }
+}
+
+
+//transparent rgba fallback for ie8
+@function trans($color, $percentage, $shade) {
+ @return lighten($color, (1-$percentage)*5%);
+}
+
+
+
+//triangle from bourbon
+@mixin triangle ($size, $color, $direction) {
+  height: 0;
+  width: 0;
+
+  $width: nth($size, 1);
+  $height: nth($size, length($size));
+
+  $foreground-color: nth($color, 1);
+  $background-color: if(length($color) == 2, nth($color, 2), transparent);
+
+  @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
+
+    $width: $width / 2;
+    $height: if(length($size) > 1, $height, $height/2);
+
+    @if $direction == up {
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+      border-bottom: $height solid $foreground-color;
+
+    } @else if $direction == right {
+      border-top: $width solid $background-color;
+      border-bottom: $width solid $background-color;
+      border-left: $height solid $foreground-color;
+
+    } @else if $direction == down {
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+      border-top: $height solid $foreground-color;
+
+    } @else if $direction == left {
+      border-top: $width solid $background-color;
+      border-bottom: $width solid $background-color;
+      border-right: $height solid $foreground-color;
+    }
+  }
+
+  @else if ($direction == up-right) or ($direction == up-left) {
+    border-top: $height solid $foreground-color;
+
+    @if $direction == up-right {
+      border-left:  $width solid $background-color;
+
+    } @else if $direction == up-left {
+      border-right: $width solid $background-color;
+    }
+  }
+
+  @else if ($direction == down-right) or ($direction == down-left) {
+    border-bottom: $height solid $foreground-color;
+
+    @if $direction == down-right {
+      border-left:  $width solid $background-color;
+
+    } @else if $direction == down-left {
+      border-right: $width solid $background-color;
+    }
+  }
+
+  @else if ($direction == inset-up) {
+    border-width: $height $width;
+    border-style: solid;
+    border-color: $background-color $background-color $foreground-color;
+  }
+
+  @else if ($direction == inset-down) {
+    border-width: $height $width;
+    border-style: solid;
+    border-color: $foreground-color $background-color $background-color;
+  }
+
+  @else if ($direction == inset-right) {
+    border-width: $width $height;
+    border-style: solid;
+    border-color: $background-color $background-color $background-color $foreground-color;
+  }
+
+  @else if ($direction == inset-left) {
+    border-width: $width $height;
+    border-style: solid;
+    border-color: $background-color $foreground-color $background-color $background-color;
+  }
+}

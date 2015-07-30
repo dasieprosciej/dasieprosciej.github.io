@@ -1,0 +1,145 @@
+p,
+p>a,
+.section-content li {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;	
+}
+
+p {
+	font-size: 24px;
+}
+
+.font-18,
+ul.font-18 li {
+	font-size: 16px;
+	@include mq($bp2){
+		font-size: 18px;
+	} 
+}
+
+.font-20,
+ul.font-20 li {
+	font-size: 18px;
+	@include mq($bp1){
+		// font-size: 18px;
+	} 
+	@include mq($bp2){
+		font-size: 20px;
+	} 
+	@include mq($bp3){
+		// font-size: 20px;
+	} 
+}
+
+
+p {
+	line-height: 1.6;
+}
+
+p,
+.font-24,
+ul.font-24 li {
+font-size: 18px;
+	@include mq($bp1) {
+		font-size: 20px;
+	} 
+	@include mq($bp2){
+		font-size: 22px;
+	} 
+	@include mq($bp4) {
+		font-size: 24px;
+	} 
+}
+
+.emphasis {
+	// color: $primary-color;
+	font-weight: 700;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+
+ul,
+ol {
+	list-style: none;
+
+}
+
+.ul-inline {
+	display: inline-block;
+	li {
+		display: inline-block;
+		margin-right: .2em;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+
+blockquote {
+    // font-style:italic;
+    font-style:normal;
+    // border-left: 1px solid gray;
+    // color: gray;
+    color:$gold-color;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    padding-left: 65px;
+    font-family: $base-font-family;
+    font-weight: 200;
+    position: relative;
+    font-size: 22px;
+    margin:1.5em 0;
+    background:url(/images/quote.svg) top left no-repeat;
+    background-size:40px auto;
+	// padding-left: 1em;
+	// margin-bottom: 1em;
+	&:before {
+		// position: absolute;
+		// left: 0;
+		// top: 0;
+		// content:"“";
+		// font-size: 150px;
+		// line-height: 1;
+		// margin-top: -10px;
+	}
+}
+
+
+cite {
+	display: block;
+	color: $text-color;
+	text-transform: uppercase;
+	font-family: $base-font-family;
+	margin:5px 0;
+	font-style:normal;
+	font-size: 14px;
+	color:$gray-color;
+}
+
+dl {
+	margin-bottom: 1em;
+}
+
+.dl-inline {
+	dd {
+		display: inline;
+		margin: 0;
+	}
+	dd:after {
+		display: block;
+		content:"";
+	}
+	dt {
+		display: inline-block;
+		min-width:100px;
+	}
+}
+
+dt {
+	color:#000;
+}

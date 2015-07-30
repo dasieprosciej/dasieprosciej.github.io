@@ -1,0 +1,96 @@
+*,
+*:before,
+*:after 
+{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+}
+
+// Set <html> and <body> to inherit the height of the viewport 
+html,
+body {
+	// overflow: hidden;
+	height: 100%;
+	min-height: 100%;
+	  
+	// overflow: auto !important;
+}
+
+
+body {
+	// overflow: auto !important;
+}
+
+html {
+background : $body-color;
+font-size : 100%;
+
+// width:100%;
+// height: 100%;
+//*****nie ukrywa adresbaru na chrome ios ale nie dziala z fixed header
+// overflow: hidden;
+//********
+
+// -webkit-overflow-scrolling : touch;
+-webkit-tap-highlight-color : rgba(0,0,0,0);
+
+// Remove text size adjustments without disabling user zoom
+-webkit-text-size-adjust : 100%;
+-ms-text-size-adjust : 100%;
+text-size-adjust : 100%;
+}
+
+body {
+@include font-size($base-font-size);
+font-family : $alt-font-family;
+font-weight: 400;
+line-height : 1.6;
+color : $text-color;
+background-color : transparent;
+
+
+//nie ukrywa adresbaru na chrome ios ale nie dziala z fixed header
+// position: absolute;
+// width: 100%;
+// height: 100%;
+// margin: 0px;
+// padding: 0px;
+// -webkit-transform-style: preserve-3d;
+// -webkit-tap-highlight-color: transparent;
+// -webkit-perspective: 0;
+// overflow: hidden;
+	
+// -webkit-font-smoothing: antialiased;
+// -moz-osx-font-smoothing: grayscale;
+}
+
+//nie ukrywa adresbaru na chrome ios ale nie dziala z fixed header
+// .container {
+// 	position: absolute;
+// 	top: 0;
+// 	right: 0;
+// 	bottom: 0;
+// 	left: 0;
+// 	width: auto;
+// 	height: auto;
+// 	// overflow-y: auto;
+// 	-webkit-overflow-scrolling: touch;
+// }
+
+::-moz-selection {
+background-color : tint($gold-color,60);
+color:#fff;
+text-shadow : none;
+}
+
+::selection {
+background-color : tint($gold-color,60);
+color:#fff;
+text-shadow : none; 
+}
+
+// Change `background` for text selections when browser is unfocused 
+::selection:window-inactive {
+	background: #dedede;
+}

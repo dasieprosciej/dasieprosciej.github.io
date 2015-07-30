@@ -1,0 +1,79 @@
+.kto .footer {
+	border-top: none;
+}
+
+.section-bio {
+	background:#f7f7f7;
+	p {
+		// font-size: 18px;
+		@include mq($bp1) {
+			// padding-left: 1em;
+			// padding-right: 2em;	
+		} 
+	}
+}
+
+.kto-item {
+	@include mq($bp1){
+		width: 50%;
+	} 
+}
+
+
+.img-about {
+	margin-bottom: 7em;
+
+}
+
+.bio-img {
+	margin-bottom: 1em;
+	@include mq($bp1){
+		margin-bottom: 3em;
+		width: 33.3333%;
+	} 
+	@include mq($bp2) {
+		margin-bottom: 0;
+		width: 16.6666%;
+	} 
+}
+
+
+.bio-info {
+	margin-bottom: 3em;
+	@include mq($bp1){
+		width: 66.6666%;
+	} 
+	@include mq($bp2) {
+		margin-bottom: 0;
+		width: 33.3333%;
+	} 
+	p {
+		@include mq($bp1){
+			padding-left: 1em;
+		} 
+		@include mq($bp2){
+			padding-right: 2em;
+		} 
+	}
+
+}
+
+
+
+
+.bio-name {
+	display: block;
+	font-size: 18px;
+	margin-top: 1em;
+	font-weight: 200;
+	font-family: $base-font-family;
+	line-height: 1;
+
+}
+
+
+.bio-link {
+
+	font-size: 14px;
+	color:$link-color;
+}

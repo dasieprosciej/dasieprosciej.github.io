@@ -1,0 +1,218 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Da Się Prościej - USLUGI</title>
+<meta name="description" content="Opis">
+<meta name="author" content="dearty">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="cleartype" content="on">
+
+    <script>
+	document.documentElement.className = document.documentElement.className.replace("no-js","js");
+</script>
+    <script>
+    !function () {
+        function is_touch_device() {
+  			return 'ontouchstart' in window || 'onmsgesturechange' in window; // works on ie10
+		};
+        if (is_touch_device()) document.documentElement.className += ' touch'
+    }()
+</script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script>
+
+(function() {
+ 
+   var files = ['css/fonts-dsp.css'];
+   
+   function getExtension(src) {
+      return src.split('.').pop();
+   }
+ 
+   function injectContent(content, type) {
+      if (type === 'css') {
+         var style = document.createElement('style');
+         document.head.appendChild(style);
+         if (style.styleSheet) {
+            style.styleSheet.cssText = content;
+         } else {
+            style.innerHTML = content;
+         }
+      } else if (type === 'svg') {
+         document.head.insertAdjacentHTML('beforeend', content);
+      }
+   }
+ 
+   function loadFile(file) {
+      var content = localStorage[file];
+      if (content) {
+         injectContent(content, getExtension(file));
+      } else {
+         window.addEventListener('load', function get() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', file, true);
+            xhr.addEventListener('load', function() {
+               if (xhr.readyState === 4) {
+                  injectContent(xhr.responseText, getExtension(file));
+                  localStorage[file] = xhr.responseText;
+               }
+            });
+            xhr.send();
+            window.removeEventListener('load', get);
+         });
+      }
+   }
+ 
+   if (window.localStorage) {
+      files.forEach(function(file) {
+         if (getExtension(file) === 'svg' && !document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Image', '1.1')) {
+            return;
+         }
+         loadFile(file);
+      });
+   }
+ 
+})();
+
+</script>
+    
+  </head>
+  
+  <body class="kto">
+
+      
+  	<header class="header "> 
+	<div class="ct flex-ct">
+		<a href="/" class="logo flex-child">
+			<img src="images/logo2.svg" />
+		</a>
+		<nav class="nav nav--main flex-child">
+			<ul>
+				<li><a href="index.html">Strona główna</a></li>
+				<li><a href="uslugi.html">Jak pomagamy</a></li>
+				<li><a href="projekty.html">Realizacje</a></li>
+				<li class="active"><a href="kto.html">Kim jesteśmy</a></li>
+				<li><a href="blog.html">Blog</a></li>	
+			</ul>
+		</nav>
+		<a href="#" id="menu-link">
+			<span>Menu</span>
+			<div class="hamburger">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>	
+		</a>
+	</div>
+</header>
+	
+	
+
+	<section class="section section-kto">
+		<div class="ct">
+			<div class="section-content">
+				<img class="img-about" src='/images/about.png' alt="">		
+				<!-- <img class="img-about" src='/images/about_small.png' srcset="/images/about.png 500w" alt="">	 -->
+				<hr>
+				<div class="grid-s grid-s--gutters grid-l--gutters-xl">
+					
+					<div class="kto-item grid-cell">
+						<p class="font-24"><strong>Jesteśmy</strong> dwuosobowym zespołem z Gdańska. Jeden web designer i jeden copywriter. Łączymy umiejętności biznesowe, design, marketing, copywriting i lata wiedzy o internecie, by odkryć przed Twoimi odbiorcami to co najlepsze i najciekawsze w Twojej ofercie.</p>
+					</div>
+					<div class="kto-item grid-cell">
+						<p class="font-24"><strong>Naprawiamy połączenie design-tekst.</strong> Wierzymy, że tylko umiejętne zgranie tych dwóch elementów czyni strony internetowe skutecznymi.</p>
+					</div>
+				</div>
+			</div>	
+		</div>	
+	</section>
+
+
+
+	<section class="section section-bio">
+		<div class="ct">
+			<div class="section-content">
+				<div class="grid-s grid-s--gutters">
+					<div class="bio-img grid-cell">
+						<img src="/images/milena.jpg" alt="">
+						<span class="bio-name">Milena</span>
+						<a href="http://milush.pl" target="_blank" class="bio-link">milush.pl</a>
+					</div>
+					<div class="bio-info grid-cell">
+						<p class="font-18">“Jestem web copywriterem, z zainteresowaniami w kierunku marketingu, reklamy, doradztwa biznesowego, psychologii zachowań konsumentów i nowoczesnego podejścia do obsługi klienta. W biznesie wyznaję ideę human to human. Uwielbiam prostotę, harmonię i użyteczność w każdej dziedzinie. Jestem miłośniczką literatury z zakresu zarządzania, rozwoju osobistego oraz biografii i książek podróżniczych.”</p>
+					</div>
+					<div class="bio-img grid-cell">
+						<img src="/images/adrian.jpg" alt="">
+						<span class="bio-name">Adrian</span>
+						<a href="http://dearty.com" target="_blank" class="bio-link">dearty.com</a>
+					</div>
+					<div class="bio-info grid-cell">
+						<p class="font-18">“Jestem web copywriterem, z zainteresowaniami w kierunku marketingu, reklamy, doradztwa biznesowego, psychologii zachowań konsumentów i nowoczesnego podejścia do obsługi klienta. W biznesie wyznaję ideę human to human. Uwielbiam prostotę, harmonię i użyteczność w każdej dziedzinie. Jestem miłośniczką literatury z zakresu zarządzania, rozwoju osobistego oraz biografii i książek podróżniczych.”</p>
+					</div>
+				</div>
+			</div>	
+		</div>	
+	</section>
+
+	<section class="section dsp-quote">
+		<div class="ct">
+			<hr class="inline">
+			<p>To jak tworzymy, definiuje to kim jesteśmy i odzwierciedla to w co wierzymy.
+			Naszym najbardziej wartościowym produktem jest nasz sposób myślenia.</p>
+		</div>
+	</section>
+
+
+	<footer class="footer"> 
+	<div class="ct">
+		<div class="grid grid--gutters">
+			<div class="footer__contact grid-cell">
+				<p class="gold">Skontaktuj się z nami</p>
+				<hr>
+				<p>mail@dasieprosciej.pl</p>
+				<p>tel. 555 555 555</p>
+			</div>
+
+			<nav class="nav nav--footer grid-cell">
+				<ul>
+				<li><a href="index.html">Strona główna</a></li>
+				<li><a href="uslugi.html">Jak pomagamy</a></li>
+				<li><a href="projekty.html">Realizacje</a></li>
+				<li class="active"><a href="kto.html">Kim jesteśmy</a></li>
+				<li><a href="blog.html">Blog</a></li>	
+				</ul>
+			</nav>
+
+			<div class="footer__copyright grid-cell">
+				<hr class="inline">
+				<p>&copy; da się prościej 2015</p>
+				<p class="rights">Wszystkie&nbsp;Prawa&nbsp;Zastrzeżone</p>
+			</div>
+		</div>	
+	</div>
+</footer>
+
+
+
+
+      
+
+  
+    <script src="js/all.js" type="text/javascript"></script>  
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43734506-7', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+
+</html>

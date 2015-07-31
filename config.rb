@@ -16,8 +16,31 @@ activate :deploy do |deploy|
 end
 
 activate :blog do |blog|
-  # set options on blog
+  # This will add a prefix to all links, template references and source paths
+  # blog.prefix = "blog"
+
+  blog.permalink = "blog/{title}.html"
+  # Matcher for blog source files
+  blog.sources = "blog/{title}.html"
+  # blog.taglink = "tags/{tag}.html"
+  blog.layout = "layout_blog"
+  # blog.summary_separator = /(READMORE)/
+  # blog.summary_length = 250
+  # blog.year_link = "{year}.html"
+  # blog.month_link = "{year}/{month}.html"
+  # blog.day_link = "{year}/{month}/{day}.html"
+  # blog.default_extension = ".markdown"
+
+  # blog.tag_template = "tag.html"
+  # blog.calendar_template = "calendar.html"
+
+  # Enable pagination
+  blog.paginate = true
+  # blog.per_page = 10
+  # blog.page_link = "page/{num}"
 end
+
+# page "/feed.xml", layout: false
 
 activate :directory_indexes
 ###
@@ -38,10 +61,21 @@ activate :directory_indexes
 # end
 
 helpers do
-  def is_page_active(page)
-    current_page.url == page ? {:class => 'is-active'} : {}
+  def is_page_selected(page)
+    current_page.url == page ? 'class="active"' : ''
   end
 end
+
+
+helpers do
+  def current_page?(page)
+    current = current_resource.url.gsub('/', ' ').strip
+    target = page.gsub('/', ' ').strip
+
+    current == target
+  end
+end
+
 
 # nie dziala z pretty urls
 # helpers do   
@@ -52,22 +86,24 @@ end
 #   end
 # end 
 
-helpers do 
-  def link_to_page name, url
-    path = request.path
-    current = false
+# helpers do 
+#   def link_to_page name, url
+#     path = request.path
+#     current = false
 
-    current = url + "/index.html" == path
+#     current = url + "/index.html" == path
 
-    if path == 'index.html' and url =="/"
-      current = true
-    end
+#     if path == 'index.html' and url =="/"
+#       current = true
+#     end
 
-    class_name = current ? ' class="active"' : ''
+#     class_name = current ? ' class="active"' : ''
 
-    "<li#{class_name}><a href=\"#{url}\">#{name}</a></li>"
-  end
-end
+#     "<li#{class_name}><a href=\"#{url}\">#{name}</a></li>"
+#   end
+# end
+
+
 # Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
@@ -103,7 +139,7 @@ configure :build do
   # activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 
   # Enable cache buster
   # activate :asset_hash

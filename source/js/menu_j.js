@@ -55,7 +55,11 @@
 	}
 
 	function initEvents() {
-		openbtn.addEventListener( 'click', toggleMenu );
+		// openbtn.addEventListener( 'click', toggleMenu, false );
+		openbtn.addEventListener( 'click', function(evt){
+			evt.preventDefault();
+			toggleMenu();
+		} );
 		// if( closebtn ) {
 		// 	closebtn.addEventListener( 'click', toggleMenu );
 		// }

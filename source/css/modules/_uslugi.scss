@@ -2,10 +2,18 @@
 	h2 {
 		padding-bottom: 0;
 	}
-	// background:url(/images/resp.svg) bottom -100px right 20px  no-repeat;
-	// background-size: 400px auto;
+}
+
+
+.subhead {
+	display: block;
+	color:$gold-color;
+	font-size: 14px;
+	margin-top: .5em;
+	font-family: $base-font-family;
 
 }
+
 
 .section-strony {
 	background:#181818;
@@ -35,7 +43,7 @@
 
 
 .section-proces {
-	background-color: #f7f7f7;
+	// background-color: #f7f7f7;
 	p {
 		margin-bottom: .5em;
 	}
@@ -219,6 +227,9 @@
 	text-align: center;
 	width: 100%;
 	background:#f7f7f7;
+	@include mq($bp2){
+		width: 100%;
+	} 
 	h2 {
 		max-width: none;
 		font-weight: 700;

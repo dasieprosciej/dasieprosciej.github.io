@@ -1,5 +1,10 @@
-<%= link_to_page "Strona główna", "/" %>
-<%= link_to_page("Jak pomagamy", "/uslugi") %>
-<!-- <%= link_to_page("Realizacje", "/projekty") %> -->
-<%= link_to_page("Kim jesteśmy", "/onas") %>
-<!-- <%= link_to_page("Blog", "/blog") %>	-->
+<li <%= is_page_selected("/") %>> <%= link_to("Strona główna", "/") %></li>
+<li <%= is_page_selected("/uslugi/") %>> <%= link_to("Jak pomagamy", "/uslugi/") %></li>
+<!--  <li <%= is_page_selected("/projekty/") %>> <%= link_to("Realizacje", "/projekty/") %></li> -->
+<li <%= is_page_selected("/onas/") %>> <%= link_to("Kim jesteśmy", "/onas/") %></li> 
+<!--  <li <%= current_resource.url.start_with?('/blog') ? 'class="active"' : "" %>> <%= link_to("Blog", "/blog/") %></li>  -->
+
+
+<!--  <p> <%#= current_resource.url.gsub('/', ' ').strip %></p>
+<p> <%= current_resource.url.index("/",2) %></p> 
+<p><%= current_resource.url.include?('blog') ? 'class="active"' : "" %></p> -->

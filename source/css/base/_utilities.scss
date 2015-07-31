@@ -155,7 +155,8 @@ strong {
 			margin-bottom: 0;
 		}
 	&:before {
-		content:'• ';
+		// content:'• ';
+		content:'\2022';
 		position: absolute;
 		left: 0;
 		color:$gold-color;

@@ -7,6 +7,9 @@ a {
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	outline: none; //
 	color:inherit;
+	transition: color .25s;
+	
+	
 	
 
 }
@@ -17,8 +20,8 @@ p>a {
 }
 
 a:hover {
-	// color:$primary-color;
-	color:inherit;
+	// color:inherit;
+	color:$link-color;
 	// text-decoration: underline;
 }
 

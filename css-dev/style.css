@@ -594,9 +594,11 @@ a {
 	-webkit-tap-highlight-color: transparent;
 	outline: none;
 	color: inherit;
+	-webkit-transition: color .25s;
+	transition: color .25s;
 }
 
-/* line 13, /Users/adrian/Projekty/dsp - website/source/css/base/_links.scss */
+/* line 16, /Users/adrian/Projekty/dsp - website/source/css/base/_links.scss */
 
 p > a {
 	text-decoration: underline;
@@ -604,13 +606,13 @@ p > a {
 	font-size: inherit;
 }
 
-/* line 19, /Users/adrian/Projekty/dsp - website/source/css/base/_links.scss */
+/* line 22, /Users/adrian/Projekty/dsp - website/source/css/base/_links.scss */
 
 a:hover {
-	color: inherit;
+	color: #00B4F1;
 }
 
-/* line 26, /Users/adrian/Projekty/dsp - website/source/css/base/_links.scss */
+/* line 29, /Users/adrian/Projekty/dsp - website/source/css/base/_links.scss */
 
 a:active,
 a:hover {
@@ -1105,7 +1107,7 @@ hr.inline {
 /* line 157, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 .bullet-list li:before {
-	content: '• ';
+	content: '\2022';
 	position: absolute;
 	left: 0;
 	color: #B99A54;
@@ -1354,13 +1356,13 @@ hr.inline {
 
 .section h2 {
 	font-weight: 300;
-	max-width: 1000px;
+	max-width: 750px;
 	padding-bottom: 2em;
 	line-height: 1.3;
 	color: #B99A54;
 }
 
-/* line 39, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
+/* line 37, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
 
 .headline-img {
 	background: #222 url(/images/people2_small.jpg) center center no-repeat;
@@ -1368,45 +1370,46 @@ hr.inline {
 	padding: 5em 0;
 }
 
-/* line 51, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
+/* line 49, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
 
 .headline-img h2 {
 	padding-bottom: 0;
+	max-width: 1000px;
 }
 
-/* line 56, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
+/* line 55, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
 
 .section-discover {
 	background: #010101;
 }
 
-/* line 65, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
+/* line 64, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
 
 .section-discover p {
 	color: #eee;
 }
 
-/* line 71, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
+/* line 70, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
 
 .section-content p,
 .section-content li {
 	max-width: 750px;
 }
 
-/* line 78, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
+/* line 77, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
 
 .section-content blockquote {
 	max-width: 700px;
 }
 
-/* line 82, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
+/* line 81, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
 
 .section-cta {
 	padding: 5em 0;
 	text-align: center;
 }
 
-/* line 85, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
+/* line 84, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
 
 .section-cta p {
 	font-weight: 700;
@@ -1427,63 +1430,67 @@ hr.inline {
 	padding-bottom: 0;
 }
 
-/* line 10, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 8, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+
+.subhead {
+	display: block;
+	color: #B99A54;
+	font-size: 14px;
+	margin-top: .5em;
+	font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+/* line 18, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .section-strony {
 	background: #181818;
 }
 
-/* line 12, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 20, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .section-strony h4 {
 	color: #B99A54;
 }
 
-/* line 17, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 25, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .features-item {
 	margin-bottom: 3em;
 }
 
-/* line 27, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 35, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .features-item p {
 	color: #eee;
 	width: 90%;
 }
 
-/* line 37, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
-
-.section-proces {
-	background-color: #f7f7f7;
-}
-
-/* line 39, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 47, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .section-proces p {
 	margin-bottom: .5em;
 }
 
-/* line 42, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 50, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .section-proces .bullet-list {
 	margin-top: 0;
 	margin-bottom: 1.5em;
 }
 
-/* line 51, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 59, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .proces-head {
 	margin-bottom: 2em;
 }
 
-/* line 63, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 71, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .proces-info {
 	margin-bottom: 4em;
 }
 
-/* line 89, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 97, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .proces-number {
 	color: #B99A54;
@@ -1493,7 +1500,7 @@ hr.inline {
 	line-height: 1;
 }
 
-/* line 102, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 110, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .proces-title {
 	font-weight: 700;
@@ -1503,7 +1510,7 @@ hr.inline {
 	line-height: 1.1;
 }
 
-/* line 119, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 127, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .proces-subtitle {
 	font-weight: 400;
@@ -1512,7 +1519,7 @@ hr.inline {
 	font-family: "Open Sans", Helvetica, sans-serif;
 }
 
-/* line 129, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 137, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .dsp-quote {
 	background: #B99A54 url(/images/quote.jpg) center center no-repeat;
@@ -1522,7 +1529,7 @@ hr.inline {
 	text-align: center;
 }
 
-/* line 142, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 150, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .dsp-quote p {
 	font-weight: 300;
@@ -1531,7 +1538,7 @@ hr.inline {
 	-moz-osx-font-smoothing: auto;
 }
 
-/* line 160, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 168, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .section-ways h2,
 .section-ways h4 {
@@ -1539,26 +1546,26 @@ hr.inline {
 	text-align: center;
 }
 
-/* line 168, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 176, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .section-ways h2 {
 	color: #010101;
 }
 
-/* line 172, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 180, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .section-ways h4 {
 	padding-bottom: 1em;
 	color: #B99A54;
 }
 
-/* line 185, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 193, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .ways-item {
 	margin-bottom: 3em;
 }
 
-/* line 202, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 210, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .ways-img {
 	height: 120px;
@@ -1576,7 +1583,7 @@ hr.inline {
 	align-items: center;
 }
 
-/* line 218, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 226, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .section-cta-uslugi {
 	text-align: center;
@@ -1584,7 +1591,7 @@ hr.inline {
 	background: #f7f7f7;
 }
 
-/* line 222, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 233, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .section-cta-uslugi h2 {
 	max-width: none;
@@ -1593,7 +1600,7 @@ hr.inline {
 	padding-bottom: 1em;
 }
 
-/* line 231, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 242, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .section-cta-uslugi p {
 	max-width: 900px;
@@ -1601,7 +1608,7 @@ hr.inline {
 	margin-right: auto;
 }
 
-/* line 238, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 249, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .cta-mail {
 	font-size: 24px;
@@ -1611,7 +1618,7 @@ hr.inline {
 	transition: all .25s;
 }
 
-/* line 249, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 260, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .cta-mail:hover {
 	color: #00B4F1;
@@ -1620,7 +1627,7 @@ hr.inline {
 
 /* line 1, /Users/adrian/Projekty/dsp - website/source/css/modules/_kto.scss */
 
-.kto .footer {
+.onas .footer {
 	border-top: none;
 }
 
@@ -1911,27 +1918,27 @@ ul.font-24 li {
 	right: 40px;
 }
 
-/* line 17, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 25, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .features-item {
 	margin-bottom: 2em;
 	width: 50%;
 }
 
-/* line 51, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 59, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .proces-head {
 	margin-bottom: 0;
 	width: 33.3333%;
 }
 
-/* line 63, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 71, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .proces-info {
 	width: 66.6666%;
 }
 
-/* line 73, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 81, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .proces-head,
 .proces-info {
@@ -1939,7 +1946,7 @@ ul.font-24 li {
 	border-top: 1px solid #ddd;
 }
 
-/* line 78, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 86, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .proces-head:first-child,
 .proces-head:nth-child(2),
@@ -1948,25 +1955,25 @@ ul.font-24 li {
 	border-top: 0;
 }
 
-/* line 89, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 97, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .proces-number {
 	font-size: 45px;
 }
 
-/* line 102, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 110, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .proces-title {
 	font-size: 26px;
 }
 
-/* line 142, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 150, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .dsp-quote p {
 	font-size: 24px;
 }
 
-/* line 178, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 186, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .ways-content {
 	-webkit-box-pack: center;
@@ -1975,7 +1982,7 @@ ul.font-24 li {
 	justify-content: center;
 }
 
-/* line 185, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 193, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .ways-item {
 	width: 50%;
@@ -2283,39 +2290,45 @@ ul.font-24 li {
 	display: none;
 }
 
-/* line 39, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
+/* line 37, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
 
 .headline-img {
 	background: #222 url(/images/people2.jpg) center center no-repeat;
 	background-size: cover;
 }
 
-/* line 56, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
+/* line 55, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
 
 .section-discover {
 	background: #010101 url(/images/ocean.jpg) left center no-repeat;
 	background-size: cover;
 }
 
-/* line 129, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 137, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .dsp-quote {
 	padding: 6em 0 8em;
 }
 
-/* line 142, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 150, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .dsp-quote p {
 	font-size: 32px;
 }
 
-/* line 222, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 226, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+
+.section-cta-uslugi {
+	width: 100%;
+}
+
+/* line 233, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .section-cta-uslugi h2 {
 	padding-bottom: 2em;
 }
 
-/* line 238, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 249, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .cta-mail {
 	font-size: 30px;
@@ -2540,75 +2553,75 @@ h2 {
 	padding: 7em 0;
 }
 
-/* line 39, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
+/* line 37, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_sections.scss */
 
 .headline-img {
 	padding: 10em 0;
 }
 
-/* line 17, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 25, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .features-item {
 	width: 25%;
 }
 
-/* line 27, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 35, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .features-item p {
 	margin-bottom: 1em;
 }
 
-/* line 51, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 59, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .proces-head {
 	width: 16.6666%;
 }
 
-/* line 63, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 71, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .proces-info {
 	width: 33.3333%;
 }
 
-/* line 73, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 81, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .proces-head,
 .proces-info {
 	border-top: 0;
 }
 
-/* line 89, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 97, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .proces-number {
 	font-size: 60px;
 }
 
-/* line 102, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 110, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .proces-title {
 	font-size: 30px;
 	margin-top: 15px;
 }
 
-/* line 129, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 137, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .dsp-quote {
 	padding: 8em 0 10em;
 }
 
-/* line 142, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 150, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .dsp-quote p {
 	font-size: 40px;
 }
 
-/* line 185, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 193, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .ways-item {
 	width: 33.3333%;
 }
 
-/* line 238, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
+/* line 249, /Users/adrian/Projekty/dsp - website/source/css/modules/_uslugi.scss */
 
 .cta-mail {
 	font-size: 40px;

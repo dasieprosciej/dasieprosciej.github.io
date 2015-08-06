@@ -20,7 +20,7 @@
 				padding-right: 2px;
 				color:$white-color;
 				display: inline-block;
-				text-transform: uppercase;
+				// text-transform: uppercase;
 				@include mq($bp2){
 					text-transform: none;
 					color:$text-color;
@@ -93,7 +93,7 @@
 
 #menu-link span {
 	font-family: $base-font-family;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 }
 
 #menu-link span,

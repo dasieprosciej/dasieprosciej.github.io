@@ -1,40 +1,48 @@
 .footer {
-	background:#fff url(/images/dsp_footer.svg) center bottom no-repeat;
-	border-bottom: 5px solid $heading-color;
-	background-size:115% auto;
-	overflow: hidden;
-	padding-top: 5em;
-	padding-bottom: 5em;
-	border-top: 1px solid #ddd;
-	@include mq($bp2){
-		padding-bottom: 7em;
-	} 
-	@include mq($bp3){
-		background-size:95% auto;
-		padding-bottom: 10em;
-	} 
+	background:#eee;
+	// overflow: hidden;
+	
+	// padding-bottom: 3em;
+	// border-top: 1px solid #ddd;
+
 	p,a {
-		font-family: $base-font-family;
+		// font-family: $base-font-family;
 		font-size: 16px;
-		-webkit-font-smoothing: auto;
-		-moz-osx-font-smoothing: auto;	
+		// -webkit-font-smoothing: auto;
+		// -moz-osx-font-smoothing: auto;	
 	}
 }
 
+.footer__top {
+	padding-top: 3em;
+	background:url(/images/dsp_footer.svg) center bottom no-repeat;
+	background-size:100% auto;
 
+	padding-bottom: 6em;
+}
 
-
+.footer__bottom {
+	background:#fff;
+	padding:1em 0 3em;
+}
 
 .footer__contact {
 	width: 100%;
 	@include mq($bp1){
+		float: left;
 		width: 75%;
 	} 
 	@include mq($bp2){
 		width: 25%;
+		
 	} 
-	hr {
-		margin-top:.5em;
+	h4 {
+		text-transform: none;
+		font-size: 18px;
+		font-weight: 700;
+		margin-top: 0;
+		margin-bottom: 1em;
+
 	}
 }
 
@@ -43,6 +51,7 @@
 	width: 100%;
 	margin:2em 0 4em;
 	@include mq($bp1){
+		float: right;
 		margin: 0;
 		width: 25%;
 		margin-bottom:1em;
@@ -65,14 +74,14 @@
 	width: 100%;
 	@include mq($bp1){
 		width: 25%;
-		margin-left: 75%;
+		// margin-left: 75%;
 	} 
 	@include mq($bp2) {
-		text-align: right;
+		// text-align: right;
 		// margin-top: 1em;
 	} 
 	@include mq($bp3){
-		margin-top: 1em;
+		// margin-top: 1em;
 	} 
 
 	p {

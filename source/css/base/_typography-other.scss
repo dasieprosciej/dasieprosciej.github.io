@@ -1,12 +1,12 @@
 p,
 p>a,
-.section-content li {
+li {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;	
 }
 
 p {
-	font-size: 24px;
+	// font-size: 24px;
 }
 
 .font-18,
@@ -31,6 +31,14 @@ ul.font-20 li {
 	} 
 }
 
+.font-40 {
+	font-size: 30px;
+	line-height: 1.2;
+	margin-bottom: 0 !important;
+	@include mq($bp2){
+		font-size: 40px;
+	}
+}
 
 p {
 	line-height: 1.6;
@@ -47,7 +55,7 @@ font-size: 18px;
 		font-size: 22px;
 	} 
 	@include mq($bp4) {
-		font-size: 24px;
+		// font-size: 24px;
 	} 
 }
 

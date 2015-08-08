@@ -26,12 +26,16 @@
 		}
 }
 
-@media all and (max-width: 1023px ) {
-    head {
-        font-family: menuscreen;
-        // display: none;
-    }
+.ct--full {
+	max-width: none;
 }
+
+// @media all and (max-width: 1023px ) {
+//     head {
+//         font-family: menuscreen;
+//         // display: none;
+//     }
+// }
 
 
 
@@ -83,14 +87,18 @@ hr {
 	height:1px;
 	border:0;
 	width: 50px;
-	background:lighten($primary-color,30);
+	background:$primary-color;
 	margin-bottom: 1.5em;
 	// margin-top: 30px;
-	box-shadow:0 1px 0 #fff;
+	// box-shadow:0 1px 0 #fff;
 	@include mq($bp1){
 		// width: 60px;
 		// height: 7px;
 	}
+}
+
+hr.inverted {
+	background:#fff;
 }
 
 hr.inline {
@@ -98,6 +106,7 @@ hr.inline {
 }
 
 hr.full {
+	background:lighten($primary-color,30);
 	width: 100%;
 }
 
@@ -153,7 +162,7 @@ strong {
 .bullet-list li {
 	position: relative;
 	padding-left: 20px;
-	margin-bottom: .5em;
+	margin-bottom: .25em;
 
 	&:last-child {
 			margin-bottom: 0;
@@ -163,7 +172,7 @@ strong {
 		content:'\2022';
 		position: absolute;
 		left: 0;
-		color:$gold-color;
+		color:$primary-color;
 	}
 }
 

@@ -31,25 +31,18 @@ ul.font-20 li {
 	} 
 }
 
-.font-40 {
-	font-size: 30px;
-	line-height: 1.2;
-	margin-bottom: 0 !important;
-	@include mq($bp2){
-		font-size: 40px;
-	}
-}
+
 
 p {
 	line-height: 1.6;
 }
 
-p,
-.font-24,
-ul.font-24 li {
-font-size: 18px;
+.font-22 >p,
+.font-22 li
+{
+font-size: 20px;
 	@include mq($bp1) {
-		font-size: 20px;
+		// font-size: 20px;
 	} 
 	@include mq($bp2){
 		font-size: 22px;
@@ -57,6 +50,15 @@ font-size: 18px;
 	@include mq($bp4) {
 		// font-size: 24px;
 	} 
+}
+
+.font-40 {
+	font-size: 30px;
+	line-height: 1.2;
+	margin-bottom: 0 !important;
+	@include mq($bp2){
+		font-size: 40px;
+	}
 }
 
 .emphasis {
@@ -93,14 +95,17 @@ blockquote {
     font-style:normal;
     // border-left: 1px solid gray;
     // color: gray;
-    color:$gold-color;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    color:#FFF3A9;
+    // color:$gold-color;
+	// -webkit-font-smoothing: antialiased;
+	// -moz-osx-font-smoothing: grayscale;
+	font-weight: 300;
     padding-left: 65px;
-    font-family: $base-font-family;
-    font-weight: 200;
+    // font-family: $base-font-family;
+    // font-weight: 400;
+    font-style: italic;
     position: relative;
-    font-size: 22px;
+    // font-size: 20px;
     margin:1.5em 0;
     background:url(/images/quote.svg) top left no-repeat;
     background-size:40px auto;

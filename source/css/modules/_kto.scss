@@ -21,7 +21,16 @@
 
 
 .img-about {
-	margin-bottom: 7em;
+	margin-bottom: 5em;
+	width: 80%;
+	@include mq($bp1){
+		// width: 70%;
+		max-width: 600px;	
+	}
+	@include mq($bp2){
+		width: 100%;
+	}
+	
 
 }
 
@@ -40,6 +49,9 @@
 
 .bio-info {
 	margin-bottom: 3em;
+	&:last-child {
+		margin-bottom: 0;
+	}
 	@include mq($bp1){
 		width: 66.6666%;
 	} 
@@ -63,10 +75,10 @@
 
 .bio-name {
 	display: block;
-	font-size: 18px;
+	font-size: 20px;
 	margin-top: 1em;
-	font-weight: 200;
-	font-family: $base-font-family;
+	// font-weight: 200;
+	// font-family: $base-font-family;
 	line-height: 1;
 
 }
@@ -76,4 +88,7 @@
 
 	font-size: 14px;
 	color:$link-color;
+	&:hover {
+		text-decoration: underline;
+	}
 }

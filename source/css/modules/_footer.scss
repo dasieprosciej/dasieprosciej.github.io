@@ -17,8 +17,15 @@
 	padding-top: 3em;
 	background:url(/images/dsp_footer.svg) center bottom no-repeat;
 	background-size:100% auto;
-
-	padding-bottom: 6em;
+	padding-bottom: 2em;
+	@include mq($bp1){
+		padding-bottom: 3em;
+	}
+	@include mq($bp2){
+		padding-bottom: 6em;
+		// background-size:100% auto;
+	}
+	// padding-bottom: 6em;
 }
 
 .footer__bottom {

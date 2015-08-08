@@ -25,11 +25,14 @@
 	letter-spacing: .05em;
 	color:$link-color;
 	// text-transform: uppercase;
-	padding-left: 3em;
-	padding-right: 3em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
 	border-radius:2em;
 	margin-top:2em;	
-	
+	@include mq($bp1){
+		padding-left: 3em;
+		padding-right: 3em;
+	}
 
 	&:hover {
 		background:shade($link-color,10);

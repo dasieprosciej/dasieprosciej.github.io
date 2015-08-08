@@ -5,20 +5,41 @@
 	min-height: 600px;
 	max-height: 800px;	
 	// background:url(../images/figury.svg) 90% 0% no-repeat;
+	// background:url(../images/arrow.svg) bottom left no-repeat;
+	.section-content {
+		padding-top: 120px;
+	}
+	.ct {
+		position: relative;
+		height: 100%;
+	}
 }
 
-.fixed-bottom{
+.explore {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	bottom: 20px;
+	background:url(../images/arrow.svg) bottom left no-repeat;
+	left: 10px;
+	@include mq($bp1){
+		left: 40px;
+	}
+}
+
+
+// .fixed-bottom{
 	// position: absolute;
 	// bottom: 0;
-	padding-top: 120px;
-	width: 100%;
-}
+	// padding-top: 120px;
+	// width: 100%;
+// }
 
 
 .headline-main {
 	padding-bottom: 3em;
 	@include mq($bp2){
-		margin-left: 16.6666%;
+		// margin-left: 16.6666%;
 	}
 	@include mq($bp3) {
 		padding-bottom: 7em;

@@ -1,230 +1,134 @@
 <!doctype html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8">
+<html>
+<head>
+<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Da Się Prościej - USLUGI</title>
-<meta name="description" content="Opis">
-<meta name="author" content="dearty">
+<title>Da Się Prościej - O nas</title>
+<meta name="description" content="Upraszczanie stron internetowych, zmiana, przebudowa, design, copywriting, dla biznesu, trójmiasto, gdańsk, gdynia, sopot">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="cleartype" content="on">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://dasieprosciej.pl/images/favicon/apple-touch-icon-144x144.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://dasieprosciej.pl/images/favicon/apple-touch-icon-152x152.png"/>
+<link rel="icon" type="image/png" href="http://dasieprosciej.pl/images/favicon/favicon-32x32.png" sizes="32x32"/>
+<link rel="icon" type="image/png" href="http://dasieprosciej.pl/images/favicon/favicon-16x16.png" sizes="16x16"/>
+<meta name="application-name" content=" "/>
+<meta name="msapplication-TileColor" content="#FFFFFF"/>
+<meta name="msapplication-TileImage" content="http://dasieprosciej.pl/images/favicon/ms-icon-144x144.png"/>
+<link href="../css/style-b67047a6.css" rel="stylesheet" type="text/css"/>
+<script>
 
-    <script>
-	document.documentElement.className = document.documentElement.className.replace("no-js","js");
+!function(){function e(e){return e.split(".").pop()}function n(e,n){if("css"===n){var t=document.createElement("style");document.head.appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}else"svg"===n&&document.head.insertAdjacentHTML("beforeend",e)}function t(t){var o=localStorage[t];o?n(o,e(t)):window.addEventListener("load",function s(){var o=new XMLHttpRequest;o.open("GET",t,!0),o.addEventListener("load",function(){4===o.readyState&&(n(o.responseText,e(t)),localStorage[t]=o.responseText)}),o.send(),window.removeEventListener("load",s)})}var o=["/fonts-dsp-38c0126d.css"];window.localStorage&&o.forEach(function(e){t(e)})}();
 </script>
-    <script>
-    !function () {
-        function is_touch_device() {
-  			return 'ontouchstart' in window || 'onmsgesturechange' in window; // works on ie10
-		};
-        if (is_touch_device()) document.documentElement.className += ' touch'
-    }()
-</script>
-    <link href="../css/style.css" rel="stylesheet" type="text/css" />
-    <script>
+</head>
+<body class="onas onas_index">
+<header class="header ">
+<div class="ct flex-ct">
+<a href="/" class="logo flex-child">
+<img src="/images/logo-8ef96a9f.svg"/>
+</a>
+<nav class="nav nav--main flex-child">
+<ul>
+<li> <a href="/">Strona główna</a></li>
+<li> <a href="/uslugi/">Jak pomagamy</a></li>
 
-(function() {
- 
-   var files = ['css/fonts-dsp.css'];
-   
-   function getExtension(src) {
-      return src.split('.').pop();
-   }
- 
-   function injectContent(content, type) {
-      if (type === 'css') {
-         var style = document.createElement('style');
-         document.head.appendChild(style);
-         if (style.styleSheet) {
-            style.styleSheet.cssText = content;
-         } else {
-            style.innerHTML = content;
-         }
-      } else if (type === 'svg') {
-         document.head.insertAdjacentHTML('beforeend', content);
-      }
-   }
- 
-   function loadFile(file) {
-      var content = localStorage[file];
-      if (content) {
-         injectContent(content, getExtension(file));
-      } else {
-         window.addEventListener('load', function get() {
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', file, true);
-            xhr.addEventListener('load', function() {
-               if (xhr.readyState === 4) {
-                  injectContent(xhr.responseText, getExtension(file));
-                  localStorage[file] = xhr.responseText;
-               }
-            });
-            xhr.send();
-            window.removeEventListener('load', get);
-         });
-      }
-   }
- 
-   if (window.localStorage) {
-      files.forEach(function(file) {
-         if (getExtension(file) === 'svg' && !document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Image', '1.1')) {
-            return;
-         }
-         loadFile(file);
-      });
-   }
- 
-})();
-
-</script>
-    
-  </head>
-  
-  <body class="onas onas_index">
-
-      
-  	<header class="header "> 
-	<div class="ct flex-ct">
-		<a href="/" class="logo flex-child">
-			<img src="/images/logo2.svg" />
-		</a>
-		<nav class="nav nav--main flex-child">
-			<ul>
-				<li > <a href="/">Strona główna</a></li>
-<li > <a href="/uslugi/">Jak pomagamy</a></li>
-<!--  <li > <a href="/projekty/">Realizacje</a></li> -->
-<li class="active"> <a href="/onas/">Kim jesteśmy</a></li> 
-<!--  <li > <a href="/blog/">Blog</a></li>  -->
+<li class="active"> <a href="/onas/">Kim jesteśmy</a></li>
 
 
-<!--  <p> </p>
-<p> 5</p> 
-<p></p> -->
-
-			</ul>
-		</nav>
-		<a href="#" id="menu-link">
-			<span>Menu</span>
-			<div class="hamburger">
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>	
-		</a>
-	</div>
+</ul>
+</nav>
+<a href="#" id="menu-link">
+<span>Menu</span>
+<div class="hamburger">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</a>
+</div>
 </header>
-	
-	
-
-	<section class="section section-kto">
-		<div class="ct">
-			<div class="section-content">
-				<img class="img-about" src='/images/about.png' alt="">		
-				<!-- <img class="img-about" src='/images/about_small.png' srcset="/images/about.png 500w" alt="">	 -->
-				<hr>
-				<div class="grid-s grid-s--gutters grid-l--gutters-xl">
-					
-					<div class="kto-item grid-cell">
-						<p class="font-24"><strong>Jesteśmy</strong> dwuosobowym zespołem z Gdańska. Jeden web designer i jeden copywriter. Łączymy umiejętności biznesowe, design, marketing, copywriting i lata wiedzy o internecie, by odkryć przed Twoimi odbiorcami to co najlepsze i najciekawsze w Twojej ofercie.</p>
-					</div>
-					<div class="kto-item grid-cell">
-						<p class="font-24"><strong>Naprawiamy połączenie design-tekst.</strong> Wierzymy, że tylko umiejętne zgranie tych dwóch elementów czyni strony internetowe skutecznymi.</p>
-					</div>
-				</div>
-			</div>	
-		</div>	
-	</section>
+<section class="section section-kto">
+<div class="ct">
+<div class="section-content">
+<div class="img-about"></div>
 
 
+<hr>
+<div class="grid-s grid-s--gutters grid-l--gutters-xl">
+<div class="kto-item grid-cell font-22">
+<p><strong>Jesteśmy</strong> dwuosobowym zespołem z Gdańska. Jeden web designer i jeden copywriter. Łączymy umiejętności biznesowe, design, marketing, copywriting i lata wiedzy o internecie, by odkryć przed Twoimi odbiorcami to co najlepsze i najciekawsze w Twojej ofercie.</p>
+</div>
+<div class="kto-item grid-cell font-22">
+<p><strong>Naprawiamy połączenie na linii design-tekst.</strong> Wierzymy, że tylko umiejętne zgranie tych dwóch elementów czyni strony internetowe skutecznymi.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-bio">
+<div class="ct">
+<div class="section-content">
+<div class="grid-s grid-s--gutters">
+<div class="bio-img grid-cell">
+<img src="/images/milena-02479cce.jpg" alt="">
+<span class="bio-name">Milena</span>
+<a href="http://milush.pl" target="_blank" class="bio-link">milush.pl</a>
+</div>
+<div class="bio-info grid-cell">
+<p>“Jestem web copywriterem, z zainteresowaniami w kierunku marketingu, reklamy, doradztwa biznesowego, psychologii zachowań konsumentów i nowoczesnego podejścia do obsługi klienta. W biznesie wyznaję ideę human to human. Uwielbiam prostotę, harmonię i użyteczność w każdej dziedzinie. Jestem miłośniczką literatury z zakresu zarządzania, rozwoju osobistego oraz biografii i książek podróżniczych.”</p>
+</div>
+<div class="bio-img grid-cell">
+<img src="/images/adrian-e2c40614.jpg" alt="">
+<span class="bio-name">Adrian</span>
+<a href="http://dearty.com" target="_blank" class="bio-link">dearty.com</a>
+</div>
+<div class="bio-info grid-cell">
+<p>“Tworzę strony, ale nie ograniczają mnie role typu UX designer czy front-end developer. Dążę do tego by zrozumieć każdy aspekt tego co tworzę - co to powinno robić, jak się to czyta, jak wygląda i jak jest zbudowane. Wszystko co może mieć wpływ na poprawienie doświadczenia dla użytkowników. Myślę, piszę, projektuję, koduję.”</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section dsp-quote">
+<div class="ct">
+<hr class="inline inverted">
+<p>To jak tworzymy, definiuje to kim jesteśmy i odzwierciedla to w co wierzymy.
+Naszym najbardziej wartościowym produktem jest nasz sposób myślenia.</p>
+</div>
+</section>
+<footer class="footer">
+<div class="ct">
+<div class="footer__top group">
+<div class="footer__contact">
+<h4>Skontaktuj się z nami</h4>
+<a href="mailto:mail@dasieprosciej.pl">mail@dasieprosciej.pl</a>
+<p>tel. 513 587 575</p>
+</div>
+<nav class="nav nav--footer">
+<ul>
+<li> <a href="/">Strona główna</a></li>
+<li> <a href="/uslugi/">Jak pomagamy</a></li>
 
-	<section class="section section-bio">
-		<div class="ct">
-			<div class="section-content">
-				<div class="grid-s grid-s--gutters">
-					<div class="bio-img grid-cell">
-						<img src="/images/milena.jpg" alt="">
-						<span class="bio-name">Milena</span>
-						<a href="http://milush.pl" target="_blank" class="bio-link">milush.pl</a>
-					</div>
-					<div class="bio-info grid-cell">
-						<p class="font-18">“Jestem web copywriterem, z zainteresowaniami w kierunku marketingu, reklamy, doradztwa biznesowego, psychologii zachowań konsumentów i nowoczesnego podejścia do obsługi klienta. W biznesie wyznaję ideę human to human. Uwielbiam prostotę, harmonię i użyteczność w każdej dziedzinie. Jestem miłośniczką literatury z zakresu zarządzania, rozwoju osobistego oraz biografii i książek podróżniczych.”</p>
-					</div>
-					<div class="bio-img grid-cell">
-						<img src="/images/adrian.jpg" alt="">
-						<span class="bio-name">Adrian</span>
-						<a href="http://dearty.com" target="_blank" class="bio-link">dearty.com</a>
-					</div>
-					<div class="bio-info grid-cell">
-						<p class="font-18">“Tworzę strony, ale nie ograniczają mnie role typu UX designer czy front-end developer. Dążę do tego by zrozumieć każdy aspekt tego co tworzę - co to powinno robić, jak się to czyta, jak wygląda i jak jest zbudowane. Wszystko co może mieć wpływ na poprawienie doświadczenia dla użytkowników. Myślę, piszę, projektuję, koduję.”</p>
-					</div>
-				</div>
-			</div>	
-		</div>	
-	</section>
-
-	<section class="section dsp-quote">
-		<div class="ct">
-			<hr class="inline">
-			<p>To jak tworzymy, definiuje to kim jesteśmy i odzwierciedla to w co wierzymy.
-			Naszym najbardziej wartościowym produktem jest nasz sposób myślenia.</p>
-		</div>
-	</section>
+<li class="active"> <a href="/onas/">Kim jesteśmy</a></li>
 
 
-	<footer class="footer"> 
-	<div class="ct">
-		<div class="grid grid--gutters">
-			<div class="footer__contact grid-cell">
-				<p class="gold">Skontaktuj się z nami</p>
-				<hr>
-				<a href="mailto:mail@dasieprosciej.pl">mail@dasieprosciej.pl</a>
-				<p>tel. 513 587 575</p>
-			</div>
-
-			<nav class="nav nav--footer grid-cell">
-				<ul>
-					<li > <a href="/">Strona główna</a></li>
-<li > <a href="/uslugi/">Jak pomagamy</a></li>
-<!--  <li > <a href="/projekty/">Realizacje</a></li> -->
-<li class="active"> <a href="/onas/">Kim jesteśmy</a></li> 
-<!--  <li > <a href="/blog/">Blog</a></li>  -->
-
-
-<!--  <p> </p>
-<p> 5</p> 
-<p></p> -->
-
-				</ul>
-			</nav>
-
-			<div class="footer__copyright grid-cell">
-				<hr class="inline">
-				<p>&copy; da się prościej 2015</p>
-				<p class="rights">Wszystkie&nbsp;Prawa&nbsp;Zastrzeżone</p>
-			</div>
-		</div>	
-	</div>
+</ul>
+</nav>
+</div>
+</div>
+<div class="footer__bottom">
+<div class="ct">
+<div class="footer__copyright">
+<p>&copy; da się prościej 2015</p>
+</div>
+</div>
+</div>
 </footer>
-
-
-
-
-      
-
-  
-    <script src="../js/all.js" type="text/javascript"></script>  
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-43734506-7', 'auto');
-  ga('send', 'pageview');
+<script src="../js/all-f3da76ba.js" type="text/javascript"></script>
+<script>
+  !function(e,a,t,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=a.createElement(t),s=a.getElementsByTagName(t)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-43734506-7","auto"),ga("send","pageview");
 
 </script>
-  </body>
-
+</body>
 </html>

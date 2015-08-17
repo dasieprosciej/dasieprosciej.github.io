@@ -5,25 +5,17 @@
 	ul {
 		li {
 			display: block;
-			// display: inline-block;
-			// width: 49%;
-			// margin-bottom: 2em;
-			// padding-left: 3em;
 			&:last-child {
 				margin-bottom: 0;
 			}
 			@include mq($bp2){
 				margin-bottom: 0;
 				display: inline-block;
-
 			} 
 			a {
-				// padding-left: 2px;
-				// padding-right: 2px;
 				padding:1em;
 				color:#ccc;
 				display: inline-block;
-				// text-transform: uppercase;
 				@include mq($bp2){
 					text-transform: none;
 					color:$text-color;
@@ -35,7 +27,6 @@
 	ul,li {
 		line-height: 1;	
 	}
-
 }
 
 
@@ -47,7 +38,6 @@
 	z-index: 1;
 	background:rgba(#fff,.99);
 	border-bottom: 1px solid #ddd;
-	// text-align: center;
 	padding:4em 1em;
 	transform:translateY(-110%);
 	transform: translate3d(0,-110%,0);
@@ -86,7 +76,6 @@
 	position: absolute;
 	right: 20px;
 	top: 20px;
-	// top: 17px;
 	z-index: 5;
 	@include mq($bp1){
 		right: 40px;
@@ -98,7 +87,6 @@
 
 #menu-link span {
 	font-family: $base-font-family;
-	// text-transform: uppercase;
 }
 
 #menu-link span,

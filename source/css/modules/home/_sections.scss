@@ -2,30 +2,9 @@
 
 .section-content {
 	padding: 5em 0;
-	// max-width:700px;
-	// margin-left: auto;
-	// margin-right: auto;
-	// @include mq($bp2){
-	// 	max-width: none;
-	// 	width: 66.6666%;
-	// 		margin-left: auto;
-	// 		margin-right: auto;
-	// }
-	@include mq($bp2){
-		// padding: 5em 0;
-	}
-	@include mq($bp3){
-		// padding: 7em 0;
-	} 
-	// max-width: 700px;
-	h3 {
-		// color:$gold-color;
-	}
 	p {
 		margin-bottom: 1em;
 	}
-	
-	// background: url(/images/sign.png) right center no-repeat;
 }
 
 .section-info {
@@ -33,24 +12,12 @@
 		color:$primary-color;
 		font-weight: 400;
 	}
-	.section-content {
-		@include mq($bp2){
-			// width: 66.6666%;
-			// margin-left: auto;
-			// margin-right: auto;
-		}
-	}
 }
 
 .section h2 {
-	// font-weight: 300;
-
-	// max-width: 1000px;
-	// max-width: 750px;
 	padding-bottom:1em;
 	line-height: 1.2;
 	color: $primary-color;
-
 }
 
 .headline-img{
@@ -61,15 +28,11 @@
 	@include mq($bp2){
 		background:$primary-color url(/images/people.jpg) center center no-repeat;
 		background-size:cover;	
-	} 
-	@include mq($bp3){
-		// padding: 10em 0;
-	} 
+	}  
 	h2 {
 		padding-bottom: 0;
 		text-align: center;
 		color: $white-color;
-		// max-width: 1000px;
 	}
 }
 
@@ -79,9 +42,6 @@
 		background: $heading-color url(/images/ocean.jpg) left center no-repeat;
 		background-size: cover;	
 	} 
-	h2 {
-		// font-size: 60px;
-	}
 	p {
 		color:$white-color;
 	}
@@ -99,14 +59,6 @@
 			margin-left: 0;
 		}
 	}
-}
-
-
-.section-content p,
-.section-content li,
- {
-	// max-width: 700px;
-	// font-size: 24px;
 }
 
 .section-content blockquote {

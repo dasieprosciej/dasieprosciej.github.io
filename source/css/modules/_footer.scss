@@ -1,16 +1,5 @@
 .footer {
 	background:#eee;
-	// overflow: hidden;
-	
-	// padding-bottom: 3em;
-	// border-top: 1px solid #ddd;
-
-	p,a {
-		// font-family: $base-font-family;
-		font-size: 16px;
-		// -webkit-font-smoothing: auto;
-		// -moz-osx-font-smoothing: auto;	
-	}
 }
 
 .footer__top {
@@ -23,9 +12,7 @@
 	}
 	@include mq($bp2){
 		padding-bottom: 6em;
-		// background-size:100% auto;
 	}
-	// padding-bottom: 6em;
 }
 
 .footer__bottom {
@@ -49,7 +36,6 @@
 		font-weight: 700;
 		margin-top: 0;
 		margin-bottom: 1em;
-
 	}
 }
 
@@ -81,16 +67,7 @@
 	width: 100%;
 	@include mq($bp1){
 		width: 25%;
-		// margin-left: 75%;
 	} 
-	@include mq($bp2) {
-		// text-align: right;
-		// margin-top: 1em;
-	} 
-	@include mq($bp3){
-		// margin-top: 1em;
-	} 
-
 	p {
 		font-size: 12px;
 	} 

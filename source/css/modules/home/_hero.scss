@@ -5,7 +5,6 @@
 	min-height: 600px;
 	max-height: 800px;	
 	// background:url(../images/figury.svg) 90% 0% no-repeat;
-	// background:url(../images/arrow.svg) bottom left no-repeat;
 	.section-content {
 		padding-top: 120px;
 	}
@@ -38,9 +37,6 @@
 
 .headline-main {
 	padding-bottom: 3em;
-	@include mq($bp2){
-		// margin-left: 16.6666%;
-	}
 	@include mq($bp3) {
 		padding-bottom: 7em;
 	} 
@@ -49,7 +45,6 @@
 		padding-bottom: 1em;
 	}
 	p {
-		// line-height: 1.3;
 		max-width: 700px;
 		font-size: 20px;
 		@include mq($bp2){

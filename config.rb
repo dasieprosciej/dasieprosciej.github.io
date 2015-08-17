@@ -139,7 +139,7 @@ configure :build do
   # activate :minify_css
 
   # Minify Javascript on build
-  activate :minify_javascript
+  activate :minify_javascript, :inline => true
 
   # Enable cache buster
   activate :asset_hash
@@ -150,7 +150,27 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 
-   # autoprefixer
+   # Minify HTML on build
+  activate :minify_html do |html|
+    html.remove_multi_spaces        = true   # Remove multiple spaces
+    html.remove_comments            = true   # Remove comments
+    html.remove_intertag_spaces     = false  # Remove inter-tag spaces
+    html.remove_quotes              = false   # Remove quotes
+    html.simple_doctype             = false  # Use simple doctype
+    html.remove_script_attributes   = false   # Remove script attributes
+    html.remove_style_attributes    = false   # Remove style attributes
+    html.remove_link_attributes     = false   # Remove link attributes
+    html.remove_form_attributes     = false  # Remove form attributes
+    html.remove_input_attributes    = false   # Remove input attributes
+    html.remove_javascript_protocol = false   # Remove JS protocol
+    html.remove_http_protocol       = false  # Remove HTTP protocol
+    html.remove_https_protocol      = false  # Remove HTTPS protocol
+    html.preserve_line_breaks       = true  # Preserve line breaks
+    html.simple_boolean_attributes  = false   # Use simple boolean attributes
+    html.preserve_patterns          = nil    # Patterns to preserve
+  end
+
+
   # activate :autoprefixer do |config|
   #   config.browsers = ["last 2 versions", "> 10%", "ie 8", "android 2.3"]
   # end

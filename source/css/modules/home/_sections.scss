@@ -8,6 +8,11 @@
 }
 
 .section-info {
+	h2 {
+		@include mq($bp2){
+			font-size: 32px;
+		} 
+	}
 	h3 {
 		color:$primary-color;
 		font-weight: 400;

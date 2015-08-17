@@ -12,15 +12,28 @@
 	} 
 }
 
+// .img-about {
+// 	margin-bottom: 5em;
+// 	width: 80%;
+// 	@include mq($bp1){
+// 		max-width: 600px;	
+// 	}
+// 	@include mq($bp2){
+// 		width: 100%;
+// 	}
+// }
+
+
 .img-about {
-	margin-bottom: 5em;
-	width: 80%;
-	@include mq($bp1){
-		max-width: 600px;	
+	@include mq($bp1){ 
+		background: url('../images/about.png') 0 0 no-repeat;
+		margin-bottom: 3em;
+		background-size:contain;
+		max-width: 600px;
+		// width:600px;
+		height:300px;
 	}
-	@include mq($bp2){
-		width: 100%;
-	}
+
 }
 
 .bio-img {

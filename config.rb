@@ -2,6 +2,8 @@
 # Compass
 ###
 
+@site = "http://dasieprosciej.pl"
+set :var, @site
 # Change Compass configuration
 # compass_config do |config|
 #   config.output_style = :compact
@@ -142,7 +144,7 @@ configure :build do
   activate :minify_javascript, :inline => true
 
   # Enable cache buster
-  activate :asset_hash
+  activate :asset_hash, :ignore => %r{^images/favicon/.*}
 
   # Use relative URLs
   activate :relative_assets

@@ -603,18 +603,26 @@ a {
 /* line 16, /Users/adrian/Projekty/dsp - website/source/css/base/_links.scss */
 
 p > a {
-	text-decoration: underline;
-	color: #4FBCF2;
+	border-bottom: 1px solid #333;
 	font-size: inherit;
+	-webkit-transition: all .25s;
+	transition: all .25s;
 }
 
 /* line 22, /Users/adrian/Projekty/dsp - website/source/css/base/_links.scss */
+
+p > a:hover {
+	border-bottom-color: #FF1414;
+	color: #FF1414;
+}
+
+/* line 28, /Users/adrian/Projekty/dsp - website/source/css/base/_links.scss */
 
 a:hover {
 	color: #FF1414;
 }
 
-/* line 29, /Users/adrian/Projekty/dsp - website/source/css/base/_links.scss */
+/* line 35, /Users/adrian/Projekty/dsp - website/source/css/base/_links.scss */
 
 a:active,
 a:hover {

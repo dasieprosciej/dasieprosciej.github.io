@@ -139,6 +139,12 @@ set :images_dir, 'images'
 configure :build do
   # For example, change the Compass output style for deployment
   # activate :minify_css
+  
+  ignore 'projekty.html.erb'
+  ignore 'blog.html.erb'
+  ignore 'blog2.html.erb'
+  ignore 'blog/*'
+  ignore 'blog2/*'
 
   # Minify Javascript on build
   activate :minify_javascript, :inline => true

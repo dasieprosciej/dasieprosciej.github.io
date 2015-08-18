@@ -14,9 +14,15 @@ a {
 
 }
 p>a {
-	text-decoration: underline;
-	color:#4FBCF2;
+	// text-decoration: underline;
+	border-bottom: 1px solid $text-color;
+	// color:#4FBCF2;
 	font-size: inherit;
+	transition:all .25s;
+	&:hover {
+		border-bottom-color: $link-color;
+		color:$link-color;
+	}
 }
 
 a:hover {

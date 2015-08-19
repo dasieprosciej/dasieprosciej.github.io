@@ -992,7 +992,32 @@ td {
 	max-width: none;
 }
 
-/* line 42, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 40, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+
+.embed-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	margin-bottom: 12px;
+}
+
+/* line 51, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* line 61, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 img {
 	max-width: 100%;
@@ -1001,14 +1026,14 @@ img {
 	-ms-interpolation-mode: bicubic;
 }
 
-/* line 49, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 68, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 .img-inline {
 	padding-top: 1.5em;
 	padding-bottom: 1.5em;
 }
 
-/* line 56, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 75, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 .img-right {
 	display: block;
@@ -1016,31 +1041,31 @@ img {
 	margin-right: auto;
 }
 
-/* line 67, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 86, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 .left {
 	float: left;
 }
 
-/* line 70, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 89, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 .right {
 	float: right;
 }
 
-/* line 74, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 93, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 .a-right {
 	text-align: right;
 }
 
-/* line 78, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 97, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 .a-center {
 	text-align: center;
 }
 
-/* line 83, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 102, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 hr {
 	display: block;
@@ -1053,71 +1078,71 @@ hr {
 	margin-bottom: 1.5em;
 }
 
-/* line 100, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 119, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 hr.inverted {
 	background: #fff;
 }
 
-/* line 104, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 123, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 hr.inline {
 	display: inline-block;
 }
 
-/* line 108, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 127, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 hr.full {
 	background: #8be2ff;
 	width: 100%;
 }
 
-/* line 120, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 139, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 .v-center {
 	display: table;
 	width: 100%;
 }
 
-/* line 127, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 146, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 .v-centered {
 	display: table-cell;
 	vertical-align: middle;
 }
 
-/* line 135, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 154, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 ::-webkit-input-placeholder {
 	color: #bbb;
 }
 
-/* line 143, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 162, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 ::-moz-placeholder { /* Firefox 19+ */
 	color: #bbb;
 }
 
-/* line 147, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 166, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 :-ms-input-placeholder {
 	color: #bbb;
 }
 
-/* line 151, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 170, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 .nomg {
 	margin-bottom: 0;
 }
 
-/* line 155, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 174, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 .bullet-list {
 	margin-top: 1em;
 	margin-bottom: 2em;
 }
 
-/* line 162, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 181, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 .bullet-list li {
 	position: relative;
@@ -1125,13 +1150,13 @@ hr.full {
 	margin-bottom: .25em;
 }
 
-/* line 167, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 186, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 .bullet-list li:last-child {
 	margin-bottom: 0;
 }
 
-/* line 170, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 189, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 .bullet-list li:before {
 	content: '\2022';
@@ -1336,7 +1361,7 @@ hr.full {
 	width: 100%;
 	height: calc(100% - 3rem);
 	min-height: 600px;
-	max-height: 800px;
+	max-height: 900px;
 }
 
 /* line 8, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_hero.scss */
@@ -1345,14 +1370,14 @@ hr.full {
 	padding-top: 120px;
 }
 
-/* line 11, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_hero.scss */
+/* line 14, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_hero.scss */
 
 .hero .ct {
 	position: relative;
 	height: 100%;
 }
 
-/* line 17, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_hero.scss */
+/* line 20, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_hero.scss */
 
 .explore {
 	width: 50px;
@@ -1363,20 +1388,20 @@ hr.full {
 	left: 10px;
 }
 
-/* line 38, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_hero.scss */
+/* line 41, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_hero.scss */
 
 .headline-main {
 	padding-bottom: 3em;
 }
 
-/* line 43, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_hero.scss */
+/* line 46, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_hero.scss */
 
 .headline-main h1 {
 	color: #00B4F1;
 	padding-bottom: 1em;
 }
 
-/* line 47, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_hero.scss */
+/* line 50, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_hero.scss */
 
 .headline-main p {
 	max-width: 700px;
@@ -2002,7 +2027,7 @@ hr.full {
 	padding-right: 40px;
 }
 
-/* line 56, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 75, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 .img-right {
 	float: right;
@@ -2014,7 +2039,7 @@ hr.full {
 	right: 40px;
 }
 
-/* line 17, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_hero.scss */
+/* line 20, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_hero.scss */
 
 .explore {
 	left: 40px;
@@ -2352,7 +2377,7 @@ ul.font-20 li {
 	font-size: 40px;
 }
 
-/* line 155, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
+/* line 174, /Users/adrian/Projekty/dsp - website/source/css/base/_utilities.scss */
 
 .bullet-list {
 	margin-bottom: 3em;
@@ -2413,7 +2438,7 @@ ul.font-20 li {
 	display: none;
 }
 
-/* line 47, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_hero.scss */
+/* line 50, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_hero.scss */
 
 .headline-main p {
 	font-size: 22px;
@@ -2696,7 +2721,7 @@ ul.font-20 li {
 	padding: 2em 0 0 2em;
 }
 
-/* line 38, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_hero.scss */
+/* line 41, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_hero.scss */
 
 .headline-main {
 	padding-bottom: 7em;
@@ -2712,6 +2737,16 @@ ul.font-20 li {
 
 .cta-mail {
 	font-size: 40px;
+}
+
+}
+
+@media screen and (min-width: 118.75em) {
+
+/* line 8, /Users/adrian/Projekty/dsp - website/source/css/modules/home/_hero.scss */
+
+.hero .section-content {
+	padding-top: 150px;
 }
 
 }

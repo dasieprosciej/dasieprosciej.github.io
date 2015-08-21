@@ -2,6 +2,12 @@
 # Compass
 ###
 
+set :markdown_engine, :kramdown
+set :markdown,    :auto_ids => false,
+                  :parse_block_html => true
+
+
+
 @site = "http://dasieprosciej.pl"
 set :var, @site
 # Change Compass configuration
@@ -42,6 +48,16 @@ activate :blog do |blog|
   # blog.page_link = "page/{num}"
 end
 
+activate :blog do |blog|
+  # This will add a prefix to all links, template references and source paths
+  # blog.prefix = "projekty"
+  blog.permalink = "projekty/{title}.html"
+  # Matcher for blog source files
+  blog.sources = "projekty/{title}.html"
+  blog.layout = "projekt"
+
+end
+
 # page "/feed.xml", layout: false
 
 activate :directory_indexes
@@ -66,17 +82,45 @@ helpers do
   def is_page_selected(page)
     current_page.url == page ? 'class="active"' : ''
   end
-end
 
+  def embed(youtube_url)
+    youtube_id = youtube_url.split("=").last
+    # %Q{<iframe title="YouTube video player" width="240" height="390" src="http://www.youtube.com/embed/#{ youtube_id }" frameborder="0" allowfullscreen></iframe>}
+    content_tag(:div, content_tag(:iframe, nil,  allowfullscreen:true , src: "//www.youtube.com/embed/#{youtube_id}"), :class => "embed-container")
 
-helpers do
-  def current_page?(page)
-    current = current_resource.url.gsub('/', ' ').strip
-    target = page.gsub('/', ' ').strip
+    # content_tag :div, :class => "embed-container" do
+    #   content_tag(:iframe, nil,  src: "//www.youtube.com/embed/#{youtube_id}")
+    # end
+  end  
 
-    current == target
+  def vimeo(vimeo_url)
+    vimeo_id = vimeo_url.split("/").last
+    content_tag(:div, content_tag(:iframe, nil, src: "//player.vimeo.com/video/#{vimeo_id}"), :class => "embed-container")
+  end  
+
+  def reading_time(input)
+    words_per_minute = 180
+    words = input.split.size
+    minutes = (words/words_per_minute).floor
+    minutes_label = minutes === 1 ? ' minute' : ' minutes'
+    minutes > 0 ? "about #{minutes} #{minutes_label}" : 'less than 1 minute'
   end
+
+  def time_ago_in_words(from_time, options = {})
+        distance_of_time_in_words(from_time, Time.now, options)
+      end
 end
+
+
+
+# helpers do
+#   def current_page?(page)
+#     current = current_resource.url.gsub('/', ' ').strip
+#     target = page.gsub('/', ' ').strip
+
+#     current == target
+#   end
+# end
 
 
 # nie dziala z pretty urls
@@ -140,10 +184,11 @@ configure :build do
   # For example, change the Compass output style for deployment
   # activate :minify_css
   
-  ignore 'projekty.html.erb'
-  ignore 'blog.html.erb'
+  # ignore 'projekty.html.erb'
+  ignore 'test.html.erb'
+  # ignore 'blog.html.erb'
   ignore 'blog2.html.erb'
-  ignore 'blog/*'
+  # ignore 'blog/*'
   ignore 'blog2/*'
 
   # Minify Javascript on build

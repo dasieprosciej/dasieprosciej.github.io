@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 gem "middleman", "~>3.3.12"
 
+gem "nokogiri"
 gem "middleman-autoprefixer"
 gem "middleman-blog"
 gem "middleman-deploy"

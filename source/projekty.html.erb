@@ -1,4 +1,31 @@
 ---
 title: da się prościej - realizacje
 ---
-	<%= partial 'partials/components/header', :locals => { :header_class => "" }%>
+<%= partial 'partials/components/header', :locals => { :header_class => "" }%>
+
+<section class="section-projekty">
+	<div class="projekt projekt-food">
+		<div class="ct">
+			<h2>Food Data</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cupiditate labore, rerum, dignissimos dicta excepturi eaque eius, quisquam vitae earum aspernatur sapiente cumque. Esse quibusdam quidem dolore incidunt, nesciunt possimus.</p>
+		</div>	
+	</div>
+	<div class="projekt projekt-senti projekt--inverted">
+		<div class="ct">
+			<h2>SentiOne</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cupiditate labore, rerum, dignissimos dicta excepturi eaque eius, quisquam vitae earum aspernatur sapiente cumque. Esse quibusdam quidem dolore incidunt, nesciunt possimus.</p>
+			<%= link_to("Zobacz", "/projekty/senti", :class => "btn btn-cta" ) %>
+			
+		</div>	
+	</div>
+	<div class="projekt projekt-milush">
+		<div class="ct">
+			<h2>Milush</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cupiditate labore, rerum, dignissimos dicta excepturi eaque eius, quisquam vitae earum aspernatur sapiente cumque. Esse quibusdam quidem dolore incidunt, nesciunt possimus.</p>
+		</div>	
+	</div>
+</section>
+
+
+
+<%= partial 'partials/components/footer'%>

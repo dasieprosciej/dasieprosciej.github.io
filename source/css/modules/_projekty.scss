@@ -1,0 +1,35 @@
+.section-projekty {
+	border-bottom: 10px solid #fff;
+}
+
+.projekt {
+	height: 500px;
+	padding: 5em 0;
+	h2 {
+		padding-bottom: .5em;
+		font-size: 50px;
+		font-weight: 300;
+	}
+	p {
+		max-width: 400px;
+	}
+}
+
+.projekt--inverted {
+	h2,p {
+		color:$white-color;
+	}
+}
+
+.projekt-food {
+	background:green;
+}
+
+.projekt-senti {
+	background:transparent url('../images/projekty/senti.jpg') left top no-repeat;
+	background-size:cover;
+}
+
+.projekt-milush {
+	background:pink;
+}

@@ -3,10 +3,13 @@
 	width: 100%;
 	height:calc(100% - 3rem);
 	min-height: 600px;
-	max-height: 800px;	
+	max-height: 900px;	
 	// background:url(../images/figury.svg) 90% 0% no-repeat;
 	.section-content {
 		padding-top: 120px;
+		@include mq($bp4){
+			padding-top: 150px;
+		} 
 	}
 	.ct {
 		position: relative;

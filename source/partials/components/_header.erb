@@ -1,7 +1,12 @@
-<header class="header <%= header_class %>"> 
+<header class="header <%= header_class ||= "" %>">  
 	<div class="ct flex-ct">
 		<a href="/" class="logo flex-child">
-			<%= tag :img, :src => "/images/logo.svg" %>
+			<% if header_class.include?("header--inverted") %>
+				<%= image_tag('logo-inverted.svg') %>
+			<% else %>
+				<%= image_tag('logo.svg') %>
+			<% end %>	
+			
 		</a>
 		<nav class="nav nav--main flex-child">
 			<ul>

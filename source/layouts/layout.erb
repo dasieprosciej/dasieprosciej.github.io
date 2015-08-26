@@ -3,7 +3,11 @@
   <head>
     <%= partial 'partials/head/head-meta' %>
     <%= partial 'partials/head/favicon' %>
-    <%= stylesheet_link_tag 'style' %>
+    <% if content_for?(:four) %>
+      <%= yield_content :four %>
+    <% else %>
+      <%= stylesheet_link_tag 'style'%>  
+    <% end %>
     <%= partial  '/partials/head/font_load' %>
     
   </head>

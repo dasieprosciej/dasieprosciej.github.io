@@ -3,12 +3,15 @@
 source 'https://rubygems.org'
 
 gem "middleman", "~>3.3.12"
-
+gem "turbolinks", require: false
 gem "nokogiri"
 gem "middleman-autoprefixer"
 gem "middleman-blog"
 gem "middleman-deploy"
+gem "slim"
 # gem 'sass-media_query_combiner'
+gem 'redcarpet'
+gem "middleman-syntax"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"

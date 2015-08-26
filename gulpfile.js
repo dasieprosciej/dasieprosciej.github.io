@@ -5,6 +5,11 @@ var gulp = require('gulp'),
     minifyCss = require("gulp-minify-css"),
     autoprefixer = require("gulp-autoprefixer"),
     browserSync = require('browser-sync'),
+    changed = require('gulp-changed'),
+    imageResize = require('gulp-image-resize'),
+    rename = require('gulp-rename'),
+    filelog = require('gulp-filelog'),
+    glob = require('glob-all'),
     sass = require('gulp-sass');
 
 
@@ -64,9 +69,87 @@ gulp.task('remote', function (cb) {
 });
 
 
+gulp.task('image-resize', function(){
+    var source = 'source/**/images/r_*.{jpg,png}';
+    var dist = 'source';
+
+    // gulp.src('source/**/images/r_*.{jpg,png}', {base: 'source'})
+    gulp.src(source)
+    // .pipe(changed('build/**/r_*.{jpg,png}'))
+    .pipe(changed(source))
+    .pipe(imageResize({
+        width : 1920,
+        height: 500,
+        crop: true
+    }))
+    // .pipe(rename(function (path) { path.basename += '-large'; }))
+    .pipe(rename({suffix: '-large' }))
+    .pipe(gulp.dest( dist ))
+    .pipe(filelog());
+
+    gulp.src(source)
+    .pipe(changed(source))
+    .pipe(imageResize({
+        width : 800,
+        height: 300,
+        crop: true
+    }))
+    .pipe(rename({suffix: '-small' }))
+    .pipe(gulp.dest( dist ))
+    .pipe(filelog());
+})
+
+
+gulp.task (  'image-res' ,  function () { 
+  var  SrcGlobs    =  glob.sync('source/**/images/'); 
+  var  srcDir      =  'resp' ; 
+  var  DstDir      =  '' ; 
+  var  targetFile  =  '/r_*.{jpg,png}' ;
+
+  var  resizeLarge  =  { 
+    width        :  1920 , 
+    height       :  500 , 
+    gravity      :  'Center' , 
+    crop         :  true 
+  };
+
+  var resizeSmall = {
+    width        :  800 , 
+    height       :  300 , 
+    gravity      :  'Center' , 
+    crop         :  true 
+  };
+
+
+  for ( var  Item  in  SrcGlobs )  { 
+    var  SrcGlob  =  SrcGlobs [ Item ]  +  srcDir  +  targetFile ; 
+    var  DstGlob  =  SrcGlobs [ Item ]  +  DstDir ;
+
+    gulp.src(  SrcGlob  ) 
+      .pipe( changed (  DstGlob  )) 
+      .pipe( imageResize (  resizeLarge  )) 
+      .pipe( rename({suffix: '-large'}))
+      .pipe( gulp.dest (  DstGlob  )) 
+      .pipe( filelog ()); 
+
+     gulp.src(  SrcGlob  ) 
+      .pipe( changed (  DstGlob  )) 
+      .pipe( imageResize (  resizeSmall  )) 
+      .pipe( rename({suffix: '-small'}))
+      .pipe( gulp.dest (  DstGlob  )) 
+      .pipe( filelog ()); 
+        
+  } 
+});
+
+
+
+
+
 //glowne
 gulp.task('default', function (cb) {
     runSequence(
+        'image-res',
         'middleman-build',
         'css', 
     cb);

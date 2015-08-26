@@ -2,10 +2,66 @@
 # Compass
 ###
 
-set :markdown_engine, :kramdown
-set :markdown,    :auto_ids => false,
-                  :parse_block_html => true
+require 'slim'
 
+# set :markdown_engine, :kramdown
+# set :markdown,    :auto_ids => false,
+#                   :parse_block_html => false,
+#                   :layout_engine => :haml
+
+###
+# Markdown
+###
+class CustomMarkdown < Middleman::Extension
+  $markdown_options = {
+    autolink: true,
+    fenced_code_blocks: true,
+    disable_indented_code_blocks: true,
+    no_intra_emphasis: true,
+    strikethrough: true,
+    tables: true,
+    hard_wrap: true,
+    with_toc_data: false
+  }
+
+  def initialize(app, options_hash={}, &block)
+    super
+    app.set :markdown_engine, :redcarpet
+    app.set :markdown, $markdown_options
+  end
+
+  module Haml::Filters
+    remove_filter("Markdown")
+
+    module Markdown
+      include Haml::Filters::Base
+
+      def render text
+        markdown.render text
+      end
+
+      class MarkdownRenderer < Redcarpet::Render::HTML
+        def block_code(code, language)
+          Middleman::Syntax::Highlighter.highlight(code.force_encoding("UTF-8"), language)
+        end
+      end
+
+      private
+
+      def markdown
+        @markdown ||= Redcarpet::Markdown.new MarkdownRenderer.new($markdown_options), $markdown_options
+      end
+    end
+  end
+end
+
+::Middleman::Extensions.register(:custom_markdown, CustomMarkdown)
+
+activate :custom_markdown
+activate :syntax, :line_numbers => false
+
+
+########
 
 
 @site = "http://dasieprosciej.pl"
@@ -51,6 +107,7 @@ end
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "projekty"
+  blog.name = "projekty"
   blog.permalink = "projekty/{title}.html"
   # Matcher for blog source files
   blog.sources = "projekty/{title}.html"
@@ -108,7 +165,7 @@ helpers do
 
   def time_ago_in_words(from_time, options = {})
         distance_of_time_in_words(from_time, Time.now, options)
-      end
+  end
 end
 
 
@@ -195,7 +252,7 @@ configure :build do
   activate :minify_javascript, :inline => true
 
   # Enable cache buster
-  activate :asset_hash, :ignore => %r{^images/favicon/.*}
+  activate :asset_hash, :ignore => %r{^images/favicon/.*}, :ignore => [/^projekty/, /^blog/]
 
   # Use relative URLs
   activate :relative_assets

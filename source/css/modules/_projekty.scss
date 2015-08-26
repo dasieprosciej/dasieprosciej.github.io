@@ -3,8 +3,8 @@
 }
 
 .projekt {
-	height: 500px;
-	padding: 5em 0;
+	// height: 500px;
+	padding: 10em 0;
 	h2 {
 		padding-bottom: .5em;
 		font-size: 50px;
@@ -33,3 +33,67 @@
 .projekt-milush {
 	background:pink;
 }
+
+.bg-opacity {
+	// height: 500px;
+	position: relative;
+	// display: table;
+	width: 100%;
+	&:before {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background:#000;
+		// background: image_url('pattern.png') 0 0 repeat;
+		opacity: .7;
+		content:'';
+	}
+}
+
+.projekt-header {
+	position: relative;
+	z-index: 1;
+	padding-top: 5em;
+	padding-bottom: 5em;
+	color:$white-color;
+	text-align: center;
+	// display: table-cell;
+	vertical-align: middle;
+}
+
+article {
+	// max-width: 700px;
+	// margin-left: auto;
+	// margin-right: auto;
+	>* {
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.full-width {
+	max-width: none;
+}
+
+.two-columns {
+	@include clearfix;
+	p {
+		float: left;
+		width: 50%;
+		&:first-child {
+			padding-right: 1em;
+		}
+		&:last-child {
+			padding-left: 1em;
+		}
+	}
+}
+
+.bg-img {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+

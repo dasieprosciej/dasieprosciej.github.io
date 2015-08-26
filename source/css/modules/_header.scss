@@ -8,7 +8,12 @@
 
 .header--absolute {
 	position: absolute;
+	z-index: 2;
 	// top: 0;
+}
+
+.header--inverted {
+	border-bottom: none;
 }
 
 .logo {
@@ -19,8 +24,8 @@
 }
 
 .nav {
-	ul {
-		li {
+	// ul {
+		// li {
 			a {				
 				font-weight: 400;
 				font-family: $base-font-family;
@@ -29,9 +34,12 @@
 				&:hover {
 					color:$link-color;
 				}
+				.header--inverted & {
+					color:$white-color;
+				}
 			}
-		}
-	}
+		// }
+	// }
 	
 }
 

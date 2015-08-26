@@ -1,10 +1,8 @@
-
+//= require rimg-breakpoints
+//= require rimg.min
 //= require classie
 //= require menu_j
 //= require smoothscroll
-
-
-
 
 
 
@@ -26,4 +24,3 @@ if(cta_link_2) {
 	  ga('send', 'event', 'button', 'click', 'cta-2');
 	});
 };
-

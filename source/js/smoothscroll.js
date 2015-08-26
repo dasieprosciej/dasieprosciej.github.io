@@ -72,15 +72,35 @@ var linkHandler = function(ev) {
     });
 }
 
-// We look for all the internal links in the documents and attach the smoothscroll function
-document.addEventListener("DOMContentLoaded", function () {
+
+//obejscie na turbolinks
+var findall = function() {
     var internal = document.querySelectorAll('a[href^="#"]:not([href="#"])'), a;
     for(var i=internal.length; a=internal[--i];){
         a.addEventListener("click", linkHandler, false);
     }
+}
+
+
+// We look for all the internal links in the documents and attach the smoothscroll function
+document.addEventListener("DOMContentLoaded", function () {
+    // var internal = document.querySelectorAll('a[href^="#"]:not([href="#"])'), a;
+    // for(var i=internal.length; a=internal[--i];){
+        // a.addEventListener("click", linkHandler, false);
+    // }
+    findall();
 });
+
+
+//obejscie na turbolinks
+document.addEventListener("page:load", function () {
+    findall();
+});
+
+
 
 // return smoothscroll API
 return smoothScroll;
+
 
 })()

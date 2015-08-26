@@ -1,10 +1,23 @@
 <% wrap_layout :layout do %>
-  <%= partial 'partials/components/header', :locals => { :header_class => "" }%>
-  <section>
-    <div class="ct">
-      <div class="section section-content section-content--middle font-22">
+  <%= partial 'partials/components/header', :locals => { :header_class => "header--absolute header--inverted" }%>
+  
+  <article>
+ 
+
+	<div class="bg-img bg-opacity full-width" data-background-image="<%= imgpath('r_main.jpg') %>">
+		<h1 class="projekt-header"><%= current_page.data.title_single %> </h1>
+	</div>
+
+    <!-- <div class="ct"> -->
+    <!-- <%= current_article.url.chomp("/").split("/").last %> -->
+	
+	
+
+	<!-- <img data-src="main.jpg"/> -->
+      <!-- <div class="section section-content section-content--middle font-22"> -->
          <%= yield %>
-      </div>
+      <!-- </div> -->
+
       <ul class="high">
 	      <li>
 	        <% prev_article = current_article.previous_article %>
@@ -19,9 +32,7 @@
 	          <% end %>
 	      </li>
 	    </ul>
-    </div>
-  </section>
-  
+  </article>
 
   <%= partial 'partials/components/footer' %>
 <% end %>

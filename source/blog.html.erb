@@ -26,10 +26,13 @@ per_page: 10
             
               <% page_articles.each_with_index do |article, i| %>
                 <article class="grid-cell u-1of3">
-                  <img src="http://placehold.it/700x200" alt="">          
-                  <h2><%= link_to article.title, article %></h2>
-                  <time><%= article.date.strftime('%b %e %Y') %></time>
-<!--                   <% $current_listed_article = article %>
+                  <a href="<%= article.url %>">
+                    <img src="http://placehold.it/700x200" alt="">          
+                    <h2><%= article.title %></h2>
+                    <!-- <h2><%= link_to article.title, article %></h2> -->
+                    <time><%= article.date.strftime('%b %e %Y') %></time>
+                  </a>  
+<!--              <% $current_listed_article = article %>
                   <%= article.summary(50, ' ...') %>
                   <% $current_listed_article = nil %> -->
 

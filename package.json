@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "del": "^1.2.1",
-    "glob-all": "^3.0.1"
+    "glob-all": "^3.0.1",
+    "vinyl-paths": "^1.0.0"
   }
 }

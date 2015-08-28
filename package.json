@@ -12,11 +12,14 @@
     "gulp-filelog": "^0.4.1",
     "gulp-image-resize": "^0.6.0",
     "gulp-minify-css": "^1.2.0",
+    "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",
+    "gulp-responsive": "^1.2.1",
     "gulp-run-sequence": "^0.3.2",
     "gulp-sass": "^2.0.4"
   },
   "dependencies": {
+    "del": "^1.2.1",
     "glob-all": "^3.0.1"
   }
 }

@@ -10,6 +10,8 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     filelog = require('gulp-filelog'),
     glob = require('glob-all'),
+    plumber = require('gulp-plumber'),
+    responsive = require('gulp-responsive'),
     sass = require('gulp-sass');
 
 
@@ -142,6 +144,86 @@ gulp.task (  'image-res' ,  function () {
   } 
 });
 
+
+gulp.task ('responsive', function(){
+    var  SrcGlobs    =  glob.sync('source/**/'); 
+    var  srcDir      =  'original' ; 
+    var  DstDir      =  'images' ; 
+    var  targetFile  =  '/*.{jpg,png}' ;
+
+    // var dist = '.';
+
+    // gulp.src(  src, { base: './' }  ) 
+
+    for ( var  Item  in  SrcGlobs )  { 
+    var  SrcGlob  =  SrcGlobs [ Item ]  +  srcDir  +  targetFile ; 
+    var  DstGlob  =  SrcGlobs [ Item ]  +  DstDir ;
+
+
+    gulp.src(SrcGlob)
+    .pipe( changed (  DstGlob  )) 
+    .pipe(plumber())
+    .pipe(responsive({
+      '**/*.jpg' : 
+        [
+          {
+            width: 800,
+
+            rename: {
+              suffix: '-800'
+            }
+          },
+          {
+            width: 1500,
+            rename: {
+              suffix: '-1500'
+            }
+          },
+          {
+            width: 2000,
+            rename: {
+              suffix: '-2000'
+            }
+          }
+        ]
+    },
+    {
+      errorOnUnusedConfig: false,
+      errorOnUnusedImage: false,
+      errorOnEnlargement: false,
+      skipOnEnlargement: true
+    }
+
+    ))
+    .pipe( gulp.dest (  DstGlob ))
+   .pipe( filelog ()); 
+
+ } //zamkniecie for
+
+  // gulp.src('source/**/images/original/*.{jpg,png,jpeg}')
+  //   .pipe(changed('dist'))
+  //   .pipe(responsive({
+  //     '**/*.{jpg,png,jpeg}' : 
+  //     [
+  //       {
+  //         width: 200,
+  //         rename: {
+  //           suffix: '-200'
+  //         }
+  //       },
+  //       {
+  //         width: 400,
+  //         rename: {
+  //           suffix: '-400'
+  //         }
+  //       }
+  //     ]
+
+
+  //   }))
+  //   .pipe(gulp.dest('dist'));
+
+});
 
 
 

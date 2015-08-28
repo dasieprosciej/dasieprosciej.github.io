@@ -1,5 +1,6 @@
 .footer {
-	background:#eee;
+	background:#333;
+	background:#333 image_url('pattern.png') 0 0 repeat;
 }
 
 .footer__top {
@@ -11,7 +12,7 @@
 		padding-bottom: 3em;
 	}
 	@include mq($bp2){
-		padding-bottom: 6em;
+		padding-bottom: 8em;
 	}
 }
 
@@ -22,6 +23,7 @@
 
 .footer__contact {
 	width: 100%;
+	color:$white-color;
 	@include mq($bp1){
 		float: left;
 		width: 75%;
@@ -31,6 +33,7 @@
 		
 	} 
 	h4 {
+		color: $primary-color;
 		text-transform: none;
 		font-size: 18px;
 		font-weight: 700;
@@ -43,7 +46,11 @@
 .nav--footer {
 	width: 100%;
 	margin:2em 0 4em;
+	border-top: 1px solid #999;
+	padding-top: 10px;
 	@include mq($bp1){
+		border-top: 0;
+		padding-top: 0;
 		float: right;
 		margin: 0;
 		width: 25%;
@@ -60,6 +67,10 @@
 			display: inline-block;
 			margin-left: 1.5em;		
 		} 
+		a {
+			color:$white-color;
+			font-size: 14px;
+		}
 	}
 }
 

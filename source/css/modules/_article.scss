@@ -1,24 +1,46 @@
 .single {
+  font-size: 20px;
+  line-height: 1.4;
+  @include mq($bp2){
+    font-size: 22px;
+    line-height: 1.5;
+  } 
   .section-inner {
     max-width: 800px;
-    padding-left: 40px;
-    padding-right: 40px;
+    // padding-left: 10px;
+    // padding-right: 10px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 3em;
-    padding-bottom: 3em;
-    font-size: 22px;
+    padding:40px 10px;
+    // padding-top: 50px;
+    // padding-bottom: 50px;
+    @include mq($bp1){
+      padding:80px 40px;
+      // padding-left: 40px;
+      // padding-right: 40px;
+      // margin: 80px auto;
+    } 
+    // font-size: 22px;
   }
   p {
-    margin-bottom: 1em;
-    &:last-of-type {
+    margin-bottom: 30px;
+    &:last-child {
       margin-bottom: 0;
     }
   }
+  .align-center {
+    text-align: center;
+  }
+  .em {
+    font-style:italic;
+    font-weight: 300;
+  }
 }
 
-// section colors
 
+
+
+// section colors
 section{
   &.blue {
     background: $primary-color;
@@ -28,4 +50,159 @@ section{
     background: #f1f1f1;
     // color:$white-color; 
   }
+}
+
+
+//heading
+.single {
+  h1 {
+    
+  }
+  h2, .h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    color: rgba(#000,.8);
+    @include mq($bp2) {
+      font-size: 60px;
+      line-height: 1;
+      margin-bottom: 16px;
+      margin-top: 40px;
+    } 
+  }
+  h3, .h3 {
+    font-size: 26px;
+    font-weight: 700;
+    // text-transform: uppercase;
+    line-height: 1.2;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    color: rgba(#000,.8);
+    @include mq($bp2){
+      font-size: 36px;
+      margin-top: 40px;
+      margin-bottom: 10px;
+
+    } 
+  }
+  h4, .h4 {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    color: rgba(#000,.45);
+    @include mq($bp2){
+      font-size: 32px;
+      margin-top: 40px;
+    } 
+  }
+  h3+h2,
+  h4+h2 {
+    margin-top: -4px;
+    @include mq($bp2) { 
+      margin-top: -6px;
+    }
+  }
+  h2+h3,
+  h2+h4 {
+    margin-top: -8px;
+    @include mq($bp2){
+      margin-top: -10px;
+    } 
+  }
+  h3+h4,
+  h4+h3 {
+    margin-top: -6px;
+  }
+  
+  h2:first-child, .h2:first-child,
+  h3:first-child, .h3:first-child,
+  h4:first-child, .h4:first-child
+  {
+    margin-top: 0;
+  }
+
+}
+
+
+
+
+
+//lists
+.single ul,
+.single ol {
+  counter-reset: post;
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:before {
+      position: absolute;
+      left: 0;
+
+    }
+  }
+}
+
+.single {
+  ul {
+    li:before {
+      content:'\2022';   
+      padding-top: 1px;
+    }
+  }
+  ol {
+    li:before {
+      counter-increment: post;
+      content: counter(post) ".";
+
+    }
+  }
+}
+
+
+.single {
+ h2+ul, h2+ol,
+ h3+ul, h3+ol,
+ h4+ul, h4+ol {
+  margin-top: 10px;
+ } 
+}
+
+
+
+// kolumny
+.columns-2 {
+  @include mq($bp2){ 
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .grid-cell {
+      width: 50%;
+      font-size: 20px; 
+    }
+  }
+}
+
+
+
+//images
+
+.bg-img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 400px;
 }

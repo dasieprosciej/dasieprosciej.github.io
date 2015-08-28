@@ -33,9 +33,13 @@ ul.font-20 li {
 
 
 
-p {
-	line-height: 1.6;
-}
+	p {
+		line-height: 1.5;
+		@include mq($bp2){
+			line-height: 1.6;
+		} 
+	}
+
 
 .font-22 >p,
 .font-22 li

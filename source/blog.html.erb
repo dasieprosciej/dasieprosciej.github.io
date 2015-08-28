@@ -29,16 +29,11 @@ per_page: 10
                   <img src="http://placehold.it/700x200" alt="">          
                   <h2><%= link_to article.title, article %></h2>
                   <time><%= article.date.strftime('%b %e %Y') %></time>
-                  <% $current_listed_article = article %>
+<!--                   <% $current_listed_article = article %>
                   <%= article.summary(50, ' ...') %>
-                  <% $current_listed_article = nil %>
-                  <!-- <p><%=  article.data.summ  ? article.data.summ : article.summary(50, ' ...') %></p> -->
-                  <p>
+                  <% $current_listed_article = nil %> -->
 
-                  </p>
-
-                  <p>read this in <%= reading_time(article.body) %> </p>
-                  <!-- <p><%= time_ago_in_words(article.date)  %> ago</p> -->
+                  <p>Czas czytania: <%= reading_time(article.body) %> </p>
                 </article>
               <% end %>
             

@@ -6,6 +6,7 @@
 	border-bottom: 1px solid #ddd;
 }
 
+
 .header--absolute {
 	position: absolute;
 	z-index: 2;
@@ -36,6 +37,9 @@
 				}
 				.header--inverted & {
 					color:$white-color;
+					&:hover {
+						color:$link-color;		
+					}
 				}
 			}
 		// }

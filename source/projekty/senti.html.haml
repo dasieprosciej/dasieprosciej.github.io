@@ -5,12 +5,13 @@ date: 2015-01-01
 projekt_class: projekt-senti projekt--inverted
 ---
 
-.ct
-  %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem et ex quibusdam ratione illum eius, ab ut dignissimos possimus, debitis similique libero voluptatem accusamus quas sapiente cumque! Eos, reiciendis, deleniti.
+%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem et ex quibusdam ratione illum eius, ab ut dignissimos possimus, debitis similique libero voluptatem accusamus quas sapiente cumque! Eos, reiciendis, deleniti.
 
-  %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod corporis maxime voluptas, deleniti quibusdam dignissimos similique iusto autem obcaecati voluptatum voluptatem aut, hic eaque rem omnis sint quae nesciunt officiis.
+%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod corporis maxime voluptas, deleniti quibusdam dignissimos similique iusto autem obcaecati voluptatum voluptatem aut, hic eaque rem omnis sint quae nesciunt officiis.
 
-  = embed("https://www.youtube.com/watch?v=nGdsTy9y1_k")
+= embed("https://www.youtube.com/watch?v=nGdsTy9y1_k")
 
 
-  = image_set_tag 'r_main-small.jpg', { 'r_main-small.jpg' => '640w', 'r_main-large.jpg' => '1024w' }, sizes: '100vw', class: 'my-image'
+= image_set_tag 'r_main-small.jpg', { 'r_main-small.jpg' => '640w', 'r_main-large.jpg' => '1024w' }, sizes: '100vw', class: 'my-image'
+
+%img{'data-src' => imgpath('r_main.jpg'), class: 'full-width'}

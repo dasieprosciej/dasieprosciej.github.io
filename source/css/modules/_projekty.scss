@@ -66,29 +66,29 @@ article {
 	// margin-left: auto;
 	// margin-right: auto;
 	>* {
-		max-width: 700px;
-		margin-left: auto;
-		margin-right: auto;
+		// max-width: 700px;
+		// margin-left: auto;
+		// margin-right: auto;
 	}
 }
 
 .full-width {
-	max-width: none;
+	// max-width: none;
 }
 
-.two-columns {
-	@include clearfix;
-	p {
-		float: left;
-		width: 50%;
-		&:first-child {
-			padding-right: 1em;
-		}
-		&:last-child {
-			padding-left: 1em;
-		}
-	}
-}
+// .two-columns {
+// 	@include clearfix;
+// 	p {
+// 		float: left;
+// 		width: 50%;
+// 		&:first-child {
+// 			padding-right: 1em;
+// 		}
+// 		&:last-child {
+// 			padding-left: 1em;
+// 		}
+// 	}
+// }
 
 .bg-img {
 	background-repeat: no-repeat;

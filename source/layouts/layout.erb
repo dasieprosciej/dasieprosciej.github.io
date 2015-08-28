@@ -8,6 +8,9 @@
     <% else %>
       <%= stylesheet_link_tag 'style'%>  
     <% end %>
+    <% if content_for?(:art) %>
+      <%= yield_content :art %>
+    <% end %>
     <%= partial  '/partials/head/font_load' %>
     
   </head>

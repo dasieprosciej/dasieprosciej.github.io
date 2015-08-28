@@ -12,6 +12,8 @@ require 'slim'
 ###
 # Markdown
 ###
+set :haml, { :ugly => true, :format => :html5 }
+
 class CustomMarkdown < Middleman::Extension
   $markdown_options = {
     autolink: true,
@@ -155,12 +157,20 @@ helpers do
     content_tag(:div, content_tag(:iframe, nil, src: "//player.vimeo.com/video/#{vimeo_id}"), :class => "embed-container")
   end  
 
-  def reading_time(input)
-    words_per_minute = 180
+  def reading_time_eng(input)
+    words_per_minute = 200
     words = input.split.size
     minutes = (words/words_per_minute).floor
     minutes_label = minutes === 1 ? ' minute' : ' minutes'
     minutes > 0 ? "about #{minutes} #{minutes_label}" : 'less than 1 minute'
+  end
+
+  def reading_time(input)
+    words_per_minute = 180
+    words = input.split.size
+    minutes = (words/words_per_minute).floor
+    minutes_label = minutes === 1 ? ' min.' : ' min.'
+    minutes > 0 ? "około #{minutes} #{minutes_label}" : 'mniej niż 1 min.'
   end
 
   def time_ago_in_words(from_time, options = {})

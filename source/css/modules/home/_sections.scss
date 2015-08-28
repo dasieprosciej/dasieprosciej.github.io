@@ -8,6 +8,7 @@
 }
 
 .section-info {
+	position: relative;
 	h2 {
 		@include mq($bp2){
 			font-size: 32px;
@@ -19,6 +20,10 @@
 	}
 }
 
+.bg-white {
+	background:#fff;
+}
+
 .section h2 {
 	padding-bottom:1em;
 	line-height: 1.2;
@@ -26,13 +31,14 @@
 }
 
 .headline-img{
-	background:$primary-color url(/images/people.jpg) center center no-repeat;
-	background-size:cover;	
+	// background:$primary-color url(/images/people.jpg) center center no-repeat;
+	// background-size:cover;	
+	background: rgba(shade($primary-color,5),.7);
 	padding:5em 0;
 	
 	@include mq($bp2){
-		background:$primary-color url(/images/people.jpg) center center no-repeat;
-		background-size:cover;	
+		// background:$primary-color url(/images/people.jpg) center center no-repeat;
+		// background-size:cover;	
 	}  
 	h2 {
 		padding-bottom: 0;

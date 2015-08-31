@@ -7,24 +7,91 @@ header_class:
 
 - content_for :art do
   :css
-
+    .bg-pink {
+      background:pink;
+    }
   
-%header.article-head
 
-  .bg-img.full-width{'data-background-image' => imgpath('r_main.jpg')}
-    %h1.projekt-header Bebe
+
+-# %header.bg-img.align-bottom.align-center.bg-shade.color-inverted{'data-background-image' => imgpath('r_main.jpg')}
+-#   .section-inner.outset
+-#     %h1.h2 Tytuł posta może byc dość długi, nawet dłuższy niż się spodziewamy
+
+-# %header.bg-color.bg-blue.align-middle.align-center.bg-shade.color-inverted
+-#   .section-inner.outset
+-#     %h1.h2 Tytuł posta może byc dość długi, nawet dłuższy niż się spodziewamy
+
+%header
+  -# .section-inner.outset-img
+  -#   %figure
+  -#     = img('r_main-large.jpg')   
+  .section-inner    
+    %h1.h2 Tytuł posta może byc dość długi, nawet dłuższy niż się spodziewamy
 
 %section
   .section-inner
-    %h2.align-center Heading 1
-    %h4.align-center SubHeading
-    %br/
-    %br/
-    %p.align-center.em Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse repudiandae fugiat, eius ullam perspiciatis cum adipisci consectetur laudantium reiciendis ratione officiis labore eos earum a fuga minus nemo, mollitia eaque?
+    -# %h4 SubHeading
+    -# %h3 Heading 3
+    %p Lorem ipsum <a href="#">dolor sit amet</a>, consectetur adipisicing elit. Esse repudiandae fugiat, eius ullam perspiciatis cum adipisci consectetur laudantium reiciendis ratione officiis labore eos earum a fuga minus nemo, mollitia eaque?
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis quia numquam quos aut aspernatur quas a nesciunt, nulla amet sapiente quasi architecto doloribus. Ad numquam cumque voluptates, nihil. Consequuntur, aut!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, quis voluptatibus molestias. Delectus placeat dolorem alias ullam rem facilis assumenda quibusdam temporibus, aliquam iste, nostrum reprehenderit aspernatur atque odit illum.
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quas placeat enim minima illo reprehenderit perspiciatis, commodi animi optio provident beatae velit hic at iusto! Maiores tempore porro dicta repudiandae!
+    %figure
+      = img('r_main-large.jpg')
+      %figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius hic sint facilis obcaecati necessitatibus tempora amet excepturi eveniet nisi, error, vero quos, facere harum fugiat. Veniam autem quidem tenetur laudantium.
     %h3 Heading 3
+    %figure
+      = img('r_main-large.jpg')
+      %figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit.   
 
-    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ex beatae sequi, quidem odit animi, tempora magni assumenda fugit sunt tenetur vero itaque officiis nam repellat aspernatur dicta deserunt perspiciatis.
-    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi cupiditate, enim itaque fuga eaque possimus mollitia, nemo labore quos nihil nam alias! Possimus omnis aperiam quis inventore, labore eveniet et!
+%section.bg-img.bg-shade.color-inverted{'data-background-image' => imgpath('r_main.jpg')}
+  .section-inner
+    %h3 Title 3
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe dolorem aut, aperiam voluptatem, officia eligendi, excepturi laboriosam fuga aspernatur cumque dicta, dolores hic voluptas ea? Omnis, sunt? Consequuntur, rem, voluptatem.
+
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sequi a fugiat excepturi consectetur perspiciatis, ipsum illum temporibus delectus maiores iste rem minima veniam voluptates tempore maxime saepe. Nobis, labore.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia nobis non, molestiae libero quisquam. Officia distinctio corrupti aspernatur quos unde doloribus odio similique excepturi! Incidunt ad officia ut, nostrum ex.
+
+%section
+  .section-inner.outset-img
+    %figure
+      = img('r_main-small.jpg')
+      %figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ad earum modi atque ullam illo deserunt. Nisi totam excepturi qui, porro omnis, eaque suscipit perferendis. Autem corporis perspiciatis incidunt, quam.
+
+  .section-inner.outset-img
+    %figure
+      = img('r_main-small.jpg')
+      %figcaption ala ma kota
+
+  .section-inner.fullwidth
+    %figure
+      = img('r_main-large.jpg')
+      %figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ad earum modi atque ullam illo deserunt. Nisi totam excepturi qui, porro omnis, eaque suscipit perferendis. Autem corporis perspiciatis incidunt, quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ad earum modi atque ullam illo deserunt. Nisi totam excepturi qui, porro omnis, eaque suscipit perferendis. Autem corporis perspiciatis incidunt, quam.
+
+  .section-inner.outset-img
+    %figure
+      = img('r_main-large.jpg')
+      %figcaption Jakis figcaption tutaj bedzie
+
+  .section-inner      
+    -# %h2 Heading 2
+    -# %figure
+    -#   = img('kwiat.jpg')
+    -#   %figcaption Jakis figcaption tutaj bedzie
+
+    %figure.img-left-outset
+      = img('clouds.jpg')
+      %figcaption Jakis figcaption tutaj bedzie  
+    %p Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing</a> elit. Veniam ex beatae sequi, quidem odit animi, tempora magni assumenda fugit sunt tenetur vero itaque officiis nam repellat aspernatur dicta deserunt perspiciatis.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus maxime corrupti, ducimus, officiis libero repudiandae totam consequuntur est earum unde adipisci corporis minus consequatur asperiores omnis eos alias, doloribus tempora.
+    
+    %figure.img-left
+      = img('clouds.jpg')
+      %figcaption Jakis figcaption tutaj bedzie  
+    %p Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing</a> elit. Veniam ex beatae sequi, quidem odit animi, tempora magni assumenda fugit sunt tenetur vero itaque officiis nam repellat aspernatur dicta deserunt perspiciatis.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus maxime corrupti, ducimus, officiis libero repudiandae totam consequuntur est earum unde adipisci corporis minus consequatur asperiores omnis eos alias, doloribus tempora.
+
+    %figure.img-right
+      = img('kwiat.jpg')
+      %figcaption Jakis figcaption tutaj bedzie 
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi cupiditate, enim itaque fuga eaque possimus mollitia, nemo labore quos nihil nam alias! Possimus omnis aperiam quis inventore, labore eveniet et!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut nulla explicabo, quaerat excepturi quasi alias, illum ea amet reprehenderit deleniti quo, quod fuga ad voluptatem natus temporibus quia molestiae sequi?
     %h2.align-center Heading 2
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis adipisci laborum ut magnam maxime voluptas asperiores cum minus ex vero veritatis minima, dolorem velit aut non, dolor, voluptatum aliquam labore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate doloremque rerum maxime inventore suscipit, voluptatum consectetur, porro eaque accusantium, repellendus ipsa veritatis. In minima expedita quibusdam voluptas, nihil saepe culpa.
     %blockquote
@@ -61,16 +128,31 @@ header_class:
       ## Heading 2
     
 
-%section.blue
+%section.bg-blue.color-inverted
   .section-inner
-    %p.align-center.h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse repudiandae fugiat, eius ullam perspiciatis cum adipisci consectetur laudantium reiciendis ratione officiis labore eos earum a fuga minus nemo, mollitia eaque?
+    %p.align-center.h4.em Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse repudiandae fugiat, eius ullam perspiciatis cum adipisci consectetur laudantium reiciendis ratione officiis labore eos earum a fuga minus nemo, mollitia eaque?
+    %ul
+      %li Adiran
+      %li Beahjk
+    %p.color-inverted  Lorem <a href="#">ipsum dolor</a> sit amet, consectetur adipisicing elit. Iure, sequi nam et atque vero rerum repellendus, ipsa deleniti labore omnis officia facere harum dolorum tempore fugiat blanditiis adipisci non aliquid.  
 
 %section
   .section-inner
-    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse repudiandae fugiat, eius ullam perspiciatis cum adipisci consectetur laudantium reiciendis ratione officiis labore eos earum a fuga minus nemo, mollitia eaque?
-    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ex beatae sequi, quidem odit animi, tempora magni assumenda fugit sunt tenetur vero itaque officiis nam repellat aspernatur dicta deserunt perspiciatis.
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id minus, doloribus rerum libero nihil alias maxime earum dolorum adipisci nobis consequatur aliquid minima deleniti dignissimos perferendis eum quas quibusdam laudantium.
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus sint, ipsa qui. Suscipit sint impedit, dolor unde facere tempora beatae odit necessitatibus veritatis, hic quod a delectus eveniet, porro? Aspernatur!
 
-%section.blue
+  .section-inner.outset
+    %p.columns-text-2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod amet quis, cupiditate. Eaque harum rerum delectus error voluptates magnam minus, voluptas, maxime suscipit tenetur ut, nobis asperiores quidem autem unde! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi velit, praesentium aspernatur laudantium ut! Placeat id eos eveniet blanditiis sit adipisci porro repellendus beatae at est. Possimus, fugit. Doloremque, soluta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ad esse dolorem facilis, modi rerum veniam sed. Reiciendis, facilis! Assumenda dolore repellat officia earum magnam numquam id voluptatum veniam! Sequi.
+
+  .section-inner   
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, quae fugit illum odit excepturi voluptatum quia, labore qui reprehenderit vero, asperiores quibusdam. Unde saepe vitae pariatur eveniet eos vel repellendus.
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, maiores tenetur libero. Sint eum, ducimus nobis possimus fuga veritatis ea odit quibusdam! Non beatae consectetur alias ex aliquid, culpa dolorem.
+
+%section.bg-grey
+  .section-inner
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse repudiandae fugiat, eius ullam perspiciatis cum adipisci consectetur laudantium reiciendis ratione officiis labore eos earum a fuga minus nemo, mollitia eaque?
+
+%section.bg-blue.color-inverted
   .section-inner
     .columns-2.grid-m.grid-m--gutters-l
       .grid-cell
@@ -78,15 +160,55 @@ header_class:
       .grid-cell
         %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores maxime nulla vitae dicta, debitis, minima sapiente velit minus eum consequuntur possimus eius animi voluptatum molestias placeat pariatur quaerat reiciendis cupiditate.  
 
-%section.grey
-  .section-inner
-    %br/
-    %br/
-    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, aspernatur, blanditiis. Id quaerat dolores reiciendis dignissimos, odio veritatis asperiores ut et rem a alias quos iusto voluptas quasi tenetur non.    
-    %br/
-    %br/
+%section.bg-grey
+  .section-inner.outset
+    %p.columns-text-2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, aspernatur, blanditiis. Id quaerat dolores reiciendis dignissimos, odio veritatis asperiores ut et rem a alias quos iusto voluptas quasi tenetur non. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias amet ut sapiente deserunt, totam nemo fuga eaque, iste tempore. Incidunt ullam ipsum sapiente dolor voluptatem sint, reprehenderit nobis. Dolorum, eum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni vero omnis ea fugit facilis ex cumque quidem aut commodi nobis reiciendis, ab labore quibusdam ullam quas, velit doloremque nam dolorem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta exercitationem aut fugiat animi, iure numquam reiciendis nam totam maiores libero ex quas deleniti sequi similique quibusdam ipsum blanditiis alias. Autem.
+
+
 
 %section
   .section-inner
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse repudiandae fugiat, eius ullam perspiciatis cum adipisci consectetur laudantium reiciendis ratione officiis labore eos earum a fuga minus nemo, mollitia eaque?
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ex beatae sequi, quidem odit animi, tempora magni assumenda fugit sunt tenetur vero itaque officiis nam repellat aspernatur dicta deserunt perspiciatis.
+  .section-inner.fullwidth-pad
+    .columns-text-img.align-middle.text-25.img-75
+      .column-img  
+        %figure
+          = img('clouds.jpg')
+      .column-text
+        :markdown
+          + Lista 1
+          + Lista 2
+          + Lista 3
+
+%section.bg-blue.color-inverted
+  .section-inner.outset
+    .columns-text-img.align-middle
+      .column-img  
+        %figure
+          = img('clouds.jpg')
+      .column-text
+        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate impedit autem iste libero nihil maxime itaque accusantium odit, id debitis in, neque ex quo soluta, tempore natus illo quaerat consectetur.
+  .section-inner
+    .columns-text-img.text-50.img-33
+      .column-img  
+        -# %figure
+        -#   = img('clouds.jpg')
+      .column-text
+        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate impedit autem iste libero nihil maxime itaque accusantium odit, id debitis in, neque ex quo soluta, tempore natus illo quaerat consectetur.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

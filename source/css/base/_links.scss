@@ -20,8 +20,8 @@ p>a {
 	font-size: inherit;
 	transition:all .25s;
 	&:hover {
-		border-bottom-color: $link-color;
-		color:$link-color;
+		border-bottom-color: $link-color !important;
+		color:$link-color !important;
 	}
 }
 

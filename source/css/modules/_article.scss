@@ -5,23 +5,41 @@
     font-size: 22px;
     line-height: 1.5;
   } 
-  .section-inner {
-    max-width: 800px;
-    // padding-left: 10px;
-    // padding-right: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    padding:40px 10px;
-    // padding-top: 50px;
-    // padding-bottom: 50px;
+  section,
+  header {
+    padding-top: 40px;
+    padding-bottom: 40px;
     @include mq($bp1){
-      padding:80px 40px;
-      // padding-left: 40px;
-      // padding-right: 40px;
-      // margin: 80px auto;
+      padding-top: 80px;
+      padding-bottom: 80px;
     } 
-    // font-size: 22px;
   }
+  header {
+    padding-bottom: 0;
+  }
+  header.bg-img,
+  header.bg-color {
+    padding-bottom: 40px;
+    @include mq($bp1){
+      padding-bottom: 80px;
+    } 
+  }
+  section:first-of-type{
+    padding-top: 40px;
+  }
+  .bg-img + section:first-of-type {
+    @include mq($bp1) {
+      padding-top: 80px;
+    } 
+  }
+
+
+  // .inverted {
+  //   h1,h2,h3,h4,p,li,a {
+  //     color:$white-color;
+  //     border-bottom-color: $white-color;
+  //   }
+  // }
   p {
     margin-bottom: 30px;
     &:last-child {
@@ -31,72 +49,147 @@
   .align-center {
     text-align: center;
   }
-  .em {
+  .em,
+  .em > * {
     font-style:italic;
-    font-weight: 300;
+    font-weight: 300 !important;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
   }
+}
+
+//br
+p + br {
+  display: none;
+}
+
+.section-inner + .section-inner { //troche eksperyment, dlatego ze zabiera margin p jesli p jest ostatnie w section-inner
+  margin-top: 30px;
+}
+
+.section-inner.outset + .section-inner,   //gdy outset jest w srodku, dotyczy tekstu, zobaczymy jak bedzie img
+.section-inner + .section-inner.outset {
+  margin-top: 30px;
+  @include mq($bp1){
+    margin-top: 60px;  
+  } 
+  
+}
+
+
+.section-inner > :last-child {
+  margin-bottom: 0;
+}
+
+.section-inner {
+  max-width: 800px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  @include mq($bp1){
+    padding-left: 40px;
+    padding-right: 40px;
+  } 
+  @include mq($bp2) {
+    // width: 800px;
+  } 
+}
+.section-inner {
+  &.outset {  
+    max-width: $max-width;
+  }
+  &.outset-img {
+    // max-width: $max-width;
+    max-width: 1020px; //max-width(1100) - 40 pd 40 pd
+    padding: 0;
+  }
+  &.fullwidth-pad {
+    max-width: none;
+  }
+  &.fullwidth {
+    max-width: none;
+    padding: 0;
+  }
+
 }
 
 
 
 
-// section colors
-section{
-  &.blue {
-    background: $primary-color;
-    color:$white-color;
-  }
-  &.grey {
-    background: #f1f1f1;
-    // color:$white-color; 
-  }
-}
+
+
 
 
 //heading
 .single {
   h1 {
-    
+    position: relative;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.1;
+    // letter-spacing: -0.02em;
+    color: rgba(#000,.8);
+    margin-top: 20px;
+    margin-bottom: 12px;
+    @include mq($bp2) {
+      font-size: 60px;
+      line-height: 1;
+      margin-top: 40px;
+      margin-bottom: 16px;
+    } 
   }
+
   h2, .h2 {
     font-size: 36px;
     font-weight: 700;
     line-height: 1.1;
-    letter-spacing: -0.02em;
-    margin-top: 20px;
-    margin-bottom: 12px;
+    // letter-spacing: -0.02em;
     color: rgba(#000,.8);
     @include mq($bp2) {
-      font-size: 60px;
+      font-size: 50px;
       line-height: 1;
-      margin-bottom: 16px;
+    } 
+  }
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    @include mq($bp2){
       margin-top: 40px;
+      margin-bottom: 16px;
     } 
   }
   h3, .h3 {
     font-size: 26px;
     font-weight: 700;
-    // text-transform: uppercase;
     line-height: 1.2;
-    margin-top: 20px;
-    margin-bottom: 6px;
     color: rgba(#000,.8);
     @include mq($bp2){
       font-size: 36px;
+    } 
+  }
+  h3 {
+    margin-top: 20px;
+    margin-bottom: 6px;
+    @include mq($bp2){
       margin-top: 40px;
       margin-bottom: 10px;
-
     } 
   }
   h4, .h4 {
     font-size: 24px;
     font-weight: 300;
     line-height: 1.2;
-    margin-top: 20px;
-    margin-bottom: 2px;
     color: rgba(#000,.45);
     @include mq($bp2){
       font-size: 32px;
+    } 
+  }
+  h4 {
+    margin-top:20px;
+    margin-bottom: 2px;
+    @include mq($bp2){
       margin-top: 40px;
     } 
   }
@@ -119,6 +212,7 @@ section{
     margin-top: -6px;
   }
   
+  h1:first-child, .h1:first-child,
   h2:first-child, .h2:first-child,
   h3:first-child, .h3:first-child,
   h4:first-child, .h4:first-child
@@ -178,8 +272,209 @@ section{
  h4+ul, h4+ol {
   margin-top: 10px;
  } 
+ h2+figure,
+ h3+figure,
+ h4+figure {
+  margin-top: 15px;
+ }
 }
 
+
+
+
+
+
+
+
+
+// section colors
+  .bg-blue {
+    background: $primary-color;
+  }
+  .bg-grey {
+    background: #f1f1f1;
+    // color:$white-color; 
+  }
+  .single {
+    .color-inverted {
+        color:$white-color;
+      h1,h2,h3,h4,p,li,a,.h2,.h3,.h4 {
+        color:$white-color;
+        border-bottom-color: $white-color;
+      }
+    }
+  }
+
+  //vertical align
+  .align-middle,
+  .align-top,
+  .align-bottom {
+    display: flex;
+  }
+  .align-middle {
+    align-items:center;
+  }
+  .align-top {
+    align-items: flex-start;
+  }
+  .align-bottom {
+    align-items: flex-end;
+  }
+
+
+  .bg-shade {
+    position: relative;
+    &:before {
+      content:'';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background:rgba(#000,.4);
+    }
+    > .section-inner {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+
+//images
+.section-inner {
+  figure {
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+    &.img-left,
+    &.img-right {
+      width: 50%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      @include mq($max-width){
+        margin-bottom: 10px;  
+      }
+      
+    }
+    &.img-left,
+    &.img-left-outset {
+      float: left;
+      margin-right: 30px;
+
+    }
+    &.img-left-outset {
+      width: 100%;
+      float: none;
+      margin-bottom: 20px;
+      margin-top: 10px;
+      @include mq($max-width) {
+        float: left;
+        width: 75%;
+        margin-bottom: 10px;
+        margin-left: -150px;
+      } 
+      figcaption {
+        @include mq($max-width) {
+          position: relative;
+          width: 100%;
+          text-align: center;
+          left: 0;
+          margin-top: 10px;
+          &:before {
+            content:none;
+          }
+        }
+      }
+    }
+    &.img-right {
+      float: right;
+      margin-left: 30px;
+      figcaption {
+        @include mq($max-width) {
+          left: auto;
+          right: -172px;
+          text-align: left;
+          &:before {
+            margin-left: auto;
+            margin-right: 75%;
+          }
+        } 
+      }
+    }
+  }
+
+  figcaption {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    margin-top: 10px;
+    top: 0;
+    letter-spacing: .01rem;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 13px;
+    line-height: 1.4;
+    color: rgba(0,0,0,0.6);
+    outline: 0;
+    @include mq($max-width) {
+      position: absolute;
+      margin-top: 0;
+      text-align: right;
+      width: 150px;
+      left: -172px;
+      &:before {
+        width: 25%;
+        margin-left: 75%;
+        border-top: 1px solid rgba(0,0,0,0.15);
+        display: block;
+        content: "";
+        margin-bottom: 10px;
+      }
+    } 
+  }
+  &.fullwidth,
+  &.fullwidth-pad,
+  &.outset-img {
+    img {
+      width: 100%;
+    }
+    figcaption {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      left: 0;
+      margin-top: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      &:before {
+        content:none;
+      }
+      @include mq($max-width) {
+        padding-left: 0;
+        padding-right: 0;
+      } 
+    }
+  } 
+  &.fullwidth,
+  &.fullwidth-pad {
+    figcaption {
+      max-width: $max-width;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  } 
+}
+
+
+
+
+.bg-img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 500px;
+}
 
 
 // kolumny
@@ -196,13 +491,160 @@ section{
   }
 }
 
-
-
-//images
-
-.bg-img {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  min-height: 400px;
+.columns-text-2 {
+  @include mq($bp1){ 
+    -webkit-column-count:2;
+    column-count:2;
+    font-size: 18px;
+    -webkit-column-gap:50px;
+    column-gap:50px;
+  }  
 }
+
+.columns-text-3 {
+  @include mq($bp1){ 
+    // width:130%;
+    // margin-left: -15%;
+    // margin-right: -15%;
+    -webkit-column-count:3;
+    column-count:3;
+    font-size: 16px;
+    -webkit-column-gap:30px;
+    column-gap:30px;
+  }  
+}
+
+
+.columns-rule {
+  @include mq($bp1){
+    -webkit-column-rule: 3px dotted #ddd;
+    column-rule: 1px dotted #ddd;
+  } 
+}
+
+//font size, glownie po to by zmienic text na kolumny, ale moze nie byc konieczne
+.font-size-16 {
+  @include mq($bp1) {
+    font-size: 16px;
+  } 
+}
+
+.font-size-18 {
+  @include mq($bp1) {
+    font-size: 18px;
+  } 
+}
+
+.font-size-20 {
+  @include mq($bp1){
+    font-size: 20px;
+  } 
+}
+
+.font-size-22 {
+  @include mq($bp2){
+    font-size: 22px;
+  } 
+}
+
+// kolumny text image lub text sam
+
+.columns-text-img {
+  //jesli chodzi o align to moze wykorzystac bg-middle, bg-top, ale zmienic nazwe na align.
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .column-text {
+    @include mq($bp1){
+      width: 48%; 
+    } 
+  }
+  .column-img {
+    @include mq($bp1){
+      width: 48%;  
+    } 
+  }
+
+  &.text-left {
+    .column-text {
+      @include mq($bp1) {
+        order:-1;
+      } 
+    }
+  }
+
+  &.text-25 {
+    .column-text {
+      @include mq($bp1) {
+        width: 25%;
+      }
+    } 
+  }
+  &.img-75 {
+    .column-img {
+      @include mq($bp1) {
+        width: 70%;
+      } 
+    }
+  }
+  
+  &.text-33 {
+    .column-text {
+      @include mq($bp1) {
+        width: 33%;
+      }
+    } 
+  }
+  &.img-66 {
+    .column-img {
+      @include mq($bp1) {
+        width: 60%;
+      } 
+    }
+  }
+
+  //50% to standard , czyli bez niczego to po 50, jesli tylko jedno ustawie, drugie zostaje 50%
+  
+  &.text-66 {
+    .column-text {
+      @include mq($bp1) {
+        width: 60%;
+      }
+    } 
+  }
+  &.img-33 {
+    .column-img {
+      @include mq($bp1) {
+        width: 33%;
+      } 
+    }
+  }
+
+  &.text-75 {
+    .column-text {
+      @include mq($bp1) {
+        width: 70%;
+      }
+    } 
+  }
+  &.img-25 {
+    .column-img {
+      @include mq($bp1){
+        width: 25%;
+      } 
+    }
+  }
+
+  //usuniecie marzy z figure gdy na duzym
+  figure {
+    @include mq($bp1){
+      margin-bottom: 10px;
+      margin-top: 10px;
+    } 
+  } 
+}
+
+
+
+
+

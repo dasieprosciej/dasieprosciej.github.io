@@ -9,6 +9,8 @@ gem "middleman-autoprefixer"
 gem "middleman-blog"
 gem "middleman-deploy"
 gem "slim"
+gem "fastimage"
+gem 'image_size'
 # gem 'sass-media_query_combiner'
 gem 'redcarpet'
 gem "middleman-syntax"

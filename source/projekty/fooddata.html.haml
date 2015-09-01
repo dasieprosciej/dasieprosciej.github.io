@@ -31,7 +31,24 @@ header: header--inverted
   .section-inner
     %h2 Adrian
 
+= @site + imgpath('img-main-small.jpg')
+= FastImage.size(@site + imgpath('img-main-small.jpg'))
 
+%p
+= Dir.pwd
+%p
+  = Dir.pwd + imgpath('img-main-large.jpg')
+  = FastImage.size('../projekty/fooddata/images/img-main-small.jpg')
+%p
+  = FastImage.size('/Users/adrian/Projekty/img-main-small.jpg')
+-# = ImageSize.path(@site + imgpath('img-main-small.jpg')).size
+
+
+-# - width, height = FastImage.size(@site + imgpath('img-main-small.jpg'), :raise_on_failure => true)
+-# = "Width: #{width}"
+-# = "Height: #{height}"
+-# = ((height.to_f / width ) * 100).to_s + "%"
+  
 %section.bg-color.align-middle.bg-blue.bg-height-2.color-inverted
   .section-inner
     .columns-text-img.text-50.text-left

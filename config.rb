@@ -4,6 +4,7 @@
 
 require 'slim'
 
+
 # set :markdown_engine, :kramdown
 # set :markdown,    :auto_ids => false,
 #                   :parse_block_html => false,
@@ -65,9 +66,11 @@ activate :syntax, :line_numbers => false
 
 ########
 
-
-@site = "http://dasieprosciej.pl"
+#  nie zmieniac, host do produkcji jest w build ponizej, ten sluzy mi do fastimage
+@site = "http://localhost:4567"
 set :var, @site
+
+set :root, "http://dasieprosciej.pl"
 # Change Compass configuration
 # compass_config do |config|
 #   config.output_style = :compact
@@ -250,7 +253,7 @@ set :images_dir, 'images'
 configure :build do
   # For example, change the Compass output style for deployment
   # activate :minify_css
-  
+
   # ignore 'projekty.html.erb'
   ignore 'test.html.erb'
   # ignore 'blog.html.erb'

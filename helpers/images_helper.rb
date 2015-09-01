@@ -116,5 +116,8 @@ module ImagesHelper
   #   content += content_tag(:figcaption, caption)
   #   content_tag :figure, content
   # end
-
+      # def get_size(name)
+      #   main_abs_path = File.join(app.source_dir,name)
+      #   FastImage.size(main_abs_path, :raise_on_failure => true)
+      # end
 end

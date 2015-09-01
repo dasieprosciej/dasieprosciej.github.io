@@ -30,8 +30,10 @@
 	} 
 	@include mq($bp2){
 		width: 25%;
-		
 	} 
+	a {
+		letter-spacing: 0.05em;
+	}
 	h4 {
 		color: $primary-color;
 		text-transform: none;
@@ -46,10 +48,11 @@
 .nav--footer {
 	width: 100%;
 	margin:2em 0 4em;
-	border-top: 1px solid #999;
+	// border-top: 1px solid #999;
 	padding-top: 10px;
+	line-height: 1;
 	@include mq($bp1){
-		border-top: 0;
+		// border-top: 0;
 		padding-top: 0;
 		float: right;
 		margin: 0;
@@ -68,9 +71,30 @@
 			margin-left: 1.5em;		
 		} 
 		a {
-			color:$white-color;
-			font-size: 14px;
+			display: inline-block;
+			padding: 0;
+			padding-bottom: 5px;
+			color:shade($white-color,50);
+			font-size: 16px;
+			&:hover {
+				color:$white-color;
+			}
+			&:after {
+				background: $white-color;
+			}
 		}
+	}
+}
+.nav--footer .active {
+	a { 
+		&:after {
+			height: 1px;
+			opacity: 1;
+			transform: translateY(0px);
+		}
+		// border-color:$text-color;
+		color:$white-color;
+
 	}
 }
 

@@ -1,95 +1,52 @@
 ---
 title: da się prościej - FoodData
 title_index: Pan Kanapka Online
-title_single: FoodData<br> czyli Pan Kanapka Online
 date: 2015-02-01
 projekt_class: projekt-food projekt--inverted
+header: header--inverted
 ---
 
-
-:markdown
-  # Adrian Level Heading
-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias impedit maxime tenetur nobis, ratione ipsum unde eveniet! Hic voluptate reiciendis assumenda sed nesciunt consequatur placeat corporis necessitatibus? Cum, labore, non. 
-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ducimus et eaque rem nam. Nam quas a, sequi animi voluptate veritatis, libero deserunt nemo, nostrum incidunt nulla fugit eius, vero.
-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt veniam eius obcaecati, assumenda culpa consequuntur provident ad, earum labore inventore, alias est nam nulla odio soluta ipsum fuga, non possimus?
-
-  = img('r_main-large.jpg')
-
-      
-  ~~http://example.com~~
-  
-  ```javascript
-  function test() {
-    console.log("notice the blank line before this function?");
-  }
-  ```
-  
-  ```ruby
-  def my_cool_method(message)
-    puts message
-  end
-  ```
-
-<h1> afer </h1>
-
-= code('ruby') do
-  puts "hello"
-
-  
-
-#example
-  :code
-    # lang: ruby
-
-    def foo
-      puts 'bar'
-    end
-
     
 
+-# %header.bg-img.bg-height-2.align-bottom.bg-shade-more.color-inverted.align-bottom{'data-background-image' => imgpath('img-main.jpg')}
+-#   .section-inner
+-#     %h1 FoodData 
+-#     %h4 czyli Pan Kanapka Online
 
-
-=img('r_main-large.jpg', class: 'full-width', alt:'dsds')
-
-%img{'data-src' => imgpath('r_main.jpg')}
-
-%section
-  %ul.test_klasy
-    %li down
-    %li bekhr
-
-.bg-img.full-width{'data-background-image' => imgpath('r_main.jpg')}
-  %h1.projekt-header Bebe
-
-
-
-%section.two-columns.ct
-  %p 
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda nemo expedita nostrum sapiente, esse. Nostrum unde ab deleniti! Temporibus unde vero, fugiat voluptatum aperiam animi eum mollitia adipisci sequi porro?
-  %p
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eum dolorum placeat illum atque voluptate rem officiis, doloribus, perferendis distinctio molestias. Veniam dolore non sed porro asperiores ab eaque quas.
+%header.bg-color.bg-blue.bg-height-1.align-bottom.align-bottom
+  .section-inner
+    %h1 FoodData 
+    %h4 czyli Pan Kanapka Online
+-# %header
+-#   .section-inner
+-#     %h1 FoodData 
+-#     %h4 czyli Pan Kanapka Online    
 
 %section
-  :markdown
-    # Adrian
-    
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis quod alias nemo, illo laboriosam, esse placeat dolorum! In dicta, velit eum, quia quam pariatur, similique labore minima debitis nihil molestias.    
+  .section-inner
+    = figure(:responsive,'img-main.jpg', 'kot ma ale')
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam provident sunt sit praesentium totam nisi, itaque earum! Culpa dolores libero aut accusantium exercitationem, doloremque magnam in qui ipsum, sunt voluptates.
 
-    > Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet, velit! Officia ad laboriosam commodi quos mollitia obcaecati harum amet natus molestiae eveniet, illo veniam animi iure, sint recusandae corrupti!
+= bgimg('img-main.jpg', class: 'bg-shade-more color-inverted bg-height-1 align-bottom') do
+  .section-inner
+    %h2 Adrian
 
-%h1 To jest nowy tytul
-%p Bede testowal br
-%br/
-%p jak to zrobic fuck
-%p ot tak po prostu, wystarczy wstawic %br/
-  
-%h1 A teraz test jak to zrobic w markdown
-:markdown
-  
-  break robi sie wewnatrz p poprzez nowa linie
-  ale to nie daje odstepu na stronie
-  trezeba dodac na koncy dwie spacje by byla nowa linia  
-  i teraz jest break ale wszystko to w jednym p
+
+%section.bg-color.align-middle.bg-blue.bg-height-2.color-inverted
+  .section-inner
+    .columns-text-img.text-50.text-left
+      .column-img
+      .column-text
+        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt consequatur tenetur, corporis repellat mollitia optio fugit incidunt, illum modi voluptatibus a dignissimos! Itaque placeat, debitis tenetur tempora hic, animi nemo!
+
+%section
+  .section-inner
+    :markdown
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias impedit maxime tenetur nobis, ratione ipsum unde eveniet! Hic voluptate reiciendis assumenda sed nesciunt consequatur placeat corporis necessitatibus? Cum, labore, non. 
+
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ducimus et eaque rem nam. Nam quas a, sequi animi voluptate veritatis, libero deserunt nemo, nostrum incidunt nulla fugit eius, vero.
+
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt veniam eius obcaecati, assumenda culpa consequuntur provident ad, earum labore inventore, alias est nam nulla odio soluta ipsum fuga, non possimus?
+
+   
+

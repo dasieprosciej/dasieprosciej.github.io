@@ -2,7 +2,7 @@
 title: Example Article
 date: 2015-08-01
 tags: example
-header_class: 
+header: header--inverted 
 ---
 
 - content_for :art do
@@ -17,16 +17,18 @@ header_class:
 -#   .section-inner.outset
 -#     %h1.h2 Tytuł posta może byc dość długi, nawet dłuższy niż się spodziewamy
 
--# %header.bg-color.bg-blue.align-middle.align-center.bg-shade.color-inverted
--#   .section-inner.outset
--#     %h1.h2 Tytuł posta może byc dość długi, nawet dłuższy niż się spodziewamy
-
-%header
-  -# .section-inner.outset-img
-  -#   %figure
-  -#     = img('r_main-large.jpg')   
-  .section-inner    
+%header.bg-color.bg-height-2.bg-blue.align-middle.align-center.bg-shade.color-inverted
+  .section-inner.outset
+    %br/
     %h1.h2 Tytuł posta może byc dość długi, nawet dłuższy niż się spodziewamy
+    %br/
+
+-# %header
+-#   .section-inner.outset-img
+-#     %figure
+-#       = img('r_main-large.jpg')   
+-#   .section-inner    
+-#     %h1.h2 Tytuł posta może byc dość długi, nawet dłuższy niż się spodziewamy
 
 %section
   .section-inner
@@ -98,6 +100,27 @@ header_class:
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, neque vel assumenda suscipit eveniet sequi ipsa, laboriosam incidunt facilis repudiandae ipsum nostrum, iste tempore corporis sint eos quae aliquam, ad.
       %cite
         Bebe
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos esse nulla, explicabo itaque beatae doloribus accusantium voluptates saepe nesciunt odio minima doloremque ex tenetur, facere illo quidem amet obcaecati vitae!
+
+    %blockquote.pullquote
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quos nam veniam numquam earum quo ipsum ducimus impedit distinctio at error quod illo, consequuntur magni vitae culpa fugiat deserunt cumque.    
+      %cite Adrian Sowirka
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere deleniti corporis recusandae sed qui labore laboriosam. Assumenda maiores beatae recusandae mollitia accusantium id deserunt sapiente laborum velit a veritatis, veniam.
+    %p.font-size-larger Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta nesciunt ex ullam quibusdam modi 
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, itaque. Fugit labore rerum vero iusto, rem quisquam commodi eaque hic, fuga modi ratione perspiciatis inventore ipsum tempore error. Pariatur, perferendis.
+    %blockquote.pull-right.font-size-16.no-quote
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero perferendis temporibus in
+      %cite Adrian
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui esse, dignissimos quidem. Vitae, libero. Numquam quis quod ipsam, similique aperiam praesentium deserunt tempora quas assumenda. Voluptatibus cum, ducimus voluptate quasi?  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates reprehenderit, quidem eum dolor! Animi accusantium ex ratione unde praesentium nihil, a corporis quibusdam esse laudantium voluptate mollitia illo maiores impedit?  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores debitis voluptas rem officiis, pariatur porro laboriosam sit, quaerat reprehenderit aliquid vitae, ad harum laudantium fugit sed sint nostrum delectus aperiam.
+
+
+
+  .section-inner.outset-img
+    %figure
+      = img('clouds.jpg')
+      %figcaption Jakis figcaption tutaj bedzie  
+  
+  .section-inner
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, dolores, commodi? Fugit eveniet vel deserunt molestias suscipit, reprehenderit doloremque delectus dolorem enim voluptas repellendus a debitis, explicabo numquam, quis. Nostrum.
     %h3 To bedzie heading numer trzy
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi sed tempora, veritatis voluptas! Totam numquam nesciunt aliquam quasi quidem in, reiciendis minus commodi, et exercitationem eveniet non aut, voluptate velit.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore recusandae, beatae architecto explicabo doloremque facilis autem dolorem, libero provident. Eius tempore ea assumenda iure facilis quaerat tenetur similique necessitatibus quis?

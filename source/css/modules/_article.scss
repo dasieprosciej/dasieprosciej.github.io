@@ -27,13 +27,14 @@
   section:first-of-type{
     padding-top: 40px;
   }
-  .bg-img + section:first-of-type {
+  .bg-img + section:first-of-type,
+  .bg-color + section:first-of-type {
     @include mq($bp1) {
       padding-top: 80px;
     } 
   }
 
-
+  
   // .inverted {
   //   h1,h2,h3,h4,p,li,a {
   //     color:$white-color;
@@ -134,7 +135,7 @@ p + br {
     margin-top: 20px;
     margin-bottom: 12px;
     @include mq($bp2) {
-      font-size: 60px;
+      font-size: 66px;
       line-height: 1;
       margin-top: 40px;
       margin-bottom: 16px;
@@ -193,6 +194,13 @@ p + br {
       margin-top: 40px;
     } 
   }
+  h1+h4 {
+    margin-top: -12px;
+    @include mq($bp2){
+      margin-top: -16px;
+    } 
+  }
+
   h3+h2,
   h4+h2 {
     margin-top: -4px;
@@ -204,7 +212,7 @@ p + br {
   h2+h4 {
     margin-top: -8px;
     @include mq($bp2){
-      margin-top: -10px;
+      margin-top: -12px;
     } 
   }
   h3+h4,
@@ -305,6 +313,12 @@ p + br {
     }
   }
 
+
+
+
+
+
+
   //vertical align
   .align-middle,
   .align-top,
@@ -322,7 +336,8 @@ p + br {
   }
 
 
-  .bg-shade {
+  .bg-shade,
+  .bg-shade-more {
     position: relative;
     &:before {
       content:'';
@@ -336,6 +351,11 @@ p + br {
     > .section-inner {
       position: relative;
       z-index: 1;
+    }
+  }
+  .bg-shade-more {
+    &:before {
+      background:rgba(#000,.6);
     }
   }
 
@@ -473,8 +493,25 @@ p + br {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  min-height: 500px;
+  // min-height: 500px;
 }
+
+//bg section height
+  .bg-height-1 {
+    min-height: 300px;
+    @include mq($bp1) {
+      min-height: 500px;  
+    } 
+    
+  }
+
+  .bg-height-2 {
+    min-height: 400px;
+    @include mq($bp1){
+      min-height: 700px;  
+    } 
+  }
+
 
 
 // kolumny
@@ -541,9 +578,10 @@ p + br {
   } 
 }
 
-.font-size-22 {
+.font-size-larger {
   @include mq($bp2){
-    font-size: 22px;
+    font-size: 28px;
+    line-height: 1.4;
   } 
 }
 
@@ -645,6 +683,47 @@ p + br {
 }
 
 
+//blockquotes
+blockquote {
+  &.pullquote {
+    margin:43px 0;
+    padding: 0;
+    // padding-left: 20px;
+    // margin-left: -20px;
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: center;
+    border: none;
+    letter-spacing: .01rem;
+    font-weight: 300;
+    font-style: italic;
+    background: none;
+    @include mq($bp2) {
+      font-size: 32px; //wtedy gdy jest zmiana p z 20 na 22
+    } 
+    @include mq($max-width) {
+      margin: 48px -150px;
+      // font-size: 32px;
+      padding: 0;
+    }  
+  }
+  &.pull-right {   
+    width: 100%;
+    @include mq($bp1) {
+      line-height: 1.4;
+      float: right;
+      margin-bottom: 20px;
+      margin-left: 30px;
+      width: 40%;
+    }
+    @include mq($bp2) {
+      margin-right: -150px; 
+    } 
+  }
+  &.no-quote {
+    background: none;
+  }
+}
 
 
 

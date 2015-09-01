@@ -31,8 +31,9 @@
 }
 
 .headline-img{
-	// background: rgba(shade($primary-color,5),.7);
-	background:image_url('pattern.png') 0 0 repeat;
+	background: rgba(shade($primary-color,5),.7);
+
+	// background:image_url('pattern.png') 0 0 repeat;
 	padding:5em 0;
 	
 	@include mq($bp2){
@@ -47,10 +48,11 @@
 }
 
 .section-discover {
-	background:$heading-color;
+	// background:$heading-color;
+	background:#f5f5f2;
 	@include mq($bp2){
-		background: $heading-color url(/images/ocean.jpg) left center no-repeat;
-		background-size: cover;	
+		// background: $heading-color url(/images/ocean.jpg) left center no-repeat;
+		// background-size: cover;	
 	} 
 	p {
 		color:$white-color;
@@ -82,10 +84,12 @@
 .section-cta {
 	padding: 5em 0;
 	text-align: center;
-	background: $link-color;
+	// background: $link-color;
 	p {
 		font-size: 22px;
-		color:$white-color;
+		// color:$white-color;
+		color:$text-color;
+		color:#999;
 		@include mq($bp2){
 			font-size: 26px;
 		}

@@ -17,16 +17,19 @@
 }
 
 .btn-cta {
-	background:#fff;
+	// background:#fff;
+	background: $link-color;
+	color:#fff;
 	font-size:16px;
 	height:50px;
 	line-height: 50px;
 	// padding-top: 1px;
 	letter-spacing: .05em;
-	color:$link-color;
+	
 	// text-transform: uppercase;
 	padding-left: 1.5em;
 	padding-right: 1.5em;
+	
 	border-radius:2em;
 	margin-top:2em;	
 	@include mq($bp1){

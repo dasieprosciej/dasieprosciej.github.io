@@ -5,20 +5,29 @@
 	ul {
 		li {
 			display: block;
+			margin-bottom: 20px;
 			&:last-child {
 				margin-bottom: 0;
 			}
 			@include mq($bp2){
 				margin-bottom: 0;
 				display: inline-block;
+				margin-right: 25px;
+				&:last-child {
+					margin-right: 0;
+					a {
+						padding-right: 0;
+					}
+				}
 			} 
 			a {
-				padding:1em;
-				color:#ccc;
+
+				// padding:5px 0;
+				// color:#ccc;
 				display: inline-block;
 				@include mq($bp2){
 					text-transform: none;
-					color:$text-color;
+					// color:$text-color;
 					display: block;
 				} 
 			}
@@ -38,9 +47,9 @@
 	z-index: 1;
 	background:rgba(#fff,.99);
 	border-bottom: 1px solid #ddd;
-	padding:4em 1em;
-	transform:translateY(-110%);
-	transform: translate3d(0,-110%,0);
+	padding:4em 2em;
+	transform:translateY(-100%);
+	transform: translate3d(0,-100%,0);
 	transition: transform 0.4s;
 	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 	@include mq($bp2){
@@ -73,20 +82,27 @@
 
 
 #menu-link {
-	position: absolute;
-	right: 20px;
-	top: 20px;
-	z-index: 5;
+	// position: absolute;
+	// right: 20px;
+	// top: 20px;
+	z-index: 999;
+	font-size: 14px;
 	@include mq($bp1){
-		right: 40px;
+		// right: 40px;
 	}
 	@include mq($bp2){
 		display: none;
 	}
+	&:hover {
+		color:inherit;
+	}
 }
 
+
 #menu-link span {
-	font-family: $base-font-family;
+
+	// transition: all 1s ease;
+	// font-family: $base-font-family;
 }
 
 #menu-link span,
@@ -105,6 +121,9 @@
 	height: 4px;
 	width: 28px;
 	background:$heading-color;
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .show-menu .hamburger div {
@@ -117,6 +136,7 @@
 	}
 	&:nth-of-type(3) {
 		transform: rotate(-45deg) translate3d(6px, -5px, 0);
+		// margin-bottom: 0;
 		// background:#fff;
 
 	}

@@ -1,31 +1,29 @@
 <% wrap_layout :layout do  %>
-  <%= partial 'partials/components/header', :locals => { :header_class => "header--absolute header--inverted" } %>
-  <article>
-    <div class="bg-img bg-opacity full-width" data-background-image="<%= imgpath('r_main.jpg') %>">
-      <h1 class="projekt-header">
-        <%= current_page.data.title_single %>
-      </h1>
-    </div>
+  <%= partial 'partials/components/header', :locals => { :header_class => current_article.data.header } %>
+  <article class="single">
+    
     <%= yield %>
-    <ul class="high">
-      <li class="prevnav">
-        <% prev_article = current_article.previous_article %>
-        <% if prev_article %>
-          <a href="<%= prev_article.url %>" rel="prev" title="Previous Article: #{prev_article.title}">
-            <%= prev_article.title %>
-          </a>
-        <% end %>
+  </article>  
 
-      </li>
-      <li class="nextnav">
-        <% next_article = current_article.next_article %>
-        <% if next_article %>
-          <a href="<%= next_article.url %>" rel="next" title="Next Article: #{next_article.title}">
-            <%= next_article.title %>
-          </a>
-        <% end %>
-      </li>
-    </ul>
-  </article>
+  <ul class="high">
+    <li class="prevnav">
+      <% prev_article = current_article.previous_article %>
+      <% if prev_article %>
+        <a href="<%= prev_article.url %>" rel="prev" title="Poprzedni projekt: <%= prev_article.data.title_index %>">
+          <%= prev_article.title %>
+        </a>
+      <% end %>
+
+    </li>
+    <li class="nextnav">
+      <% next_article = current_article.next_article %>
+      <% if next_article %>
+        <a href="<%= next_article.url %>" rel="next" title="Następny projekt: <%= next_article.data.title_index %>">
+          <%= next_article.title %>
+        </a>
+      <% end %>
+    </li>
+  </ul>
+
   <%= partial 'partials/components/footer' %>
 <% end %>

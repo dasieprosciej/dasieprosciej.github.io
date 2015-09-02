@@ -3,7 +3,7 @@ title: da się prościej - FoodData
 title_index: Pan Kanapka Online
 date: 2015-02-01
 projekt_class: projekt-food projekt--inverted
-header: header--inverted
+header: 
 ---
 
     
@@ -13,48 +13,67 @@ header: header--inverted
 -#     %h1 FoodData 
 -#     %h4 czyli Pan Kanapka Online
 
-%header.bg-color.bg-blue.bg-height-1.align-bottom.align-bottom
-  .section-inner
-    %h1 FoodData 
-    %h4 czyli Pan Kanapka Online
--# %header
+-# %header.bg-color.bg-blue.bg-height-1.align-bottom.align-bottom
 -#   .section-inner
 -#     %h1 FoodData 
--#     %h4 czyli Pan Kanapka Online    
+-#     %h4 czyli Pan Kanapka Online
+%header
+  .section-inner
+    %h1 FoodData 
+    %h4 czyli Pan Kanapka Online    
 
 %section
   .section-inner
-    = figure(:responsive,'img-main.jpg', 'kot ma ale')
-    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam provident sunt sit praesentium totam nisi, itaque earum! Culpa dolores libero aut accusantium exercitationem, doloremque magnam in qui ipsum, sunt voluptates.
+    %p 
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, reiciendis doloribus obcaecati voluptate sit illo autem quod veritatis aliquam quis repellendus culpa soluta numquam expedita eum earum vero officia ullam?
+    %p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae impedit ducimus qui repudiandae repellat iure deserunt quam labore magnam, commodi expedita officiis reiciendis! Voluptatem, harum autem sapiente, hic repudiandae nostrum?
+    = figure_r(:responsive,'img-jezioro.jpg', 'To jest figcaption', 'To jest alt', class: 'img-left-outset')
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit eveniet quam ducimus expedita et, eius harum corporis reprehenderit magnam laudantium facilis provident facere inventore, a, explicabo. Delectus at, eos obcaecati!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam unde suscipit quaerat quia animi excepturi sint odit, porro at tempore distinctio natus a consequatur recusandae ut sit commodi deleniti perferendis.
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta excepturi qui, aliquid alias assumenda voluptatem asperiores quod, cum error mollitia voluptatum quasi, fugiat ipsam iure quibusdam dolor deleniti sunt earum!
+    = figure_r(:responsive,'img-jezioro.jpg', nil, nil, class: 'img-right')
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam provident sunt sit praesentium totam nisi, itaque earum! Culpa dolores libero aut accusantium exercitationem, doloremque magnam in qui ipsum, sunt voluptates.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas temporibus ut deleniti dolore, officia culpa ducimus, quia odit tempora! Similique ex voluptate blanditiis! Consequatur quia voluptatem, dicta sunt maxime mollitia!
+    
+  .section-inner.outset-img
+    = figure_r(:l,'img-jezioro.jpg', 'asasa')
 
-= bgimg('img-main.jpg', class: 'bg-shade-more color-inverted bg-height-1 align-bottom') do
+  .section-inner  
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure tempore deleniti ipsa eos consequuntur, ducimus mollitia eum repellat consectetur alias, voluptatem nulla dolorem voluptatibus quo, ex tenetur nobis hic! Ipsum?  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem voluptates facere repellendus quibusdam repudiandae odit voluptatem assumenda natus enim nisi qui neque voluptatibus, nostrum eaque sint nemo placeat? Numquam, cum.
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, distinctio. Id aliquam, dicta nobis voluptatibus sapiente, repellendus nesciunt commodi fuga temporibus rem. Eligendi illum vero vitae, magni sint voluptatibus inventore?
+
+= bgimg('img-jezioro.jpg', class: 'bg-img bg-shade-more color-inverted bg-height-2 align-middle') do
   .section-inner
-    %h2 Adrian
+    %h2.h1 Adrian
 
-= @site + imgpath('img-main-small.jpg')
-= FastImage.size(@site + imgpath('img-main-small.jpg'))
+-# = FastImage.size(@site + imgpath('img-main-small.jpg'), :raise_on_failure => true)
+-# - width, height = FastImage.size(@site + imgpath('img-main-small.jpg'), :raise_on_failure => true)
+-# = number_to_percentage(height.to_f / width * 100, precision: 4)
+-# = number_to_percentage(width)
+-# = number_to_percentage(width).is_a?(String)
 
-%p
-= Dir.pwd
-%p
-  = Dir.pwd + imgpath('img-main-large.jpg')
-  = FastImage.size('../projekty/fooddata/images/img-main-small.jpg')
-%p
-  = FastImage.size('/Users/adrian/Projekty/img-main-small.jpg')
 -# = ImageSize.path(@site + imgpath('img-main-small.jpg')).size
+-# = width.instance_of? Fixnum
+-# = width.to_s.instance_of? String
 
-
+-# = img_ratio('img-main-small.jpg')
+ 
 -# - width, height = FastImage.size(@site + imgpath('img-main-small.jpg'), :raise_on_failure => true)
 -# = "Width: #{width}"
 -# = "Height: #{height}"
 -# = ((height.to_f / width ) * 100).to_s + "%"
-  
+
+-# = Dir.pwd
+
+
 %section.bg-color.align-middle.bg-blue.bg-height-2.color-inverted
   .section-inner
     .columns-text-img.text-50.text-left
       .column-img
       .column-text
-        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt consequatur tenetur, corporis repellat mollitia optio fugit incidunt, illum modi voluptatibus a dignissimos! Itaque placeat, debitis tenetur tempora hic, animi nemo!
+        %h2 asdfkshfkdhs
+= bgimg('img-main.jpg', class: 'bg-img bg-height-3 bg-shade-more align-middle color-inverted') do
+  .section-inner
+    %h1 adfsdf
+
 
 %section
   .section-inner

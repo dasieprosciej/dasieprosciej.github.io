@@ -152,21 +152,21 @@ gulp.task ('responsive', function(){
 
             rename: {
               prefix: 'img-',
-              suffix: '-800'
+              suffix: '-s'
             }
           },
           {
             width: 1500,
             rename: {
               prefix: 'img-',
-              suffix: '-1500'
+              suffix: '-l'
             }
           },
           {
             width: 2000,
             rename: {
               prefix: 'img-',
-              suffix: '-2000'
+              suffix: '-xl'
             }
           }
         ]

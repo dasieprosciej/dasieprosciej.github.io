@@ -260,17 +260,23 @@ p + br {
 
 .single {
   ul {
-    li:before {
+    &>li:before {
       content:'\2022';   
       padding-top: 1px;
     }
   }
   ol {
-    li:before {
+    &>li:before {
       counter-increment: post;
       content: counter(post) ".";
 
     }
+  }
+  li > ul,
+  li > ol,
+  {
+  margin-top:10px;
+  
   }
 }
 

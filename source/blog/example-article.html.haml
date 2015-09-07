@@ -1,8 +1,10 @@
 ---
-title: Example Article
+title: 10 najlepszych sposobow na uproszczenie twojej strony www
 date: 2015-08-01
 tags: example
 header: header--inverted 
+summary: To jest podsumowanie tego posta, nie wiem na ile liter to ma byc 
+thumbnail: img-main-thumbnail.jpg
 ---
 
 - content_for :art do
@@ -37,14 +39,14 @@ header: header--inverted
     %p Lorem ipsum <a href="#">dolor sit amet</a>, consectetur adipisicing elit. Esse repudiandae fugiat, eius ullam perspiciatis cum adipisci consectetur laudantium reiciendis ratione officiis labore eos earum a fuga minus nemo, mollitia eaque?
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis quia numquam quos aut aspernatur quas a nesciunt, nulla amet sapiente quasi architecto doloribus. Ad numquam cumque voluptates, nihil. Consequuntur, aut!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, quis voluptatibus molestias. Delectus placeat dolorem alias ullam rem facilis assumenda quibusdam temporibus, aliquam iste, nostrum reprehenderit aspernatur atque odit illum.
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quas placeat enim minima illo reprehenderit perspiciatis, commodi animi optio provident beatae velit hic at iusto! Maiores tempore porro dicta repudiandae!
-    %figure
-      = img('r_main-large.jpg')
-      %figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    = figure_r(:s, 'img-main.jpg', 'figcaption', nil, class: 'img-left')
+    -# %figure
+    -#   = img('r_main-large.jpg')
+    -#   %figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius hic sint facilis obcaecati necessitatibus tempora amet excepturi eveniet nisi, error, vero quos, facere harum fugiat. Veniam autem quidem tenetur laudantium.
     %h3 Heading 3
-    %figure
-      = img('r_main-large.jpg')
-      %figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit.   
+  .section-inner.outset-img  
+    = figure_r(:s, 'img-main.jpg', 'lorem ipsum kdh dkshfksh kshf')
 
 %section.bg-img.bg-shade.color-inverted{'data-background-image' => imgpath('r_main.jpg')}
   .section-inner
@@ -69,10 +71,11 @@ header: header--inverted
       = img('r_main-large.jpg')
       %figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ad earum modi atque ullam illo deserunt. Nisi totam excepturi qui, porro omnis, eaque suscipit perferendis. Autem corporis perspiciatis incidunt, quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ad earum modi atque ullam illo deserunt. Nisi totam excepturi qui, porro omnis, eaque suscipit perferendis. Autem corporis perspiciatis incidunt, quam.
 
-  .section-inner.outset-img
-    %figure
-      = img('r_main-large.jpg')
-      %figcaption Jakis figcaption tutaj bedzie
+  .section-inner
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quos dignissimos ipsam, fuga, accusantium animi error, ex eum nulla explicabo deleniti ratione rerum vel laboriosam voluptates minima aspernatur quo enim.
+    = figure(:thumb, 'img-main.jpg')
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis quod nulla fugit natus illo. Quaerat officia vel, beatae eveniet sequi aperiam aliquam praesentium maiores magnam voluptatibus fugit at, pariatur facere.
+    
 
   .section-inner      
     -# %h2 Heading 2

@@ -145,6 +145,16 @@ helpers do
     current_page.url == page ? 'class="active"' : ''
   end
 
+  def smart_truncate(s, opts = {})
+    opts = {:words => 12}.merge(opts)
+    if opts[:sentences]
+      return s.split(/\.(\s|$)+/)[0, opts[:sentences]].map{|s| s.strip}.join('. ') + '.'
+    end
+    a = s.split(/\s/) # or /[ ]+/ to only split on spaces
+    n = opts[:words]
+    a[0...n].join(' ') + (a.size > n ? '...' : '')
+  end
+  
   def embed(youtube_url)
     youtube_id = youtube_url.split("=").last
     # %Q{<iframe title="YouTube video player" width="240" height="390" src="http://www.youtube.com/embed/#{ youtube_id }" frameborder="0" allowfullscreen></iframe>}
@@ -264,36 +274,36 @@ configure :build do
   # Minify Javascript on build
   activate :minify_javascript, :inline => true
 
-  activate :imageoptim do |options|
-    # Use a build manifest to prevent re-compressing images between builds
-    options.manifest = true
+  # activate :imageoptim do |options|
+  #   # Use a build manifest to prevent re-compressing images between builds
+  #   options.manifest = true
 
-    # Silence problematic image_optim workers
-    options.skip_missing_workers = true
+  #   # Silence problematic image_optim workers
+  #   options.skip_missing_workers = true
 
-    # Cause image_optim to be in shouty-mode
-    options.verbose = false
+  #   # Cause image_optim to be in shouty-mode
+  #   options.verbose = false
 
-    # Setting these to true or nil will let options determine them (recommended)
-    options.nice = true
-    options.threads = true
+  #   # Setting these to true or nil will let options determine them (recommended)
+  #   options.nice = true
+  #   options.threads = true
 
-    # Image extensions to attempt to compress
-    options.image_extensions = %w(.png .jpg .gif .svg)
+  #   # Image extensions to attempt to compress
+  #   options.image_extensions = %w(.png .jpg .gif .svg)
 
-    options.allow_lossy = true
+  #   options.allow_lossy = true
 
-    # Compressor worker options, individual optimisers can be disabled by passing
-    # false instead of a hash
-    options.advpng    = { :level => 4 }
-    options.gifsicle  = { :interlace => false }
-    options.jpegoptim = { :strip => ['all'], :max_quality => 100 }
-    options.jpegtran  = { :copy_chunks => false, :progressive => true, :jpegrescan => true }
-    options.optipng   = { :level => 6, :interlace => false }
-    options.pngcrush  = { :chunks => ['alla'], :fix => false, :brute => false }
-    options.pngout    = false
-    options.svgo      = false
-  end
+  #   # Compressor worker options, individual optimisers can be disabled by passing
+  #   # false instead of a hash
+  #   options.advpng    = { :level => 4 }
+  #   options.gifsicle  = { :interlace => false }
+  #   options.jpegoptim = { :strip => ['all'], :max_quality => 100 }
+  #   options.jpegtran  = { :copy_chunks => false, :progressive => true, :jpegrescan => true }
+  #   options.optipng   = { :level => 6, :interlace => false }
+  #   options.pngcrush  = { :chunks => ['alla'], :fix => false, :brute => false }
+  #   options.pngout    = false
+  #   options.svgo      = false
+  # end
 
   # Enable cache buster
   activate :asset_hash, :ignore => %r{^images/favicon/.*}, :ignore => [/^projekty/, /^blog/]

@@ -72,11 +72,13 @@ module ImagesHelper
   # end
 
   def figure(type, content_url, caption=nil, alt=nil, opts={})
-    if !(type == :s || type == :m || type == :l || type == :xl || type== :responsive) && opts[:type].blank?
+    if !(type == :s || type == :m || type == :l || type == :xl || type== :responsive || type== :thumb) && opts[:type].blank?
       raise ArgumentError.new("You should pass :type option key explicitly, because you have passed #{type} type other than :s, :m, :l, :xl or :responsive.")
     end
 
     case type
+    when :thumb
+      suffix = '-thumbnail'  
     when :s
       suffix = '-s'
     when :m 
@@ -113,11 +115,13 @@ module ImagesHelper
 
 # figure with aspect ratio
   def figure_r(type, content_url, caption=nil, alt=nil, options={})
-    if !(type == :s || type == :m || type == :l || type == :xl || type== :responsive) && options[:type].blank?
+    if !(type == :s || type == :m || type == :l || type == :xl || type== :responsive || type== :thumb)  && options[:type].blank?
       raise ArgumentError.new("You should pass :type option key explicitly, because you have passed #{type} type other than :s, :m, :l, :xl or :responsive.")
     end
 
     case type
+    when :thumb
+      suffix = '-thumbnail'
     when :s
       suffix = '-s'
     when :m 

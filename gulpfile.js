@@ -13,9 +13,16 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     responsive = require('gulp-responsive'),
     del = require('del'),
+    newer = require('gulp-newer'),
     sass = require('gulp-sass');
 
 
+// dla pluginu z grunt
+require('gulp-grunt')(gulp);
+
+gulp.task('grunt-images', function() {
+    gulp.start('grunt-imageoptim');
+});
 
 gulp.task('middleman-build', function (done) {
     return cp.spawn('middleman', ['build'], {stdio: 'inherit'})
@@ -116,7 +123,8 @@ gulp.task('remote', function (cb) {
 // });
 
 gulp.task( 'regenerate', function(){
-  var src = 'source/**/images/img-*.{jpg,jpeg,png}';
+  var src = ['source/projekty/**/images/img-*.{jpg,jpeg,png}', 'source/blog/**/images/img-*.{jpg,png,jpeg}'];
+
   del(src);
   // del(src, function (err, paths) {
   //   console.log('Deleted files/folders:\n', paths.join('\n'));
@@ -142,8 +150,8 @@ gulp.task ('responsive', function(){
 
 
     gulp.src(SrcGlob)
-    .pipe( changed (  DstGlob  )) 
-    .pipe(plumber())
+    .pipe(newer(DstGlob)) 
+    // .pipe(plumber())
     .pipe(responsive({
       '**/*.jpg' : 
         [
@@ -167,6 +175,15 @@ gulp.task ('responsive', function(){
             rename: {
               prefix: 'img-',
               suffix: '-xl'
+            }
+          },
+          {
+            width: 600,
+            height: 400,
+            crop: true,
+            rename: {
+              prefix: 'img-',
+              suffix: '-thumbnail'
             }
           }
         ]
@@ -197,7 +214,18 @@ gulp.task('images', function (cb) {
 gulp.task('default', function (cb) {
     runSequence(
         'images',
+        'middleman-build',        
+        'css', 
+    cb);
+});
+
+
+// produckja dodatkowo optymalizuje images w buildzie, a moze lepiej w source -> wtedy middleman build nie nadpisze zoptymalizowanych img
+gulp.task('production', function (cb) {
+    runSequence(
+        'images',
         'middleman-build',
+        'grunt-images',
         'css', 
     cb);
 });

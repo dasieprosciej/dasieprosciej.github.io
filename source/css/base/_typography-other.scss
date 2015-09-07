@@ -1,8 +1,8 @@
 p,
 p>a,
 li {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;	
+	// -webkit-font-smoothing: antialiased;
+	// -moz-osx-font-smoothing: grayscale;	
 }
 
 p {
@@ -12,8 +12,8 @@ p {
 em {
   font-style:italic;
   font-weight: 300 !important;
-  -webkit-font-smoothing: auto !important;
-  -moz-osx-font-smoothing: auto !important;
+  // -webkit-font-smoothing: auto !important;
+  // -moz-osx-font-smoothing: auto !important;
 }    
 
 .font-18,

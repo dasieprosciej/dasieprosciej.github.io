@@ -1,0 +1,9 @@
+%header{:class => "header #{header_class ||= ""}"}
+  %a.logo{:href => "/"}
+    - if header_class.include?("header--inverted")
+      = image_tag('logo-inverted.svg')
+    - else
+      = image_tag('logo.svg')
+  %nav.nav.nav--main
+    %ul
+      = partial 'partials/components/nav'

@@ -43,7 +43,7 @@ text-size-adjust : 100%;
 
 body {
 @include font-size($base-font-size);
-font-family : $alt-font-family;
+font-family : $serif-font;
 font-weight: 400;
 line-height : 1.6;
 color : $text-color;

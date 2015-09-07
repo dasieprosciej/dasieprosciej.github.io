@@ -1,0 +1,268 @@
+.container {
+  overflow: hidden;
+}
+.container-inner {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left:10px; 
+  padding-right: 10px;
+
+  @include mq($bp1){
+    padding-left:40px;
+    padding-right:40px;
+  }
+}
+
+.stripe,
+.container-stripe {
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.stripe {
+  height: 100%;
+  position: fixed;
+  transform: translateZ(0);
+  background: #CFEBE4;
+
+  // top: 0;
+  // bottom: 0;
+  left: 10px;
+  right: 10px;
+  z-index: -1;
+}
+
+.hero {
+  padding-top: 100px;
+  padding-bottom: 350px;
+  @include mq($bp2){
+    margin-left: -100px;  
+  } 
+  
+}
+
+.hero-title {
+  // color: #fff;
+  // padding-top: 100px;
+  padding-bottom: 75px;
+  span {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+    line-height: 0.8;
+    &:nth-child(1){
+      // border-width:10px
+    }
+    &:nth-child(2){
+      // border-width:6px
+    }
+    &:nth-child(3){
+      // border-width:3px
+    }        
+  }
+}
+
+.hero-subtitle {
+  padding-left: 20px;
+  padding-right: 20px;
+  // color:shade($white-color,20);
+  font-size: 18px;
+  line-height: 1.4;
+
+}
+
+//////////////////////////////////
+.content {
+  p {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.content {
+  position: relative;
+  // background:url('../images/dsp_footer.svg') top center no-repeat;
+  @include mq($bp3){ 
+    &:before {
+      content:'';
+      position: absolute;
+      // width: 500%;
+      width: 300%;
+      height: 500px;
+      background:#CFEBE4;
+      background:#f5f5fd;
+      background:#f5f5f5 url('../images/dsp_footer.svg') left bottom no-repeat;
+      // background-size:cover;
+      z-index: -1;
+      left: -100%;
+      top: 250px;
+
+    }
+  }
+}
+.content-block {
+  @include mq($bp2) {
+    display: flex;
+    flex-wrap:nowrap;
+  } 
+  
+}
+.block-img,
+.block-heading,
+.block-text {
+  @include mq($bp2) {
+    width: 50%;
+  } 
+}
+
+
+.block-heading {
+  background: #111;
+  background: #fff;
+  box-shadow: inset 0 0 0 8px #fff,inset 0 0 0 9px #999;
+  width: 100%;
+  padding: 100px;
+  @include mq($bp2){
+    width: 50%;
+    height: 500px;
+    order:-1;
+  } 
+  h2 {
+    // color:tint($heading-color,70);
+  }
+}
+
+.block-text {
+  background:#fff;
+  // border-right: 1px solid #ddd;
+  // border-bottom: 1px solid #ddd;
+  font-size:18px;
+  @include mq($bp2) {
+    order:2;
+    padding:100px 50px;
+  } 
+}
+.block-img-1,
+.block-heading {
+  @include mq($bp2){
+    // border:10px solid #fff;  
+  } 
+}
+
+
+.block-heading {
+  border-right: 0;
+  border-left: 0;
+  // box-shadow: inset 0 0 0px 4px #111, inset 0 0 0px 6px #fff;
+}
+
+// .block-img-1,
+.block-text {
+  @include mq($bp2){
+    position: relative;
+    margin-top: -250px;  
+  } 
+  h2 {
+    padding-bottom: 10px;
+  }
+}
+
+.block-img-1,
+ {
+  @include mq($bp2){
+    position: relative;
+   top: -250px;  
+  } 
+}
+
+
+.block-img-1,
+.block-img-2 {
+  position: relative;
+  &:before {
+    content:'';
+    position: absolute;
+    border:1px solid #fff;
+    width: 100%;
+    height: 100%;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    // background:#fff;
+    // opacity: .3;
+    top: -10px;
+    left: -10px;
+    z-index: -1;
+  }
+}
+
+.block-img-2 {
+  &:before {
+    // top:10px;
+    left:10px;
+    top:10px;
+    height:calc(100% - 10px);
+
+  }
+}
+.cta-title {
+  margin-left: -100px;
+  margin-top: -100px;
+  position: relative;
+  z-index: 2;
+}
+
+.cta {
+
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  &:before {
+
+  }
+}
+
+.btn-cta {
+  position: relative;
+  &:hover {
+    &:before {
+      transform: translateX(0) translateY(0) translateZ(0);
+      border-color:transparent;
+    }
+  }
+
+  &:before {
+    content:'';
+    width: calc(100% + 10px);
+    // width:calc(100% + 120px);
+    position: absolute;
+    // height: calc(100% + 10px);
+    height:calc(100% + 10px);
+    border:6px solid shade(#CFEBE4,5);
+    transform: translateX(10px) translateY(10px) translateZ(0);
+    transition: all .4s;
+    top: -5px;
+    left: -5px;
+    // top: 6px;
+    // left: 6px;
+    z-index: -1;
+  }
+  // margin-top:50px;
+  // margin-bottom: 100px;
+  // margin-left: auto;
+  // margin-right: auto;
+}
+.block-img-bg {
+  // width:500px;
+  // height: 500px;
+  // background:url(http://placehold.it/500x500) 50% 50% no-repeat;
+}

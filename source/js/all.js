@@ -1,7 +1,6 @@
 //= require rimg-breakpoints
 //= require rimg.min
 //= require classie
-//= require menu_j
 //= require smoothscroll
 
 
@@ -24,3 +23,21 @@ if(cta_link_2) {
 	  ga('send', 'event', 'button', 'click', 'cta-2');
 	});
 };
+
+
+(function() {
+  var days = ['Niedzieli', 'Poniedziałku', 'Wtorku', 'Środy', 'Czwartku', 'Piątku', 'Soboty'];
+  var dow = new Date().getDay();
+  function msg(){
+    if (dow==0 || dow==3 || dow==6) {
+      return 'Miłej ' + days[dow] + '!'
+    }
+    else {
+      return 'Miłego ' + days[dow] + '!';    
+    }
+  };
+  var msg2 = msg();
+  var day = document.getElementById('weekday');
+  day.innerHTML = msg2;
+})();
+

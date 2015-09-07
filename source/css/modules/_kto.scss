@@ -1,86 +1,90 @@
-.onas .footer {
-	border-top: none;
+.onas .stripe {
+	background:#f1f1f1;
 }
 
-.section-bio {
-	background:#f7f7f7;
-}
+// .onas .footer {
+// 	border-top: none;
+// }
 
-.kto-item {
-	@include mq($bp1){
-		width: 50%;
-	} 
-}
+// .section-bio {
+// 	background:#f7f7f7;
+// }
+
+// .kto-item {
+// 	@include mq($bp1){
+// 		width: 50%;
+// 	} 
+// }
+
+// // .img-about {
+// // 	margin-bottom: 5em;
+// // 	width: 80%;
+// // 	@include mq($bp1){
+// // 		max-width: 600px;	
+// // 	}
+// // 	@include mq($bp2){
+// // 		width: 100%;
+// // 	}
+// // }
+
 
 // .img-about {
-// 	margin-bottom: 5em;
-// 	width: 80%;
-// 	@include mq($bp1){
-// 		max-width: 600px;	
+// 	@include mq($bp1){ 
+// 		background: url('../images/about.png') 0 0 no-repeat;
+// 		margin-bottom: 3em;
+// 		background-size:contain;
+// 		max-width: 600px;
+// 		// width:600px;
+// 		height:300px;
 // 	}
-// 	@include mq($bp2){
-// 		width: 100%;
+
+// }
+
+// .bio-img {
+// 	margin-bottom: 1em;
+// 	@include mq($bp1){
+// 		margin-bottom: 3em;
+// 		width: 33.3333%;
+// 	} 
+// 	@include mq($bp2) {
+// 		margin-bottom: 0;
+// 		width: 16.6666%;
+// 	} 
+// }
+
+// .bio-info {
+// 	margin-bottom: 3em;
+// 	&:last-child {
+// 		margin-bottom: 0;
+// 	}
+// 	@include mq($bp1){
+// 		width: 66.6666%;
+// 	} 
+// 	@include mq($bp2) {
+// 		margin-bottom: 0;
+// 		width: 33.3333%;
+// 	} 
+// 	p {
+// 		@include mq($bp1){
+// 			padding-left: 1em;
+// 		} 
+// 		@include mq($bp2){
+// 			padding-right: 2em;
+// 		} 
 // 	}
 // }
 
+// .bio-name {
+// 	display: block;
+// 	font-size: 20px;
+// 	margin-top: 1em;
+// 	line-height: 1;
+// }
 
-.img-about {
-	@include mq($bp1){ 
-		background: url('../images/about.png') 0 0 no-repeat;
-		margin-bottom: 3em;
-		background-size:contain;
-		max-width: 600px;
-		// width:600px;
-		height:300px;
-	}
-
-}
-
-.bio-img {
-	margin-bottom: 1em;
-	@include mq($bp1){
-		margin-bottom: 3em;
-		width: 33.3333%;
-	} 
-	@include mq($bp2) {
-		margin-bottom: 0;
-		width: 16.6666%;
-	} 
-}
-
-.bio-info {
-	margin-bottom: 3em;
-	&:last-child {
-		margin-bottom: 0;
-	}
-	@include mq($bp1){
-		width: 66.6666%;
-	} 
-	@include mq($bp2) {
-		margin-bottom: 0;
-		width: 33.3333%;
-	} 
-	p {
-		@include mq($bp1){
-			padding-left: 1em;
-		} 
-		@include mq($bp2){
-			padding-right: 2em;
-		} 
-	}
-}
-
-.bio-name {
-	display: block;
-	font-size: 20px;
-	margin-top: 1em;
-	line-height: 1;
-}
-
-.bio-link {
-	font-size: 14px;
-	color:$link-color;
-	&:hover {
-		text-decoration: underline;
-	}
-}
+// .bio-link {
+// 	font-size: 14px;
+// 	color:$link-color;
+// 	&:hover {
+// 		text-decoration: underline;
+// 	}
+// }

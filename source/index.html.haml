@@ -3,8 +3,74 @@ title: da się prościej - upraszczanie stron www, design i copywriting
 desc: Upraszczanie komunikacji na stronach internetowych. Planowanie i projektowanie przejrzystych, prostych i skutecznych stron www które sprzedają.
 ---
 
-= partial 'partials/components/header', :locals => { :header_class => "header--absolute" }
-= partial 'partials/components/home/hero'
-= partial 'partials/components/home/sections'
-= partial 'partials/components/footer'
 
+.stripe
+.container-stripe 
+  = partial 'partials/components/header'
+
+.container
+  .container-inner
+    .container-stripe
+      .hero
+        %h1.hero-title 
+          %span Upraszczamy
+          %span przekaz
+          %span na stronach
+          %span www
+        %p.hero-subtitle
+          Łączymy <strong>design i copywriting</strong>
+          %br/
+          by pomóc Ci
+          %br/
+          odkryć to co najlepsze
+          %br/
+          w Twojej ofercie
+          %br/
+          i przekazac to ludziom
+          %br/
+          do których chcesz dotrzeć.
+
+    .content
+      .content-block
+        .block-img.block-img-1
+          -# .img-block
+          -# .block-img-bg
+          %img{:src => "https://unsplash.it/500/500?random", :alt => ""}/
+        .block-heading.v-center
+          %h2.v-centered
+            Jesteś świetny w tym co robisz i znasz swój biznes lepiej niż ktokolwiek inny&hellip; 
+            %br/
+            %br/
+            Ale czy Twoja strona przedstawia Cię tak jak powinna?
+      .content-block
+        .block-text  
+          %p 
+            %strong Być może masz stronę,
+            która wyróżnia się z tłumu pod względem wizualnym. To oczywiście ważne. Problem tylko w tym, że nie przynosi ona korzyści jakich się spodziewałeś, nie przyciąga nowych klientów albo co gorsze - odstrasza aktualnych. Wiemy co może być przyczyną.
+          %h2 
+            Strona działa na ludzi
+            %br/
+            podobnie jak film
+          %p Jeśli w filmie brakuje ciekawej, intrygującej fabuły, wszystkie inne elementy - świetne zdjęcia, efekty specjalne czy znani aktorzy - są nieistotne. Z drugiej strony, słaba prezentacja dobrej historii nie przykuje uwagi widzów lub szybko ich zniechęci.
+          %p
+            %strong Ludzie odwiedzają strony z powodu treści.
+            Nie przychodzą po to by zobaczyć piękne czcionki, kolory czy fantazyjne animacje, ale po informacje które odpowiadają na ich pytania i rozwiązują ich problemy. Dlatego tak ważny jest prosty i zrozumiały, ale też interesujący przekaz.
+          %p To co mówisz jest ważne, ale jak to powiesz jest równie ważne. Design i treść muszą ze sobą współgrać, tak żeby uwaga skupiła się na tym co najważniejsze, czyli na Twojej ofercie. <strong>Liczy sie pełen obraz.</strong>
+        .block-img.block-img-2
+          %img{:src => "https://unsplash.it/500/500/?random", :alt => ""}/
+    %section.container-stripe
+      %h1.cta-title
+        Stworzyliśmy
+        %br/
+        da się prościej
+        %br/
+        by odkryć
+        %br/
+        i dostarczyć Ci
+        %br/
+        ten obraz
+      .cta  
+        %a.btn.btn-primary.btn-cta#cta-1{:href => "/uslugi"}
+          Zobacz jak możemy Ci pomóc
+
+= partial 'partials/components/footer'

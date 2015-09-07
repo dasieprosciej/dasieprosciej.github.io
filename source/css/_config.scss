@@ -6,7 +6,7 @@ $lightgold-color 				: #F3E29F;
 $body-color 					: #fff;//#EEF2EA; 
 // $text-color-dark				: #A8A8A8;
 $text-color 				 	: #333;
-$link-color 					: #FF1414;
+$link-color 					: $primary-color;
 // $link-color           : orange;
 $heading-color 					: #010101;
 $gray-color 					: #999;
@@ -33,9 +33,11 @@ $bp4 							: em(1900);
 
 // TYPOGRAPHY ================================================
 
-$font-family-serif 				: 'jubilat', Helvetica, sans-serif;
-$font-family-sans 				: 'jubilat', Helvetica, sans-serif;
+// $font-family-serif 				: 'Lora', Helvetica, sans-serif;
+// $font-family-sans 				: 'Bebas Neue', Helvetica, sans-serif;
 
-$base-font-family 				: $font-family-serif;
-$alt-font-family 				: $font-family-sans;
+// $base-font-family 			: $font-family-serif;
+// $alt-font-family 				: $font-family-sans;
 
+$sans-font              : 'Bebas Neue', Helvetica, sans-serif;
+$serif-font             : 'Source Sans Pro', Helvetica, sans-serif;

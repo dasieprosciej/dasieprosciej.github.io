@@ -1,8 +1,16 @@
 .header {
-	background: #fff;
+	
+	// font-weight: 200;
+	color:#fff;
+	// background: #fff;
 	padding-top: 50px;
+	// padding-bottom: 10px;
 }
 
+.z-1 {
+	position: relative;
+	z-index: 1;
+}
 
 .header--absolute {
 	position: absolute;
@@ -20,13 +28,15 @@
 
 .logo {
 	display: block;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 	img {
 		width: 90px;
 	}
 }
 
 .nav {
+	font-family:$sans-font;
+	font-weight: 400;
 		li {
 			display: inline-block;
 			margin-right: 25px;
@@ -39,11 +49,11 @@
 		}
 			a {				
 				position: relative;
-				font-weight: 400;
-				font-family: $sans-font;
+				// font-weight: 300;
+				// font-family: $sans-font;
 				letter-spacing: 0.04em;
 				display: block;
-				font-size: 18px;
+				font-size: 16px;
 				transition:all .2s linear;
 				padding: 5px 0;		
 				&:hover {
@@ -61,8 +71,13 @@
 
 .nav--main {
 	padding-top:3px;
-	border-top: 4px solid #111;
+	// border-top: 4px solid #111;
+	
+	.index & {
+		border-bottom: 1px solid #fff;	
+	}
 }
+
 
 .nav--main li:first-child {
 		display: none;

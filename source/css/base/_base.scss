@@ -44,7 +44,7 @@ text-size-adjust : 100%;
 body {
 @include font-size($base-font-size);
 font-family : $serif-font;
-font-weight: 400;
+font-weight: 300;
 line-height : 1.6;
 color : $text-color;
 background-color : transparent;
@@ -61,8 +61,8 @@ background-color : transparent;
 // -webkit-perspective: 0;
 // overflow: hidden;
 	
-// -webkit-font-smoothing: antialiased;
-// -moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
 }
 
 //nie ukrywa adresbaru na chrome ios ale nie dziala z fixed header

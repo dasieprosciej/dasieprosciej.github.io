@@ -11,7 +11,7 @@
 
 
 <% wrap_layout :layout do %>
-  <%= partial 'partials/components/header', :locals => {:header_class => current_article.data.header} %>
+<!--    <%= # partial 'partials/components/header', :locals => {:header_class => current_article.data.header} %> -->
  
     <article class="single">
       <%= yield %>
@@ -24,5 +24,4 @@
           <% end %>
         </ol>
       </aside> -->
-  <%= partial 'partials/components/footer'%>  
 <% end %>

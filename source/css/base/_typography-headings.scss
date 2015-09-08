@@ -17,12 +17,12 @@ h6 {
 
 
 h1 {
-	font-size:50px;
+	font-size:40px;
 	line-height: .9;
 	font-family: $sans-font;
 	font-weight: 700;
 	@include mq($bp1){
-		font-size: 60px;
+		font-size: 50px;
 	}
 	@include mq($bp2){
 		// font-size: 50px;
@@ -45,7 +45,7 @@ h2 {
 		// font-size: 28px;
 	}
 	@include mq($bp2){
-		font-size: 30px;
+		// font-size: 30px;
 		// font-size:34px;
 	}
 	@include mq($bp3){

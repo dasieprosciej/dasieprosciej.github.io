@@ -96,7 +96,7 @@ hr {
 	display: block;
 	margin: 0;
 	margin-right: auto;
-	height:1px;
+	height:6px;
 	border:0;
 	width: 50px;
 	background: $heading-color;
@@ -111,6 +111,9 @@ hr.inverted {
 
 hr.inline {
 	display: inline-block;
+}
+hr.thin {
+	height: 1px;
 }
 
 hr.full {

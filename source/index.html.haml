@@ -3,47 +3,37 @@ title: da się prościej - upraszczanie stron www, design i copywriting
 desc: Upraszczanie komunikacji na stronach internetowych. Planowanie i projektowanie przejrzystych, prostych i skutecznych stron www które sprzedają.
 ---
 
+.teaser
+  .container--wide
+    = partial 'partials/components/_header.haml'
+    %h1 
+      upraszczamy  
+      %br/
+      przekaz
+      %br/
+      na stronach
+      %br/
+      internetowych
 
-.stripe
-.container-stripe 
-  = partial 'partials/components/header'
-
-.container
-  .container-inner
-    .container-stripe
-      .hero
-        %h1.hero-title 
-          %span Upraszczamy
-          %span przekaz
-          %span na stronach
-          %span www
-        %p.hero-subtitle
-          Łączymy <strong>design i copywriting</strong>
-          %br/
-          by pomóc Ci
-          %br/
-          odkryć to co najlepsze
-          %br/
-          w Twojej ofercie
-          %br/
-          i przekazac to ludziom
-          %br/
-          do których chcesz dotrzeć.
-
-    .content
-      .content-block
-        .block-img.block-img-1
+.content
+  .info
+    .container--wide
+      %p <span>da się prościej</span> to jeden web designer i jeden copywriter. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit excepturi officia sunt, fugiat odio, asperiores nesciunt, cum mollitia, reiciendis impedit deserunt alias! Perferendis in ipsa provident ad fugiat eligendi libero.
+  %section.section-why
+    .container--wide
+      .block
+        .block__img.block__img-1
           -# .img-block
           -# .block-img-bg
           %img{:src => "https://unsplash.it/500/500?random", :alt => ""}/
-        .block-heading.v-center
+        .block__heading.v-center
           %h2.v-centered
             Jesteś świetny w tym co robisz i znasz swój biznes lepiej niż ktokolwiek inny&hellip; 
             %br/
             %br/
-            Ale czy Twoja strona przedstawia Cię tak jak powinna?
-      .content-block
-        .block-text  
+            ale czy Twoja strona przedstawia Cię tak jak powinna?
+      .block
+        .block__text 
           %p 
             %strong Być może masz stronę,
             która wyróżnia się z tłumu pod względem wizualnym. To oczywiście ważne. Problem tylko w tym, że nie przynosi ona korzyści jakich się spodziewałeś, nie przyciąga nowych klientów albo co gorsze - odstrasza aktualnych. Wiemy co może być przyczyną.
@@ -56,21 +46,22 @@ desc: Upraszczanie komunikacji na stronach internetowych. Planowanie i projektow
             %strong Ludzie odwiedzają strony z powodu treści.
             Nie przychodzą po to by zobaczyć piękne czcionki, kolory czy fantazyjne animacje, ale po informacje które odpowiadają na ich pytania i rozwiązują ich problemy. Dlatego tak ważny jest prosty i zrozumiały, ale też interesujący przekaz.
           %p To co mówisz jest ważne, ale jak to powiesz jest równie ważne. Design i treść muszą ze sobą współgrać, tak żeby uwaga skupiła się na tym co najważniejsze, czyli na Twojej ofercie. <strong>Liczy sie pełen obraz.</strong>
-        .block-img.block-img-2
+        .block__img.block__img-2
           %img{:src => "https://unsplash.it/500/500/?random", :alt => ""}/
-    %section.container-stripe
+  %section.section-cta
+    .container--wide
+      %hr.inline/
       %h1.cta-title
         Stworzyliśmy
         %br/
         da się prościej
         %br/
-        by odkryć
+        by odkryć i pokazać 
         %br/
-        i dostarczyć Ci
+        lepszy obraz
         %br/
-        ten obraz
-      .cta  
+        Twojego biznesu
+      .cta-button  
         %a.btn.btn-primary.btn-cta#cta-1{:href => "/uslugi"}
           Zobacz jak możemy Ci pomóc
 
-= partial 'partials/components/footer'

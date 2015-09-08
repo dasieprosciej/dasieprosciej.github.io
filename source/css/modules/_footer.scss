@@ -1,6 +1,7 @@
 .footer {
 	background: #fff;
-	padding-top: 50px;
+	margin-top: 100px;
+	// padding-top: 50px;
 	h4 {
 		color:#ccc;
 	}
@@ -8,7 +9,7 @@
 
 .footer-inner {
 	padding-top:20px;
-	border-top: 1px solid #999;
+	border-top: 1px solid #ddd;
 	text-align: center;
 }
 
@@ -17,6 +18,7 @@
 }
 
 .nav--footer {
+	font-weight: 400;
 	padding-bottom: 50px;
 		a {
 			font-size: 16px;
@@ -31,4 +33,13 @@
 #weekday {
 	padding-top: 50px;
 	padding-bottom: 50px;
+}
+
+.logo-footer {
+	p {
+		font-weight: 700;
+		font-family: $sans-font;
+		font-size: 40px;
+		line-height: 1;
+	}
 }

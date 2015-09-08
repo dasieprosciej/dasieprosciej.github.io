@@ -16,11 +16,17 @@
   </head>
   
   <body class="<%= page_classes %>">
-      
-  <%= yield %>
-      
+    <% if page_classes != 'index' %>
+      <div class="teaser">
+        <div class="container--wide">
+          <%= partial 'partials/components/header' %>    
+        </div>
+      </div>
+    <% end %>  
+      <%= yield %>
+      <%= partial 'partials/components/footer' %>
 
-  
+    <!-- <div class="stripe"></div> -->
     <%= javascript_include_tag  "all" %>  
     <%= partial 'partials/head/analytics' %>
   </body>

@@ -19,7 +19,7 @@
 .btn-primary {
 	// background:#fff;
 	// background: $link-color;
-	color:$primary-color;
+	color:$link-color;
 	font-size:18px;
 	// height:60px;
 	// line-height: 60px;
@@ -32,7 +32,7 @@
 	font-weight: 700;
 	padding-left: 1em;
 	padding-right: 1em;
-	border:6px solid $primary-color;
+	border:6px solid $link-color;
 	// border-radius:2em;
 	// border-radius:4px;
 	// margin-top:30px;	
@@ -42,9 +42,47 @@
 	}
 
 	&:hover {
-		background:$link-color;
-		color:#fff;
+		// background:$link-color;
+		// color:#fff;
 	}
+}
+
+.btn-effect {
+	position: relative;
+	overflow: hidden;
+	// width: 245px;
+	transition: border-color 0.3s, color 0.3s;
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.btn-effect::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 150%;
+	height: 100%;
+	// background: #37474f;
+	z-index: -1;
+	transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+	transform-origin: 0% 100%;
+	transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+.btn-effect:hover,
+.btn-effect:focus,
+.btn-effect:active
+ {
+	color: #fff;
+	// border-color: #3f51b5;
+}
+
+.btn-effect:hover::before,
+.btn-effect:focus::before,
+.btn-effect:active::before
+{
+	opacity: 1;
+	background-color: $link-color;
+	transform: rotate3d(0, 0, 1, 0deg);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 
@@ -52,4 +90,33 @@
 	background:transparent;
 	border:1px solid $link-color;
 	color:$link-color;
+}
+
+.cta-button {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  margin-top: 70px;
+  &:hover {
+    .btn-shadow {
+      transform: translateX(0) translateY(0) translateZ(0);
+      border-color:transparent;
+    }
+  }
+}
+
+.btn-shadow {
+  position: absolute;
+  content:'';
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  height:calc(100% - 6px);
+  border:6px solid shade(#CFEBE4,5);
+  transform: translateX(10px) translateY(10px) translateZ(0);
+  transition: all .3s;
+  top: 0;
+  left: 0;
+  z-index: -2;
 }

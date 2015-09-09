@@ -3,41 +3,42 @@ title: da się prościej - upraszczanie stron www, design i copywriting
 desc: Upraszczanie komunikacji na stronach internetowych. Planowanie i projektowanie przejrzystych, prostych i skutecznych stron www które sprzedają.
 ---
 
-.teaser
-  .container--wide
-    = partial 'partials/components/_header.haml'
-    %h1 
-      upraszczamy  
-      %br/
-      przekaz
-      %br/
-      na stronach
-      %br/
-      internetowych
+
+= partial 'partials/components/_header.haml' do
+  %h1 
+    upraszczamy  
+    %br/
+    przekaz
+    %br/
+    na stronach
+    %br/
+    internetowych  
 
 .content
-  .info
+  %section.info
     .container--wide
-      %p <span>da się prościej</span> to jeden web designer i jeden copywriter. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit excepturi officia sunt, fugiat odio, asperiores nesciunt, cum mollitia, reiciendis impedit deserunt alias! Perferendis in ipsa provident ad fugiat eligendi libero.
+      %p <span>da się prościej</span> nie jest kolejną agencją typu full-service. By robić coś naprawdę dobrze, skupiamy się na jednej rzeczy -  odświeżaniu stron www. Łączymy design i&nbsp;copywriting by pomóc Ci odkryć to co najlepsze w Twojej ofercie i przekazać to ludziom, do których chcesz dotrzeć. Tak po prostu.
+      -# Prostota to zrozumienie, w tym tkwi nasza siła. W pierwszej kolejnosci chcemy zrozumiec twoj biznes, twoich odbiorcow i to co chcesz osiagnac. W efekcie tworzymy prosta i zrozumiala wiadomosc dla odwiedzajacych, tak by podjeli dzialania jakich od nich oczekujesz. 
   %section.section-why
     .container--wide
-      .block
-        .block__img.block__img-1
-          -# .img-block
-          -# .block-img-bg
+      .columns-text-img
+
+      .grid-m.grid-m--1of2
+        .grid-cell.block-img.block-img-1
           %img{:src => "https://unsplash.it/500/500?random", :alt => ""}/
-        .block__heading.v-center
-          %h2.v-centered
+          -# %img{:src => "http://placehold.it/500x500", :alt => ""}/
+        .grid-cell.block-heading.v-center
+          %h2.mg-0.v-centered
             Jesteś świetny w tym co robisz i znasz swój biznes lepiej niż ktokolwiek inny&hellip; 
             %br/
             %br/
             ale czy Twoja strona przedstawia Cię tak jak powinna?
-      .block
-        .block__text 
+      .grid-m.grid-m--1of2
+        .grid-cell.block-text 
           %p 
             %strong Być może masz stronę,
             która wyróżnia się z tłumu pod względem wizualnym. To oczywiście ważne. Problem tylko w tym, że nie przynosi ona korzyści jakich się spodziewałeś, nie przyciąga nowych klientów albo co gorsze - odstrasza aktualnych. Wiemy co może być przyczyną.
-          %h2 
+          %h3 
             Strona działa na ludzi
             %br/
             podobnie jak film
@@ -46,8 +47,9 @@ desc: Upraszczanie komunikacji na stronach internetowych. Planowanie i projektow
             %strong Ludzie odwiedzają strony z powodu treści.
             Nie przychodzą po to by zobaczyć piękne czcionki, kolory czy fantazyjne animacje, ale po informacje które odpowiadają na ich pytania i rozwiązują ich problemy. Dlatego tak ważny jest prosty i zrozumiały, ale też interesujący przekaz.
           %p To co mówisz jest ważne, ale jak to powiesz jest równie ważne. Design i treść muszą ze sobą współgrać, tak żeby uwaga skupiła się na tym co najważniejsze, czyli na Twojej ofercie. <strong>Liczy sie pełen obraz.</strong>
-        .block__img.block__img-2
+        .grid-cell.block-img
           %img{:src => "https://unsplash.it/500/500/?random", :alt => ""}/
+          -# %img{:src => "http://placehold.it/500x500", :alt => ""}/
   %section.section-cta
     .container--wide
       %hr.inline/
@@ -60,8 +62,8 @@ desc: Upraszczanie komunikacji na stronach internetowych. Planowanie i projektow
         %br/
         lepszy obraz
         %br/
-        Twojego biznesu
-      .cta-button  
-        %a.btn.btn-primary.btn-cta#cta-1{:href => "/uslugi"}
-          Zobacz jak możemy Ci pomóc
-
+        Twojego biznesu  
+      = partial 'partials/components/button', :locals => {btn_link: '/uslugi'} do
+        Zobacz jak możemy Ci pomóc
+      
+        

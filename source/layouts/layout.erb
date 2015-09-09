@@ -17,11 +17,7 @@
   
   <body class="<%= page_classes %>">
     <% if page_classes != 'index' %>
-      <div class="teaser">
-        <div class="container--wide">
-          <%= partial 'partials/components/header' %>    
-        </div>
-      </div>
+      <%= partial 'partials/components/header', :locals => { :header_class => current_page.data.header } %>  
     <% end %>  
       <%= yield %>
       <%= partial 'partials/components/footer' %>

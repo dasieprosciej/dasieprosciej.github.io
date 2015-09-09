@@ -1,9 +1,11 @@
 %header{:class => "header #{header_class ||= ""}"}
-  %a.logo{:href => "/"}
-    - if header_class.include?("header--inverted")
-      = image_tag('logo-inverted.svg')
-    - else
-      = image_tag('logo-inverted.svg')
-  %nav.nav.nav--main
-    %ul
-      = partial 'partials/components/nav'
+  .container--wide
+    %a.logo{:href => "/"}
+      - if header_class.include?("header--inverted")
+        = image_tag('logo.svg')
+      - else
+        = image_tag('logo-inverted.svg')
+    %nav.nav.nav--main
+      %ul
+        = partial 'partials/components/nav'
+    = yield if defined? yield    

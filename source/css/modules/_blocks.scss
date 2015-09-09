@@ -1,0 +1,186 @@
+.block-heading {
+  position: relative;
+  background: #0C216C;
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+  &:before {
+    content:'';
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    background:tint($link-color,50);
+    left: -250px;
+    bottom: 0;
+  }
+  @include mq($bp2){
+    width: 50%;
+    height: 500px;
+    order:-1;
+  } 
+  h2 {
+    color:#fff;
+    text-align: center;
+  }
+}
+
+.block-text {
+  font-size:18px;
+  @include mq($bp2) {
+    padding:100px 50px;
+  } 
+}
+
+.index .block-text {
+  background:#fff;
+  @include mq($bp2) {
+    order:2;
+    margin-top: -250px;
+  } 
+}
+
+.uslugi .block-text{
+  position: relative;
+  &:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:#D2F0FC;
+    width: 250px;
+    height: 250px;
+    z-index: -1;
+  }
+  &:first-child {
+    padding-top: 0;
+    &:before {
+      width: 125px;
+      height: 125px;
+    }
+  }
+}
+
+
+.block-img-1 {
+    position: relative;
+    &:before,
+    &:after {
+      content:'';
+      width: 250px;
+      height: 250px;
+      position: absolute;
+    }
+    &:before {
+      background:tint($link-color,50);
+      bottom: 0px;
+      right: -250px;
+    }
+    &:after {
+      background: #D2F0FC;
+      top: 0;
+      left: -250px;
+    }
+  @include mq($bp2) {
+    top: -250px;  
+  } 
+}
+
+
+// ikony z uslug
+.icon-block {
+  // width: 100%;
+  height: 333px;
+  
+  background:$primary-color;
+  position: relative;
+  &:before {
+    content:'';
+    position: absolute;
+    margin:auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/icons-block.svg');  
+    background-repeat: no-repeat;
+    opacity: .9;
+  }
+}
+
+.icon-odpowiada {
+  &:before {
+    background-position: 0 -2px;
+    width: 89px;
+    height: 97px;
+  }
+}
+
+.icon-wzmacnia {
+  &:before {
+    background-position: -114px -8px;
+    width: 78px;
+    height: 75px;
+  }
+  &:after {
+    @include mq($bp2) {
+      content:'';
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      top: -50%;
+      right:-50%;
+      background:#eee;  
+    } 
+  }
+}
+
+.icon-buduje {
+  order:2;
+  &:before {
+    background-position: -222px 0;
+    width: 76px;
+    height: 87px;
+  }
+  &:after {
+    @include mq($bp2) { 
+      content:'';
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      bottom: -50%;
+      background:#eee;
+    }
+  }
+}
+
+.icon-czyni {
+  &:before {
+    background-position: -327px -19px;
+    width: 112px;
+    height: 59px;
+  }
+  &:after {
+    @include mq($bp2) {
+      content:'';
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      top: -50%;
+      left: 0;
+      // left: 50%;
+      background:#eee;  
+    } 
+  }
+}
+
+.icon-text-block {
+  padding:50px;
+  h3 {
+    font-weight: 400;
+    color:$primary-color;
+  }
+  // width: 100%;
+  // background:#eee;
+}
+
+

@@ -2,234 +2,56 @@
 	background: #FFF79F;
 }
 
+.section-get {
+  background:#fafafa;
+  padding-top: 100px;
+}
+
+.section-proces {
+  font-size:18px;
+  p + ul {
+    margin-top: -15px;
+  }
+  h2 {
+    margin: 0;
+  }
+}
+.proces-header {
+  
+  // display: flex;
+  // align-items: flex-end;
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 120px;
+  // padding-top: 50px;
+  &:before {
+    content:attr(data-number);
+    position: absolute;
+    font-size: 130px;
+    line-height: .6;
+    font-family: $sans-font;
+    font-weight: 700;
+    left: 0;
+    bottom: -10px;
+    letter-spacing:-0.1em;
+    z-index: -1;
+    color:$link-color;
+  }
+}
+
+.proces-first {
+  padding-left: 90px;
+}
+
+.proces-title {
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.proces-subtitle {
+  font-style: italic;
+}
 
 
-
-// .section-help {
-// 	h2:first-of-type {
-// 		padding-bottom: 0;
-// 	}
-// 	h2:last-of-type {
-// 		padding-top: 1em;
-// 		padding-bottom: .5em;
-// 	}
-// }
-
-
-// .subhead {
-// 	display: block;
-// 	color:$gold-color;
-// 	font-size: 14px;
-// 	margin-top: .5em;
-// 	// font-family: $sans-font;
-
-// }
-
-
-// .section-strony {
-// 	background:#f5f5f5;
-// }
-
-// .features-item {
-// 		margin-bottom: 3em;
-// 		&:last-child {
-// 			margin-bottom: 0;
-// 		}
-// 		@include mq($bp1){
-// 			margin-bottom: 0;
-// 			&:first-child {
-// 				// margin-bottom: 2em;
-// 			}
-// 			width: 50%;
-// 		} 
-// 		@include mq($bp2){
-// 			&:first-child {
-// 				// margin-bottom: 0;	
-// 			}		
-// 		}
-// 		@include mq($bp3){
-// 			// width: 25%;
-// 		} 
-// 		p {
-// 			font-size: 18px;
-// 		}
-// 	}
-
-
-// .section-proces {
-// 	background: #f9f9f9;
-// 	p {
-// 		margin-bottom: .5em;
-// 	}
-// 	h2 {
-// 		margin-bottom: 1em;
-// 		color:$heading-color;
-// 	}
-// 	.bullet-list {
-// 		margin-top: 0;
-// 		margin-bottom: 1.5em;
-// 	}
-// }
-
-// .proces-head {
-// 	margin-bottom: 2em;
-// 	@include mq($bp1) {
-// 		margin-bottom: 0;
-// 		width: 33.3333%;
-// 	} 
-// 	@include mq($bp2){
-// 		width: 16.6666%;
-// 		text-align: right;
-// 	}
-// }
-
-
-// .proces-info {
-// 	margin-bottom: 4em;
-// 	&:last-child {
-// 		margin-bottom: 0;
-// 	}
-// 	@include mq($bp1){
-// 		width: 66.6666%;
-// 	} 
-// 	@include mq($bp2){
-// 		margin-bottom: 0;
-// 		width: 33.3333%;
-// 	}
-// }
-
-// .proces-head,
-// .proces-info {
-// 	@include mq($bp1) { 
-// 		margin-bottom: 5em;
-// 		&:last-child,
-// 		&:nth-last-child(2) {
-// 			margin-bottom: 0;
-// 		}
-// 	}
-// 	@include mq($bp2) {
-// 		margin-bottom: 0;
-// 	} 
-// }
-
-// .proces-number {
-// 	color:$primary-color;
-// 	font-weight: 700;
-// 	font-size: 50px;
-// 	display: block;
-// 	line-height: 1;
-
-// }
-// .proces-title {
-// 	font-weight: 700;
-// 	font-size: 24px;
-// 	margin: 0;
-// 	margin-top: 10px;
-// 	margin-bottom: 5px;
-// 	line-height: 1.1;
-// }
-
-// .proces-subtitle {
-// 	font-weight: 300;
-// 	font-style:italic;
-// 	font-size: 14px;
-// 	color:$gold-color;
-// }
-
-
-// .dsp-quote {
-// 	background:$primary-color;
-// 	padding: 3em 0 5em;
-// 	text-align: center;
-// 	@include mq($bp2){
-// 		padding: 6em 0 8em;
-// 	} 
-// 	p {
-// 		font-weight: 300;
-// 		font-style: italic;
-// 		color:$white-color;
-// 		-webkit-font-smoothing: auto;
-// 		-moz-osx-font-smoothing: auto;
-// 		font-size: 22px;
-// 		@include mq($bp2){
-// 			font-size: 30px;
-// 		} 
-// 	}
-// }
-
-// .section-ways {
-// 	h2,h4 {
-// 		max-width: none;
-// 		text-align: center;			
-// 	}
-// 	h2 {
-// 		color:$heading-color;
-// 	}
-// 	h4 {
-// 		padding-bottom: 1em;
-// 	}
-// }
-
-// .ways-content {
-// 	p {
-// 		max-width: 500px;
-// 		margin-left: auto;
-// 		margin-right: auto;		
-// 		@include mq($bp2){
-// 			padding: 0 2em;
-// 		}
-// 	}
-// 	@include mq($bp1) {
-// 		justify-content:center;	
-// 	} 
-// }
-
-// .ways-item {
-// 	@include mq($bp1){
-// 		width: 50%;
-// 	} 
-// 	@include mq($bp3){
-// 		width: 33.3333%;
-// 	} 
-// }
-
-// .ways-img {
-// 	height:120px;
-// 	display: flex;
-// 	justify-content:center;
-// 	align-items: center;
-// }
-
-// .section-cta-uslugi {
-// 	text-align: center;
-// 	width: 100%;
-// 	background:$link-color;
-// 	@include mq($bp2){
-// 		width: 100%;
-// 	} 
-// 	h2 {
-// 		color:#fff;
-// 		font-weight: 700;
-// 	}
-// 	p {
-// 		color:$white-color;
-// 	}
-// }
-
-// .cta-mail {
-// 	font-size: 24px;
-// 	color:$link-color;
-// 	border-bottom:1px solid transparent;
-// 	transition:all .25s;
-// 	@include mq($bp2) {
-// 		font-size: 30px;
-// 	} 
-// 	@include mq($bp3){
-// 		font-size: 40px;
-// 	} 
-// 	&:hover {
-// 		color: $link-color;
-// 		border-bottom-color:$link-color;
-// 	}
-// }
 

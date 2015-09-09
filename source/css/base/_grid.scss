@@ -107,18 +107,18 @@
 .grid {
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    // list-style: none;
+    // margin: 0;
+    // padding: 0;
 }
 
 @include mq($bp1) {
   .grid-s {
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    // list-style: none;
+    // margin: 0;
+    // padding: 0;
   }
 }
 
@@ -126,9 +126,9 @@
   .grid-m {
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    // list-style: none;
+    // margin: 0;
+    // padding: 0;
   }
 } 
 
@@ -136,9 +136,9 @@
   .grid-l {
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    // list-style: none;
+    // margin: 0;
+    // padding: 0;
   }
 } 
 
@@ -209,18 +209,24 @@
 {
   .grid-s--fit > .grid-cell {
     flex: 1;
+    
   }
   .grid-s--full > .grid-cell {
-    flex: 0 0 100%;
+
+    // flex: 0 0 100%;
+    width: 100%;
   }
   .grid-s--1of2 > .grid-cell {
-    flex: 0 0 50%;
+    // flex: 0 0 50%;
+    width: 50%;
   }
   .grid-s--1of3 > .grid-cell {
-    flex: 0 0 33.3333%;
+    // flex: 0 0 33.3333%;
+    width: 33.3333%;
   }
   .grid-s--1of4 > .grid-cell {
-    flex: 0 0 25%;
+    // flex: 0 0 25%;
+    width: 25%;
   }
 }
 
@@ -229,16 +235,20 @@
     flex: 1;
   }
   .grid-m--full > .grid-cell {
-    flex: 0 0 100%;
+    // flex: 0 0 100%;
+    width: 100%;
   }
   .grid-m--1of2 > .grid-cell {
-    flex: 0 0 50%;
+    // flex: 0 0 50%;
+    width: 50%;
   }
   .grid-m--1of3 > .grid-cell {
-    flex: 0 0 33.3333%;
+    // flex: 0 0 33.3333%;
+    width: 33.3333%;
   }
   .grid-m--1of4 > .grid-cell {
-    flex: 0 0 25%;
+    // flex: 0 0 25%;
+    width: 25%;
   }
 }
 
@@ -247,16 +257,20 @@
     flex: 1;
   }
   .grid-l--full > .grid-cell {
-    flex: 0 0 100%;
+    // flex: 0 0 100%;
+    width: 100%;
   }
   .grid-l--1of2 > .grid-cell {
-    flex: 0 0 50%;
+    // flex: 0 0 50%;
+    width: 50%;
   }
   .grid-l--1of3 > .grid-cell {
-    flex: 0 0 33.3333%;
+    // flex: 0 0 33.3333%;
+    width: 33.3333%;
   }
   .grid-l--1of4 > .grid-cell {
-    flex: 0 0 25%;
+    // flex: 0 0 25%;
+    width: 25%;
   }
 }
 
@@ -341,11 +355,11 @@
     padding: 2em 0 0 2em;
   }
   .grid-m--gutters-xxl {
-    margin: -5em 0 2em -2em;
+    margin: -7em 0 5em -5em;
     margin-bottom: 0;
   }
   .grid-m--gutters-xxl > .grid-cell {
-    padding: 5em 0 0 2em;
+    padding: 7em 0 0 5em;
   }
 }
 

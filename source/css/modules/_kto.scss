@@ -1,91 +1,118 @@
-.onas .stripe {
-	background:#f1f1f1;
+.section-onas{  
+  // border-bottom: 1px solid #ddd;  
+  h1 {
+    // text-align: center;
+    line-height: 1;
+    padding-bottom: 30px;
+    color:$primary-color;
+    @include mq($bp2){
+      // font-size: 70px;
+    } 
+  }
+ }
+
+.texture { 
+  // background: #ffffff url(../images/text-texture.jpg);
+  // -webkit-text-fill-color: transparent;
+  // -webkit-background-clip: text;
+  // text-fill-color: transparent;
+  // background-clip: text;
+}
+    
+.onas-info {
+  font-size: 24px;
+}    
+
+
+.section-bio {
+  // padding-top: 150px;
+  @include mq($bp2){
+    background: linear-gradient(to bottom, #fff, rgba(#fff,0) 15%, rgba(#fff,0) 85%, #fff), url(../images/beach.jpg) center bottom no-repeat;
+    background-size:cover;  
+  } 
+}
+
+.onas-bio-container {
+  // max-width: 750px;
+  // margin-left: auto;
+  // margin-right: auto;
+}
+
+.onas-bio
+ {
+  margin: -200px 0 0 -2em;
+
+  &> .grid-cell {
+    padding: 200px 0 0 2em;
+  }
+}
+
+.onas-bio p {
+  font-size:18px;
+}
+
+.bio-img {
+  text-align: center;
+}
+
+.bio-img-milena,
+.bio-img-adrian {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  @include mq($bp2){
+     // display: inline-block;
+  } 
+  img {
+    width: 250px; 
+  }
+  &:before,
+  &:after {
+    content:'';
+    position: absolute;
+
+  }
 }
 
 
-// .onas .footer {
-// 	border-top: none;
-// }
-
-// .section-bio {
-// 	background:#f7f7f7;
-// }
-
-// .kto-item {
-// 	@include mq($bp1){
-// 		width: 50%;
-// 	} 
-// }
-
-// // .img-about {
-// // 	margin-bottom: 5em;
-// // 	width: 80%;
-// // 	@include mq($bp1){
-// // 		max-width: 600px;	
-// // 	}
-// // 	@include mq($bp2){
-// // 		width: 100%;
-// // 	}
-// // }
+.bio-img-milena {
+  &:before {
+    width: 175px;
+    height: 125px;
+    left: -50%;
+    top: 75%;
+    background:#D2F0FC; 
+    opacity: .6;
 
 
-// .img-about {
-// 	@include mq($bp1){ 
-// 		background: url('../images/about.png') 0 0 no-repeat;
-// 		margin-bottom: 3em;
-// 		background-size:contain;
-// 		max-width: 600px;
-// 		// width:600px;
-// 		height:300px;
-// 	}
+  }
+  &:after {
+    width: 250px;
+    height: 125px;
+    left: 50%;
+    opacity: .6;
+    top: -25%;
+    background:#D2F0FC;
+  }
+}
 
-// }
+.bio-img-adrian {
+  &:before {
+    width: 125px;
+    height: 250px;
+    left: -25%;
+    top: 50%;
+    background:#D2F0FC;
+    opacity: .6;
+  }
+  &:after {
+    width: 125px;
+    height: 125px;
+    left: 75%;
+    opacity: .6;
+    top: -25%;
+    background:#D2F0FC;
+  }
+}
 
-// .bio-img {
-// 	margin-bottom: 1em;
-// 	@include mq($bp1){
-// 		margin-bottom: 3em;
-// 		width: 33.3333%;
-// 	} 
-// 	@include mq($bp2) {
-// 		margin-bottom: 0;
-// 		width: 16.6666%;
-// 	} 
-// }
 
-// .bio-info {
-// 	margin-bottom: 3em;
-// 	&:last-child {
-// 		margin-bottom: 0;
-// 	}
-// 	@include mq($bp1){
-// 		width: 66.6666%;
-// 	} 
-// 	@include mq($bp2) {
-// 		margin-bottom: 0;
-// 		width: 33.3333%;
-// 	} 
-// 	p {
-// 		@include mq($bp1){
-// 			padding-left: 1em;
-// 		} 
-// 		@include mq($bp2){
-// 			padding-right: 2em;
-// 		} 
-// 	}
-// }
-
-// .bio-name {
-// 	display: block;
-// 	font-size: 20px;
-// 	margin-top: 1em;
-// 	line-height: 1;
-// }
-
-// .bio-link {
-// 	font-size: 14px;
-// 	color:$link-color;
-// 	&:hover {
-// 		text-decoration: underline;
-// 	}
-// }

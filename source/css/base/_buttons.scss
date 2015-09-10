@@ -17,13 +17,10 @@
 }
 
 .btn-primary {
-	// background:#fff;
-	// background: $link-color;
+
 	color:$link-color;
-	font-size:18px;
-	// height:60px;
-	// line-height: 60px;
-	// padding-top: 1px;
+	// font-size:18px;  //zmienilem zeby inheritowalo z cta-button
+  font-size: inherit;
 	letter-spacing: .05em;
 	// padding-top: 2px;
 	padding-top: 22px;
@@ -97,7 +94,10 @@
   display: inline-block;
   text-align: center;
   position: relative;
+  font-style: normal;
+  cursor:pointer;
   margin-top: 70px;
+  font-size:18px;
   &:hover {
     .btn-shadow {
       transform: translateX(0) translateY(0) translateZ(0);
@@ -113,7 +113,7 @@
   position: absolute;
   height: 100%;
   height:calc(100% - 6px);
-  border:6px solid shade(#CFEBE4,5);
+  border:6px solid #e5e5e5;
   transform: translateX(10px) translateY(10px) translateZ(0);
   transition: all .3s;
   top: 0;

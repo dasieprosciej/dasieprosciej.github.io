@@ -6,15 +6,19 @@
 	padding-top: 100px;
 	padding-bottom: 100px;
 	&:first-child {
-		padding-top: 0;
+		// padding-top: 0;
 	}
 	&:last-child {
-		padding-bottom: 0;
+		// padding-bottom: 20px;
 	}
 }
 
 .content {
-		padding-top: 120px;
+		// padding-top: 120px;
+}
+
+.content {
+	overflow: hidden;
 }
 
 
@@ -35,4 +39,8 @@
 			margin-left: auto;
 			margin-right: auto;
 	}
+}
+
+.z--2 {
+	z-index: -2;
 }

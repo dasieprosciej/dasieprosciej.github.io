@@ -111,15 +111,22 @@ hr.inverted {
 
 hr.inline {
 	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
 }
 hr.thin {
 	height: 1px;
 }
 
-hr.full {
-	background:lighten($primary-color,30);
-	width: 100%;
+hr.container {
+	background:#ddd;
+	width: $max-width;
+	height: 1px;
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
 }
+
 
 strong {
 	// font-weight: 900;

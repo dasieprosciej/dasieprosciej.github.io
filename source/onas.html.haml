@@ -3,27 +3,35 @@ title: da się prościej - o nas
 header:
 ---
 
+.content
+	%section.section.section-onas
+		.container--wide
+			%h1.texture
+				Naprawiamy połączenie
+				%br/
+				na&nbsp;linii design-tekst	
+			%p.onas-info	Jesteśmy dwuosobowym zespołem z Gdańska. Jeden web designer i jeden copywriter. Łączymy umiejętności biznesowe, design, marketing, copywriting i lata wiedzy o internecie, by odkryć przed Twoimi odbiorcami to co najlepsze i najciekawsze w Twojej ofercie.
+	%section.section.section-bio		
+		.container--wide
+			.onas-bio.grid-m.grid-m--1of2
+				.bio-img.grid-cell
+					.bio-img-milena
+						%img{:src => "/images/milena.jpg", :alt => ""}/
+				.bio-text.grid-cell	
+					%h3 Milena
+					%p “Jestem web copywriterem, z zainteresowaniami w kierunku marketingu, reklamy, doradztwa biznesowego, psychologii zachowań konsumentów i nowoczesnego podejścia do obsługi klienta. W biznesie wyznaję ideę human to human. Uwielbiam prostotę, harmonię i użyteczność w każdej dziedzinie. Jestem miłośniczką literatury z zakresu zarządzania, rozwoju osobistego oraz biografii i książek podróżniczych.”
+				.bio-img.grid-cell
+					.bio-img-adrian
+						%img{:src => "/images/adrian.jpg", :alt => ""}/
+				.bio-text.grid-cell	
+					%h3 Adrian
+					%p “Tworzę strony, ale nie ograniczają mnie role typu UX designer czy front-end developer. Dążę do tego by zrozumieć każdy aspekt tego co tworzę - co to powinno robić, jak się to czyta, jak wygląda i jak jest zbudowane. Wszystko co może mieć wpływ na poprawienie doświadczenia dla użytkowników. Myślę, piszę, projektuję, koduję.”
 
-.container
-	.banner
+	%section.section.dsp-quote
 		.container--wide
-			%img{:src => "/images/onas.png", :alt => ""}/
-	.onas-info			
-		.container--stripe
-			%p Jesteśmy dwuosobowym zespołem z Gdańska. Jeden web designer i jeden copywriter. Łączymy umiejętności biznesowe, design, marketing, copywriting i lata wiedzy o internecie, by odkryć przed Twoimi odbiorcami to co najlepsze i najciekawsze w Twojej ofercie.
-			%p Naprawiamy połączenie na linii design-tekst.Wierzymy, że tylko umiejętne zgranie tych dwóch elementów czyni strony internetowe skutecznymi.
-	.onas-bio
-		.container--wide
-			.bio-milena
-				%img{:src => "/images/milena.jpg", :alt => ""}/
-				%p “Jestem web copywriterem, z zainteresowaniami w kierunku marketingu, reklamy, doradztwa biznesowego, psychologii zachowań konsumentów i nowoczesnego podejścia do obsługi klienta. W biznesie wyznaję ideę human to human. Uwielbiam prostotę, harmonię i użyteczność w każdej dziedzinie. Jestem miłośniczką literatury z zakresu zarządzania, rozwoju osobistego oraz biografii i książek podróżniczych.”
-			.bio-adrian
-				%img{:src => "/images/adrian.jpg", :alt => ""}/
-				%p “Tworzę strony, ale nie ograniczają mnie role typu UX designer czy front-end developer. Dążę do tego by zrozumieć każdy aspekt tego co tworzę - co to powinno robić, jak się to czyta, jak wygląda i jak jest zbudowane. Wszystko co może mieć wpływ na poprawienie doświadczenia dla użytkowników. Myślę, piszę, projektuję, koduję.”
-	.onas-quote
-		.container--wide
-			%hr/
-			%blockquote
-				To jak tworzymy, definiuje to kim jesteśmy i odzwierciedla to w co wierzymy. Naszym najbardziej wartościowym produktem jest nasz sposób myślenia.
-			%hr/	 		
+			%hr.inline
+			%p To jak tworzymy, definiuje to kim jesteśmy i odzwierciedla to w co wierzymy. Naszym najbardziej wartościowym produktem jest nasz sposób myślenia.
+			= partial 'partials/components/button', :locals => {btn_link: 'mailto:mail@dasieprosciej.pl'} do
+				Przywitaj się
+		
 	

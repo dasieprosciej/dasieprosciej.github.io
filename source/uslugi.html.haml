@@ -17,10 +17,10 @@ title: da się prościej - usługi
             -# %li świetnie działała na każdym urządzeniu na którym jest wyświetlana  
           %h4 Możemy Ci w tym pomóc
           %p  W zależności od potrzeby, odświeżymy lub gruntownie przebudujemy Twoją stronę internetową. Uprościmy przekaz zarówno w zakresie treści jak i warstwy wizualnej, by skupić się na tym co najcenniejsze w Twoim biznesie.
-        .grid-cell.block-img
+        .grid-cell.block-img          
           %img{:src => "https://unsplash.it/500/500?random", :alt => ""}/
       .grid-m.grid-m--1of2
-        .grid-cell.block-img
+        .grid-cell.block-img.z--2
           %img{:src => "https://unsplash.it/500/500/?random", :alt => ""}/
         .grid-cell.block-text
           %h2
@@ -34,11 +34,10 @@ title: da się prościej - usługi
       %h2 Otrzymasz stronę, która:
       .grid.grid-m--1of3.align-middle
         .grid-cell.icon-block.icon-odpowiada
-          
         .grid-cell.icon-text-block  
           %h3 Odpowiada
           %p na pytania Twoich odbiorców, rozwiewa ich wątpliwości i&nbsp;inspiruje do podjęcia akcji
-      .grid.grid-m--1of3.align-middle
+      .grid.grid-m--1of3.align-middle.block-line-full
         .grid-cell
         .grid-cell.icon-block.icon-wzmacnia
         .grid-cell.icon-text-block        
@@ -46,7 +45,7 @@ title: da się prościej - usługi
           %p wiarygodność i wizerunek Twojego biznesu
         
           
-      .grid.grid-m--1of3.align-middle
+      .grid.grid-m--1of3.align-middle.block-line-full
         .grid-cell
         .grid-cell.icon-block.icon-buduje  
         .grid-cell.icon-text-block  
@@ -54,8 +53,7 @@ title: da się prościej - usługi
           %p zaufanie i lojalność, zamieniając odwiedzających w klientów, a&nbsp;klientów w fanów
         
 
-      .grid.grid-m--1of3.align-middle
-        
+      .grid.grid-m--1of3.align-middle.block-line-full    
         .grid-cell.icon-block.icon-czyni
         .grid-cell.icon-text-block        
           %h3 Czyni
@@ -64,10 +62,11 @@ title: da się prościej - usługi
    
   %section.section.section-proces
     .container--wide
+      %h2.section-proces-title Nasz proces w skrócie
       .grid-m.grid-m--1of2.grid-m--gutters-xxl
         .grid-cell
           .proces-header.proces-first{"data-number" => "01"} 
-            %h2.proces-title Na początku
+            %h3.proces-title Na początku
             %span.proces-subtitle Strategia i analiza            
           %p Wszystko zaczyna się od Twojej historii:
           %ul
@@ -80,13 +79,13 @@ title: da się prościej - usługi
 
         .grid-cell
           .proces-header{"data-number" => "02"}             
-            %h2.proces-title Następnie
+            %h3.proces-title Następnie
             %span.proces-subtitle Treść i struktura
           %p Przeglądamy i dostosowujemy dotychczasową zawartość strony . W zależności od potrzeb Twoich odbiorców tworzymy również nową treść. Projektujemy nowy układ informacji i interakcje z użytkownikami.
         
         .grid-cell
           .proces-header{"data-number" => "03"} 
-            %h2.proces-title By w końcu
+            %h3.proces-title By w końcu
             %span.proces-subtitle Design i technologia
           %p Prezentujemy treść w przejrzysty i zrozumiały sposób oraz opracowujemy właściwą oprawę wizualną dla Twojego biznesu.
           %p.strong Budujemy stronę tak by była:
@@ -97,7 +96,39 @@ title: da się prościej - usługi
         
         .grid-cell
           .proces-header{"data-number" => "04"} 
-            %h2.proces-title Ale to nie koniec
+            %h3.proces-title Ale to nie koniec
             %span.proces-subtitle Efekty
           %p Po uruchomieniu strony, badamy jej efektywność. Mierzymy jej sukces, żebyś wiedział jak wiele zyskałeś dzięki tej inwestycji.       
-           
+    
+  %section.section.dsp-quote
+    .container--wide
+      %p Pracujemy tak, jak chcielibyśmy, by pracowano dla nas. Twój sukces jest tak samo ważny dla Ciebie jak i dla nas - w&nbsp;końcu to również nasza reputacja.      
+
+  %section.section.section-ways
+    .container--wide
+      %h2 3 sposoby współpracy     
+      .grid-s.grid-s--1of2.grid-m--1of3.grid-s--gutters-xl
+        .grid-cell
+          .ways-item
+            %h3 Tekst
+            %p Jesteś bardzo zadowolony z&nbsp;wyglądu swojej strony, ale wiesz że treść wymaga profesjonalnego spojrzenia z&nbsp;zewnątrz. Czasem wystarczą drobne zmiany by efekt był zaskakujący. Ocenimy, ulepszymy i&nbsp;stworzymy treść, która połączy Twoje cele biznesowe z&nbsp;potrzebami Twoich odbiorców.
+        .grid-cell
+          .ways-item.ways-item-2
+            %h3 Tekst + Design
+            %p Jeśli zmiany samego tekstu nie wystarczą, zaproponujemy nowy układ informacji i&nbsp;stworzymy lub usprawnimy warstwę wizualną tak, by dostarczyć Twój przekaz z&nbsp;większą skutecznością.  Pod warunkiem, że masz swojego programistę, który złoży to w&nbsp;całość.
+        .grid-cell
+          .ways-item.ways-item-3
+            %h3 Cały zestaw
+            %p Zajmiemy się Twoją stroną od początku do końca. W zakres wchodzi copywriting, design, wdrożenie strony i&nbsp;jeśli zajdzie taka potrzeba - system zarządzania treścią (CMS). Będziemy również wspierać Twoją stronę, włączając w&nbsp;to mierzenie efektów i&nbsp;bieżące usprawnienia.  
+   
+  %section.section.section-cta
+    .container--wide
+      %hr.inline/
+      %h1.cta-title
+        Nadal zainteresowany?
+      %p To świetnie. Napisz nam kilka słów o swoim biznesie oraz dlaczego chciałbyś zmienić swoją stronę. Nie możemy się doczekać aż Cię poznamy.  
+      = partial 'partials/components/button', :locals => {btn_link: 'mailto:mail@dasieprosciej.pl'} do
+        Napisz do nas
+
+
+       

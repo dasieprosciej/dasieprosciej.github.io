@@ -2,101 +2,124 @@
   width: 100%;
 }
 
-.u-1of2 {
+.u--1of2 {
   width: 50%;
 }
 
-.u-1of3 {
+.u--1of3 {
   width: 33.3333%;
 }
 
 
-.u-2of3 {
+.u--2of3 {
   width: 66.6667%;
 }
 
-.u-1of4 {
+.u--1of4 {
   width: 25%;
 }
 
-.u-1of6 {
+.u--1of6 {
   width: 16.6666%;
 }
 
-.u-3of4 {
+.u--3of4 {
   width: 75%;
 }
 
+
+//offset
+.grid--offset-33 {
+  margin-left: 33.3333%;
+}
+@include mq($bp1){
+  .grid-s--offset-33 {
+    margin-left: 33.3333%;
+  }
+} 
+@include mq($bp2){
+  .grid-m--offset-33 {
+    margin-left: 33.3333%;
+  }
+} 
+@include mq($bp3){
+  .grid-l--offset-33 {
+    margin-left: 33.3333%;
+  }
+} 
+
+
+
 @include mq($bp1) {
-  .u-s-full {
+  .u-s--full {
     width: 100%;
   }
-  .u-s-1of2 {
+  .u-s--1of2 {
     width: 50%;
   }
-  .u-s-1of3 {
+  .u-s--1of3 {
     width: 33.3333%;
   }
-  .u-s-2of3 {
+  .u-s--2of3 {
     width: 66.6667%;
   }
-  .u-s-1of4 {
+  .u-s--1of4 {
     width: 25%;
   }
   
-  .u-s-1of6 {
+  .u-s--1of6 {
   width: 16.6666%;
   }
 
-  .u-s-3of4 {
+  .u-s--3of4 {
     width: 75%;
   }
 }
 
 @include mq($bp2) {
-  .u-m-full {
+  .u-m--full {
     width: 100%;
   }
-  .u-m-1of2 {
+  .u-m--1of2 {
     width: 50%;
   }
-  .u-m-1of3 {
+  .u-m--1of3 {
     width: 33.3333%;
   }
-  .u-m-2of3 {
+  .u-m--2of3 {
     width: 66.6667%;
   }
-  .u-m-1of4 {
+  .u-m--1of4 {
     width: 25%;
   }
-  .u-m-1of6 {
+  .u-m--1of6 {
   width: 16.6666%;
   }
-  .u-m-3of4 {
+  .u-m--3of4 {
     width: 75%;
   }
 }
 
 @include mq($bp3) {
-  .u-l-full {
+  .u-l--full {
     width: 100%;
   }
-  .u-l-1of2 {
+  .u-l--1of2 {
     width: 50%;
   }
-  .u-l-1of3 {
+  .u-l--1of3 {
     width: 33.3333%;
   }
-  .u-l-2of3 {
+  .u-l--2of3 {
     width: 66.6667%;
   }
-  .u-l-1of4 {
+  .u-l--1of4 {
     width: 25%;
   }
-  .u-l-1of6 {
+  .u-l--1of6 {
   width: 16.6666%;
   }
-  .u-l-3of4 {
+  .u-l--3of4 {
     width: 75%;
   }
 }
@@ -324,11 +347,11 @@
     padding: 2em 0 0 2em;
   }
   .grid-s--gutters-xxl {
-    margin: -3em 0 2em -2em;
+    margin: -7em 0 3em -3em;
     margin-bottom: 0;
   }
   .grid-s--gutters-xxl > .grid-cell {
-    padding: 3em 0 0 2em;
+    padding: 7em 0 0 3em;
   }
 }
 

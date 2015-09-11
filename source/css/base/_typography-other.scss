@@ -1,81 +1,24 @@
-p,
-p>a,
-li {
-	// -webkit-font-smoothing: antialiased;
-	// -moz-osx-font-smoothing: grayscale;	
-}
-
-p {
-	// font-size: 24px;
-}
-
 em {
   font-style:italic;
   font-weight: 300 !important;
-  // -webkit-font-smoothing: auto !important;
-  // -moz-osx-font-smoothing: auto !important;
 }    
 
-.font-18,
-ul.font-18 li {
-	font-size: 16px;
-	@include mq($bp2){
-		font-size: 18px;
-	} 
+.font-large {
+  font-size: 20px;
+  @include mq($bp1) {
+    font-size: 24px;
+  } 
+}
+.font-larger {
+  font-size: 20px;
+  @include mq($bp1) {
+    font-size: 24px;
+  } 
+  @include mq($bp2){
+    font-size: 28px;
+  } 
 }
 
-.font-20,
-ul.font-20 li {
-	font-size: 18px;
-	@include mq($bp1){
-		// font-size: 18px;
-	} 
-	@include mq($bp2){
-		font-size: 20px;
-	} 
-	@include mq($bp3){
-		// font-size: 20px;
-	} 
-}
-
-
-
-	p {
-		// line-height: 1.5;
-		@include mq($bp2){
-			// line-height: 1.6;
-		} 
-	}
-
-
-.font-22 >p,
-.font-22 li
-{
-font-size: 20px;
-	@include mq($bp1) {
-		// font-size: 20px;
-	} 
-	@include mq($bp2){
-		font-size: 22px;
-	} 
-	@include mq($bp4) {
-		// font-size: 24px;
-	} 
-}
-
-.font-40 {
-	font-size: 30px;
-	line-height: 1.2;
-	margin-bottom: 0 !important;
-	@include mq($bp2){
-		font-size: 40px;
-	}
-}
-
-.emphasis {
-	// color: $primary-color;
-	font-weight: 700;
-}
 
 b,
 strong,
@@ -87,7 +30,6 @@ strong,
 ul,
 ol {
 	list-style: none;
-
 }
 
 .ul-inline {
@@ -103,32 +45,16 @@ ol {
 
 
 blockquote {
-    // font-style:italic;
-    font-style:normal;
-    // border-left: 1px solid gray;
-    // color: gray;
-    
-    // color:#FFF3A9;
-
-	// -webkit-font-smoothing: antialiased;
-	// -moz-osx-font-smoothing: grayscale;
-		font-weight: 300;
-    // padding-left: 65px;
-    
-    
-    font-style: italic;
-    position: relative;
-    // font-size: 20px;
-    // margin:1.5em 0;
-    background:url(/images/quote.svg) top left no-repeat;
-    background-size:30px auto;
-		color:#999;
-    padding-left: 45px;
-    margin-left: -45px;
-    margin-bottom: 30px;
-    // padding-bottom: 3px;
-	// padding-left: 1em;
-	// margin-bottom: 1em;
+  font-style:normal;
+	font-weight: 300;
+  font-style: italic;
+  position: relative;
+  background:url(/images/quote.svg) top left no-repeat;
+  background-size:30px auto;
+	color:#999;
+  padding-left: 45px;
+  margin-left: -45px;
+  margin-bottom: 30px;
 }
 
 
@@ -139,8 +65,6 @@ cite {
 	font-style:normal;
 	font-size: 14px;
 	color:$heading-color;
-	// -webkit-font-smoothing: antialiased;
-	// -moz-osx-font-smoothing: grayscale;	
 }
 
 dl {

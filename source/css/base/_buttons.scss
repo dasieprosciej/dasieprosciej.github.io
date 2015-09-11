@@ -97,7 +97,10 @@
   font-style: normal;
   cursor:pointer;
   margin-top: 70px;
-  font-size:18px;
+  font-size:15px;
+  @include mq($bp1){
+    font-size: 18px;
+  } 
   &:hover {
     .btn-shadow {
       transform: translateX(0) translateY(0) translateZ(0);

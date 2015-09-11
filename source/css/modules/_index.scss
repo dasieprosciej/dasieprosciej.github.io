@@ -1,8 +1,18 @@
+.index .header h1 {
+  line-height: .9;
+}
+
 
 .section-info {
-  padding-top: 100px;
-  padding-bottom: 370px;
-  font-size:28px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  @include mq($bp1){
+    padding-top: 100px;
+    padding-bottom: 100px;
+  } 
+  @include mq($bp2) {
+    padding-bottom: 370px;
+  } 
   p {
     line-height: 1.6;
     span {
@@ -40,7 +50,9 @@
 
 .section-why {
   position: relative;
-  @include mq($bp3){ 
+  text-align: center;
+  @include mq($bp2){ 
+    text-align: left;
     &:before {
       content:'';
       position: absolute;
@@ -65,11 +77,15 @@
   // padding-top: 50px;
   // padding-bottom: 50px;
   .index & {
-    padding-top: 50px;
+    padding-top: 100px;
     padding-bottom: 125px;
+    @include mq($bp2){
+      padding-top: 50px;
+    } 
   }
 }
 
 .cta-title {
+  word-wrap: break-word;
   line-height: 1;
 }

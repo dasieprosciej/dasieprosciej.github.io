@@ -1,21 +1,14 @@
-.header {
-	// margin-bottom: 120px;
-}
+
 
 .section {
-	padding-top: 100px;
-	padding-bottom: 100px;
-	&:first-child {
-		// padding-top: 0;
-	}
-	&:last-child {
-		// padding-bottom: 20px;
-	}
+		padding-top: 70px;
+		padding-bottom: 70px;
+	@include mq($bp1){
+		padding-top: 100px;
+		padding-bottom: 100px;
+	} 
 }
 
-.content {
-		// padding-top: 120px;
-}
 
 .content {
 	overflow: hidden;

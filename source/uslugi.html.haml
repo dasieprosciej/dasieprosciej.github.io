@@ -3,9 +3,8 @@ title: da się prościej - usługi
 ---
 
 .content
-  %section.section
-    .container--wide
-      -# .block.block--1of2.align-bottom        
+  %section.section.section-help
+    .container--wide    
       .grid-m.grid-m--1of2.align-bottom
         .grid-cell.block-text
           %h2
@@ -32,39 +31,36 @@ title: da się prościej - usługi
   %section.section.section-get
     .container--wide
       %h2 Otrzymasz stronę, która:
-      .grid.grid-m--1of3.align-middle
+      .grid.grid-m--1of3.grid-s--1of2.align-middle
         .grid-cell.icon-block.icon-odpowiada
         .grid-cell.icon-text-block  
           %h3 Odpowiada
           %p na pytania Twoich odbiorców, rozwiewa ich wątpliwości i&nbsp;inspiruje do podjęcia akcji
-      .grid.grid-m--1of3.align-middle.block-line-full
-        .grid-cell
+      .grid.grid-s--1of2.u-m--2of3.grid-m--offset-33.align-middle.block-line-full
         .grid-cell.icon-block.icon-wzmacnia
         .grid-cell.icon-text-block        
           %h3 Wzmacnia
           %p wiarygodność i wizerunek Twojego biznesu
         
           
-      .grid.grid-m--1of3.align-middle.block-line-full
-        .grid-cell
+      .grid.grid-s--1of2.u-m--2of3.grid-m--offset-33.align-middle.block-line-full
         .grid-cell.icon-block.icon-buduje  
         .grid-cell.icon-text-block  
           %h3 Buduje
           %p zaufanie i lojalność, zamieniając odwiedzających w klientów, a&nbsp;klientów w fanów
         
 
-      .grid.grid-m--1of3.align-middle.block-line-full    
+      .grid.grid-s--1of2.u-m--2of3.align-middle.block-line-full    
         .grid-cell.icon-block.icon-czyni
         .grid-cell.icon-text-block        
           %h3 Czyni
           %p rzeczy skomplikowane prostymi i łatwymi w użyciu
-        .grid-cell
    
   %section.section.section-proces
     .container--wide
       %h2.section-proces-title Nasz proces w skrócie
-      .grid-m.grid-m--1of2.grid-m--gutters-xxl
-        .grid-cell
+      .grid-s.grid-s--1of2.grid-s--gutters-xxl
+        .grid-cell.proces-item
           .proces-header.proces-first{"data-number" => "01"} 
             %h3.proces-title Na początku
             %span.proces-subtitle Strategia i analiza            
@@ -77,13 +73,13 @@ title: da się prościej - usługi
             %li Co chcesz osiągnąć?
           %p W pełni zanurzamy się w świecie Twojego biznesu, badamy aktualne trendy, analizujemy Twoją konkurencję i rynek na którym działasz. Docieramy do sedna tego co sprawia, że Twoja oferta jest wyjątkowa.  
 
-        .grid-cell
+        .grid-cell.proces-item
           .proces-header{"data-number" => "02"}             
             %h3.proces-title Następnie
             %span.proces-subtitle Treść i struktura
           %p Przeglądamy i dostosowujemy dotychczasową zawartość strony . W zależności od potrzeb Twoich odbiorców tworzymy również nową treść. Projektujemy nowy układ informacji i interakcje z użytkownikami.
         
-        .grid-cell
+        .grid-cell.proces-item
           .proces-header{"data-number" => "03"} 
             %h3.proces-title By w końcu
             %span.proces-subtitle Design i technologia
@@ -94,7 +90,7 @@ title: da się prościej - usługi
             %li szybka
             %li responsywna (dostosowana do ekranu)
         
-        .grid-cell
+        .grid-cell.proces-item
           .proces-header{"data-number" => "04"} 
             %h3.proces-title Ale to nie koniec
             %span.proces-subtitle Efekty
@@ -107,7 +103,7 @@ title: da się prościej - usługi
   %section.section.section-ways
     .container--wide
       %h2 3 sposoby współpracy     
-      .grid-s.grid-s--1of2.grid-m--1of3.grid-s--gutters-xl
+      .grid-s.grid-s--1of2.grid-m--1of3.grid-s--gutters-xxl
         .grid-cell
           .ways-item
             %h3 Tekst
@@ -126,7 +122,7 @@ title: da się prościej - usługi
       %hr.inline/
       %h1.cta-title
         Nadal zainteresowany?
-      %p To świetnie. Napisz nam kilka słów o swoim biznesie oraz dlaczego chciałbyś zmienić swoją stronę. Nie możemy się doczekać aż Cię poznamy.  
+      %p.font-larger To świetnie. Napisz nam kilka słów o swoim biznesie oraz dlaczego chciałbyś zmienić swoją stronę. Nie możemy się doczekać aż Cię poznamy.  
       = partial 'partials/components/button', :locals => {btn_link: 'mailto:mail@dasieprosciej.pl'} do
         Napisz do nas
 

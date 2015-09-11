@@ -1,19 +1,25 @@
+
 .block-heading {
   position: relative;
   background: #0C216C;
   width: 100%;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding: 70px 20px;
   &:before {
-    content:'';
-    width: 250px;
-    height: 250px;
-    position: absolute;
-    background:tint($link-color,50);
-    left: -250px;
-    bottom: 0;
+    @include mq($bp2){
+      content:'';
+      width: 250px;
+      height: 250px;
+      position: absolute;
+      background:tint($link-color,50);
+      left: -250px;
+      bottom: 0;
+    }  
   }
-  @include mq($bp2){
+  @include mq($bp1) {
+    // padding: 0 100px;
+  } 
+  @include mq($bp2) {
+    padding: 0 100px;
     width: 50%;
     height: 500px;
     order:-1;
@@ -23,21 +29,28 @@
     text-align: center;
   }
 }
-.block-img-2 {
-  // @include clearfix;
-  img {
-    float: left;
-  }
+
+.block-img {
+  display: inline-block;
 }
+
+
 .block-text {
   font-size:18px;
+  padding: 50px 0;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
   @include mq($bp2) {
+    max-width: none;
     padding:100px 50px;
   } 
 }
 
 .index .block-text {
   background:#fff;
+  // text-align: left;
   @include mq($bp2) {
     order:2;
     margin-top: -250px;
@@ -47,16 +60,17 @@
 .uslugi .block-text{
   position: relative;
   &:before {
-    content:'';
-    position: absolute;
-    top: 0;
-    // left: 0;
-    background:#D2F0FC;
-    width: 500px;
-    height: 250px;
-    left: -250px;
-    z-index: -1;
-    opacity: .7;
+    @include mq($bp2){
+      content:'';
+      position: absolute;
+      top: 0;
+      background:#D2F0FC;
+      width: 375px;
+      height: 250px;
+      left: -125px;
+      z-index: -1;
+      opacity: .7;
+    }
   }
   &:first-child {
     padding-top: 0;
@@ -67,17 +81,23 @@
       top: -50px;
     }
   }
+  &:last-child {
+    padding-bottom: 0;
+  }
 }
 
 
 .block-img-1 {
     position: relative;
+    margin-bottom: 50px;
     &:before,
     &:after {
-      content:'';
-      width: 250px;
-      height: 250px;
-      position: absolute;
+      @include mq($bp2){
+        content:'';
+        width: 250px;
+        height: 250px;
+        position: absolute;  
+      }       
     }
     &:before {
       background:tint($link-color,50);
@@ -90,6 +110,7 @@
       left: -250px;
     }
   @include mq($bp2) {
+    margin-bottom: 0;
     top: -250px;  
   } 
 }
@@ -98,10 +119,16 @@
 // ikony z uslug
 .icon-block {
   // width: 100%;
-  height: 333px;
-  
+  // padding: 100px;
+  width: 100%;
+  height: 300px;
   background:$primary-color;
   position: relative;
+  display: inline-block;
+  @include mq($bp1){
+    width: 333px;
+    height: 333px;
+  } 
   &:before {
     content:'';
     position: absolute;
@@ -138,6 +165,13 @@
 }
 
 .icon-wzmacnia {
+  @include mq($bp1) {
+    order:2;  
+  } 
+  
+  @include mq($bp2) {
+    order:0;
+  } 
   &:before {
     background-position: -114px -8px;
     width: 78px;
@@ -157,7 +191,9 @@
 }
 
 .icon-buduje {
-  order:2;
+  @include mq($bp2){
+    order:2;  
+  } 
   &:before {
     background-position: -222px 0;
     width: 76px;
@@ -176,6 +212,12 @@
 }
 
 .icon-czyni {
+  @include mq($bp1) {
+    order:2;
+  } 
+  @include mq($bp2) {
+    order:0;
+  } 
   &:before {
     background-position: -327px -19px;
     width: 112px;
@@ -198,13 +240,20 @@
 }
 
 .icon-text-block {
-  padding:50px;
+  padding:20px 0 50px;
+  font-size: 18px;
+  @include mq($bp1){
+    font-size: 16px;
+  } 
+  // text-align: left;
   h3 {
     font-weight: 400;
+    font-size: 24px;
     color:$primary-color;
   }
-  // width: 100%;
-  // background:#eee;
+  @include mq($bp1) {
+    padding: 50px;
+  }  
 }
 
 

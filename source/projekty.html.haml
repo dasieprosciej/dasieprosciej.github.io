@@ -1,0 +1,12 @@
+---
+title: da się prościej - realizacje
+blog: projekty
+---
+
+
+%section.section.section-projekty
+  .container--wide
+    - page_articles.each_with_index do |article, i|
+      %article{class: "projekt #{article.data.projekt_class}", style: "background:url(https://unsplash.it/1000/400/?random) 0 0 no-repeat"}
+        %h1=article.data.title_index  
+        = link_to("Zobacz", article.url, :class => "btn btn-cta")

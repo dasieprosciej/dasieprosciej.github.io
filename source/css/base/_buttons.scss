@@ -1,5 +1,6 @@
 .btn {
-	display: inline-block;
+	// display: inline-block;
+  display: block;
 	outline: none;
 	border:none;
 	// color:$link-color;
@@ -115,7 +116,7 @@
   width: 100%;
   position: absolute;
   height: 100%;
-  height:calc(100% - 6px);
+  // height:calc(100% - 6px);
   border:6px solid #e5e5e5;
   transform: translateX(10px) translateY(10px) translateZ(0);
   transition: all .3s;

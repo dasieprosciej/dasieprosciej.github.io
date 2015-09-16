@@ -8,10 +8,11 @@
     <% else %>
       <%= stylesheet_link_tag 'style'%>  
     <% end %>
-    <% if content_for?(:art) %>
-      <%= yield_content :art %>
+    <% if content_for?(:css) %>
+      <%= yield_content :css %>
     <% end %>
-    <%= partial  '/partials/head/font_load' %>
+    <%= stylesheet_link_tag 'fonts-dsp'%>  
+     <!-- <%= partial  '/partials/head/font_load' %> -->
     
   </head>
   

@@ -10,7 +10,7 @@
 
 
 //fonts
-@import "base/fonts";
+// @import "base/fonts";
 
 
 // Site-wide styles
@@ -19,6 +19,7 @@
 
 // Grid styles
 @import "base/grid";
+// @import "base/grid-custom";
 
 @import "layout";
 // Misc. HTML elements
@@ -33,9 +34,9 @@
 @import "base/buttons";
 @import "base/forms";
 @import "base/tables";
-@import "base/icons";
-@import "base/tooltip";
-@import "base/validacje";
+// @import "base/icons";
+// @import "base/tooltip";
+// @import "base/validacje";
 @import "base/utilities";
 
 //other
@@ -46,14 +47,9 @@
 @import "modules/header";
 @import "modules/menu";
 @import "modules/index";
-// @import "modules/home/hero";
-// @import "modules/home/sections";
-
-@import "modules/blog/blog-index";
 @import "modules/uslugi";
-@import "modules/kto";
+@import "modules/onas";
 @import "modules/footer";
-
 @import "modules/projekty";
 @import "modules/article";
 @import "modules/blog";

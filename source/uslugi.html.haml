@@ -17,10 +17,10 @@ title: da się prościej - usługi
           %h4 Możemy Ci w tym pomóc
           %p  W zależności od potrzeby, odświeżymy lub gruntownie przebudujemy Twoją stronę internetową. Uprościmy przekaz zarówno w zakresie treści jak i warstwy wizualnej, by skupić się na tym co najcenniejsze w Twoim biznesie.
         .grid-cell.block-img          
-          %img{:src => "https://unsplash.it/500/500?random", :alt => ""}/
+          %img{:src => "/images/uslugi-1.jpg", :alt => ""}/
       .grid-m.grid-m--1of2
-        .grid-cell.block-img.z--2
-          %img{:src => "https://unsplash.it/500/500/?random", :alt => ""}/
+        .grid-cell.block-img.block-img--simplify
+          
         .grid-cell.block-text
           %h2
             Upraszczamy
@@ -32,26 +32,26 @@ title: da się prościej - usługi
     .container--wide
       %h2 Otrzymasz stronę, która:
       .grid.grid-m--1of3.grid-s--1of2.align-middle
-        .grid-cell.icon-block.icon-odpowiada
+        .grid-cell.icon-block.icon-odpowiada        
+          -# = partial 'partials/components/svg-odpowiada'
         .grid-cell.icon-text-block  
           %h3 Odpowiada
           %p na pytania Twoich odbiorców, rozwiewa ich wątpliwości i&nbsp;inspiruje do podjęcia akcji
       .grid.grid-s--1of2.u-m--2of3.grid-m--offset-33.align-middle.block-line-full
         .grid-cell.icon-block.icon-wzmacnia
+          -# = partial 'partials/components/svg-wzmacnia'
         .grid-cell.icon-text-block        
           %h3 Wzmacnia
           %p wiarygodność i wizerunek Twojego biznesu
-        
-          
       .grid.grid-s--1of2.u-m--2of3.grid-m--offset-33.align-middle.block-line-full
         .grid-cell.icon-block.icon-buduje  
+          -# = partial 'partials/components/svg-buduje'        
         .grid-cell.icon-text-block  
           %h3 Buduje
           %p zaufanie i lojalność, zamieniając odwiedzających w klientów, a&nbsp;klientów w fanów
-        
-
       .grid.grid-s--1of2.u-m--2of3.align-middle.block-line-full    
-        .grid-cell.icon-block.icon-czyni
+        .grid-cell.icon-block.icon-czyni        
+          -# = partial 'partials/components/svg-czyni'        
         .grid-cell.icon-text-block        
           %h3 Czyni
           %p rzeczy skomplikowane prostymi i łatwymi w użyciu

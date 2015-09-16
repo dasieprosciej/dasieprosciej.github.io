@@ -1,7 +1,10 @@
 //= require rimg-breakpoints
 //= require rimg.min
-//= require classie
-//= require smoothscroll
+//= require turbolinks
+
+
+
+
 
 
 
@@ -11,18 +14,18 @@ function addListener(element, type, callback) {
 }
 
 var cta_link_1 = document.getElementById('cta-1');
-var cta_link_2 = document.getElementById('cta-2');
+// var cta_link_2 = document.getElementById('cta-2');
 if(cta_link_1) {   //if the element exists add the click event
 	addListener(cta_link_1, 'click', function() {
 	  ga('send', 'event', 'button', 'click', 'cta-1');
 	});	
 };
 
-if(cta_link_2) {
-	addListener(cta_link_2, 'click', function() {
-	  ga('send', 'event', 'button', 'click', 'cta-2');
-	});
-};
+// if(cta_link_2) {
+// 	addListener(cta_link_2, 'click', function() {
+// 	  ga('send', 'event', 'button', 'click', 'cta-2');
+// 	});
+// };
 
 
 (function() {
@@ -41,3 +44,9 @@ if(cta_link_2) {
   day.innerHTML = msg2;
 })();
 
+
+//vivus
+// odpowiada = new Vivus('odpowiada', {type: 'delayed', duration: 150});
+// wzmacnia = new Vivus('wzmacnia', {type: 'delayed', duration: 150});
+// buduje = new Vivus('buduje', {type: 'delayed', duration: 150});
+// czyni = new Vivus('czyni', {type: 'delayed', duration: 150});

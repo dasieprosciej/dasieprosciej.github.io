@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
     cp = require('child_process'),
     cmq = require('gulp-combine-media-queries'),
-    runSequence = require('gulp-run-sequence'),
+    runSequence = require('run-sequence'),
     minifyCss = require("gulp-minify-css"),
     autoprefixer = require("gulp-autoprefixer"),
     browserSync = require('browser-sync'),
@@ -13,9 +13,12 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     responsive = require('gulp-responsive'),
     del = require('del'),
+    cache = require('gulp-cache'),
     newer = require('gulp-newer'),
+    moz = require('imagemin-mozjpeg'),
     sass = require('gulp-sass');
 
+var path = require('path');
 
 // dla pluginu z grunt
 require('gulp-grunt')(gulp);
@@ -23,6 +26,7 @@ require('gulp-grunt')(gulp);
 gulp.task('grunt-images', function() {
     gulp.start('grunt-imageoptim');
 });
+
 
 gulp.task('middleman-build', function (done) {
     return cp.spawn('middleman', ['build'], {stdio: 'inherit'})
@@ -80,47 +84,6 @@ gulp.task('remote', function (cb) {
 
 
 
-// gulp.task (  'image-res' ,  function () { 
-//   var  SrcGlobs    =  glob.sync('source/**/images/'); 
-//   var  srcDir      =  'resp' ; 
-//   var  DstDir      =  '' ; 
-//   var  targetFile  =  '/r_*.{jpg,png}' ;
-
-//   var  resizeLarge  =  { 
-//     width        :  1920 , 
-//     height       :  500 , 
-//     gravity      :  'Center' , 
-//     crop         :  true 
-//   };
-
-//   var resizeSmall = {
-//     width        :  800 , 
-//     height       :  300 , 
-//     gravity      :  'Center' , 
-//     crop         :  true 
-//   };
-
-
-//   for ( var  Item  in  SrcGlobs )  { 
-//     var  SrcGlob  =  SrcGlobs [ Item ]  +  srcDir  +  targetFile ; 
-//     var  DstGlob  =  SrcGlobs [ Item ]  +  DstDir ;
-
-//     gulp.src(  SrcGlob  ) 
-//       .pipe( changed (  DstGlob  )) 
-//       .pipe( imageResize (  resizeLarge  )) 
-//       .pipe( rename({suffix: '-large'}))
-//       .pipe( gulp.dest (  DstGlob  )) 
-//       .pipe( filelog ()); 
-
-//      gulp.src(  SrcGlob  ) 
-//       .pipe( changed (  DstGlob  )) 
-//       .pipe( imageResize (  resizeSmall  )) 
-//       .pipe( rename({suffix: '-small'}))
-//       .pipe( gulp.dest (  DstGlob  )) 
-//       .pipe( filelog ()); 
-        
-//   } 
-// });
 
 gulp.task( 'regenerate', function(){
   var src = ['source/projekty/**/images/img-*.{jpg,jpeg,png}', 'source/blog/**/images/img-*.{jpg,png,jpeg}'];
@@ -134,7 +97,7 @@ gulp.task( 'regenerate', function(){
 
 
 
-gulp.task ('responsive', function(){
+gulp.task ('responsive-s', function(){
     var  SrcGlobs    =  glob.sync('source/**/'); 
     var  srcDir      =  'original' ; 
     var  DstDir      =  'images' ; 
@@ -150,8 +113,17 @@ gulp.task ('responsive', function(){
 
 
     gulp.src(SrcGlob)
-    .pipe(newer(DstGlob)) 
-    // .pipe(plumber())
+    .pipe(newer({
+      dest: DstGlob,
+      map: function(pathDir) {
+        pathDir = 
+          path.dirname(pathDir) + '/img-' +
+          path.basename(pathDir, path.extname(pathDir)) + '-s' +
+          path.extname(pathDir);
+        return pathDir;  
+      }
+      }))  
+    .pipe(filelog())
     .pipe(responsive({
       '**/*.jpg' : 
         [
@@ -162,28 +134,77 @@ gulp.task ('responsive', function(){
               prefix: 'img-',
               suffix: '-s'
             }
-          },
+          }
+          // {
+          //   width: 1500,
+          //   rename: {
+          //     prefix: 'img-',
+          //     suffix: '-l'
+          //   }
+          // },
+          // {
+          //   width: 2000,
+          //   rename: {
+          //     prefix: 'img-',
+          //     suffix: '-xl'
+          //   }
+          // },
+          // {
+          //   width: 600,
+          //   height: 400,
+          //   crop: true,
+          //   rename: {
+          //     prefix: 'img-',
+          //     suffix: '-thumbnail'
+          //   }
+          // }
+        ]
+    },
+    {
+      errorOnUnusedConfig: false,
+      errorOnUnusedImage: false,
+      errorOnEnlargement: false,
+      skipOnEnlargement: true
+    }
+
+    ))
+    .pipe( gulp.dest (  DstGlob ))
+    .pipe(filelog());
+
+ } //zamkniecie for
+});
+
+gulp.task ('responsive-l', function(){
+    var  SrcGlobs    =  glob.sync('source/**/'); 
+    var  srcDir      =  'original' ; 
+    var  DstDir      =  'images' ; 
+    var  targetFile  =  '/*.{jpg,png}' ;
+
+    for ( var  Item  in  SrcGlobs )  { 
+    var  SrcGlob  =  SrcGlobs [ Item ]  +  srcDir  +  targetFile ; 
+    var  DstGlob  =  SrcGlobs [ Item ]  +  DstDir ;
+
+
+    gulp.src(SrcGlob)
+    .pipe(newer({
+      dest: DstGlob,
+      map: function(pathDir) {
+        pathDir = 
+          path.dirname(pathDir) + '/img-' +
+          path.basename(pathDir, path.extname(pathDir)) + '-l' +
+          path.extname(pathDir);
+        return pathDir;  
+      }
+      }))  
+    .pipe(filelog())
+    .pipe(responsive({
+      '**/*.jpg' : 
+        [
           {
             width: 1500,
             rename: {
               prefix: 'img-',
               suffix: '-l'
-            }
-          },
-          {
-            width: 2000,
-            rename: {
-              prefix: 'img-',
-              suffix: '-xl'
-            }
-          },
-          {
-            width: 600,
-            height: 400,
-            crop: true,
-            rename: {
-              prefix: 'img-',
-              suffix: '-thumbnail'
             }
           }
         ]
@@ -196,10 +217,129 @@ gulp.task ('responsive', function(){
     }
 
     ))
-    .pipe( gulp.dest (  DstGlob ));
+    .pipe( gulp.dest (  DstGlob ))
+    .pipe(filelog());
 
  } //zamkniecie for
 });
+
+gulp.task ('responsive-xl', function(){
+    var  SrcGlobs    =  glob.sync('source/**/'); 
+    var  srcDir      =  'original' ; 
+    var  DstDir      =  'images' ; 
+    var  targetFile  =  '/*.{jpg,png}' ;
+
+    for ( var  Item  in  SrcGlobs )  { 
+    var  SrcGlob  =  SrcGlobs [ Item ]  +  srcDir  +  targetFile ; 
+    var  DstGlob  =  SrcGlobs [ Item ]  +  DstDir ;
+
+
+    gulp.src(SrcGlob)
+    .pipe(newer({
+      dest: DstGlob,
+      map: function(pathDir) {
+        pathDir = 
+          path.dirname(pathDir) + '/img-' +
+          path.basename(pathDir, path.extname(pathDir)) + '-xl' +
+          path.extname(pathDir);
+        return pathDir;  
+      }
+      }))  
+    .pipe(filelog())
+    .pipe(responsive({
+      '**/*.jpg' : 
+        [
+          {
+            width: 2000,
+            rename: {
+              prefix: 'img-',
+              suffix: '-xl'
+            }
+          }
+        ]
+    },
+    {
+      errorOnUnusedConfig: false,
+      errorOnUnusedImage: false,
+      errorOnEnlargement: false,
+      skipOnEnlargement: true
+    }
+
+    ))
+    .pipe( gulp.dest (  DstGlob ))
+    .pipe(filelog());
+
+ } //zamkniecie for
+});
+
+
+gulp.task('responsive', ['responsive-s', 'responsive-l', 'responsive-xl']);
+
+// gulp.task ('dupa', function(){
+//     var  src    =  'source/**/original/*.jpg'; 
+
+//     gulp.src(src)
+//     .pipe(filelog())
+//     .pipe(responsive({
+//       '**/*.jpg' : 
+//         [
+//           {
+//             width: 800,
+
+//             rename: {
+//               prefix: 'img-',
+//               suffix: '-s'
+//             }
+//           },
+//           {
+//             width: 1500,
+//             rename: {
+//               prefix: 'img-',
+//               suffix: '-l'
+//             }
+//           },
+//           {
+//             width: 2000,
+//             rename: {
+//               prefix: 'img-',
+//               suffix: '-xl'
+//             }
+//           },
+//           {
+//             width: 600,
+//             height: 400,
+//             crop: true,
+//             rename: {
+//               prefix: 'img-',
+//               suffix: '-thumbnail'
+//             }
+//           }
+//         ]
+//     },
+//     {
+//       errorOnUnusedConfig: false,
+//       errorOnUnusedImage: false,
+//       errorOnEnlargement: false,
+//       skipOnEnlargement: true
+//     }
+
+//     ))
+//     .pipe(rename(function(path){
+//       path.basename = '../dupa/' + path.basename;
+//     }))
+//     .pipe(gulp.dest(function(file){
+//       return file.base;
+//     }))
+//     .pipe(filelog());
+// });
+
+// gulp.task('moz', function () {
+//     return gulp.src('source/**/images/img-*.{jpg,jpeg}')
+//         .pipe(moz({quality: 80})())
+//         .pipe(gulp.dest('./dest'));
+// });
+
+
 
 
 gulp.task('images', function (cb) {
@@ -213,7 +353,7 @@ gulp.task('images', function (cb) {
 //glowne
 gulp.task('default', function (cb) {
     runSequence(
-        'images',
+        'responsive',
         'middleman-build',        
         'css', 
     cb);

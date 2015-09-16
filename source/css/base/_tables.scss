@@ -7,9 +7,24 @@ table {
 }
 th,td {
 	text-align: left;
-	padding: 1em 1%;
+	padding: 1em 20px;
 	font-weight: 400;
 	vertical-align: middle;
 }
 
+thead th {
+  font-weight: 700;
+  font-family: $sans-font;
+}
 
+table tbody tr:nth-of-type(odd) {
+    background: #F9FAFB;
+}
+
+table td:nth-child(2),
+table th:nth-child(2),
+table td:nth-child(3),
+table th:nth-child(3)
+{
+    border-left: 1px solid #eee;
+}

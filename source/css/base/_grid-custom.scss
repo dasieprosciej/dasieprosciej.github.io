@@ -1,63 +1,150 @@
-// .row {
-// 	width: 100%;
-// 	margin:0 auto;
-// 	@include clearfix;
-// }
+@mixin flex-grid($count) {
+	$item-width : 100 / $count;
 
-.col  {
-	@include mq($bp1){
-	// display: block;
-		float: left;
-	}
-	// margin-left: 2%;
+$breakpoints: $bp1, $bp2, $bp3;
+$sizes: l, xl, xxl ;
+$l-top :  1.5em;
+$l-left : 1.5em;
+$xl-top :  4em;
+$xl-left : 4em;
+$xxl-top :  6em;
+$xxl-left : 4em;  
+$break : s,m,l;
+
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+.grid--gutters {
+  margin: -1em 0 0 -1em;
+}
+.grid--gutters > .grid--cell {
+  padding: 1em 0 0 1em;
 }
 
-// .col:first-child {
-// 	margin-left: 0;
-// }
+ 
 
-.grid-1of3 {
-	@include mq($bp1){
-
-		width: 33%;
+//default gutters
+@each $size in $sizes {
+	.grid--gutters-#{$size} {
+		@if $size == l {
+			margin: -$l-top 0 0 (-$l-top);
+		}
+		@if $size == xl {
+			margin: -$xl-top 0 0 (-$xl-top);	
+		}
+		@if $size == xxl {
+			margin: -$xxl-top 0 0 (-$xxl-top);	
+		}
+	}
+	.grid--gutters-#{$size} > .grid--cell {
+		@if $size == l {
+			padding: $l-top 0 0 $l-top;
+		}
+		@if $size == xl {
+			padding: $xl-top 0 0 $xl-top;	
+		}
+		@if $size == xxl {
+			padding: $xxl-top 0 0 $xxl-top;	
+		}
 	}
 }
 
-.grid-2of3 {
-	@include mq($bp1){
-		width: 67%;
-		padding-left: 3em;
-	}
+
+//dla media queries
+
+@each $breakpoint in $breakpoints {
+	@include mq($breakpoint) {	
+
+		@if $breakpoint == $bp1 {
+			$break: s;
+		}
+		@if $breakpoint == $bp2 {
+			$break: m;
+		}
+		@if $breakpoint == $bp3 {
+			$break: l;
+		}
+
+		@each $size in $sizes {
+
+			.grid-#{$break}--gutters-#{$size} {
+				@if $size == l {
+					margin: -$l-top 0 0 (-$l-top);
+				}
+				@if $size == xl {
+					margin: -$xl-top 0 0 (-$xl-top);	
+				}
+				@if $size == xxl {
+					margin: -$xxl-top 0 0 (-$xxl-top);	
+				}
+			}
+			.grid-#{$break}--gutters-#{$size} > .grid--cell {
+				@if $size == l {
+					padding: $l-top 0 0 $l-top;
+				}
+				@if $size == xl {
+					padding: $xl-top 0 0 $xl-top;	
+				}
+				@if $size == xxl {
+					padding: $xxl-top 0 0 $xxl-top;	
+				}
+			}
+		}
+
+	} //end breakpoint
+} //end each breakpoint
+
+
+
+
+
+//wielkosc grida
+	@for $i from 1 through $count {
+			.u--#{$i}of#{$count} {
+				width: unquote(($item-width * $i) + '%');
+			}
+		}
+
+@include mq($bp1) {
+			.grid-s {
+				display: flex;
+				flex-wrap: wrap;
+			}
+	@for $i from 1 through $count {
+			.grid-s--#{$i}of#{$count} > .grid-cell {
+				// width: unquote(($item-width * $i) - $gutter + ($margin * $i) + '%');
+				width: unquote(($item-width * $i) + '%');
+			}
+		}
+}
+@include mq($bp2) {
+			.grid-m {
+				display: flex;
+				flex-wrap: wrap;
+			}
+	@for $i from 1 through $count {
+			.grid-m--#{$i}of#{$count} > .grid-cell {
+				width: unquote(($item-width * $i) + '%');
+			}
+		}
 }
 
-// .grid-2 {
-// 	@include mq($bp1){
-// 		width:49%;
-// 	}
-// }
-// .grid-3 {
-// 	width:32%;
-// }
-// .grid-2 {
-// 	width: 49%;
-// }
+@include mq($bp3) {
+	@for $i from 1 through $count {
+			.grid-l {
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.grid-l--#{$i}of#{$count} > .grid-cell {
+				width: unquote(($item-width * $i) + '%');
+			}
+		}
+}		
 
-// .grid-1-of-4 {
-// 	width: 23.5%;
-// }
 
-// .grid-2-of-4 {
-// 	width: 49%;
-// }
 
-// .grid-3-of-4 {
-// 	width: 74.5%;
-// }
+}
 
-// .grid-2-of-3 {
-// 	width: 66%;
-// }
-
-// .grid-1-of-3 {
-// 	width: 32%;
-// }
+@include flex-grid(12);

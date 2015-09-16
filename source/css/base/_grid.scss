@@ -130,18 +130,12 @@
 .grid {
     display: flex;
     flex-wrap: wrap;
-    // list-style: none;
-    // margin: 0;
-    // padding: 0;
 }
 
 @include mq($bp1) {
   .grid-s {
     display: flex;
     flex-wrap: wrap;
-    // list-style: none;
-    // margin: 0;
-    // padding: 0;
   }
 }
 
@@ -149,9 +143,6 @@
   .grid-m {
     display: flex;
     flex-wrap: wrap;
-    // list-style: none;
-    // margin: 0;
-    // padding: 0;
   }
 } 
 
@@ -159,9 +150,6 @@
   .grid-l {
     display: flex;
     flex-wrap: wrap;
-    // list-style: none;
-    // margin: 0;
-    // padding: 0;
   }
 } 
 
@@ -347,11 +335,11 @@
     padding: 2em 0 0 2em;
   }
   .grid-s--gutters-xxl {
-    margin: -7em 0 3em -3em;
-    margin-bottom: 0;
+    margin: -150px 0 0 -3em;
+    // margin-bottom: 0;
   }
   .grid-s--gutters-xxl > .grid-cell {
-    padding: 7em 0 0 3em;
+    padding: 150px 0 0 3em;
   }
 }
 

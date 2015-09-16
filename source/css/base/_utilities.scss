@@ -4,22 +4,22 @@
 }
 
 
-.ct {	
-		margin-left: auto;
-		margin-right: auto;
-		width: 100%;
-		max-width:$max-width;
-		padding-left:10px; 
-		padding-right: 10px;
-		@include mq($bp1){
-			padding-left:40px;
-			padding-right:40px;
-		}
-}
+// .ct {	
+// 		margin-left: auto;
+// 		margin-right: auto;
+// 		width: 100%;
+// 		max-width:$max-width;
+// 		padding-left:10px; 
+// 		padding-right: 10px;
+// 		@include mq($bp1){
+// 			padding-left:40px;
+// 			padding-right:40px;
+// 		}
+// }
 
-.ct--full {
-	max-width: none;
-}
+// .ct--full {
+// 	max-width: none;
+// }
 
 // @media all and (max-width: 1023px ) {
 //     head {
@@ -31,13 +31,9 @@
 .embed-container {
 	position: relative;
 	padding-bottom: 56.25%;
-	// padding-top: 30px;
 	height: 0;
 	overflow: hidden;
 	max-width: 100%;
-	// width: 100%;
-	// height: auto;
-	// margin-bottom: 12px;
 }
 
 .embed-container iframe,
@@ -52,36 +48,12 @@
 
 
 img {
-// width:100%;
-max-width : 100%; //pozniej zmienic na container
+max-width : 100%; 
 border-width : 0;
 vertical-align : middle;
 -ms-interpolation-mode : bicubic; }
 
-.img-inline {
-	padding-top: 1.5em;
-	padding-bottom: 1.5em;
-	
-	
-}
 
-.img-right {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	@include mq($bp1){
-		float: right;
-		// padding-left: 1.5em;
-		// margin-right: -150px;
-	}
-}
-
-.left {
-	float: left;
-}
-.right {
-	float: right;
-}
 
 .a-right {
 	text-align: right;
@@ -129,35 +101,21 @@ hr.container {
 }
 
 
-strong {
-	// font-weight: 900;
-	// font-weight: 400;
-	// text-transform: uppercase;
-}
-
 
 .v-center {
-	// @include mq($bp1){
 		display: table;
 		width: 100%;
-	// }	
 }
 
 .v-centered {
-	// @include mq($bp1){
 		display: table-cell;
 		vertical-align: middle;
-	// }
 }
 
 
 ::-webkit-input-placeholder {
    color:#bbb;
 }
-
-// :-moz-placeholder { /* Firefox 18- */
-//    color:#aaa; 
-// }
 
 ::-moz-placeholder {  /* Firefox 19+ */
    color:#bbb;
@@ -167,9 +125,6 @@ strong {
    color:#bbb;
 }
 
-.nomg {
-	margin-bottom: 0;
-  }
 
 .bullet-list {
 	margin-top: 1em;
@@ -194,7 +149,6 @@ strong {
 		color:$primary-color;
 	}
 }
-
 
 
 // .visuallyhidden {

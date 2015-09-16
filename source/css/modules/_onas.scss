@@ -1,0 +1,100 @@
+.section-onas{  
+  h1 {
+    line-height: 1;
+    padding-bottom: 30px;
+    color:$primary-color;
+  }
+ }
+
+ 
+.section-bio {
+  @include mq($bp2){
+    background: linear-gradient(to bottom, #fff, rgba(#fff,0) 15%, rgba(#fff,0) 85%, #fff), url(../images/beach.jpg) center bottom no-repeat;
+    background-size:cover;  
+  } 
+}
+
+
+
+.onas-bio {
+  margin-top:-100px;
+  @include mq($bp2){
+    margin: -200px 0 0 -2em;  
+  } 
+  & > .grid-cell {
+      padding-top: 100px;
+    @include mq($bp2) {
+      padding: 200px 0 0 2em;  
+    } 
+  }
+}
+
+.onas-bio p {
+  font-size:18px;
+}
+
+.bio-img {
+  text-align: center;
+}
+
+.bio-img-milena,
+.bio-img-adrian {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  img {
+    width: 250px; 
+  }
+  &:before,
+  &:after {
+    content:'';
+    position: absolute;
+
+  }
+}
+
+
+.bio-img-milena {
+  &:before {
+    width: 175px;
+    height: 125px;
+    left: -50%;
+    top: 75%;
+    background:#D2F0FC; 
+    opacity: .6;
+
+
+  }
+  &:after {
+    width: 250px;
+    height: 125px;
+    left: 50%;
+    opacity: .6;
+    top: -25%;
+    background:#D2F0FC;
+  }
+}
+
+.bio-img-adrian {
+  &:before {
+    width: 125px;
+    height: 175px;
+    left: -25%;
+    top: 50%;
+    background:#D2F0FC;
+    opacity: .6;
+    @include mq($bp2){
+      height: 250px;
+    } 
+  }
+  &:after {
+    width: 125px;
+    height: 125px;
+    left: 75%;
+    opacity: .6;
+    top: -25%;
+    background:#D2F0FC;
+  }
+}
+
+

@@ -2,6 +2,7 @@
   background:#0C216C;
   color:#fff;
   padding-top: 50px;
+  border-top: 5px solid transparent;
   h1 {
     color:#fff;
     color:rgba(#fff,.98);
@@ -25,18 +26,26 @@
 	width: 100%;
 	background: transparent;
 	.nav--main {
-		border-bottom: 1px solid #fff;	
+		// border-bottom: 1px solid #fff;	
 	}
-	
-	// top: 0;
 }
+
+.header--borderbottom {
+	.nav--main {
+		border-bottom: 1px solid #999;
+	}
+}
+
+.header--bordertop {
+	border-color:$primary-color;
+}
+
 
 //header--inverted - zmiana koloru headera na bialy, lacznie z logiem
 .header--inverted {
-	// position: absolute;
-	// width: 100%;
-	// z-index: 2;
+	background: transparent;
 	color:$heading-color;
+
 }
 
 

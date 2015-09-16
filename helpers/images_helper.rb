@@ -48,6 +48,12 @@ module ImagesHelper
     content_tag :section, content, options
   end
 
+# jako bgimg w headerze, zeby dobry h1 ustawic na caly artykul
+  def bgimg_header(url, options={}, &block)
+    options.reverse_merge!('data-background-image' => imgpath(url))
+    content = block_given? ? capture(&block) : ''
+    content_tag :header, content, options
+  end
 
   # Acts as a thin wrapper for image_tag and generates an srcset attribute for regular image tags
   # for usage with responsive images polyfills like picturefill.js, supports asset pipeline path helpers.

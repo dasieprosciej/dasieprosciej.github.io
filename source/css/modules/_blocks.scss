@@ -5,7 +5,7 @@
   width: 100%;
   padding: 70px 20px;
   &:before {
-    @include mq($bp2){
+    @include mq($bp3){
       content:'';
       width: 250px;
       height: 250px;
@@ -21,8 +21,11 @@
   @include mq($bp2) {
     padding: 0 100px;
     width: 50%;
-    height: 500px;
+    display: flex; //do wysrodkowania tekstu
     order:-1;
+  } 
+  @include mq($bp3) {
+    height: 500px;
   } 
   h2 {
     color:#fff;
@@ -32,6 +35,7 @@
 
 .block-img {
   display: inline-block;
+  max-width: 500px;
 }
 
 
@@ -51,8 +55,10 @@
 .index .block-text {
   background:#fff;
   // text-align: left;
-  @include mq($bp2) {
+  @include mq($bp2){
     order:2;
+  } 
+  @include mq($bp3) {
     margin-top: -250px;
   } 
 }
@@ -63,8 +69,10 @@
     @include mq($bp2){
       content:'';
       position: absolute;
-      top: 0;
+      // top: 0;
+      top: -125px;
       background:#D2F0FC;
+      // background:#DFF4FD;
       width: 375px;
       height: 250px;
       left: -125px;
@@ -92,7 +100,7 @@
     margin-bottom: 50px;
     &:before,
     &:after {
-      @include mq($bp2){
+      @include mq($bp3){
         content:'';
         width: 250px;
         height: 250px;
@@ -111,15 +119,43 @@
     }
   @include mq($bp2) {
     margin-bottom: 0;
+  }   
+  @include mq($bp3) {
     top: -250px;  
   } 
+}
+
+.block-img--simplify {
+  @include mq($bp2) { 
+    border:1px solid #ddd;
+    position: relative;
+    height: 500px;
+    &:before,
+    &:after {
+      content:'';
+      position: absolute;
+      margin:auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    &:before {
+      width: 250px;
+      height: 250px;
+      background:$primary-color;
+    }
+    &:after {
+      width: 125px;
+      height: 125px;
+      background:#fff;
+    }
+  }
 }
 
 
 // ikony z uslug
 .icon-block {
-  // width: 100%;
-  // padding: 100px;
   width: 100%;
   height: 300px;
   background:$primary-color;
@@ -143,6 +179,7 @@
   }
   &:after {
     background:#ddd;
+    // background:#DFF4FD;
   }
 }
 
@@ -225,27 +262,23 @@
   }
   &:after {
     @include mq($bp2) {
-      content:'';
-      position: absolute;
-      width: 50%;
-      height: 25%;
-      top: -25%;
-      width: 100%;
-      // left: 50%;
-      // left: -50%;
-      // left: 50%;
-
+      // content:'';
+      // position: absolute;
+      // width: 50%;
+      // height: 50%;
+      // top: 0%;
+      // top: -100%;
+      // left: 0;
     } 
   }
 }
 
 .icon-text-block {
-  padding:20px 0 50px;
+  padding:20px 0 75px;
   font-size: 18px;
   @include mq($bp1){
     font-size: 16px;
   } 
-  // text-align: left;
   h3 {
     font-weight: 400;
     font-size: 24px;
@@ -257,3 +290,13 @@
 }
 
 
+//svg icons
+// .svg-icons {
+//   position: absolute;
+//   margin:auto;
+//   left: 0;
+//   right: 0;
+//   top: 0;
+//   bottom: 0;
+//   stroke:#fff;
+// }

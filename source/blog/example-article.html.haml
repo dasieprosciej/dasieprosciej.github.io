@@ -2,28 +2,30 @@
 title: 10 najlepszych sposobow na uproszczenie twojej strony www
 date: 2015-08-01
 tags: example
-header: header--absolute
+header: header--absolute header--borderbottom
 summary: To jest podsumowanie tego posta, nie wiem na ile liter to ma byc 
 thumbnail: img-main-thumbnail.jpg
 ---
 
-- content_for :art do
+- content_for :css do
   :css
     .bg-pink {
       background:pink;
     }
   
 
-
+= bgimg_header('img-main.jpg', class: 'bg-img bg-shade-more color-inverted bg-height-2 align-bottom') do
+  .section-inner
+    %h1 Tytuł posta może byc dość długi, nawet dłuższy niż się spodziewamy
 -# %header.bg-img.align-bottom.align-center.bg-shade.color-inverted{'data-background-image' => imgpath('r_main.jpg')}
 -#   .section-inner.outset
 -#     %h1.h2 Tytuł posta może byc dość długi, nawet dłuższy niż się spodziewamy
 
-%header.bg-color.bg-height-2.bg-blue.align-middle.align-center.bg-shade.color-inverted
-  .section-inner.outset
-    %br/
-    %h1.h2 Tytuł posta może byc dość długi, nawet dłuższy niż się spodziewamy
-    %br/
+-# %header.bg-color.bg-height-2.bg-blue.align-middle.align-center.bg-shade.color-inverted
+-#   .section-inner.outset
+-#     %br/
+-#     %h1.h2 Tytuł posta może byc dość długi, nawet dłuższy niż się spodziewamy
+-#     %br/
 
 -# %header
 -#   .section-inner.outset-img
@@ -44,11 +46,13 @@ thumbnail: img-main-thumbnail.jpg
     -#   = img('r_main-large.jpg')
     -#   %figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius hic sint facilis obcaecati necessitatibus tempora amet excepturi eveniet nisi, error, vero quos, facere harum fugiat. Veniam autem quidem tenetur laudantium.
+
     %h3 Heading 3
   .section-inner.outset-img  
     = figure_r(:s, 'img-main.jpg', 'lorem ipsum kdh dkshfksh kshf')
 
-%section.bg-img.bg-shade.color-inverted{'data-background-image' => imgpath('r_main.jpg')}
+-# %section.bg-img.bg-shade.color-inverted{'data-background-image' => imgpath('r_main.jpg')}
+= bgimg('img-main.jpg', class: 'bg-img bg-shade-more bg-height-3 align-middle color-inverted') do
   .section-inner
     %h3 Title 3
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe dolorem aut, aperiam voluptatem, officia eligendi, excepturi laboriosam fuga aspernatur cumque dicta, dolores hic voluptas ea? Omnis, sunt? Consequuntur, rem, voluptatem.
@@ -58,18 +62,17 @@ thumbnail: img-main-thumbnail.jpg
 %section
   .section-inner.outset-img
     %figure
-      = img('r_main-small.jpg')
+      = img('img-main-s.jpg')
       %figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ad earum modi atque ullam illo deserunt. Nisi totam excepturi qui, porro omnis, eaque suscipit perferendis. Autem corporis perspiciatis incidunt, quam.
 
   .section-inner.outset-img
     %figure
-      = img('r_main-small.jpg')
+      = img('img-main-s.jpg')
       %figcaption ala ma kota
 
   .section-inner.fullwidth
-    %figure
-      = img('r_main-large.jpg')
-      %figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ad earum modi atque ullam illo deserunt. Nisi totam excepturi qui, porro omnis, eaque suscipit perferendis. Autem corporis perspiciatis incidunt, quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ad earum modi atque ullam illo deserunt. Nisi totam excepturi qui, porro omnis, eaque suscipit perferendis. Autem corporis perspiciatis incidunt, quam.
+    = figure_r(:responsive, 'img-main.jpg', "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ad earum modi atque ullam illo deserunt. Nisi totam excepturi qui, porro omnis, eaque suscipit perferendis. Autem corporis perspiciatis incidunt, quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ad earum modi atque ullam illo deserunt. Nisi totam excepturi qui, porro omnis, eaque suscipit perferendis. Autem corporis perspiciatis incidunt, quam.")
+
 
   .section-inner
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quos dignissimos ipsam, fuga, accusantium animi error, ex eum nulla explicabo deleniti ratione rerum vel laboriosam voluptates minima aspernatur quo enim.
@@ -84,17 +87,17 @@ thumbnail: img-main-thumbnail.jpg
     -#   %figcaption Jakis figcaption tutaj bedzie
 
     %figure.img-left-outset
-      = img('clouds.jpg')
+      = img('img-main-s.jpg')
       %figcaption Jakis figcaption tutaj bedzie  
     %p Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing</a> elit. Veniam ex beatae sequi, quidem odit animi, tempora magni assumenda fugit sunt tenetur vero itaque officiis nam repellat aspernatur dicta deserunt perspiciatis.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus maxime corrupti, ducimus, officiis libero repudiandae totam consequuntur est earum unde adipisci corporis minus consequatur asperiores omnis eos alias, doloribus tempora.
     
     %figure.img-left
-      = img('clouds.jpg')
+      = img('img-main-s.jpg')
       %figcaption Jakis figcaption tutaj bedzie  
     %p Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing</a> elit. Veniam ex beatae sequi, quidem odit animi, tempora magni assumenda fugit sunt tenetur vero itaque officiis nam repellat aspernatur dicta deserunt perspiciatis.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus maxime corrupti, ducimus, officiis libero repudiandae totam consequuntur est earum unde adipisci corporis minus consequatur asperiores omnis eos alias, doloribus tempora.
 
     %figure.img-right
-      = img('kwiat.jpg')
+      = img('img-main-s.jpg')
       %figcaption Jakis figcaption tutaj bedzie 
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi cupiditate, enim itaque fuga eaque possimus mollitia, nemo labore quos nihil nam alias! Possimus omnis aperiam quis inventore, labore eveniet et!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut nulla explicabo, quaerat excepturi quasi alias, illum ea amet reprehenderit deleniti quo, quod fuga ad voluptatem natus temporibus quia molestiae sequi?
     %h2.align-center Heading 2
@@ -120,7 +123,7 @@ thumbnail: img-main-thumbnail.jpg
 
   .section-inner.outset-img
     %figure
-      = img('clouds.jpg')
+      = img('img-main-s.jpg')
       %figcaption Jakis figcaption tutaj bedzie  
   
   .section-inner
@@ -129,12 +132,20 @@ thumbnail: img-main-thumbnail.jpg
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi sed tempora, veritatis voluptas! Totam numquam nesciunt aliquam quasi quidem in, reiciendis minus commodi, et exercitationem eveniet non aut, voluptate velit.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore recusandae, beatae architecto explicabo doloremque facilis autem dolorem, libero provident. Eius tempore ea assumenda iure facilis quaerat tenetur similique necessitatibus quis?
     
     :markdown
-      ### Heading 3
+      # Heading 1
       ## Heading 2
       ### Heading 3
       #### Heading 4
 
+      # Heading 1
+      ### Heading 3
+      ## Heading 2
+      ### Heading 3
+      # Heading 1
+      #### Heading 4
+
       #### heading 4
+      ## heading 2
       
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, dignissimos alias ipsum quaerat reiciendis dolores, quod ducimus dolore labore consequuntur doloremque consequatur iste dicta cupiditate! Quia, explicabo, repellendus. Ad, obcaecati.
 
@@ -196,7 +207,7 @@ thumbnail: img-main-thumbnail.jpg
     .columns-text-img.align-middle.text-25.img-75
       .column-img  
         %figure
-          = img('clouds.jpg')
+          = img('img-main-s.jpg')
       .column-text
         :markdown
           + Lista 1
@@ -208,14 +219,14 @@ thumbnail: img-main-thumbnail.jpg
     .columns-text-img.align-middle.img-33
       .column-img  
         %figure
-          = img('clouds.jpg')
+          = img('img-main-s.jpg')
       .column-text
         %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate impedit autem iste libero nihil maxime itaque accusantium odit, id debitis in, neque ex quo soluta, tempore natus illo quaerat consectetur.
   .section-inner
     .columns-text-img.text-66.img-25
       .column-img  
         %figure
-          = img('clouds.jpg')
+          = img('img-main-s.jpg')
       .column-text
         %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate impedit autem iste libero nihil maxime itaque accusantium odit, id debitis in, neque ex quo soluta, tempore natus illo quaerat consectetur.
 

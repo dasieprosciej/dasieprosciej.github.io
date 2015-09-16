@@ -66,11 +66,13 @@ activate :syntax, :line_numbers => false
 
 ########
 
-#  nie zmieniac, host do produkcji jest w build ponizej, ten sluzy mi do fastimage
+#  nie zmieniac, host do produkcji jest ponizej, ten sluzy mi do fastimage
 @site = "http://localhost:4567"
 set :var, @site
 
 set :root, "http://dasieprosciej.pl"
+
+
 # Change Compass configuration
 # compass_config do |config|
 #   config.output_style = :compact
@@ -267,9 +269,8 @@ configure :build do
   # ignore 'projekty.html.erb'
   ignore 'test.html.erb'
   # ignore 'blog.html.erb'
-  ignore 'blog2.html.erb'
+  # ignore 'blog2.html.erb'
   # ignore 'blog/*'
-  ignore 'blog2/*'
 
   # Minify Javascript on build
   activate :minify_javascript, :inline => true

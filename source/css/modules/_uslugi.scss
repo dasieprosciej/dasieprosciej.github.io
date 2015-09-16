@@ -32,13 +32,28 @@
 }
 
 .section-proces {
+  position: relative;
   font-size:18px;
   @include mq($bp1) {
     font-size: 16px;
+    &:before {
+      content:'';
+      position: absolute;
+      margin:auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background:url(../images/proces-bg.svg) center center no-repeat;
+    }
   } 
   @include mq($bp2) {
     font-size: 18px;
     padding-bottom: 200px;
+
   } 
   p + ul {
     margin-top: -15px;

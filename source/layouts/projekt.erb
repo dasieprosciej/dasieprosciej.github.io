@@ -3,25 +3,45 @@
   <article class="single"> 
     <%= yield %>
   </article>  
-
-  <ul class="high">
-    <li class="prevnav">
-      <% prev_article = current_article.previous_article %>
-      <% if prev_article %>
-        <a href="<%= prev_article.url %>" rel="prev" title="Poprzedni projekt: <%= prev_article.data.title_index %>">
-          <%= prev_article.title %>
-        </a>
-      <% end %>
-
-    </li>
-    <li class="nextnav">
-      <% next_article = current_article.next_article %>
-      <% if next_article %>
-        <a href="<%= next_article.url %>" rel="next" title="Następny projekt: <%= next_article.data.title_index %>">
-          <%= next_article.title %>
-        </a>
-      <% end %>
-    </li>
-  </ul>
-
+  
+  <section class="section">
+    <div class="container--wide">
+      <ul class="projekt-nav">
+        <li class="prevnav">
+          <% prev_article = current_article.previous_article %>
+          <% if prev_article %>
+            <a href="<%= prev_article.url %>" rel="prev" title="Poprzedni projekt: <%= prev_article.data.title_index %>">
+              <i class="icon-nav icon-prevnav"></i>
+              <span><%= prev_article.data.title_index %></span>
+            </a>
+          <% end %>
+        <li class="home">
+          <a href="/projekty">
+           <i class="icon-nav icon-home"></i> 
+          </a>    
+        </li>
+        </li>
+        <li class="nextnav">
+          <% next_article = current_article.next_article %>
+          <% if next_article %>
+            <a href="<%= next_article.url %>" rel="next" title="Następny projekt: <%= next_article.data.title_index %>">
+              <i class="icon-nav icon-nexnav"></i>
+              <span><%= next_article.data.title_index %></span>
+            </a>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="section section-cta">
+    <div class="container--wide">
+      <hr class="inline">
+      <h1 class="cta-title">
+        Pomożemy Ci przebudować Twoją
+        <br>
+        stronę internetową
+      </h1>
+      <%= partial 'partials/components/button', :locals => {btn_link: 'mailto:mail@dasieprosciej.pl'} do 'Napisz do nas' end %>
+    </div>
+  </section>
 <% end %>

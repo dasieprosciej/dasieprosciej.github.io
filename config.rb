@@ -89,7 +89,7 @@ end
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
-
+  blog.name = "blog"
   blog.permalink = "blog/{title}.html"
   # Matcher for blog source files
   blog.sources = "blog/{title}.html"
@@ -101,7 +101,12 @@ activate :blog do |blog|
   # blog.month_link = "{year}/{month}.html"
   # blog.day_link = "{year}/{month}/{day}.html"
   # blog.default_extension = ".markdown"
-
+  blog.custom_collections = {
+    author: {
+      link: '/blog/autorzy/{author}.html',
+      template: '/templates/authors.html'
+    }
+  }
   # blog.tag_template = "tag.html"
   # blog.calendar_template = "calendar.html"
 
@@ -191,6 +196,12 @@ helpers do
   def time_ago_in_words(from_time, options = {})
         distance_of_time_in_words(from_time, Time.now, options)
   end
+
+  def br()
+      content_tag(:p, "<br>", :class => "p--empty")
+  end
+
+
 end
 
 

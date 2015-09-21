@@ -1,11 +1,18 @@
-%header{:class => "header #{header_class ||= ""}"}
+- if page_classes == 'index'
+  - $horizontal = ""
+- else
+  - $horizontal = "header--horizontal"
+
+
+%header{:class => "header #{$horizontal} #{header_class ||= ""}"}
   .container--wide
-    %a.logo{:href => "/"}
-      - if header_class.include?("header--inverted")
-        = image_tag('logo.svg')
-      - else
-        = image_tag('logo-inverted.svg')
-    %nav.nav.nav--main
-      %ul
-        = partial 'partials/components/nav'
+    .header-inner
+      %a.logo{:href => "/"}
+        - if header_class.include?("header--inverted")
+          = image_tag('logo.svg')
+        - else
+          = image_tag('logo-inverted.svg')
+      %nav.nav.nav--main
+        %ul
+          = partial 'partials/components/nav'
     = yield if defined? yield    

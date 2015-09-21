@@ -1,13 +1,26 @@
+//= require aload
+//= require layzr
 //= require rimg-breakpoints
 //= require rimg.min
 //= require turbolinks
 
+//aload
+// window.onload = function () {
+//   aload();
+// };
+// document.addEventListener("page:load", function () {
+//     aload();
+// });
+
+//layzr
+var layzr = new Layzr(
+// {
+  // threshold: 50
+// }
+);
 
 
-
-
-
-
+//analytics
 function addListener(element, type, callback) {
  if (element.addEventListener) element.addEventListener(type, callback);
  else if (element.attachEvent) element.attachEvent('on' + type, callback);
@@ -27,6 +40,15 @@ if(cta_link_1) {   //if the element exists add the click event
 // 	});
 // };
 
+(function(){
+  var mockups = document.querySelectorAll('.mockup-shade');
+  [].forEach.call(mockups, function(mockup) {
+    addListener(mockup, 'touchstart', function(){
+      this.style.display = "none";
+    })
+  });
+})();
+
 
 (function() {
   var days = ['Niedzieli', 'Poniedziałku', 'Wtorku', 'Środy', 'Czwartku', 'Piątku', 'Soboty'];
@@ -43,6 +65,7 @@ if(cta_link_1) {   //if the element exists add the click event
   var day = document.getElementById('weekday');
   day.innerHTML = msg2;
 })();
+
 
 
 //vivus

@@ -4,7 +4,8 @@ date: 2015-08-01
 tags: example
 header: header--absolute header--borderbottom
 summary: To jest podsumowanie tego posta, nie wiem na ile liter to ma byc 
-thumbnail: img-main-thumbnail.jpg
+thumbnail: img-main-s.jpg
+author: Adrian
 ---
 
 - content_for :css do
@@ -216,18 +217,18 @@ thumbnail: img-main-thumbnail.jpg
 
 %section.bg-blue.color-inverted
   .section-inner
-    .columns-text-img.align-middle.img-33
-      .column-img  
+    .columns.align-middle.column-1--1of3
+      .column-1
         %figure
           = img('img-main-s.jpg')
-      .column-text
+      .column-2
         %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate impedit autem iste libero nihil maxime itaque accusantium odit, id debitis in, neque ex quo soluta, tempore natus illo quaerat consectetur.
   .section-inner
-    .columns-text-img.text-66.img-25
-      .column-img  
+    .columns.column-1--1of4.column-2--2of3
+      .column-1 
         %figure
           = img('img-main-s.jpg')
-      .column-text
+      .column-2
         %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate impedit autem iste libero nihil maxime itaque accusantium odit, id debitis in, neque ex quo soluta, tempore natus illo quaerat consectetur.
 
 

@@ -12,6 +12,7 @@ gem "slim"
 gem "fastimage"
 gem 'middleman-imageoptim'
 
+
 # gem 'sass-media_query_combiner'
 gem 'redcarpet'
 gem "middleman-syntax"

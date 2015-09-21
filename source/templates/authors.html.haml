@@ -1,0 +1,51 @@
+---
+pageable: true
+per_page: 10
+blog: blog
+---
+
+- content_for(:title, "da się prościej - autor #{author}")
+
+%section.section.section-blog
+  .container--wide
+    %h1=author
+    .grid-s.grid-s--1of2.grid-s--gutters-l
+      - page_articles.each_with_index do |article, i|
+        %article.post-teaser.grid-cell
+          %a{:href => "#{article.url}", class: 'post-teaser__link'}
+            - $current_listed_article = article    
+            %img{:src => imgpath(article.data.thumbnail), :alt => ""}/
+            %header.blog-article__header
+              %h1=article.title
+            = link_to article.data.author, author_path(article.data.author)
+            
+            - if article.data.summary
+              .post-teaser__body
+                %p= smart_truncate(article.data.summary, :words => 25)
+            -# - else 
+            -#   = article.summary(250, '...')
+            %time.post-time=article.date.strftime('%d.%m.%Y')  
+            %p.reading-time Czas czytania : #{reading_time(article.body)}
+            - $current_listed_article = nil
+      
+      
+    - if paginate && num_pages >1
+      %p Page #{page_number} of #{num_pages}
+      - if prev_page
+        %p=link_to 'Previous page', prev_page
+      - if next_page
+        %p=link_to 'Next page', next_page
+
+// listing
+-# %section.section
+-#   .section-inner.outset
+-#     - authors = blog.articles.group_by {|a| a.metadata[:page]['author']}
+-#     %h1 Projects
+-#     %ul
+-#       - authors.each do |author, articles|
+-#         - if !author.blank?
+-#           %li
+-#             = link_to author, author_path(author)
+              
+-#                 
+            

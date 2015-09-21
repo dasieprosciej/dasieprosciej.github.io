@@ -2,6 +2,25 @@
   line-height: .9;
 }
 
+.index .header {
+  @include mq($bp1) { 
+    background: $primary-color url(../images/hero.jpg) center center no-repeat;
+    // background-position: left 100px center;
+    background-size:cover;
+    position: relative;
+    &:before {
+      content:'';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background:shade($primary-color,0);
+      opacity: .5;
+    }
+  }
+}
+
 
 .section-info {
   padding-top: 70px;

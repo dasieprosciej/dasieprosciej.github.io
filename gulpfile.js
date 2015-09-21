@@ -6,16 +6,16 @@ var gulp = require('gulp'),
     autoprefixer = require("gulp-autoprefixer"),
     browserSync = require('browser-sync'),
     changed = require('gulp-changed'),
-    imageResize = require('gulp-image-resize'),
     rename = require('gulp-rename'),
     filelog = require('gulp-filelog'),
     glob = require('glob-all'),
-    plumber = require('gulp-plumber'),
+    // plumber = require('gulp-plumber'),
     responsive = require('gulp-responsive'),
     del = require('del'),
     cache = require('gulp-cache'),
     newer = require('gulp-newer'),
     moz = require('imagemin-mozjpeg'),
+    // typeset = require('gulp-typeset'),
     sass = require('gulp-sass');
 
 var path = require('path');
@@ -95,13 +95,60 @@ gulp.task( 'regenerate', function(){
 
 })
 
+gulp.task ('responsive-xs', function(){
+    var  SrcGlobs    =  glob.sync('source/**/'); 
+    var  srcDir      =  'original' ; 
+    var  DstDir      =  'images' ; 
+    var  targetFile  =  '/*.{jpg,jpeg,png}' ;
 
+    for ( var  Item  in  SrcGlobs )  { 
+    var  SrcGlob  =  SrcGlobs [ Item ]  +  srcDir  +  targetFile ; 
+    var  DstGlob  =  SrcGlobs [ Item ]  +  DstDir ;
+
+
+    gulp.src(SrcGlob)
+    .pipe(newer({
+      dest: DstGlob,
+      map: function(pathDir) {
+        pathDir = 
+          path.dirname(pathDir) + '/img-' +
+          path.basename(pathDir, path.extname(pathDir)) + '-xs' +
+          path.extname(pathDir);
+        return pathDir;  
+      }
+      }))  
+    .pipe(filelog())
+    .pipe(responsive({
+      '**/*.{jpg,jpeg,png}' : 
+        [
+          {
+            width: 400,
+            rename: {
+              prefix: 'img-',
+              suffix: '-xs'
+            }
+          }
+        ]
+    },
+    {
+      errorOnUnusedConfig: false,
+      errorOnUnusedImage: false,
+      errorOnEnlargement: false,
+      skipOnEnlargement: true
+    }
+
+    ))
+    .pipe( gulp.dest (  DstGlob ))
+    .pipe(filelog());
+
+ } //zamkniecie for
+});
 
 gulp.task ('responsive-s', function(){
     var  SrcGlobs    =  glob.sync('source/**/'); 
     var  srcDir      =  'original' ; 
     var  DstDir      =  'images' ; 
-    var  targetFile  =  '/*.{jpg,png}' ;
+    var  targetFile  =  '/*.{jpg,jpeg,png}' ;
 
     //jesli w tym samym katalogu
     // var dist = '.'; 
@@ -125,7 +172,7 @@ gulp.task ('responsive-s', function(){
       }))  
     .pipe(filelog())
     .pipe(responsive({
-      '**/*.jpg' : 
+      '**/*.{jpg,jpeg,png}' : 
         [
           {
             width: 800,
@@ -178,7 +225,7 @@ gulp.task ('responsive-l', function(){
     var  SrcGlobs    =  glob.sync('source/**/'); 
     var  srcDir      =  'original' ; 
     var  DstDir      =  'images' ; 
-    var  targetFile  =  '/*.{jpg,png}' ;
+    var  targetFile  =  '/*.{jpg,jpeg,png}' ;
 
     for ( var  Item  in  SrcGlobs )  { 
     var  SrcGlob  =  SrcGlobs [ Item ]  +  srcDir  +  targetFile ; 
@@ -198,10 +245,10 @@ gulp.task ('responsive-l', function(){
       }))  
     .pipe(filelog())
     .pipe(responsive({
-      '**/*.jpg' : 
+      '**/*.{jpg,jpeg,png}' : 
         [
           {
-            width: 1500,
+            width: 1400,
             rename: {
               prefix: 'img-',
               suffix: '-l'
@@ -227,7 +274,7 @@ gulp.task ('responsive-xl', function(){
     var  SrcGlobs    =  glob.sync('source/**/'); 
     var  srcDir      =  'original' ; 
     var  DstDir      =  'images' ; 
-    var  targetFile  =  '/*.{jpg,png}' ;
+    var  targetFile  =  '/*.{jpg,jpeg,png}' ;
 
     for ( var  Item  in  SrcGlobs )  { 
     var  SrcGlob  =  SrcGlobs [ Item ]  +  srcDir  +  targetFile ; 
@@ -247,10 +294,10 @@ gulp.task ('responsive-xl', function(){
       }))  
     .pipe(filelog())
     .pipe(responsive({
-      '**/*.jpg' : 
+      '**/*.{jpg,jpeg,png}' : 
         [
           {
-            width: 2000,
+            width: 1920,
             rename: {
               prefix: 'img-',
               suffix: '-xl'
@@ -273,7 +320,7 @@ gulp.task ('responsive-xl', function(){
 });
 
 
-gulp.task('responsive', ['responsive-s', 'responsive-l', 'responsive-xl']);
+gulp.task('responsive', ['responsive-xs', 'responsive-s', 'responsive-l', 'responsive-xl']);
 
 // gulp.task ('dupa', function(){
 //     var  src    =  'source/**/original/*.jpg'; 
@@ -358,6 +405,12 @@ gulp.task('default', function (cb) {
         'css', 
     cb);
 });
+
+// gulp.task('typeset', function () {
+//     return gulp.src('build/blog/**/*.html')
+//         .pipe(typeset())
+//         .pipe(gulp.dest('build/blog'));
+// });
 
 
 // produckja dodatkowo optymalizuje images w buildzie, a moze lepiej w source -> wtedy middleman build nie nadpisze zoptymalizowanych img

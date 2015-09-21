@@ -43,5 +43,67 @@
 	background:pink;
 }
 
+//projekt nav
+
+.projekt-nav {
+	position: relative;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 50px;
+	padding-top: 50px;
+	border-top: 1px solid #ddd;
+	a span {
+		display: none;
+		@include mq($bp1){ 
+			display: block;
+			font-family: $sans-font;
+			font-size: 14px;
+		}
+	}
+	a:hover {
+		i {
+			opacity: 1;
+		}
+	}
+	.nextnav {
+		text-align: right;
+	}
+	.home {
+		position: absolute;
+		width: 45px;
+		height: 45px;
+		margin:auto;
+		left: 0;
+		right: 0;
+	}
+}
+
+.icon-nav {
+	background-image: url(../images/icons-projectnav.svg);
+	background-repeat:no-repeat;
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	opacity: .3;
+	transition:opacity .25s;
+}
+
+.icon-prevnav {
+	background-position:-53px 0px;
+}
+
+.icon-nexnav {
+	background-position:-106px 0px;
+}
+
+.icon-home {
+	background-position:0 0;
+}
+
+.projekt-nav {
+	display: flex;
+	justify-content:space-between;
+}
+
+
 
 

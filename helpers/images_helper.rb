@@ -34,6 +34,13 @@ module ImagesHelper
     tag(:img, options)
   end
 
+# load images after load, nie uzywam lazy loading celowo
+  def img_aload(url, options={})
+    options.reverse_merge!("data-aload" => imgpath(url))
+    tag(:img, options)
+  end
+
+
 # uzywane do bg figure responsive
   def dataimg(url, options={})
     options.reverse_merge!(:data => {:src => imgpath(url)})

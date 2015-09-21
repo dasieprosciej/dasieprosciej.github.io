@@ -10,6 +10,17 @@
 # Ignore the build directory
 /build
 
+# Ignore responsive images (only original)
+
+/source/**/images/img-*.jpg
+/source/**/images/img-*.jpeg
+
+
+
+# Ignore node modules
+/node_modules
+
+
 # Ignore cache
 /.sass-cache
 /.cache

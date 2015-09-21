@@ -11,9 +11,10 @@
     <% if content_for?(:css) %>
       <%= yield_content :css %>
     <% end %>
-    <%= stylesheet_link_tag 'fonts-dsp'%>  
+    <!-- do zmiany na font-load -->
+    <link href="/fonts-dsp.css" rel="stylesheet" type="text/css"/>
      <!-- <%= partial  '/partials/head/font_load' %> -->
-    
+    <%= partial  '/partials/head/touch-check' %>
   </head>
   
   <body class="<%= page_classes %>">

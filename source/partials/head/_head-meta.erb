@@ -1,6 +1,11 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title><%= current_page.data.title %></title>
+<% if content_for?(:title) %>
+  <title><%= yield_content :title %></title>
+<% else %>
+  <title><%= current_page.data.title %></title>  
+<% end %>
+<title><% %></title>
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

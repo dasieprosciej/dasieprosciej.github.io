@@ -1,5 +1,5 @@
 .header {
-  background:#0C216C;
+  background:$primary-color;
   color:#fff;
   padding-top: 50px;
   border-top: 5px solid transparent;
@@ -15,6 +15,21 @@
 	background:$primary-color;
 }
 
+.header-inner {
+	border-bottom: 1px solid #fff;	
+}
+.header--horizontal {
+	.header-inner {
+		border-bottom: 0;
+		@include mq($bp1) { 
+			display: flex;
+			justify-content:space-between;
+			align-items:flex-end;
+			padding-bottom: 20px;
+		}
+	}
+}
+
 .z-1 {
 	position: relative;
 	z-index: 1;
@@ -25,13 +40,16 @@
 	z-index: 2;
 	width: 100%;
 	background: transparent;
-	.nav--main {
-		// border-bottom: 1px solid #fff;	
-	}
+}
+// jesli header glowny jest absolute, to header w article ma padding-top 200px - zeby sie nie zjechal na mobilu lub gdy jest align-top
+.header--absolute + .single {
+  header {
+    padding-top:200px;
+  }
 }
 
 .header--borderbottom {
-	.nav--main {
+	.header-inner {
 		border-bottom: 1px solid #999;
 	}
 }
@@ -50,10 +68,17 @@
 
 
 .logo {
-	display: block;
+	display: inline-block;
 	padding-bottom: 20px;
 	img {
 		width: 90px;
+	}
+}
+.header--horizontal {
+	.logo {
+		@include mq($bp1) { 
+			padding-bottom: 5px;
+		}
 	}
 }
 
@@ -72,11 +97,8 @@
 		}
 			a {				
 				position: relative;
-				// font-weight: 300;
-				// font-family: $sans-font;
 				letter-spacing: 0.04em;
 				display: block;
-				// font-size: 16px;
 				transition:all .2s linear;
 				padding: 5px 0;		
 				&:hover {
@@ -88,17 +110,15 @@
 
 .nav .active {
 	a {
-		// font-weight: 700;
 		color: $link-color;
 	}
 }
 
 .nav--main {
 	padding-top:3px;
-	// border-top: 4px solid #111;
 	
 	.index & {
-		border-bottom: 1px solid #fff;	
+		// border-bottom: 1px solid #fff;	
 	}
 }
 

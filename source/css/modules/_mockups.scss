@@ -7,14 +7,29 @@
   width: 100%;
   margin: 0 auto;
   margin-bottom:30px;
-  &:hover .mockup-shade {
-    visibility: hidden;
-    opacity: 0;
-  }
+  // &:hover .mockup-shade {
+  //   visibility: hidden;
+  //   opacity: 0;
+  // }
   img {
     width: 100%;
   }
 }
+
+.mockup.is-hovered {
+  .mockup-shade {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.mockup.is-hidden {
+  .mockup-shade {
+    display: none;
+  }
+}
+
+
 
 .mockup + span {
   display: block;
@@ -32,9 +47,10 @@
 
 .columns {
   .mockup {
-    @include mq($bp1){
-      margin-bottom: 0;
-    } 
+    margin-bottom: 0;
+    // @include mq($bp1){
+    //   margin-bottom: 0;
+    // } 
   }
 }
 
@@ -54,7 +70,6 @@
 
 .mockup-shade {
   position: absolute;
-  // background:#000;
   background:rgba(#000,.5) url(../images/scroll.svg) center center no-repeat;
   opacity: .9; //bo nie moge na wierz dac ikony scroll
   transition:all .2s;
@@ -69,6 +84,9 @@
     top: 4.9%;
     left: 4.0%;
   }
+  .mockup-shade {
+    height: calc(63% + 1px);
+  }
 }
 
 .mockup-laptop {
@@ -79,6 +97,9 @@
    top: 6.1%;
    left: 11.75%;
   }
+  .mockup-shade {
+    height: calc(82.6% + 1px);
+  }
 }
 
 .mockup-iphone {
@@ -88,5 +109,8 @@
     height: 74.6%;
     top: 12.7%;
     left: 7.3%;
+  }
+  .mockup-shade {
+    height: calc(74.6% + 1px);
   }
 }

@@ -29,9 +29,9 @@ module Mockups
 
 
     content_tag :div ,class: mock_class do
-      # content_tag(:img ,nil, :src => mock) +
-      content_tag(:img ,nil, "data-layzr" => mock) + 
-      content_tag(:div ,content, class: "artwork") +
+      content_tag(:img ,nil, :src => mock) +
+      # content_tag(:img ,nil, "data-layzr" => mock) + 
+      content_tag(:div ,content, class: "artwork", id: options[:id]) +
       if scroll
       content_tag(:div ,nil, class: "mockup-shade")
       end

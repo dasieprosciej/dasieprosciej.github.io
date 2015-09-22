@@ -36,3 +36,38 @@
 	z-index: -2;
 }
 
+#back-to-top {
+	position: fixed;
+	visibility: hidden;
+	opacity: 0;
+	transform:translateZ(0);
+	right: 20px;
+	bottom: 20px;
+	width: 50px;
+	height: 50px;
+	border:1px solid #ddd;
+	text-align: center;
+	display: table;
+
+	cursor:pointer;
+	transition: all .5s;
+	&:hover:before {
+		color:#333;
+	}
+	&:before {
+		content:'\2191';
+		position: absolute;
+		bottom: 0;
+		left: 5px;
+		font-family: sans-serif;
+		// display: table-cell;
+		color:#ddd;
+		// vertical-align: middle;
+		transition:color .25s;
+	}
+}
+
+#back-to-top.is-visible {
+	visibility: visible;
+	opacity: 1;
+}

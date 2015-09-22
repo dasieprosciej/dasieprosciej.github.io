@@ -649,9 +649,11 @@ p + br {
 
 
 // kolumny text image lub text sam
-.single {
+// .single {
   .columns {
+      margin-bottom: 30px;
     @include mq($bp1) { 
+      margin-bottom: 0;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -740,7 +742,7 @@ p + br {
       } 
     } 
   }
-}
+// }
 
 //order do flex
 .order-1 {

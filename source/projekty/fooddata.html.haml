@@ -30,10 +30,19 @@ header: header--inverted
         %h3 Wersja „Przed”
         %p To co się najbardziej rzucało w oczy w dotychczasowej wersji strony, to brak na wstępie jasnej i przejrzystej propozycji wartości, czyli informacji, czym właściwie jest FoodData i jak może pomóc odbiorcy.
       .column-2.order-1 
-        = mockup(:imac, :scroll, 'img-fooddata-old-s.jpg', caption: "dupa jasia")
+        = mockup(:imac, :scroll, 'img-fooddata-old-s.jpg')
         %span FoodData - wersja „Przed”
+
+    .columns.column-2--1of3.column-1--2of3.align-middle
+      .column-1
+        = mockup(:imac, :scroll, 'img-fooddata-l.jpg', id:"compare-1")
+      .column-2    
+        = mockup(:iphone, :scroll, 'fooddata_sx.png', id:"compare-2")
+    
+      
 %section
-  = figure_r(:l, 'img-value.jpg')       
+  .section-inner.fullwidth
+    = figure_r(:l, 'img-value.jpg')       
   
   .section-inner
     = mockup(:laptop, nil, 'fooddata-1440x900.jpeg')  

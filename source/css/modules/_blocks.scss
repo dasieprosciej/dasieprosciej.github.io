@@ -64,6 +64,41 @@
   } 
 }
 
+.uslugi .block-text{
+  position: relative;
+  // &:before {
+  //   @include mq($bp2){
+  //     content:'';
+  //     position: absolute;
+  //     top: -125px;
+  //     background:url(../images/pattern.svg) 0 0 no-repeat;
+  //     width: 500px;
+  //     height: 250px;
+  //     left: -125px;
+  //     opacity: .7;
+  //   }
+  // }
+  &:first-child {
+    padding-top: 0;
+    @include mq($bp2){ 
+      padding-right: 100px;
+      padding-left: 0;
+      &:before {
+        // content:'';
+        position: absolute;
+        background:#f8f8fd;
+        z-index: -1;
+        width: 125px;
+        height: 125px;
+        left: 0;
+        top: -50px;
+      }
+    }
+  }
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
 
 
 .block-img-1 {
@@ -98,7 +133,33 @@
   } 
 }
 
-
+.block-img--simplify {
+  @include mq($bp2) { 
+    border:1px solid #ddd;
+    position: relative;
+    height: 500px;
+    &:before,
+    &:after {
+      content:'';
+      position: absolute;
+      margin:auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    &:before {
+      width: 250px;
+      height: 250px;
+      background:$primary-color;
+    }
+    &:after {
+      width: 125px;
+      height: 125px;
+      background:#fff;
+    }
+  }
+}
 
 
 // ikony z uslug

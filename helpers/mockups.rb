@@ -1,8 +1,8 @@
 
 module Mockups
   def mockup(type, scroll, content_url,  options={})
-    if !(type == :imac || type == :laptop || type == :iphone || type == :iphone_black)  && options[:type].blank?
-      raise ArgumentError.new("You should pass :type option key explicitly, because you have passed #{type} type other than :laptop, :imac, :iphone, :iphone_black.")
+    if !(type == :imac || type == :laptop || type == :iphone || type == :iphone_black || type == :iphone_transparent)  && options[:type].blank?
+      raise ArgumentError.new("You should pass :type option key explicitly, because you have passed #{type} type other than :laptop, :imac, :iphone, :iphone_black, :iphone_transparent")
     end
 
     case type
@@ -10,13 +10,16 @@ module Mockups
       mock = '/images/mockups/mockup-imac.png'
       mock_class = 'mockup mockup-imac'
     when :laptop
-      mock = '/images/mockups/mockup-laptop.png'
+      mock = '/images/mockups/mockup-laptop2.png'
       mock_class = 'mockup mockup-laptop'
     when :iphone
-      mock = '/images/mockups/mockup-iphone.png'
+      mock = '/images/mockups/mockup-iphone2.png'
       mock_class = 'mockup mockup-iphone'
     when :iphone_black 
-      mock = '/images/mockups/mockup-iphone-black.png'
+      mock = '/images/mockups/mockup-iphone-black2.png'
+      mock_class = 'mockup mockup-iphone'
+    when :iphone_transparent 
+      mock = '/images/mockups/mockup-iphone-transparent.png'
       mock_class = 'mockup mockup-iphone'
     end
 
@@ -25,7 +28,12 @@ module Mockups
       mock_class += ' mockup-scroll'
     end  
     
-    content = content_tag :img ,nil, 'data-layzr' => imgpath(content_url), :alt => ""
+
+    img_content = content_tag(:img ,nil, 'data-layzr' => imgpath(content_url), :alt => "")
+    noscript = content_tag(:noscript, content_tag(:img ,nil, 'src' => imgpath(content_url), :alt => ""))
+
+    content = img_content + noscript
+    
 
 
     content_tag :div ,class: mock_class do

@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="no-js">
   <head>
     <%= partial 'partials/head/head-meta' %>
     <%= partial 'partials/head/favicon' %> 
@@ -8,19 +8,21 @@
     <% else %>
       <%= stylesheet_link_tag 'style'%>  
     <% end %>
-    <% if content_for?(:css) %>
-      <%= yield_content :css %>
-    <% end %>
     <!-- do zmiany na font-load -->
     <link href="/fonts-dsp.css" rel="stylesheet" type="text/css"/>
      <!-- <%= partial  '/partials/head/font_load' %> -->
     <%= partial  '/partials/head/touch-check' %>
+    <%= partial  '/partials/head/js-check' %>
   </head>
   
   <body class="<%= page_classes %>">
-    <% if page_classes != 'index' %>
+    
+    <% if content_for?(:header) %>
+      <%= yield_content :header %>
+    <% else %>
       <%= partial 'partials/components/header', :locals => { :header_class => current_page.data.header } %>  
     <% end %>  
+
       <%= yield %>
       <%= partial 'partials/components/footer' %>
       <div id="back-to-top"></div>

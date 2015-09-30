@@ -71,3 +71,20 @@
 	visibility: visible;
 	opacity: 1;
 }
+
+.artwork::-webkit-scrollbar {
+	display: none;
+}
+
+
+.touch .artwork::-webkit-scrollbar {
+	display: initial;
+}
+
+.artwork {
+	-ms-overflow-style: -ms-autohiding-scrollbar;  //swietnie dziala w ie
+}
+
+// .single img {
+// 	    // background: #FFF url(../images/ajax2.gif) no-repeat center center;
+// }

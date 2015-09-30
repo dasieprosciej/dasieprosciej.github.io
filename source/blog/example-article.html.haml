@@ -42,7 +42,7 @@ author: Adrian
     %p Lorem ipsum <a href="#">dolor sit amet</a>, consectetur adipisicing elit. Esse repudiandae fugiat, eius ullam perspiciatis cum adipisci consectetur laudantium reiciendis ratione officiis labore eos earum a fuga minus nemo, mollitia eaque?
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis quia numquam quos aut aspernatur quas a nesciunt, nulla amet sapiente quasi architecto doloribus. Ad numquam cumque voluptates, nihil. Consequuntur, aut!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, quis voluptatibus molestias. Delectus placeat dolorem alias ullam rem facilis assumenda quibusdam temporibus, aliquam iste, nostrum reprehenderit aspernatur atque odit illum.
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quas placeat enim minima illo reprehenderit perspiciatis, commodi animi optio provident beatae velit hic at iusto! Maiores tempore porro dicta repudiandae!
-    = figure_r(:s, 'img-main.jpg', 'figcaption', nil, class: 'img-left')
+    = figure_lazy(:s, 'img-main.jpg', 'figcaption', nil, class: 'img-left')
     -# %figure
     -#   = img('r_main-large.jpg')
     -#   %figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
@@ -50,7 +50,7 @@ author: Adrian
 
     %h3 Heading 3
   .section-inner.outset-img  
-    = figure_r(:s, 'img-main.jpg', 'lorem ipsum kdh dkshfksh kshf')
+    = figure_lazy(:s, 'img-main.jpg', 'lorem ipsum kdh dkshfksh kshf')
 
 -# %section.bg-img.bg-shade.color-inverted{'data-background-image' => imgpath('r_main.jpg')}
 = bgimg('img-main.jpg', class: 'bg-img bg-shade-more bg-height-3 align-middle color-inverted') do
@@ -62,44 +62,31 @@ author: Adrian
 
 %section
   .section-inner.outset-img
-    %figure
-      = img('img-main-s.jpg')
-      %figcaption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ad earum modi atque ullam illo deserunt. Nisi totam excepturi qui, porro omnis, eaque suscipit perferendis. Autem corporis perspiciatis incidunt, quam.
+    = figure_lazy(:l, 'img-main.jpg', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ad earum modi atque ullam illo deserunt. Nisi totam excepturi qui, porro omnis, eaque suscipit perferendis. Autem corporis perspiciatis incidunt, quam.', 'alt')
 
   .section-inner.outset-img
-    %figure
-      = img('img-main-s.jpg')
-      %figcaption ala ma kota
+    = figure_lazy(:l, 'img-main.jpg', 'ala ma kota')
 
   .section-inner.fullwidth
-    = figure_r(:responsive, 'img-main.jpg', "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ad earum modi atque ullam illo deserunt. Nisi totam excepturi qui, porro omnis, eaque suscipit perferendis. Autem corporis perspiciatis incidunt, quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ad earum modi atque ullam illo deserunt. Nisi totam excepturi qui, porro omnis, eaque suscipit perferendis. Autem corporis perspiciatis incidunt, quam.")
+    = figure_lazy(:responsive, 'img-main.jpg', "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ad earum modi atque ullam illo deserunt. Nisi totam excepturi qui, porro omnis, eaque suscipit perferendis. Autem corporis perspiciatis incidunt, quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ad earum modi atque ullam illo deserunt. Nisi totam excepturi qui, porro omnis, eaque suscipit perferendis. Autem corporis perspiciatis incidunt, quam.")
 
 
   .section-inner
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quos dignissimos ipsam, fuga, accusantium animi error, ex eum nulla explicabo deleniti ratione rerum vel laboriosam voluptates minima aspernatur quo enim.
-    = figure(:thumb, 'img-main.jpg')
+    -# = figure(:thumb, 'img-main.jpg')
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis quod nulla fugit natus illo. Quaerat officia vel, beatae eveniet sequi aperiam aliquam praesentium maiores magnam voluptatibus fugit at, pariatur facere.
     
 
   .section-inner      
-    -# %h2 Heading 2
-    -# %figure
-    -#   = img('kwiat.jpg')
-    -#   %figcaption Jakis figcaption tutaj bedzie
 
-    %figure.img-left-outset
-      = img('img-main-s.jpg')
-      %figcaption Jakis figcaption tutaj bedzie  
+    = figure_lazy(:s, 'img-main.jpg', 'Jakis figcaption tutaj bedzie', nil, class: 'img-left-outset')
     %p Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing</a> elit. Veniam ex beatae sequi, quidem odit animi, tempora magni assumenda fugit sunt tenetur vero itaque officiis nam repellat aspernatur dicta deserunt perspiciatis.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus maxime corrupti, ducimus, officiis libero repudiandae totam consequuntur est earum unde adipisci corporis minus consequatur asperiores omnis eos alias, doloribus tempora.
     
-    %figure.img-left
-      = img('img-main-s.jpg')
-      %figcaption Jakis figcaption tutaj bedzie  
+    = figure_lazy(:s, 'img-main.jpg', nil, nil, class: 'img-left')
     %p Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing</a> elit. Veniam ex beatae sequi, quidem odit animi, tempora magni assumenda fugit sunt tenetur vero itaque officiis nam repellat aspernatur dicta deserunt perspiciatis.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus maxime corrupti, ducimus, officiis libero repudiandae totam consequuntur est earum unde adipisci corporis minus consequatur asperiores omnis eos alias, doloribus tempora.
 
-    %figure.img-right
-      = img('img-main-s.jpg')
-      %figcaption Jakis figcaption tutaj bedzie 
+    = figure_lazy(:s, 'img-main.jpg', 'Kolejny figcaption', nil, class: 'img-right')
+    
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi cupiditate, enim itaque fuga eaque possimus mollitia, nemo labore quos nihil nam alias! Possimus omnis aperiam quis inventore, labore eveniet et!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut nulla explicabo, quaerat excepturi quasi alias, illum ea amet reprehenderit deleniti quo, quod fuga ad voluptatem natus temporibus quia molestiae sequi?
     %h2.align-center Heading 2
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis adipisci laborum ut magnam maxime voluptas asperiores cum minus ex vero veritatis minima, dolorem velit aut non, dolor, voluptatum aliquam labore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate doloremque rerum maxime inventore suscipit, voluptatum consectetur, porro eaque accusantium, repellendus ipsa veritatis. In minima expedita quibusdam voluptas, nihil saepe culpa.
@@ -123,9 +110,7 @@ author: Adrian
 
 
   .section-inner.outset-img
-    %figure
-      = img('img-main-s.jpg')
-      %figcaption Jakis figcaption tutaj bedzie  
+    = figure_lazy(:l, 'img-main.jpg')
   
   .section-inner
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, dolores, commodi? Fugit eveniet vel deserunt molestias suscipit, reprehenderit doloremque delectus dolorem enim voluptas repellendus a debitis, explicabo numquam, quis. Nostrum.
@@ -205,11 +190,10 @@ author: Adrian
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse repudiandae fugiat, eius ullam perspiciatis cum adipisci consectetur laudantium reiciendis ratione officiis labore eos earum a fuga minus nemo, mollitia eaque?
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ex beatae sequi, quidem odit animi, tempora magni assumenda fugit sunt tenetur vero itaque officiis nam repellat aspernatur dicta deserunt perspiciatis.
   .section-inner.fullwidth-pad
-    .columns-text-img.align-middle.text-25.img-75
-      .column-img  
-        %figure
-          = img('img-main-s.jpg')
-      .column-text
+    .columns.align-middle.column-1--3of4.column-2--1of4
+      .column-1  
+        = figure_lazy(:s, 'img-main.jpg')
+      .column-2
         :markdown
           + Lista 1
           + Lista 2
@@ -219,15 +203,13 @@ author: Adrian
   .section-inner
     .columns.align-middle.column-1--1of3
       .column-1
-        %figure
-          = img('img-main-s.jpg')
+        = figure_lazy(:s, 'img-main.jpg')        
       .column-2
         %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate impedit autem iste libero nihil maxime itaque accusantium odit, id debitis in, neque ex quo soluta, tempore natus illo quaerat consectetur.
   .section-inner
     .columns.column-1--1of4.column-2--2of3
       .column-1 
-        %figure
-          = img('img-main-s.jpg')
+        = figure_lazy(:s, 'img-main.jpg')      
       .column-2
         %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate impedit autem iste libero nihil maxime itaque accusantium odit, id debitis in, neque ex quo soluta, tempore natus illo quaerat consectetur.
 

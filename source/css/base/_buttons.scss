@@ -17,38 +17,55 @@
 
 }
 
-.btn-primary {
-
-	color:$link-color;
-	// font-size:18px;  //zmienilem zeby inheritowalo z cta-button
+.btn-default {
   font-size: inherit;
-	letter-spacing: .05em;
-	// padding-top: 2px;
-	padding-top: 22px;
-	padding-bottom: 19px;
-	text-transform: uppercase;
-	font-weight: 700;
-	padding-left: 1em;
-	padding-right: 1em;
-	border:6px solid $link-color;
-	// border-radius:2em;
-	// border-radius:4px;
-	// margin-top:30px;	
-	@include mq($bp1){
-		padding-left: 2em;
-		padding-right: 2em;
-	}
+  letter-spacing: .05em;
+  padding-top: 22px;
+  padding-bottom: 19px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-left: 1em;
+  padding-right: 1em;
+  border:6px solid transparent;
+  @include mq($bp1){
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
 
-	&:hover {
-		// background:$link-color;
-		// color:#fff;
-	}
+.btn-primary {
+	color:$link-color;
+  border-color:$link-color;
+  &.btn-effect {
+    &:hover,
+    &:focus,
+    &:active {
+      color:#fff;
+    }
+    &:before {
+      background-color:$link-color;
+    }
+  }
+}
+
+.btn-secondary {
+  color:$white-color;
+  border-color:$white-color;
+  &.btn-effect {
+    &:hover,
+    &:focus,
+    &:active {
+      color:$link-color;
+    }
+    &:before {
+      background-color:$white-color;
+    }
+  }
 }
 
 .btn-effect {
 	position: relative;
 	overflow: hidden;
-	// width: 245px;
 	transition: border-color 0.3s, color 0.3s;
 	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
@@ -59,36 +76,29 @@
 	left: 0;
 	width: 150%;
 	height: 100%;
-	// background: #37474f;
-	z-index: -1;
 	transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
 	transform-origin: 0% 100%;
-	transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+	// transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  // background-color: $link-color;
 }
-.btn-effect:hover,
-.btn-effect:focus,
-.btn-effect:active
- {
-	color: #fff;
-	// border-color: #3f51b5;
-}
+
+
 
 .btn-effect:hover::before,
 .btn-effect:focus::before,
 .btn-effect:active::before
 {
 	opacity: 1;
-	background-color: $link-color;
+	// background-color: $link-color;
 	transform: rotate3d(0, 0, 1, 0deg);
 	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-
-.btn-cta--inverted {
-	background:transparent;
-	border:1px solid $link-color;
-	color:$link-color;
+.btn-effect span {
+  position: relative;
 }
+
 
 .cta-button {
   position: relative;
@@ -116,7 +126,6 @@
   width: 100%;
   position: absolute;
   height: 100%;
-  // height:calc(100% - 6px);
   border:6px solid #e5e5e5;
   transform: translateX(10px) translateY(10px) translateZ(0);
   transition: all .3s;

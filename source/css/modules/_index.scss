@@ -4,7 +4,7 @@
 
 .index .header {
   @include mq($bp1) { 
-    background: $primary-color url(../images/hero2.jpg) center center no-repeat;
+    background: $primary-color url(../images/hero3b.jpg) center center no-repeat;
     // background-position: left 100px center;
     background-size:cover;
     position: relative;
@@ -15,7 +15,7 @@
       height: 100%;
       top: 0;
       left: 0;
-      background:shade($primary-color,0);
+      background:$primary-color;
       opacity: .5;
     }
   }

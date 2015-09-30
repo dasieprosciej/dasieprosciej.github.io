@@ -1,9 +1,9 @@
 ---
 title: da się prościej - Test
 title_index: Test
-date: 2015-02-14
+date: 2010-02-14
 published: false
-projekt_class: projekt-food
+projekt_class:
 header: 
 ---
 
@@ -28,14 +28,14 @@ header:
     %p 
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, reiciendis doloribus obcaecati voluptate sit illo autem quod veritatis aliquam quis repellendus culpa soluta numquam expedita eum earum vero officia ullam?
     %p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae impedit ducimus qui repudiandae repellat iure deserunt quam labore magnam, commodi expedita officiis reiciendis! Voluptatem, harum autem sapiente, hic repudiandae nostrum?
-    = figure_r(:responsive,'img-jezioro.jpg', 'To jest figcaption', 'To jest alt', class: 'img-left-outset')
+    = figure_lazy(:l,'img-jezioro.jpg', 'To jest figcaption', 'To jest alt', class: 'img-left-outset')
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit eveniet quam ducimus expedita et, eius harum corporis reprehenderit magnam laudantium facilis provident facere inventore, a, explicabo. Delectus at, eos obcaecati!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam unde suscipit quaerat quia animi excepturi sint odit, porro at tempore distinctio natus a consequatur recusandae ut sit commodi deleniti perferendis.
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta excepturi qui, aliquid alias assumenda voluptatem asperiores quod, cum error mollitia voluptatum quasi, fugiat ipsam iure quibusdam dolor deleniti sunt earum!
-    = figure_r(:responsive,'img-jezioro.jpg', nil, nil, class: 'img-right')
+    = figure_lazy(:l,'img-jezioro.jpg', nil, nil, class: 'img-right')
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam provident sunt sit praesentium totam nisi, itaque earum! Culpa dolores libero aut accusantium exercitationem, doloremque magnam in qui ipsum, sunt voluptates.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas temporibus ut deleniti dolore, officia culpa ducimus, quia odit tempora! Similique ex voluptate blanditiis! Consequatur quia voluptatem, dicta sunt maxime mollitia!
     
   .section-inner.outset-img
-    = figure_r(:l,'img-jezioro.jpg', 'asasa')
+    = figure_lazy(:l,'img-jezioro.jpg', 'asasa')
 
   .section-inner  
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure tempore deleniti ipsa eos consequuntur, ducimus mollitia eum repellat consectetur alias, voluptatem nulla dolorem voluptatibus quo, ex tenetur nobis hic! Ipsum?  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem voluptates facere repellendus quibusdam repudiandae odit voluptatem assumenda natus enim nisi qui neque voluptatibus, nostrum eaque sint nemo placeat? Numquam, cum.

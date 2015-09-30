@@ -2,9 +2,37 @@
 
   <article class="single"> 
     <%= yield %>
+    <section class="section section-projekt-info">
+      <div class="section-inner outset">
+          <div class="columns">
+            <div class="column-1 group">
+              <h3>Klient</h3>
+              <p><%= current_page.data.klient %></p>
+              
+              <h3>Status</h3>              
+              <% if current_page.data.status == "online" %>
+                <a href="<%= current_page.data.status_link %>" target="_blank"><%= current_page.data.status %> - zobacz</a>
+              <% else %>
+                <p><%= current_page.data.status %></p>                    
+              <% end %>
+                   
+            </div>
+            <div class="column-2 group">              
+              <h3>Zakres</h3>
+              <ul>
+              <% unless current_page.data.zakres.nil? %>
+                <% current_page.data.zakres.each do |f| %>
+                  <li><%= f %></li>
+                <% end %>
+              <% end %>
+              </ul>
+            </div>
+          </div>
+      </div>  
+    </section>  
   </article>  
   
-  <section class="section">
+  <section class="section section-projekt-nav">
     <div class="container--wide">
       <ul class="projekt-nav">
         <li class="prevnav">

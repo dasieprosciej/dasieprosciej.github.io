@@ -7,6 +7,7 @@
   width: 100%;
   margin: 0 auto;
   margin-bottom:30px;
+
   // &:hover .mockup-shade {
   //   visibility: hidden;
   //   opacity: 0;
@@ -60,10 +61,16 @@
   img {
     width: 100%;
   }
+  .no-js & {
+    > img {
+      display: none;
+    }
+  }
 }
 
 .mockup-scroll .artwork {
-  overflow-y: scroll;
+  overflow-y: auto;
+
   -webkit-overflow-scrolling: touch;
   transform: translateZ(0);
 }
@@ -74,15 +81,18 @@
   opacity: .9; //bo nie moge na wierz dac ikony scroll
   transition:all .2s;
   visibility: visible;
-
+  .no-js & {
+    display: none;
+  }
 }
+
 .mockup-imac {
   .artwork,
   .mockup-shade {
     width: 92.5%;
     height: 63%;
-    top: 4.9%;
-    left: 4.0%;
+    top: 4.8%;
+    left: 3.9%;
   }
   .mockup-shade {
     height: calc(63% + 1px);
@@ -93,24 +103,28 @@
   .artwork,
   .mockup-shade {
    width: 76.2%;
-   height: 82.6%;
-   top: 6.1%;
-   left: 11.75%;
+   height: 81.9%;
+   top: 6.5%;
+   left: 11.9%;
   }
   .mockup-shade {
-    height: calc(82.6% + 1px);
+    height: calc(81.9% + 1px);
   }
 }
 
 .mockup-iphone {
   .artwork,
   .mockup-shade {
-    width: 85.5%;
-    height: 74.6%;
-    top: 12.7%;
-    left: 7.3%;
+    // width: 85.5%;
+    // height: 74.6%;
+    // top: 12.7%;
+    // left: 7.3%;
+    top:11.9%;
+    left: 4.9%;
+    width: 90.4%;
+    height: 76%;
   }
   .mockup-shade {
-    height: calc(74.6% + 1px);
+    height: calc(76% + 1px);
   }
 }

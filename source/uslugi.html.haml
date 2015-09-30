@@ -1,6 +1,11 @@
 ---
 title: da się prościej - usługi
 ---
+- content_for :header do
+  = partial 'partials/components/_header.haml', :locals => { :header_class => current_page.data.header } do
+    %h1 
+      Jak możemy Ci pomóc
+
 
 .content
   %section.section.section-help
@@ -36,68 +41,101 @@ title: da się prościej - usługi
       %h2 Otrzymasz stronę, która:
       .grid.grid-m--1of3.grid-s--1of2.align-middle
         .grid-cell.icon-block.icon-odpowiada        
-          -# = partial 'partials/components/svg-odpowiada'
+          %span.effect-shine
         .grid-cell.icon-text-block  
           %h3 Odpowiada
           %p na pytania Twoich odbiorców, rozwiewa ich wątpliwości i&nbsp;inspiruje do podjęcia akcji
-      .grid.grid-s--1of2.u-m--2of3.grid-m--offset-33.align-middle.block-line-full
+      .grid.grid-s--1of2.u-m--2of3.grid-m--offset-33.align-middle
         .grid-cell.icon-block.icon-wzmacnia
-          -# = partial 'partials/components/svg-wzmacnia'
+          %span.effect-shine
         .grid-cell.icon-text-block        
           %h3 Wzmacnia
           %p wiarygodność i wizerunek Twojego biznesu
-      .grid.grid-s--1of2.u-m--2of3.grid-m--offset-33.align-middle.block-line-full
+      .grid.grid-s--1of2.u-m--2of3.align-middle
         .grid-cell.icon-block.icon-buduje  
-          -# = partial 'partials/components/svg-buduje'        
+          %span.effect-shine          
         .grid-cell.icon-text-block  
           %h3 Buduje
           %p zaufanie i lojalność, zamieniając odwiedzających w klientów, a&nbsp;klientów w fanów
-      .grid.grid-s--1of2.u-m--2of3.align-middle.block-line-full    
+      .grid.grid-s--1of2.u-m--2of3.grid-m--offset-33.align-middle    
         .grid-cell.icon-block.icon-czyni        
-          -# = partial 'partials/components/svg-czyni'        
+          %span.effect-shine
         .grid-cell.icon-text-block        
           %h3 Czyni
           %p rzeczy skomplikowane prostymi i łatwymi w użyciu
-   
+      -# .grid.grid-m--1of4.grid-s--1of2.grid--justify
+      -#   .get-item
+      -#     .icon-block.icon-odpowiada
+      -#       %span.effect-shine
+      -#     .get-item-inner
+      -#       %h3 Odpowiada
+      -#       %p na pytania Twoich odbiorców, rozwiewa ich wątpliwości i&nbsp;inspiruje do podjęcia akcji
+        
+      -#   .get-item
+      -#     .icon-block.icon-wzmacnia
+      -#       %span.effect-shine
+      -#     .get-item-inner
+      -#       %h3 Wzmacnia
+      -#       %p wiarygodność i wizerunek Twojego biznesu
+      -#   .get-item 
+      -#     .icon-block.icon-buduje  
+      -#       %span.effect-shine    
+      -#     .get-item-inner
+      -#       %h3 Buduje
+      -#       %p zaufanie i lojalność, zamieniając odwiedzających w klientów, a&nbsp;klientów w fanów         
+      -#   .get-item
+      -#     .icon-block.icon-czyni       
+      -#       %span.effect-shine
+      -#     .get-item-inner
+      -#       %h3 Czyni
+      -#       %p rzeczy skomplikowane prostymi i łatwymi w użyciu         
+          
+
+
   %section.section.section-proces
     .container--wide
       %h2.section-proces-title Nasz proces w skrócie
-      .grid-s.grid-s--1of2.grid-s--gutters-xxl
+      -# .grid-s.grid-s--1of2.grid-s--gutters-xxl
+      .grid-s.grid-s--1of2
         .grid-cell.proces-item
-          .proces-header.proces-first{"data-number" => "01"} 
-            %h3.proces-title Na początku
-            %span.proces-subtitle Strategia i analiza            
-          %p Wszystko zaczyna się od Twojej historii:
-          %ul
-            %li  Dlaczego robisz to co robisz?
-            %li Co czyni Cię unikalnym?
-            %li Czyją uwagę chcesz przyciągnąć?
-            %li Czego chcą lub potrzebują Twoi odbiorcy?
-            %li Co chcesz osiągnąć?
-          %p W pełni zanurzamy się w świecie Twojego biznesu, badamy aktualne trendy, analizujemy Twoją konkurencję i rynek na którym działasz. Docieramy do sedna tego co sprawia, że Twoja oferta jest wyjątkowa.  
+          .proces-item--inner
+            .proces-header.proces-first{"data-number" => "01"}             
+              %h3.proces-title Na początku
+              %span.proces-subtitle Strategia i analiza          
+            %p Wszystko zaczyna się od Twojej historii:
+            %ul
+              %li  Dlaczego robisz to co robisz?
+              %li Co czyni Cię unikalnym?
+              %li Czyją uwagę chcesz przyciągnąć?
+              %li Czego chcą lub potrzebują Twoi odbiorcy?
+              %li Co chcesz osiągnąć?
+            %p W pełni zanurzamy się w świecie Twojego biznesu, badamy aktualne trendy, analizujemy Twoją konkurencję i rynek na którym działasz. Docieramy do sedna tego co sprawia, że Twoja oferta jest wyjątkowa.  
 
         .grid-cell.proces-item
-          .proces-header{"data-number" => "02"}             
-            %h3.proces-title Następnie
-            %span.proces-subtitle Treść i struktura
-          %p Przeglądamy i dostosowujemy dotychczasową zawartość strony . W zależności od potrzeb Twoich odbiorców tworzymy również nową treść. Projektujemy nowy układ informacji i interakcje z użytkownikami.
+          .proces-item--inner
+            .proces-header{"data-number" => "02"}             
+              %h3.proces-title Następnie
+              %span.proces-subtitle Treść i struktura
+            %p Przeglądamy i dostosowujemy dotychczasową zawartość strony . W zależności od potrzeb Twoich odbiorców tworzymy również nową treść. Projektujemy nowy układ informacji i interakcje z użytkownikami.
         
         .grid-cell.proces-item
-          .proces-header{"data-number" => "03"} 
-            %h3.proces-title By w końcu
-            %span.proces-subtitle Design i technologia
-          %p Prezentujemy treść w przejrzysty i zrozumiały sposób oraz opracowujemy właściwą oprawę wizualną dla Twojego biznesu.
-          %p.strong Budujemy stronę tak by była:
-          %ul
-            %li łatwa do znalezienia 
-            %li szybka
-            %li responsywna (dostosowana do ekranu)
+          .proces-item--inner
+            .proces-header{"data-number" => "03"} 
+              %h3.proces-title By w końcu
+              %span.proces-subtitle Design i technologia
+            %p Prezentujemy treść w przejrzysty i zrozumiały sposób oraz opracowujemy właściwą oprawę wizualną dla Twojego biznesu.
+            %p.strong Budujemy stronę tak by była:
+            %ul
+              %li łatwa do znalezienia 
+              %li szybka
+              %li responsywna (dostosowana do ekranu)
         
         .grid-cell.proces-item
-          .proces-header{"data-number" => "04"} 
-            %h3.proces-title Ale to nie koniec
-            %span.proces-subtitle Efekty
-          %p Po uruchomieniu strony, badamy jej efektywność. Mierzymy jej sukces, żebyś wiedział jak wiele zyskałeś dzięki tej inwestycji.       
+          .proces-item--inner
+            .proces-header{"data-number" => "04"} 
+              %h3.proces-title Ale to nie koniec
+              %span.proces-subtitle Efekty
+            %p Po uruchomieniu strony, badamy jej efektywność. Mierzymy jej sukces, żebyś wiedział jak wiele zyskałeś dzięki tej inwestycji.       
     
   %section.section.dsp-quote
     .container--wide

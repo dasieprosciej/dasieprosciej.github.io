@@ -6,9 +6,14 @@ blog: blog
 
 - content_for(:title, "da się prościej - autor #{author}")
 
+- content_for :header do
+  = partial 'partials/components/_header.haml', :locals => { :header_class => current_page.data.header } do
+    %h1 
+      Zobacz jak myśli #{author} 
+
 %section.section.section-blog
   .container--wide
-    %h1=author
+    -# %h1=author
     .grid-s.grid-s--1of2.grid-s--gutters-l
       - page_articles.each_with_index do |article, i|
         %article.post-teaser.grid-cell

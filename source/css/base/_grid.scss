@@ -179,6 +179,12 @@
 .grid--justifyCenter {
   justify-content: center;
 }
+.grid--justify {
+  justify-content: space-between;
+}
+.grid--nojustify {
+  justify-content: flex-start;
+}
 
 .grid-cell--top {
   align-self: flex-start;

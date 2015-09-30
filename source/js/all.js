@@ -1,4 +1,4 @@
-//= require aload
+//= require rAF
 //= require layzr
 //= require rimg-breakpoints
 //= require rimg.min
@@ -7,6 +7,7 @@
 //= require classie
 //= require debounce
 //= require scrollTop
+//= require menu_j
 
 //aload
 // window.onload = function () {
@@ -16,10 +17,13 @@
 //     aload();
 // });
 
+
+
+
 //layzr
 var layzr = new Layzr(
 {
-  threshold: 40
+  threshold: 20
 }
 );
 
@@ -78,14 +82,15 @@ if(cta_link_1) {   //if the element exists add the click event
 
 //matchmedia dla synchscroll
 (function(){
-  var comp = document.getElementById('compare-1'); 
+  var comp_1 = document.getElementById('compare-1');
+  var comp_2 = document.getElementById('compare-2');  
   if(window.matchMedia) {
     var mq = window.matchMedia("(min-width: 700px)");
     mq.addListener(WidthChange);
     WidthChange(mq);  
   }
   function WidthChange(mq) {
-    if(mq.matches && comp) {  
+    if(mq.matches && comp_1 && comp_2) {  
       new SynchDivScroll('compare-1', 'compare-2'); //synchscroll init
     }
   }
@@ -113,7 +118,7 @@ if(cta_link_1) {   //if the element exists add the click event
       });
     });
   }
-  if(comp_1)  {
+  if(comp_1 && comp_2)  {
     var compare_1 = comp_1.parentNode;
     var compare_2 = comp_2.parentNode;
 

@@ -84,51 +84,53 @@ module ImagesHelper
   #   content_tag :figure, content
   # end
 
-  def figure(type, content_url, caption=nil, alt=nil, opts={})
-    if !(type == :s || type == :m || type == :l || type == :xl || type== :responsive || type== :thumb) && opts[:type].blank?
-      raise ArgumentError.new("You should pass :type option key explicitly, because you have passed #{type} type other than :s, :m, :l, :xl or :responsive.")
-    end
 
-    case type
-    when :thumb
-      suffix = '-thumbnail'  
-    when :s
-      suffix = '-s'
-    when :m 
-      suffix = '-m'
-    when :l 
-      suffix = '-l'
-    when :xl
-      suffix = '-xl'
-    when :responsive
-       suffix = ''
-    end
+#  wersja bez aspect ratio, to mi nie bedzie potrzebne narazie
+  # def figure(type, content_url, caption=nil, alt=nil, opts={})
+  #   if !(type == :s || type == :m || type == :l || type == :xl || type== :responsive || type== :thumb) && opts[:type].blank?
+  #     raise ArgumentError.new("You should pass :type option key explicitly, because you have passed #{type} type other than :s, :m, :l, :xl or :responsive.")
+  #   end
+
+  #   case type
+  #   when :thumb
+  #     suffix = '-thumbnail'  
+  #   when :s
+  #     suffix = '-s'
+  #   when :m 
+  #     suffix = '-m'
+  #   when :l 
+  #     suffix = '-l'
+  #   when :xl
+  #     suffix = '-xl'
+  #   when :responsive
+  #      suffix = ''
+  #   end
     
-    basename = File.basename(content_url, '.*')
-    ext = File.extname(content_url)
+  #   basename = File.basename(content_url, '.*')
+  #   ext = File.extname(content_url)
 
-    real_path = content_url.sub(basename + ext,basename + suffix + ext )
+  #   real_path = content_url.sub(basename + ext,basename + suffix + ext )
 
-    if type == :responsive
-      content = content_tag :img ,nil, 'data-src' => imgpath(real_path), :alt => alt
-    else        
-      content = content_tag :img ,nil, :src => imgpath(real_path), :alt => alt
-    end  
+  #   if type == :responsive
+  #     content = content_tag :img ,nil, 'data-src' => imgpath(real_path), :alt => alt
+  #   else        
+  #     content = content_tag :img ,nil, :src => imgpath(real_path), :alt => alt
+  #   end  
 
-    if caption
-      content += content_tag(:figcaption, caption)  
-    end  
+  #   if caption
+  #     content += content_tag(:figcaption, caption)  
+  #   end  
 
-    content_tag :figure, opts do 
-      content
-    end
-  end
+  #   content_tag :figure, opts do 
+  #     content
+  #   end
+  # end
 
 
 
-# figure with aspect ratio
-  def figure_r(type, content_url, caption=nil, alt=nil, options={})
-    if !(type == :s || type == :m || type == :l || type == :xl || type== :responsive || type== :thumb)  && options[:type].blank?
+# figure with aspect ratio, wczesniej nazwa to figure_r
+  def figure(type, content_url, caption=nil, alt=nil, options={})
+    if !(type == :direct || type == :s || type == :m || type == :l || type == :xl || type== :responsive || type== :thumb)  && options[:type].blank?
       raise ArgumentError.new("You should pass :type option key explicitly, because you have passed #{type} type other than :s, :m, :l, :xl or :responsive.")
     end
 
@@ -143,6 +145,8 @@ module ImagesHelper
       suffix = '-l'
     when :xl
       suffix = '-xl'
+    when :direct
+      suffix = ''  
     when :responsive
        suffix = ''
     end
@@ -151,13 +155,6 @@ module ImagesHelper
     ext = File.extname(content_url)
     real_path = content_url.sub(basename + ext,basename + suffix + ext )
     
-
-    # if type == :responsive
-    #   content = dataimg(content_url) 
-    #   # dataimg z gory
-    #   else        
-    #   content = img(real_path)
-    # end  
 
     if type == :responsive
       content = content_tag :img ,nil, 'data-src' => imgpath(real_path), :alt => alt
@@ -194,6 +191,75 @@ module ImagesHelper
     end
   end
 
+# figure with aspect ratio, lazy load i noscript
+  def figure_lazy(type, content_url, caption=nil, alt=nil, options={})
+    if !(type == :direct || type == :s || type == :m || type == :l || type == :xl || type== :responsive || type== :thumb)  && options[:type].blank?
+      raise ArgumentError.new("You should pass :type option key explicitly, because you have passed #{type} type other than :s, :m, :l, :xl or :responsive.")
+    end
+
+    case type
+    when :thumb
+      suffix = '-thumbnail'
+    when :s
+      suffix = '-s'
+    when :m 
+      suffix = '-m'
+    when :l 
+      suffix = '-l'
+    when :xl
+      suffix = '-xl'
+    when :direct
+      suffix = ''    
+    when :responsive
+       suffix = ''
+    end
+    
+    basename = File.basename(content_url, '.*')
+    ext = File.extname(content_url)
+    real_path = content_url.sub(basename + ext,basename + suffix + ext )
+    
+    #  potrzebne do noscript dla responsywnego bo tam jest tylko glowna nazwa zdjecia, bez suffixu, daje rozmiar s bo powinien byc zawsze
+    noscript_responsive_real_path = content_url.sub(basename + ext,basename + '-s' + ext )
+    # noscript dla normalnego i dla responsive
+    noscript = content_tag(:noscript, content_tag(:img ,nil, 'src' => imgpath(real_path), :alt => alt))
+    noscript_responsive = content_tag(:noscript, content_tag(:img ,nil, 'src' => imgpath(noscript_responsive_real_path), :alt => alt))
+
+
+    if type == :responsive
+      content = content_tag(:img ,nil, 'data-src' => imgpath(real_path), :alt => alt) + noscript_responsive
+    else        
+      # content = content_tag :img ,nil, :src => imgpath(real_path), :alt => alt
+      content = content_tag(:img ,nil, 'data-layzr' => imgpath(real_path), :alt => alt) + noscript
+    end      
+
+
+    suffixed_path = imgpath(real_path)
+
+    # dla responsive bedziemy badac tylko wielkosc 's' stad musze nowy path stworzyc
+    suffix_s = '-s'
+    real_path_s = content_url.sub(basename + ext,basename + suffix_s + ext )
+    suffixed_path_responsive = imgpath(real_path_s)
+
+    if type == :responsive
+        width, height = FastImage.size(@site + suffixed_path_responsive, :raise_on_failure => true)
+      else
+        width, height = FastImage.size(@site + suffixed_path, :raise_on_failure => true)    
+    end  
+    
+    aspect_ratio = number_to_percentage(height.to_f / width * 100, precision: 4)
+
+
+    if caption
+      content_tag :figure, options do  
+          content_tag(:span, content, :class => "aspect-ratio", :style => "padding-bottom: #{aspect_ratio}") +
+          content_tag(:figcaption, caption)
+      end  
+    else
+      content_tag :figure, options do  
+          content_tag(:span, content, :class => "aspect-ratio", :style => "padding-bottom: #{aspect_ratio}")
+      end  
+    end
+  end
 
 
   # def figure_tag(content_type, content_urls=[], caption, options={})

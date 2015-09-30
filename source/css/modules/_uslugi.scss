@@ -1,9 +1,29 @@
+.uslugi_index .header {
+  @include mq($bp1) { 
+    background: $primary-color url(../images/uslugi-hero.jpg) center center no-repeat;
+    background-size:cover;
+    position: relative;
+    &:before {
+      content:'';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background:$primary-color;
+      opacity: .4;
+    }
+  }
+}
+
 .section-help {
   text-align: center;
+  position: relative;
   @include mq($bp2){
     text-align: left;
   } 
 }
+
 
 .section-get {
   // padding-top: 0;
@@ -11,10 +31,21 @@
   // text-align: center;
   @include mq($bp2){
     text-align: left;
-    background: linear-gradient(to bottom, #fff, rgba(#fff,0) 10%, rgba(#fff,0) 90%, #fff), url(../images/get-bg.jpg) 0 0 no-repeat;
+    background:#fff;
+    // background: linear-gradient(to bottom, #fff, rgba(#fff,0) 10%, rgba(#fff,0) 90%, #fff), url(../images/get-bg.jpg) 0 0 no-repeat;
+    background: linear-gradient(to bottom, #fff, rgba(#fff,0) 10%, rgba(#fff,0) 100%), url(../images/get-bg.jpg) 0 0 no-repeat;
     background-size:cover;
-    padding-top: 100px;
+    
+    // padding-top: 100px;
+    margin-top: -600px;
+    padding-top: 700px;
   } 
+  .container--wide {
+    // max-width: 1400px;
+  }
+  h2 {
+    // text-align: center;
+  }
 }
 
 .block-line-full {
@@ -34,6 +65,8 @@
 .section-proces {
   position: relative;
   font-size:18px;
+  background:#efefef;
+  border-top: 1px solid #ddd;
   @include mq($bp1) {
     font-size: 16px;
     &:before {
@@ -58,9 +91,16 @@
   p + ul {
     margin-top: -15px;
   }
+  h2 {
+    text-align: center;
+  }
 }
 
 .proces-item {
+  overflow: hidden;
+  @include mq($bp1) {
+    // background:red;  
+  } 
   @include mq-max($bp1-max) {
     margin-bottom: 120px;
     &:last-child {
@@ -69,8 +109,18 @@
   } 
 }
 
+.proces-item--inner {
+  @include mq($bp1) {
+    background:#fff;
+    padding:100px 20px;
+  } 
+  @include mq($bp2) {
+    padding:100px 50px;
+  } 
+}
+
 .section-proces-title {
-  padding-bottom: 75px;
+  padding-bottom: 100px;
 }
 
 
@@ -80,24 +130,29 @@
   width: 100%;
   margin-bottom: 30px;
   position: relative;
-  padding-left: 120px;
+  // padding-left: 120px;
   &:before {
     content:attr(data-number);
     position: absolute;
-    font-size: 130px;
+    font-size: 200px;
     line-height: .6;
     font-family: $sans-font;
     font-weight: 700;
-    left: 0;
-    top:-20px;
+    left: -85px;
+    top:-60px;
     letter-spacing:-0.1em;
-    z-index: -1;
-    color:$link-color;
+    opacity: .25;
+    // z-index: -1;
+    color:#ddd;
+    // color:tint($link-color,30);
   }
+  @include mq($bp1){
+    margin-bottom: 50px;
+  } 
 }
 
 .proces-first {
-  padding-left: 90px;
+  // padding-left: 90px;
 }
 
 .proces-title {
@@ -108,6 +163,7 @@
 
 .proces-subtitle {
   font-style: italic;
+  color:#999;
 }
 
 

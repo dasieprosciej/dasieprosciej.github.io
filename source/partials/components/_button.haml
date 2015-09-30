@@ -1,4 +1,5 @@
 .cta-button  
-  %a.btn.btn-primary.btn-effect.btn-cta#cta-1{:href => "#{btn_link}"}
-    = yield if defined? yield
+  %a.btn.btn-primary.btn-default.btn-effect.btn-cta#cta-1{:href => "#{btn_link}"}
+    %span
+      = yield if defined? yield
   .btn-shadow

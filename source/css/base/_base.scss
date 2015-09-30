@@ -42,14 +42,14 @@ background-color : transparent;
 
 ::-moz-selection {
 // background-color : tint($primary-color,60);
-background-color:#B68900;
+background-color:tint(#B68900,60);
 color:#fff;
 text-shadow : none;
 }
 
 ::selection {
 // background-color : tint($primary-color,60);
-background-color:#B68900;
+background-color:tint(#B68900,60);
 color:#fff;
 text-shadow : none; 
 }

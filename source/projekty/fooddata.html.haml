@@ -4,6 +4,13 @@ title_index: Pan Kanapka Online
 date: 2015-02-01
 projekt_class: projekt-food
 header: header--inverted
+klient: FoodData
+zakres:
+  - design
+  - development
+  - copywriting
+status: offline
+status_link: http://dev.dearty.com/fooddata  
 ---
 
 
@@ -22,59 +29,57 @@ header: header--inverted
       Naszym zadaniem było stworzenie tzw. <em>launch page</em>, która przy odpowiedniej akcji marketingowej (już nie za naszym pośrednictwem) miała ocenić zapotrzebowanie na takie narzędzie. 
     %hr.inline/
 
-
 %section   
   .section-inner.outset
-    .columns.column-1--1of3.align-middle
+    .columns.column-1--1of3.column-2--2of3.font-size-18
       .column-1
         %h3 Wersja „Przed”
         %p To co się najbardziej rzucało w oczy w dotychczasowej wersji strony, to brak na wstępie jasnej i przejrzystej propozycji wartości, czyli informacji, czym właściwie jest FoodData i jak może pomóc odbiorcy.
-      .column-2.order-1 
+      .column-2
         = mockup(:imac, :scroll, 'img-fooddata-old-s.jpg')
         %span FoodData - wersja „Przed”
-
-    .columns.column-2--1of3.column-1--2of3.align-middle
+        
+%section.bg-color.bg-grey
+  .section-inner.outset
+    .columns.column-1--1of4.column-2--3of4.align-middle.font-size-18
       .column-1
-        = mockup(:imac, :scroll, 'img-fooddata-l.jpg', id:"compare-1")
-      .column-2    
-        = mockup(:iphone, :scroll, 'fooddata_sx.png', id:"compare-2")
-    
+        %h3 Propozycja wartości
+        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil nobis cum ipsa. Sapiente repudiandae, voluptatem saepe delectus culpa molestias ducimus labore maxime, hic, dolores architecto tempora impedit beatae accusantium nisi?
+      .column-2.order-1 
+        = figure_lazy(:l, 'img-value.jpg')  
+
+%section
+  .section-inner.outset
+    .columns.column-1--1of3.column-2--2of3.align-middle.font-size-18
+      .column-1
+        %h3 Imitacja aplikacji
+        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil nobis cum ipsa. Sapiente repudiandae, voluptatem saepe delectus culpa molestias ducimus labore maxime, hic, dolores architecto tempora impedit beatae accusantium nisi?
+      .column-2 
+        = figure_lazy(:l, 'img-value.jpg')      
+
+%section
+  .section-inner.outset
+    .columns.column-1--1of4.column-2--3of4.align-middle.font-size-18
+      .column-1
+        %h3 Ikony
+        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil nobis cum ipsa. Sapiente repudiandae, voluptatem saepe delectus culpa molestias ducimus labore maxime, hic, dolores architecto tempora impedit beatae accusantium nisi?
+      .column-2.order-1 
+        = figure_lazy(:direct, 'fooddata-icons.png')      
       
 %section
   .section-inner.fullwidth
-    = figure_r(:l, 'img-value.jpg')       
-  
-  .section-inner
-    = mockup(:laptop, nil, 'fooddata-1440x900.jpeg')  
-    = mockup(:imac, nil, 'fooddata-1920x1050.jpeg')
-    .columns
+    = figure_lazy(:l, 'img-zainteresowanie.jpg')       
+
+%section 
+  .section-inner.outset.align-center
+    %h2 Efekt końcowy
+    %p.color-lighter Nie zapomnieliśmy oczywiście o wersji responsywnej
+    = br
+
+    .columns.column-1--3of4.column-2--1of4.align-bottom
       .column-1
-        = mockup(:iphone, nil, 'img-fooddata-414x736-xs.jpeg')
-    = mockup(:iphone, nil, 'fooddata-iphone.jpg')
-
-  .section-inner.outset
-    = figure_r(:l, 'img-zainteresowanie.jpg')
-
-%section
-  .section-inner
-    :markdown
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias impedit maxime tenetur nobis, ratione ipsum unde eveniet! Hic voluptate reiciendis assumenda sed nesciunt consequatur placeat corporis necessitatibus? Cum, labore, non. 
-
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ducimus et eaque rem nam. Nam quas a, sequi animi voluptate veritatis, libero deserunt nemo, nostrum incidunt nulla fugit eius, vero.
-
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt veniam eius obcaecati, assumenda culpa consequuntur provident ad, earum labore inventore, alias est nam nulla odio soluta ipsum fuga, non possimus?
-  .section-inner.outset-img
-    .mockup-container
-      = mockup(:imac, :scroll, 'img-fooddata_old-l.jpg')  
-%section.bg-grey.bg-height-3  
-  .section-inner.outset
-    -# = mockup(:iphone, 'fooddata_sx.png')
-    -# = mockup_scroll(:desktop, 'img-fooddata_old-l.jpg')
-
-
-    .columns.column-1--1of3.align-middle
-      .column-1
-        = mockup(:iphone, :scroll, 'fooddata_sx.png', class: 'ala')
+        = mockup(:imac, :scroll, 'img-fooddata-l.jpg', id: 'compare-1')
       .column-2
-        %h3 Title 3
-        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quibusdam ad consequuntur tempore suscipit. Ipsam odio eos officia, libero ratione recusandae eum possimus praesentium, tempora necessitatibus ullam iure accusamus voluptatibus.       
+        = mockup(:iphone, :scroll, 'fooddata_sx.png', id: 'compare-2')
+    
+            

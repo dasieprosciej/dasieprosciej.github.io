@@ -1,14 +1,18 @@
 ---
 title: da się prościej - realizacje
 blog: projekty
-header:
+header: header--inverted
 ---
 
 
-%section.section.section-projekty
-  .container--wide
-    - page_articles.each_with_index do |article, i|
-      %a{:href => "#{article.url}"}
-        %article{class: "projekt #{article.data.projekt_class}"}
-          %h1=article.data.title_index  
-          -# = link_to("Zobacz", article.url, :class => "btn btn-cta")
+-# %section.section.section-projekty
+
+  -# .container--wide
+- page_articles.each_with_index do |article, i|
+  -# %a{:href => "#{article.url}"}
+  %article{class: "projekt-index #{article.data.projekt_class}"}
+    .projekt-index-info
+      %h1=article.data.title_index  
+      = partial 'partials/components/button-default', :locals => {btn_link: article.url} do
+        Zobacz
+    -# = link_to("Zobacz", article.url, :class => "btn btn-cta")

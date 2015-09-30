@@ -23,6 +23,7 @@ $section-inner-width: 800px;
       padding-top: 80px;
     } 
   }
+  
   header.bg-img,
   header.bg-color {
     padding-bottom: 40px;
@@ -30,6 +31,7 @@ $section-inner-width: 800px;
       padding-bottom: 80px;
     } 
   }
+
   section:first-of-type{
     padding-top: 40px;
   }
@@ -83,7 +85,7 @@ p + br {
   
 }
 
-
+// section > :last-child, //ten wiersz glownie do fullwidth
 .section-inner > :last-child {
   margin-bottom: 0;
 }
@@ -113,11 +115,23 @@ p + br {
     max-width:calc(#{$max-width} - 80px); //odejmuje padding
     padding: 0;
   }
+  &.fullwidth,
   &.fullwidth-pad {
     max-width: none;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @include mq($bp1){
+      margin-top: 80px;
+      margin-bottom: 80px;  
+    } 
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   &.fullwidth {
-    max-width: none;
     padding: 0;
   }
 
@@ -218,10 +232,11 @@ p + br {
   }
 
   h3+h2,
-  h4+h2 {
+  h4+h2,
+  h4+h1 {
     margin-top: -4px;
     @include mq($bp2) { 
-      margin-top: -6px;
+      // margin-top: -4px;
     }
   }
   h2+h3,
@@ -357,10 +372,19 @@ p + br {
   .align-top,
   .align-bottom {
     // @include mq($bp2){   //sprawdzic to bo zmienilem gdyz posypalo sie statyczne rzeczy
-    @include mq($bp1) {   
+    // @include mq($bp1) {   
       display: flex;  
-    }    
+    // }    
   }
+  .columns.align-middle,
+  .columns.align-top,
+  .columns.align-bottom {
+    display: block;
+    @include mq($bp1){
+      display: flex;
+    } 
+  }
+
 }  
   .align-middle {
     align-items:center;
@@ -653,7 +677,6 @@ p + br {
   .columns {
       margin-bottom: 30px;
     @include mq($bp1) { 
-      margin-bottom: 0;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -742,7 +765,17 @@ p + br {
       } 
     } 
   }
-// }
+
+.columns-3 {
+  .column-1,
+  .column-2,
+  .column-3 {
+    @include mq($bp1){
+      width: 32%;
+    } 
+  }
+}
+
 
 //order do flex
 .order-1 {
@@ -802,7 +835,8 @@ blockquote {
   background: #eee;
   outline:none;
   
-  > img, > div {
+  // > img, > div {
+  img, > div {
     position: absolute;
     top: 0;
     left: 0;
@@ -811,6 +845,9 @@ blockquote {
     display: block;
   }
 }
+
+
+
 
 // empty paragraph br
 h1 + .p--empty,

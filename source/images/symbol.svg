@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="457px" height="463px" viewBox="0 0 457 463" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="logo-circle" sketch:type="MSLayerGroup" fill="#092E78">
+            <g id="Group" sketch:type="MSShapeGroup">
+                <path d="M377,10 L377,53.9 C336.9,20.2 285.3,0 229,0 C114.3,0 19.3,82.8 0.4,192 L103.1,192 C120,138.5 169.8,100 229,100 C287.4,100 337,138.6 353.9,192 L456.6,192 L457,192 L457,10 L377,10 L377,10 Z" id="Shape"></path>
+                <path d="M229,363 C170.1,363 120.3,324.7 103.3,272 L0.5,272 L0,272 L0,449 L80,449 L80,409.1 C120.3,442.8 172.2,463 229,463 C342.7,463 437.5,380.4 456.5,272 L353.7,272 C336.7,324.7 287.2,363 229,363 L229,363 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

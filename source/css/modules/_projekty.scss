@@ -45,6 +45,12 @@
 		color:$white-color;
 		position: relative;
 		z-index: 1;
+		span {
+			font-size: .5em;
+			display: block;
+			font-weight: 400;
+			margin-bottom: 5px;
+		}
 	}
 }
 
@@ -60,7 +66,9 @@
 }
 
 .projekt-senti {
-	background: #8FC9FF;
+	// background: #8FC9FF;
+	background-image:url(../images/projekty/sentione2.png);
+	background-position:bottom center;
 }
 
 .projekt-milush {

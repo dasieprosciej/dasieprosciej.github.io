@@ -12,7 +12,9 @@ header: header--inverted
   -# %a{:href => "#{article.url}"}
   %article{class: "projekt-index #{article.data.projekt_class}"}
     .projekt-index-info
-      %h1=article.data.title_index  
+      %h1
+        %span=article.data.index_firm   
+        #{article.data.index_title}  
       = partial 'partials/components/button-default', :locals => {btn_link: article.url} do
         Zobacz
     -# = link_to("Zobacz", article.url, :class => "btn btn-cta")

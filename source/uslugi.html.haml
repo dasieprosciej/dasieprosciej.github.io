@@ -1,14 +1,23 @@
 ---
 title: da się prościej - usługi
 ---
-- content_for :header do
-  = partial 'partials/components/_header.haml', :locals => { :header_class => current_page.data.header } do
-    %h1 
-      Jak możemy Ci pomóc
+-# - content_for :header do
+-#   = partial 'partials/components/_header.haml', :locals => { :header_class => current_page.data.header } do
+-#     %h1 
+-#       Jak możemy Ci pomóc
 
 
 .content
   %section.section.section-help
+    -# .container--wide.container--narrow    
+    -#   %h2
+    -#     Planujesz przebudować stronę i&nbsp;chcesz aby jej nowa wersja:
+    -#   %ul
+    -#     %li skutecznie przekonywała odbiorców do Twojej oferty
+    -#     %li miała treść i układ informacji które są dopasowane do potrzeb Twoich odbiorców
+    -#     %li dobrze odzwierciedlała to kim jesteś i co robisz
+    -#   %h4 Możemy Ci w tym pomóc
+    -#   %p  W zależności od potrzeby, odświeżymy lub gruntownie przebudujemy Twoją stronę internetową. Uprościmy przekaz zarówno w zakresie treści jak i warstwy wizualnej, by skupić się na tym co najcenniejsze w Twoim biznesie.
     .container--wide    
       .grid-m.grid-m--1of2.align-bottom
         .grid-cell.block-text
@@ -23,19 +32,22 @@ title: da się prościej - usługi
           %p  W zależności od potrzeby, odświeżymy lub gruntownie przebudujemy Twoją stronę internetową. Uprościmy przekaz zarówno w zakresie treści jak i warstwy wizualnej, by skupić się na tym co najcenniejsze w Twoim biznesie.
         .grid-cell.block-img          
           %img{:src => "/images/uslugi-1.jpg", :alt => ""}/
-      .grid-m.grid-m--1of2
-        .grid-cell.block-img.block-img--simplify
-          
-        .grid-cell.block-text
+
+  %section.section.section-simplify
+    .container--wide  
+      .simplify.grid-m.grid-m--1of2.align-middle
+        .grid-cell.block-simplify 
+          .icon-simplify
+        .grid-cell.block-simplify-text
           %h2
             Upraszczamy
           %p
             Skupiamy się na Twoich mocnych stronach i usuwamy wszystko to co zbędne, by pokazać Twoim odbiorcom <strong> nie to co chcesz im sprzedać, ale to co chcieliby od Ciebie kupić</strong>.
-          -# %blockquote.no-quote
-          -#   Prostota nie jest celem samym w sobie. Jest wypadkową dobrego pomysłu i rozsądnych oczekiwań.
-          -#   %cite Paul Rand
           %p
             W upraszczaniu nie chodzi o mniej, ale o <strong>wystarczająco</strong>. Wystarczająco by Twoi odbiorcy zrozumieli to co chcesz im przekazać i podjęli działania jakich od nich oczekujesz. To oni wyznaczają granicę prostoty.
+           
+
+
   %section.section.section-get
     .container--wide
       %h2 Otrzymasz stronę, która:

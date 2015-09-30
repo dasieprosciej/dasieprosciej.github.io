@@ -16,9 +16,6 @@
       bottom: 0;
     }  
   }
-  @include mq($bp1) {
-    // padding: 0 100px;
-  } 
   @include mq($bp2) {
     padding: 0 100px;
     width: 50%;
@@ -55,7 +52,6 @@
 
 .index .block-text {
   background:#fff;
-  // text-align: left;
   @include mq($bp2){
     order:2;
   } 
@@ -66,37 +62,12 @@
 
 .uslugi .block-text{
   position: relative;
-  // &:before {
-  //   @include mq($bp2){
-  //     content:'';
-  //     position: absolute;
-  //     top: -125px;
-  //     background:url(../images/pattern.svg) 0 0 no-repeat;
-  //     width: 500px;
-  //     height: 250px;
-  //     left: -125px;
-  //     opacity: .7;
-  //   }
-  // }
   &:first-child {
     padding-top: 0;
     @include mq($bp2){ 
+      padding-left: 10px;
       padding-right: 100px;
-      padding-left: 0;
-      &:before {
-        // content:'';
-        position: absolute;
-        background:#f8f8fd;
-        z-index: -1;
-        width: 125px;
-        height: 125px;
-        left: 0;
-        top: -50px;
-      }
     }
-  }
-  &:last-child {
-    padding-bottom: 0;
   }
 }
 
@@ -133,6 +104,22 @@
   } 
 }
 
+.block-img--help {
+  @include mq($bp2) { 
+    position: relative;
+    &:before {
+      content:'';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: -15%;
+      left: 15%;
+      background:url(../images/pattern.svg) 0 0 no-repeat;
+      z-index: -1;
+    }
+  }
+}
+
 .block-img--simplify {
   @include mq($bp2) { 
     border:1px solid #ddd;
@@ -162,35 +149,44 @@
 }
 
 
+
 // ikony z uslug
 
-// .get-item {
-//   width: 100%;
-//   position: relative;
-//   z-index: 1;
-//   margin-bottom: 50px;
-//   background:#fff;
-//   @include mq($bp1) {
-//     width: 49%;
-//   } 
-//   @include mq($bp2){
-//     margin-bottom: 0;
-//     width: 24%;
-//   } 
+.get-item {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 50px;
+  background:rgba(#fff,.5);
+  @include mq($bp1) {
+    width: 49%;
+  } 
+  @include mq($bp2){
+    margin-bottom: 0;
+    width: 24%;
+  } 
 
-// }
+}
 
-// .get-item-inner {
-//   padding:20px;
-// }
+.get-item-inner {
+  padding:20px 20px 30px;
+  h3 {
+    font-weight: 400;
+    font-size: 20px;
+    color:$primary-color;
+  }
+  @include mq($bp2){
+    font-size: 14px;
+  } 
+}
 
 
 .icon-block {
   background:$primary-color;
   position: relative;
   width: 100%;
-  // border:2px solid #fff;
-  height: 333px;
+  height: 250px;
+
   &:before {
     content:'';
     position: absolute;
@@ -203,15 +199,6 @@
     background-repeat: no-repeat;
     opacity: .9;
   }
-  @include mq($bp2){ 
-    &:after {
-      // content:'';
-      position: absolute;
-      background:#ddd;
-      width: 50%;
-      height: 50%;
-    }
-  }
 }
 
 .icon-odpowiada {
@@ -219,10 +206,6 @@
     background-position: 0 -2px;
     width: 89px;
     height: 97px;
-  }
-  &:after {
-    bottom: 0;
-    left: 200%;
   }
 }
 
@@ -235,11 +218,6 @@
     width: 78px;
     height: 75px;
   }
-  &:after {
-    bottom: 0;
-    left: -150%;
-  }
-  
 }
 
 .icon-buduje {
@@ -248,11 +226,6 @@
     width: 76px;
     height: 87px;
   }
-  &:after {
-    bottom: 0;
-    left: 200%;
-  }
-
 }
 
 .icon-czyni {
@@ -263,24 +236,6 @@
     background-position: -327px -19px;
     width: 112px;
     height: 59px;
-  }
-  &:after {
-    bottom: 0;
-    left: -150%;
-  }
-}
-
-.icon-text-block {
-  padding:20px 0 75px;
-  font-size: 18px;
-  @include mq($bp1){
-    padding:20px 50px;
-    font-size: 16px;
-  } 
-  h3 {
-    font-weight: 400;
-    font-size: 24px;
-    color:$primary-color;
   }
 }
 

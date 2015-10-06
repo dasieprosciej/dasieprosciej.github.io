@@ -11,7 +11,23 @@
 .content {
 	overflow: hidden;
 }
+.container--wide {
+  position: relative;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left:10px; 
+  padding-right: 10px;
 
+  @include mq($bp1){
+    padding-left:40px;
+    padding-right:40px;
+  }
+}
+
+.container--narrow {
+	max-width: 600px;
+}
 
 .pad-0 {
 	padding: 0;

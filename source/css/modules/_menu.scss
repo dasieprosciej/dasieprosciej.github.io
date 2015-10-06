@@ -14,18 +14,21 @@
     z-index: 4;
     transition: opacity 0.9s;
     transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-    // border-top: 1px solid #ddd;
     border-top: 1px solid tint($primary-color,30);
-    // padding-top: 110px;
+    
+    border-top: 10px solid #fff;
+
     li {
       background:$primary-color;
       display: block;
       margin: 0;
       opacity: 0;
       visibility: hidden;
-      // border-bottom: 1px solid #ddd;
       border-bottom: 1px solid tint($primary-color,30);
-      transition:all .5s;
+      
+      border: 10px solid #fff;
+      border-top: 0;
+
       transition-timing-function: cubic-bezier(0.7,0,0.3,1);
       &:hover a,
       &:focus a,
@@ -48,9 +51,9 @@
       a {
         min-height: 30px;
         height: 75px;
-        height: calc(25vh - 28px);      
+        height: calc(25vh - 40px);      
         line-height: 75px;
-        line-height: calc(25vh - 28px);
+        line-height: calc(25vh - 40px);
 
        
 
@@ -63,9 +66,9 @@
 .header--inverted .nav--main,
 .header--absolute .nav--main, {
   @include mq-max($bp1-max) {
-    border-color:#ddd;
+    border-color:$primary-color;
     li {
-      border-color:#ddd;
+      border-color:$primary-color;
       background:#fff;
       &:hover a,
       &:focus a,
@@ -87,6 +90,7 @@
   @include mq-max($bp1-max) {
     opacity: .97;
     visibility: visible;
+    transition:opacity .1s, visibility .5s;
     li {
       opacity: 1;
       // transition-duration:0;

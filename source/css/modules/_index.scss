@@ -4,8 +4,10 @@
 
 .index .header {
   @include mq($bp1) { 
-    // background: $primary-color url(../images/hero2.jpg) center center no-repeat;    
-    background: $primary-color url(../images/hero3.jpg) center center no-repeat;    
+    // background: $primary-color url(../images/hero.jpg) center top no-repeat;    
+    // background: $primary-color url(../images/symbol.svg) left bottom no-repeat;    
+    // background-position:center right;
+    
     background-size:cover;
     position: relative;
     &:before {
@@ -15,8 +17,21 @@
       height: 100%;
       top: 0;
       left: 0;
-      // background:$primary-color;
-      // opacity: .7;
+      background:$primary-color;
+      opacity: .8;
+    }
+    .container--wide {
+      @include mq($bp3) { 
+        &:after {
+          content:'';
+          position: absolute;
+          background:$kwadrat;
+          width: 15px;
+          height: 15px;
+          left: -50px;
+          top:0;
+        }
+      }
     }
   }
 }
@@ -29,8 +44,12 @@
     padding-top: 100px;
     padding-bottom: 100px;
   } 
+  @include mq($bp2) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  } 
   @include mq($bp3) {
-    padding-bottom: 370px;
+    padding-bottom: 400px;
   } 
   p {
     line-height: 1.6;
@@ -51,19 +70,7 @@
     }
   }
 }
-.container--wide {
-  position: relative;
-  max-width: $max-width;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left:10px; 
-  padding-right: 10px;
 
-  @include mq($bp1){
-    padding-left:40px;
-    padding-right:40px;
-  }
-}
 
 
 
@@ -77,13 +84,14 @@
       position: absolute;
       width: 130%;
       height: 500px;
-      background:#CFEBE4;
-      background:#f5f5fd;
+      // background:#CFEBE4;
+      // background:#f5f5fd;
       background:#f1f1f1 url('../images/dsp_footer.svg') left bottom no-repeat;
       z-index: -1;
       left: 0;
       top: 250px;
     }
+
   }
 }
 
@@ -116,3 +124,7 @@
   max-width: 600px;
   padding: 50px 0;
 }
+
+
+
+

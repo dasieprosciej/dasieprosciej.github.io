@@ -40,7 +40,7 @@
           <% if prev_article %>
             <a href="<%= prev_article.url %>" rel="prev" title="Poprzedni projekt: <%= prev_article.data.title_index %>">
               <i class="icon-nav icon-prevnav"></i>
-              <span><%= prev_article.data.title_index %></span>
+              <span><%= prev_article.data.index_firm %></span>
             </a>
           <% end %>
         <li class="home">
@@ -54,7 +54,7 @@
           <% if next_article %>
             <a href="<%= next_article.url %>" rel="next" title="Następny projekt: <%= next_article.data.title_index %>">
               <i class="icon-nav icon-nexnav"></i>
-              <span><%= next_article.data.title_index %></span>
+              <span><%= next_article.data.index_firm %></span>
             </a>
           <% end %>
         </li>

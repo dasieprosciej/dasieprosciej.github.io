@@ -18,7 +18,7 @@
 }
 
 .header-inner {
-	border-bottom: 1px solid rgba(#fff,.5);	
+	border-bottom: 3px solid rgba(#fff,.9);	
 }
 
 .header--horizontal {
@@ -53,16 +53,16 @@
 
 .header--borderbottom {
 	.header-inner {
-		border-bottom: 1px solid rgba(#fff,.5);
+		border-bottom: 3px solid rgba(#fff,.9);
 	}
 }
 .header--borderbottom-full {
-	border-bottom: 1px solid #ddd;
+	border-bottom: 3px solid #ddd;
 }
 
 .header--inverted.header--borderbottom {
 	.header-inner {
-		border-bottom: 1px solid #ddd;
+		border-bottom: 3px solid #ddd;
 	}
 }
 
@@ -115,10 +115,11 @@
 				position: relative;
 				letter-spacing: 0.04em;
 				display: block;
-				transition:all .2s linear;
+				cursor:pointer;
+				// transition:all .2s linear;
 				padding: 5px 0;		
 				&:hover {
-					color:$link-color;
+					// color:$link-color;
 				}
 			}
 

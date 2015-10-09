@@ -68,6 +68,8 @@
 	overflow: hidden;
 	transition: border-color 0.3s, color 0.3s;
 	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  // transform: translateZ(0);
+
 }
 .btn-effect::before {
 	content: '';
@@ -102,6 +104,9 @@
 
 .cta-button {
   position: relative;
+  // padding: 1px; //zeby nie bylo szpary
+
+  // z-index: 1;
   display: inline-block;
   text-align: center;
   position: relative;

@@ -2,91 +2,79 @@
 title: da się prościej - usługi
 ---
 
--# - content_for :header do
--#   = partial 'partials/components/_header.haml', :locals => { :header_class => current_page.data.header } do
--#     %h1 
--# Jak możemy Ci pomóc
 
 
 .content
-  -# %section.section.section-help
-  %section.section-help.single
-    %section.section
-      .section-inner    
-        %h2
-          Planujesz przebudować stronę i&nbsp;chcesz aby jej nowa wersja:
-        %ul
-          %li skutecznie przekonywała odbiorców do Twojej oferty
-          %li miała treść i układ informacji które są dopasowane do potrzeb Twoich odbiorców
-          %li dobrze odzwierciedlała to kim jesteś i co robisz
-
-        %img{:src => "/images/uslugi-mockup.jpg", :alt => ""}/  
-
-        %h4 No tak, to przecież oczywiste.
-        %p Jest wiele firm które to „gwarantują”. W rzeczywistości dostajesz jednak ładnie zaprojektowana pola z tekstem demonstraycjnym, ktore Ty, często już na sam koniec, musisz zastapic trescia. I tu zaczynają się schody. Tekst nie pasuje do oprawy wizualnej? A może na siłe dodajesz tekst, byle tylko zapelnic czymś pola lorem ipsum. Tracisz czas, pieniądze i dobre chęci. 
-
-        %h2 My robimy to inaczej
-        
-        
-        %h3 Upraszczamy
-
-
-        Czasami to dziala, czesciej jednak nie. nie projektujemy stron dla samuch stron, projektujemy tresc. 
-        
-        Dobry tekst to pochodna swietnego zrozumienia Twoich klientow. 
-        Dlatego tak duza wage przywiazujemy do poczatkowej analizy. 
-        W upraszczaniu chodzi o zrozumienie. W tym tkwi nasza sila. W zrozumieniu twojego biznesu, twoich odbiorcow i tego co chcesz osiagnac..
-
-        %h4 Robimy to inaczej. Treść jest dla nas nie mniej wazna niz design.   
-        %h4 Możemy Ci w tym pomóc
-        %p  W zależności od potrzeby, odświeżymy lub gruntownie przebudujemy Twoją stronę internetową. Uprościmy przekaz zarówno w zakresie treści jak i warstwy wizualnej, by skupić się na tym co najcenniejsze w Twoim biznesie.
-  
+  %section.section-uslugi
+    .uslugi-panel-1
+      .container--wide
+        .grid.grid-s--1of2
+          .grid-cell.uslugi-block-1
+            %span.pre-title Ty
+            %h2
+              Planujesz przebudować stronę i&nbsp;chcesz aby jej nowa wersja:
+            %ul
+              %li skutecznie przekonywała odbiorców do Twojej oferty
+              %li miała treść i układ informacji które są dopasowane do potrzeb Twoich odbiorców
+              %li dobrze odzwierciedlała to kim jesteś i co robisz
+          .grid-cell.uslugi-block-2
+            %span.pre-title My
+            %h2 Upraszczamy strony internetowe
+            %p W zależności od potrzeby, odświeżymy lub gruntownie przebudujemy Twoją stronę internetową. Uprościmy przekaz zarówno w zakresie treści jak i warstwy wizualnej, by skupić się na tym co najcenniejsze w Twoim biznesie.
     
-    .grid-m.grid-m--1of2
-      .grid-cell.block-img.block-img--simplify
-        
-      .grid-cell.block-text
-        %h2
-          Upraszczamy
-        %p
-          Skupiamy się na Twoich mocnych stronach i usuwamy wszystko to co zbędne, by pokazać Twoim odbiorcom <strong> nie to co chcesz im sprzedać, ale to co chcieliby od Ciebie kupić</strong>.
-        %p
-          W upraszczaniu nie chodzi o mniej, ale o <strong>wystarczająco</strong>. Wystarczająco by Twoi odbiorcy zrozumieli to co chcesz im przekazać i podjęli działania jakich od nich oczekujesz. To oni wyznaczają granicę prostoty.
-  %section.section.section-get
-    .container--wide
-      %h2 Chcemy dać Ci stronę, która:
-      .grid.grid-m--1of4.grid-s--1of2.grid--justify
-        .get-item
-          .icon-block.icon-odpowiada
+    .uslugi-site
+      .container--wide
+        %h2 Otrzymasz stronę, która:
+        .grid.grid-s--1of2.site-block-list         
+          .site-block.grid-cell
+            .site-block-inner
+              .icon-block.icon-odpowiada
+              %h3 Odpowiada
+              %p na pytania Twoich odbiorców, rozwiewa ich wątpliwości i&nbsp;inspiruje do podjęcia akcji
             %span.effect-shine
-          .get-item-inner
-            %h3 Odpowiada
-            %p na pytania Twoich odbiorców, rozwiewa ich wątpliwości i&nbsp;inspiruje do podjęcia akcji
-        
-        .get-item
-          .icon-block.icon-wzmacnia
+            .uslugi-pseudo-1
+            .uslugi-pseudo-2
+          .site-block.grid-cell
+            .site-block-inner
+              .icon-block.icon-wzmacnia
+              %h3 Wzmacnia
+              %p wiarygodność i wizerunek Twojego biznesu
             %span.effect-shine
-          .get-item-inner
-            %h3 Wzmacnia
-            %p wiarygodność i wizerunek Twojego biznesu
-        .get-item 
-          .icon-block.icon-buduje  
-            %span.effect-shine    
-          .get-item-inner
-            %h3 Buduje
-            %p zaufanie i lojalność, zamieniając odwiedzających w klientów, a&nbsp;klientów w fanów         
-        .get-item
-          .icon-block.icon-czyni       
-            %span.effect-shine
-          .get-item-inner
-            %h3 Czyni
-            %p rzeczy skomplikowane prostymi i łatwymi w użyciu         
-          
 
+          .site-block.grid-cell
+            .site-block-inner
+              .icon-block.icon-buduje
+              %h3 Buduje
+              %p zaufanie i lojalność, zamieniając odwiedzających w klientów, a&nbsp;klientów w fanów  
+            %span.effect-shine
+          
+          .site-block.grid-cell
+            .site-block-inner
+              .icon-block.icon-czyni
+              %h3 Czyni
+              %p rzeczy skomplikowane prostymi i&nbsp;łatwymi w użyciu  
+            %span.effect-shine
+
+            .uslugi-pseudo-3
+            .uslugi-pseudo-4
+
+              
+    .uslugi-panel-2
+      .container--wide     
+        .uslugi-block-3
+          %h2 No dobrze, ale po co upraszczać?
+          %hr.inline.orange/
+          %p  Odpowiedź jest prosta - bo proste to zrozumiałe. W upraszczaniu nie chodzi o mniej, ale o <strong>wystarczająco</strong>. Wystarczająco by Twoi odbiorcy zrozumieli to co chcesz im przekazać i podjęli działania jakich od nich oczekujesz. To oni wyznaczają granicę prostoty. Skupiamy się na Twoich mocnych stronach i usuwamy wszystko co zbędne, by pokazać <strong> nie to co chcesz im sprzedać, ale to co chcieliby od Ciebie kupić</strong>.   
+
+  
+  %section.section.dsp-quote
+    .container--wide
+      %p Pracujemy tak, jak chcielibyśmy, by pracowano dla nas. Twój sukces jest tak samo ważny dla Ciebie jak i dla nas - w&nbsp;końcu to również nasza reputacja.     
+      .uslugi-pseudo-6
 
   %section.section.section-proces
     .container--wide
-      %h2.section-proces-title Nasz proces w skrócie
+      %h2.section-proces-title A robimy to mniej więcej tak
       .grid-s.grid-s--1of2.proces-list
         .grid-cell.proces-item
           .proces-item--inner
@@ -120,7 +108,7 @@ title: da się prościej - usługi
               %li łatwa do znalezienia 
               %li szybka
               %li responsywna (dostosowana do ekranu)
-        
+          .uslugi-pseudo-5
         .grid-cell.proces-item
           .proces-item--inner
             .proces-header{"data-number" => "04"} 
@@ -128,10 +116,6 @@ title: da się prościej - usługi
               %span.proces-subtitle Efekty
             %p Po uruchomieniu strony, badamy jej efektywność. Mierzymy jej sukces, żebyś wiedział jak wiele zyskałeś dzięki tej inwestycji.       
     
-  %section.section.dsp-quote
-    .container--wide
-      %p Pracujemy tak, jak chcielibyśmy, by pracowano dla nas. Twój sukces jest tak samo ważny dla Ciebie jak i dla nas - w&nbsp;końcu to również nasza reputacja.      
-
   %section.section.section-ways
     .container--wide
       %h2 3 sposoby współpracy     

@@ -87,6 +87,12 @@ hr.inline {
 	margin-left: auto;
 	margin-right: auto;
 }
+hr.blue {
+	background:$kwadrat;
+}
+hr.orange {
+	background:$link-color;
+}
 hr.thin {
 	height: 1px;
 }

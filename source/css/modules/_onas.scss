@@ -9,7 +9,7 @@
  
 .section-bio {
   @include mq($bp2){
-    background: linear-gradient(to bottom, #fff, rgba(#fff,0) 15%, rgba(#fff,0) 85%, #fff), url(../images/beach.jpg) center bottom no-repeat;
+    background: linear-gradient(to bottom, #fff, rgba(#fff,0) 15%, rgba(#fff,0) 85%, #fff), image-url('beach.jpg') center bottom no-repeat;
     background-size:cover;  
   } 
 }

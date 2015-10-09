@@ -9,6 +9,7 @@
 //= require scrollTop
 //= require menu_j
 
+
 //aload
 // window.onload = function () {
 //   aload();

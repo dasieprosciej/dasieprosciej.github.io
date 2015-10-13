@@ -19,7 +19,7 @@
 // });
 
 
-
+Turbolinks.enableProgressBar();
 
 //layzr
 var layzr = new Layzr(

@@ -4,50 +4,45 @@ index_firm: Milush
 index_title: Web Copywriting
 date: 2015-01-02
 projekt_class: projekt-milush
+header:  header--absolute
+zakres:
+  - design
+  - copywriting
+  - development
+  - CMS (Wordpress)
+status: online
+status_link: http://milush.pl
 ---
 
-%header
+= bgimg_header('img-milena-hero.jpg', class: "bg-img bg-height-2 bg-shade color-inverted align-center align-middle") do
   .section-inner
-    %h1 Adrian
+    %h4.color-lighter Milush
+    %h1 Copywriting na stronach internetowych
+
+-# %header.bg-height-2.bg-color.bg-pink.align-middle.align-center.color-inverted
+-#   .section-inner
+-#     %h4 Milush
+-#     %h1 Copywriting na stronach internetowych 
 
 %section
-  .section-inner
-    :markdown
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias impedit maxime tenetur nobis, ratione ipsum unde eveniet! Hic voluptate reiciendis assumenda sed nesciunt consequatur placeat corporis necessitatibus? Cum, labore, non. 
-      
-      + lista 1
-      + lista 2
+  .section-inner.align-center
+    %h2 O co chodzi
+    %p 
+      Strona stworzona dla „połówki” Da Się Prościej. Chodziło nam głównie o&nbsp;przejrzyste przedstawienie, czym zajmuje się copywriter na stronach www i&nbsp;dlaczego jego udział w projektowaniu stron jest tak ważny. Statyczna strona typu one-page w&nbsp;lekkim, nowoczesnym stylu oraz dodatkowy blog oparty na Wordpress’ie.
+    %hr.inline/
 
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ducimus et eaque rem nam. Nam quas a, sequi animi voluptate veritatis, libero deserunt nemo, nostrum incidunt nulla fugit eius, vero.
-
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt veniam eius obcaecati, assumenda culpa consequuntur provident ad, earum labore inventore, alias est nam nulla odio soluta ipsum fuga, non possimus?
-      
-      + lista 1
-      + lista 2
-        + podlista 1
-            1. podpodlista 1
-            2. podpodlista 2
-        + podlista 2
-      + lista 3
-      + lista 1
-      + lista 2
-        1. podlista 1
-        2. podlista 2
-      + lista 3    
-      
-      <br>
-
-      A tu będzie druga lista
-
-      1. Lista 1
-      2. Lista 2
-        + podlista 1
-            1. more list
-            2. more list
-        + podlista 2
-      3. Lista 3  
+%section
+  .section-inner.outset-img
+    = figure(:l, 'img-milush.jpg', nil,nil, class: "bordered")  
 
 
+%section
+  .section-inner.outset.align-center
+    .columns.column-1--3of4.column-2--1of4.align-bottom
+      .column-1
+        = mockup(:imac, :scroll, 'img-milush-l.jpg', id: 'compare-1')
+      .column-2
+        = mockup(:iphone, :scroll, 'milush-mobile.jpg', id: 'compare-2')
 
 
 

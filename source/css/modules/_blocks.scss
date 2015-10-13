@@ -4,16 +4,22 @@
 .block-heading {
   position: relative;
   background: $primary-color;
-  // background:#27929F;
+  background: rgba($primary-color,.9);
   width: 100%;
   padding: 70px 20px;
+  
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 100px 50px;
+
   &:before {
     @include mq($bp3){
       content:'';
       width: 1000px;
       height: 50%;
+      z-index: 0;
       position: absolute;
-      // background: #3DBECE;
       background: $kwadrat;
       right:100%;
       top: 0;
@@ -23,7 +29,6 @@
   &:after {
     @include mq($bp3){
       content:'';
-      // width: 1500px;
       width: 750px;
       height: 50%;
       position: absolute;
@@ -33,11 +38,20 @@
       top: -50%;
     }  
   }
+  @include mq($bp1) {
+    padding: 100px;
+    // padding:0 20px;
+    // width: 50%;
+    // display: flex; //do wysrodkowania tekstu
+    // order:-1;
+  } 
   @include mq($bp2) {
-    padding: 0 100px;
+    background: $primary-color;
+    max-width:none;
     width: 50%;
     display: flex; //do wysrodkowania tekstu
     order:-1;
+    padding:0 100px;
   } 
   @include mq($bp3) {
     height: 500px;
@@ -45,6 +59,14 @@
   h2 {
     color:#fff;
     text-align: center;
+    font-size: 24px;
+    @include mq($bp1) {
+
+    } 
+    @include mq($bp2){
+      font-size: 28px;
+    } 
+
   }
 }
 
@@ -98,10 +120,31 @@
   }
 }
 
+.block-img-1 img {
+  width: 400px;
+  max-width: none;
+  @include mq($bp2) {
+    width: auto;
+    max-width: 100%;
+  } 
+}
 
 .block-img-1 {
-    position: relative;
+    // position: relative;
     margin-bottom: 50px;
+
+    position: absolute;
+    top: -50px;
+    left: 0;
+
+    @include mq($bp1) {
+      margin-bottom: 0;
+    } 
+    @include mq($bp2) {
+      position: relative;
+      top:auto;
+      left:auto;
+    } 
     @include mq($bp3) {
       &:before,
       &:after {
@@ -143,25 +186,23 @@
 .block-img-2 {
   @include mq($bp3) {
     position: relative;
-    &:before,
+    // &:before,
     &:after {
       content:'';
       position: absolute;
     }
-    &:before {
-      width: 250px;
-      height: 250px;
-      background:#ddd;
-      left: -250px;
-      top: -250px;
-    }
+    // &:before {
+    //   width: 250px;
+    //   height: 250px;
+    //   background:$kwadrat;
+    //   opacity: .3;
+    //   left: 200%;
+    //   top: -250px;
+    // }
     &:after {
        width: 125px;
       height: 125px;
-      // background:$primary-color;
       background:#fff;
-      // left: -250px;
-      // top: -750px; 
       left: -125px;
       top: -625px;
       z-index: 2;

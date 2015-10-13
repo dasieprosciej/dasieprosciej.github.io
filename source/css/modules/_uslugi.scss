@@ -190,7 +190,7 @@ $proces-bg: #fff;
     letter-spacing:-0.1em;
     z-index: -1;
     color:#f5f5f5;
-    transition:color .25s;
+    transition:color 1s linear;
     @include mq($bp3) {
       left: -150px;
 
@@ -820,16 +820,18 @@ $proces-bg: #fff;
     }
   }
   .uslugi-pseudo-6 {
-      width: 31.25px;
-      height: 31.25px;
-      bottom: 0;
-      right: -71.25px;
+      // width: 31.25px;
+      // height: 31.25px;
+      // bottom: -150px;
+      // left: -71.25px;
+      
+      // right: -71.25px;
     &:before {
-      width: 31.25px;
-      height: 31.25px;
-      left: -31.25px;
-      bottom: -31.25px;
-      opacity: .6;
+      // width: 31.25px;
+      // height: 31.25px;
+      // left: -31.25px;
+      // bottom: -31.25px;
+      // opacity: .6;
     }
 
   }

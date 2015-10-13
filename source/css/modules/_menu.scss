@@ -14,9 +14,9 @@
     z-index: 4;
     transition: opacity 0.9s;
     transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-    border-top: 1px solid tint($primary-color,30);
+    // border-top: 1px solid tint($primary-color,30);
     
-    border-top: 10px solid #fff;
+    // border-top: 10px solid #fff;
 
     li {
       background:$primary-color;
@@ -24,8 +24,6 @@
       margin: 0;
       opacity: 0;
       visibility: hidden;
-      border-bottom: 1px solid tint($primary-color,30);
-      
       border: 10px solid #fff;
       border-top: 0;
 
@@ -37,6 +35,7 @@
       }
       &:nth-of-type(2) {
         transition-delay: 0.1s; 
+        border-top: 10px solid #fff;;
       }
       &:nth-of-type(3) {
         transition-delay:0.2s; 
@@ -88,7 +87,7 @@
 
 .show-menu .nav--main {
   @include mq-max($bp1-max) {
-    opacity: .97;
+    opacity: 1;
     visibility: visible;
     transition:opacity .1s, visibility .5s;
     li {

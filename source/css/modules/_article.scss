@@ -550,7 +550,10 @@ p + br {
   } 
 }
 
-
+figure.bordered {
+  border:4px solid #eee;
+  border-radius:4px;
+}
 
 
 .bg-img {

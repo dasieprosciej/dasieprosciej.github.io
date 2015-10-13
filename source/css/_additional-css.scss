@@ -11,8 +11,12 @@ $senti: #3FB3E3;
   .single h2,
   .single h3,
   .single h4 {
-    color:$senti;
+    color:$senti !important;
   } 
+// .section-projekt-info {
+//   background:#14436D;
+//   color:#fff;
+// }  
 }
 
 .projekty_milush {
@@ -25,6 +29,10 @@ $senti: #3FB3E3;
 
 .bg-pink {
   background:#fb8ec5;
+}
+
+.bg-sentiblue {
+  background:lighten($senti,40);
 }
 
 .projekty {
@@ -60,6 +68,7 @@ $senti: #3FB3E3;
   width: 100%;
   top: 0;
   left: 0;
+
   // opacity: .4;
   // background:#3FB3E3;
 
@@ -71,6 +80,7 @@ $senti: #3FB3E3;
     top: 0;
     left: 0;   
     background:$senti;    
+    // border-bottom:1px solid #fff;
     opacity: .4;
 
   }
@@ -94,7 +104,7 @@ $senti: #3FB3E3;
   }
   &:hover {
     &:before {
-      opacity: 0;
+      opacity: 0 !important;
     }
     &:after {
       color:#fff;
@@ -107,45 +117,57 @@ $senti: #3FB3E3;
   &:nth-of-type(2) {
     top: 18.7%;
     height: 29%;
+    // &:before {
+    //   opacity: .5;
+    // }
   }
   &:nth-of-type(3) {
     top:47.7%;
     height: 18.2%;
+  // &:before {
+  //     opacity: .6;
+  //   }
   }
   &:nth-of-type(4) {
     top:65.9%;
     height: 19.3%;
+    // &:before {
+    //   opacity: .7;
+    // }
   }
   &:nth-of-type(5) {
     top:85.2%;
     height: 14.8%;
+    // &:before {
+    //   opacity: .8;
+    // }
   }
 }
 
 .aidca-heading {
-  // background: $aidca-color;
-  // height:150px;
-  // color:#fff;
   font-family: $sans-font;
   font-weight: 700;
   display: flex;
   padding-top: 10px;
-  padding-bottom: 10px;
-  // padding:10px;
+  // padding-bottom: 10px;
   font-size: 20px;
   @include mq($bp1){
-    width: 40%;
+    // width: 40%;
     font-size: 16px;
   } 
   @include mq($bp2) {
+    width: 40%;
     font-size: 20px;
   } 
 }
 
 .aidca-info {
   padding-top: 10px;
-  padding-bottom: 10px;
-  @include mq($bp1) {
+  padding-bottom: 30px;
+  &:last-child {
+    padding-bottom: 0;
+  }
+  @include mq($bp2) {
     width: 60%; 
   }
 }

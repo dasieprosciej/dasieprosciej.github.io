@@ -28,58 +28,84 @@ status: offline
   
 %section 
   .section-inner.outset
-    .columns.column-1--2of3.column-2--1of3.font-size-18
-      .column-1
-        = figure(:direct, 'senti-old.jpg', 'SentiOne - „Wersja przed”')
-      .column-2
+    .columns.column-1--1of3.column-2--2of3.font-size-18
+      .column-1        
         %h3 Wersja „Przed”
-        %p Dotychczasowy landing page, Zgodnie z informacjami jakie dostaliśmy od SentiOne, wciąż kuleje świadomość czym jest monitoring internetu. W związku z tym, landing page
+        %p Problem dotychczasowej wersji to problem związany z brakiem świadomości, czym jest monitoring internetu. Naszym priorytetem było więc zwiększenie treści edukacyjnej („co w tym jest dla mnie”), co bezpośrednio przekłada się na zwiększenie grupy odbiorczej. Wszystko to w sposób który nie odciąga od głównego celu, czyli wypełnienia formularza i założenia konta testowego. 
 
-Aidca jako sprzedazowa i marketinowa zasada. 
-%section
+
+      
+
+
+      .column-2.order-1
+        = figure(:direct, 'senti-old.jpg', 'SentiOne - „Wersja przed”')
+
+%section.bg-color.bg-sentiblue
+  .section-inner.align-center
+    %h2 AIDCA
+    %p Strukturę strony oparliśmy o model sprzedażowo-marketingowy AIDCA (Uwaga, Zainteresowanie, Pożadanie, Przekonanie, Działanie), który doskonale sprawdza się w stronach typu landing page.
+    =br
+
   .section-inner.outset
     .columns
       .column-1        
         .aidca-img
-          = figure(:direct, 'senti.jpg')        
+          = figure_lazy(:direct, 'senti.jpg')        
           .aidca-shade{"data-aidca" => "1"}
           .aidca-shade{"data-aidca" => "2"}
           .aidca-shade{"data-aidca" => "3"}
           .aidca-shade{"data-aidca" => "4"}
           .aidca-shade{"data-aidca" => "5"}
-      .column-2
+      .column-2.order-1
         .aidca.grid-s
           .aidca-heading
             %p 1. Attention
           .aidca-info
-            %p Złapanie uwagi odwiedzającego. Dodatkowy szybkie wezwanie do akcji jakby ktoś już na wstępie był przekoany. Propozycja wartości.
+            %p Przyciągnięcie uwagi odwiedzającego poprzez chwytliwy i intrygujący nagłówek oraz jasną i przejrzystą propozycję wartości, która daje poczucie narzędzia łatwego w użytkowaniu. Na starcie również formularz z mocno kontrastującym wezwaniem do działania, skierowany do użytkowników, którzy już na wstępie są przekonani do SentiOne.                    
+            
           .aidca-heading
             %p 2. Interest
           .aidca-info
-            %p ZAinteresowanie odwiedzajacego , edukacja, co to jest monitoring
+            %p Zaprezentowanie korzyści jakie można osiągnąć z tytułu monitorowania sieci i jednoczesne powiązanie tych korzyści z SentiOne. Zdecydowanie najważniejsza sekcja dla potencjalnego klienta, ponieważ odpowiadamy tu na pytanie „Dlaczego warto”.
           .aidca-heading
             %p 3. Desire
           .aidca-info
-            %p Przedstawienie sentione jako lidera w branzy.
+            %p Przedstawienie głównych funkcjonalności, które wyróżniają SentiOne na tle konkurencji i stawiają narzędzie  w pozycji jednego z liderów branży.
           .aidca-heading
             %p 4. Conviction
           .aidca-info
-            %p Social proof, video,
+            %p Social proof czyli potwierdzenie wizerunku SentiOne. Oprócz zaprezentowania logo znanych marek korzystających z narzędzia, wykorzystaliśmy również potężne narzędzie jakim są video referencje. Video otwiera się w lightboxach, nie ma więc ryzyka że użytkownik opuści stronę.
           .aidca-heading
             %p 5. Action
           .aidca-info
-            %p Główne wezwanie do akcji  
+            %p Ostateczne wezwanie do działania, wraz z hasłem podkreślającym łatwość korzystania z narzędzia. Jeśli klient potrzebuje więcej informacji, na końcu znajdzie link do strony SentiOne, gdzie moze uzyskać więcej informacji (np. cennik). Z mniej istotnych aspektów, uprościliśmy również (wydawało by się mało znaczące) opisy do checkboxów pod formularzem. Wszystko po to, by było prosto, przyjaźnie i po ludzku.
+
+%section
+  .section-inner.outset
+    .columns.align-middle.font-size-18.column-1--1of3
+      .column-1
+        %h3 Look & Feel
+        %p Całość została zaprojektowana w oparciu o istniejącą szatę graficzną strony głównej SentiOne.
+      .column-2.order-1
+        = figure_lazy(:direct, 'ikony.png') 
 
 
-    Przyklad ze mniej to nie zawsze wiecej. Odwiedzajacy musi przede wszystkim wiedziec o co chodzi.
-
-    %p problem - wciaz kuleje swiadomosc czym jest monitoring internetu, w zwaizku z tym landing page mial miec tresc edukacyjna.w sposob ktory nie bedzie odciagal od celu nr 1 czyli wypelniani formularza.
+%section.bg-color.bg-sentiblue
+  .section-inner.align-center
+    =br
+    %h2 Wersja „Po”
+    %p Efekt końcowy to przykład tego, że mniej nie zawsze oznacza więcej, a prostota to nic innego jak zrozumienie. Zrozumienie nie tylko celów biznesowych, ale też grupy odbiorczej do której chcemy dotrzeć.
+    =br
+  .section-inner.outset.align-center  
+    = figure(:direct, 'senti.jpg', nil, nil, class: "bordered")     
   
-social proof czyli potwierdzenie wizerunku
-cala kreacja jest w look and feelu sentione.
-Obecny landing jest zdecydowanie dluzszy niz obecny ale w przypadku tego produktu- nie ma innego wyjascia. dochodzi koniecznosc edukacji kleitna.
-Struktura opiera sie na AIDCA (attention, interest, desire, convince, action)
 
 
-uproszczenie checkboxow
+
+
+  
+
+
+
+-# uproszczenie checkboxow
 

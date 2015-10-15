@@ -8,6 +8,7 @@
 //= require debounce
 //= require scrollTop
 //= require menu_j
+//= require orphan
 
 
 //aload
@@ -19,6 +20,14 @@
 // });
 
 
+
+// orphan
+var single = document.querySelectorAll('p, li');
+[].forEach.call(single, function(el){
+  el.orphan();
+});
+
+//turbolinks
 Turbolinks.enableProgressBar();
 
 //layzr

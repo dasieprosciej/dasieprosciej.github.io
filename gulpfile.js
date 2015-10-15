@@ -190,11 +190,12 @@ gulp.task('default', function (cb) {
     cb);
 });
 
-// gulp.task('typeset', function () {
-//     return gulp.src('build/blog/**/*.html')
-//         .pipe(typeset())
-//         .pipe(gulp.dest('build/blog'));
-// });
+gulp.task('typeset', function () {
+    return gulp.src('build/blog/**/*.html')
+        .pipe(typeset())
+        .pipe(gulp.dest('build/blog'));
+});
+
 
 
 // produckja dodatkowo optymalizuje images w buildzie, a moze lepiej w source -> wtedy middleman build nie nadpisze zoptymalizowanych img

@@ -14,6 +14,13 @@
  
     <article class="single">
       <%= yield %>
+      <section class="article-meta">
+            <div class="section-inner article-meta__content">
+              <span>Autor: <%= link_to current_article.data.author, author_path(current_article.data.author) %></span>
+              <span>Opublikowano: <%= current_article.date.strftime('%d.%m.%Y')  %></span>
+            </div>
+      </section>  
+    
     </article>
      <!--  <aside>
         <h2>Recent Articles</h2>

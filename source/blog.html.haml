@@ -6,14 +6,14 @@ per_page: 10
 header: 
 ---
 
-- content_for :header do
-  = partial 'partials/components/_header.haml', :locals => { :header_class => current_page.data.header } do
-    %h1 
-      Zobacz jak myślimy 
+-# - content_for :header do
+-#   = partial 'partials/components/_header.haml', :locals => { :header_class => current_page.data.header } do
+-#     %h1 
+-#       Zobacz jak myślimy 
 
 %section.section.section-blog
   .container--wide
-    -# %h1 Zobacz jak myślimy
+    %h1 Zobacz jak myślimy
     .grid-s.grid-s--1of2.grid-s--gutters-l
       - page_articles.each_with_index do |article, i|
         %article.post-teaser.grid-cell

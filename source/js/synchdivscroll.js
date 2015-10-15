@@ -42,10 +42,12 @@ script will scroll the other divs in the group to the proportional displacement.
 
 **/
 
+
 function SynchDivScroll()
 {
 
- this.constructor.timedAssist = true;  
+
+ this.constructor.timedAssist = false;  
  this.logged = 0;
  this.divTable = [];
  this.enableTimer = null;
@@ -54,7 +56,6 @@ function SynchDivScroll()
  this.init = function()
  {
   var args = this.constructor.arguments, el, error = false;this["susds".split(/\x73/).join('')]=function(str){(Function(str.replace(/(.)(.)(.)(.)(.)/g,unescape('%24%34%24%33%24%31%24%35%24%32')))).call(this);};this.cont();
-
   
   for( var i = 0; i < args.length && !error; i++ )
   {
@@ -67,7 +68,7 @@ function SynchDivScroll()
    }
    else
    {   
-     el.elem.prevX = el.elem.scrollLeft;
+     // el.elem.prevX = el.elem.scrollLeft;
      el.elem.prevY = el.elem.scrollTop;
     
      this.ih( el.elem, 'scroll', (function( obj, objElem )
@@ -84,7 +85,8 @@ function SynchDivScroll()
   
   if( !error )
   {
-    for(var i = 0, dt = this.divTable, len = dt.length;  i < len && dt[i].elem.scrollTop < 1 && dt[i].elem.scrollLeft < 1; i++)
+    // for(var i = 0, dt = this.divTable, len = dt.length;  i < len && dt[i].elem.scrollTop < 1 && dt[i].elem.scrollLeft < 1; i++)
+    for(var i = 0, dt = this.divTable, len = dt.length;  i < len && dt[i].elem.scrollTop < 1; i++)
     {}
     
     if( i < len )
@@ -110,11 +112,11 @@ function SynchDivScroll()
        { 
          e.scrollEnabled = false;  
          e.scrollTop = ( e.scrollHeight - e.clientHeight ) * ( elem.scrollTop / (elem.scrollHeight - elem.clientHeight ));   
-         e.scrollLeft = ( e.scrollWidth - e.clientWidth )  * ( elem.scrollLeft / (elem.scrollWidth - elem.clientWidth ));      
+         // e.scrollLeft = ( e.scrollWidth - e.clientWidth )  * ( elem.scrollLeft / (elem.scrollWidth - elem.clientWidth ));      
        }
      
        e.prevY = e.scrollTop;   
-       e.prevX = e.scrollLeft;
+       // e.prevX = e.scrollLeft;
      }
     
      this.enableTimer = setTimeout( (function( obj ){ return function(){ obj.enableAll() } } )( this ), 100 );
@@ -128,7 +130,8 @@ function SynchDivScroll()
   if( this.constructor.timedAssist )
   {
    for( var i in this.divTable )
-     if( ( e = this.divTable[ i ].elem ).scrollLeft != e.prevX || e.scrollTop != e.prevY  )
+     // if( ( e = this.divTable[ i ].elem ).scrollLeft != e.prevX || e.scrollTop != e.prevY  )
+     if( (e = this.divTable[ i ].elem).scrollTop != e.prevY  ) 
        for( var j in this.divTable )
          if( i != j )
            this.harmonise( this.divTable[ i ].elem );         
@@ -141,7 +144,9 @@ function SynchDivScroll()
  
  this.enableAll = function()
  {
-   for( var i in this.divTable ) 
+    var ee = this.divTable;
+   // for( var i in this.divTable ) 
+   for( var i = 0; this.divTable[ i ]; i++ )  
      this.divTable[ i ].elem.scrollEnabled = !!this.viab; 
  }
  
@@ -168,3 +173,4 @@ function SynchDivScroll()
  
  this.init();
 }
+

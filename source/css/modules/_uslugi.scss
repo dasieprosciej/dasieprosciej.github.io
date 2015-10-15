@@ -394,15 +394,15 @@ $proces-bg: #fff;
   @include mq($bp3) { 
     &:before
      {
-      content:'';
-      position: absolute;
-      background:$kwadrat;
+      // content:'';
+      // position: absolute;
+      // background:$kwadrat;
     }
     &:before {
-      width: 31.25px;
-      height: 31.25px;
-      top: 31.25px;
-      left: -31.25px ;
+      // width: 31.25px;
+      // height: 31.25px;
+      // top: 31.25px;
+      // left: -31.25px ;
     }
     // &:after {
     //   width: 62.5px;

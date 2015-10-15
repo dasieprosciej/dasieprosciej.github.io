@@ -1,5 +1,5 @@
 // (function($, window, document, undefined) {
-(function(window) {
+(function() {
 
     'use strict';
     //pure js equivalents
@@ -132,5 +132,5 @@
 
     var Entities = entities;
 
-})(window);
+})();
 // })(jQuery, window, document);

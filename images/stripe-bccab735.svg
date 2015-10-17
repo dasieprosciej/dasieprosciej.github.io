@@ -1,0 +1,9 @@
+<svg xmlns='http://www.w3.org/2000/svg'>
+  <defs>
+      <pattern id="stripes" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse" >
+         <rect width='1' height='100%' fill='#ccc'/>
+         <rect x='10%' width='10%' height='10' fill='#fff'/>
+      </pattern>
+   </defs>
+    <rect x="1" y="1" height="100%" width="100%" style="fill:url(#stripes);" />
+</svg>

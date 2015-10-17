@@ -5,15 +5,47 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://dasieprosciej.pl/blog/spraw-by-przestali-ziewac</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://dasieprosciej.pl/blog</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://dasieprosciej.pl/blog/autorzy/milena</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://dasieprosciej.pl/uslugi</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://dasieprosciej.pl/onas</loc>
+    <loc>http://dasieprosciej.pl/projekty</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://dasieprosciej.pl/projekty/test.html.hhhaml</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://dasieprosciej.pl/projekty/senti</loc>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://dasieprosciej.pl/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://dasieprosciej.pl/projekty/milush</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://dasieprosciej.pl/projekty/fooddata</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://dasieprosciej.pl/onas</loc>
     <priority>0.7</priority>
   </url>
 </urlset>

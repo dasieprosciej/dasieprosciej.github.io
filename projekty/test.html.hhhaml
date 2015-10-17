@@ -1,0 +1,106 @@
+-# %header.bg-img.bg-height-2.align-bottom.bg-shade-more.color-inverted.align-bottom{'data-background-image' => imgpath('img-main.jpg')}
+-#   .section-inner
+-#     %h1 FoodData 
+-#     %h4 czyli Pan Kanapka Online
+
+-# %header.bg-color.bg-blue.bg-height-1.align-bottom.align-bottom
+-#   .section-inner
+-#     %h1 FoodData 
+-#     %h4 czyli Pan Kanapka Online
+%header
+  .section-inner
+    %h1 test
+    %h4 czyli Pan Kanapka Online    
+
+%section
+  .section-inner
+    %p 
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, reiciendis doloribus obcaecati voluptate sit illo autem quod veritatis aliquam quis repellendus culpa soluta numquam expedita eum earum vero officia ullam?
+    %p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae impedit ducimus qui repudiandae repellat iure deserunt quam labore magnam, commodi expedita officiis reiciendis! Voluptatem, harum autem sapiente, hic repudiandae nostrum?
+    = figure_lazy(:l,'img-jezioro.jpg', 'To jest figcaption', 'To jest alt', class: 'img-left-outset')
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit eveniet quam ducimus expedita et, eius harum corporis reprehenderit magnam laudantium facilis provident facere inventore, a, explicabo. Delectus at, eos obcaecati!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam unde suscipit quaerat quia animi excepturi sint odit, porro at tempore distinctio natus a consequatur recusandae ut sit commodi deleniti perferendis.
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta excepturi qui, aliquid alias assumenda voluptatem asperiores quod, cum error mollitia voluptatum quasi, fugiat ipsam iure quibusdam dolor deleniti sunt earum!
+    = figure_lazy(:l,'img-jezioro.jpg', nil, nil, class: 'img-right')
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam provident sunt sit praesentium totam nisi, itaque earum! Culpa dolores libero aut accusantium exercitationem, doloremque magnam in qui ipsum, sunt voluptates.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas temporibus ut deleniti dolore, officia culpa ducimus, quia odit tempora! Similique ex voluptate blanditiis! Consequatur quia voluptatem, dicta sunt maxime mollitia!
+    
+  .section-inner.outset-img
+    = figure_lazy(:l,'img-jezioro.jpg', 'asasa')
+
+  .section-inner  
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure tempore deleniti ipsa eos consequuntur, ducimus mollitia eum repellat consectetur alias, voluptatem nulla dolorem voluptatibus quo, ex tenetur nobis hic! Ipsum?  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem voluptates facere repellendus quibusdam repudiandae odit voluptatem assumenda natus enim nisi qui neque voluptatibus, nostrum eaque sint nemo placeat? Numquam, cum.
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, distinctio. Id aliquam, dicta nobis voluptatibus sapiente, repellendus nesciunt commodi fuga temporibus rem. Eligendi illum vero vitae, magni sint voluptatibus inventore?
+
+= bgimg('img-jezioro.jpg', class: 'bg-img bg-shade-more color-inverted bg-height-2 align-middle') do
+  .section-inner
+    %h2.h1 Adrian
+
+-# = FastImage.size(@site + imgpath('img-main-small.jpg'), :raise_on_failure => true)
+-# - width, height = FastImage.size(@site + imgpath('img-main-small.jpg'), :raise_on_failure => true)
+-# = number_to_percentage(height.to_f / width * 100, precision: 4)
+-# = number_to_percentage(width)
+-# = number_to_percentage(width).is_a?(String)
+
+-# = ImageSize.path(@site + imgpath('img-main-small.jpg')).size
+-# = width.instance_of? Fixnum
+-# = width.to_s.instance_of? String
+
+-# = img_ratio('img-main-small.jpg')
+ 
+-# - width, height = FastImage.size(@site + imgpath('img-main-small.jpg'), :raise_on_failure => true)
+-# = "Width: #{width}"
+-# = "Height: #{height}"
+-# = ((height.to_f / width ) * 100).to_s + "%"
+
+-# = Dir.pwd
+
+
+%section.bg-color.align-middle.bg-blue.bg-height-2.color-inverted
+  .section-inner
+    .columns-text-img.text-50.text-left
+      .column-img
+      .column-text
+        %h2 asdfkshfkdhs
+= bgimg('img-main.jpg', class: 'bg-img bg-height-3 bg-shade-more align-middle color-inverted') do
+  .section-inner
+    %h1 adfsdf
+
+
+%section
+  .section-inner
+    :markdown
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias impedit maxime tenetur nobis, ratione ipsum unde eveniet! Hic voluptate reiciendis assumenda sed nesciunt consequatur placeat corporis necessitatibus? Cum, labore, non. 
+
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ducimus et eaque rem nam. Nam quas a, sequi animi voluptate veritatis, libero deserunt nemo, nostrum incidunt nulla fugit eius, vero.
+
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt veniam eius obcaecati, assumenda culpa consequuntur provident ad, earum labore inventore, alias est nam nulla odio soluta ipsum fuga, non possimus?
+
+      + lista 1
+      + lista 2
+        + podlista 1
+            1. podpodlista 1
+            2. podpodlista 2
+        + podlista 2
+      + lista 3
+      + lista 1
+      + lista 2
+        1. podlista 1
+        2. podlista 2
+      + lista 3    
+      
+      <br>
+
+      A tu będzie druga lista
+
+      1. Lista 1
+      2. Lista 2
+        + podlista 1
+            1. more list
+            2. more list
+        + podlista 2
+      3. Lista 3
+  
+      | head | Header 2 | Header 3   |
+      | ----     | -------- | --------   |
+      | cell1    | cell 2   | skhdkshdf  |
+      | cell1    | cell 2   | skhdkshdf  |
+      | cell1    | cell 2   | skhdkshdf  |

@@ -10,7 +10,6 @@
 //= require menu_j
 //= require orphan
 
-
 //aload
 // window.onload = function () {
 //   aload();

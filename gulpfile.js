@@ -104,10 +104,10 @@ gulp.task ('responsive', function(){
     var  targetFile  =  '/*.{jpg,jpeg,png}' ;
     var rozmiar =
     [
-      {
-        "name" : "-xs",
-        "width" : "400"
-      },
+      // {
+      //   "name" : "-xs",
+      //   "width" : "400"
+      // },
       {
         "name" : "-s",
         "width" : "800"

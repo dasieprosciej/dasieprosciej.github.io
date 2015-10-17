@@ -2,6 +2,9 @@
 <html class="no-js">
   <head>
     <%= partial 'partials/head/head-meta' %>
+    <% if current_page.data.robots == "noindex" %>
+      <meta name="robots" content="noindex">
+    <% end %>
     <%= partial 'partials/head/favicon' %> 
     <% if content_for?(:four) %>
       <%= yield_content :four %>
@@ -9,8 +12,8 @@
       <%= stylesheet_link_tag 'style'%>  
     <% end %>
     <!-- do zmiany na font-load -->
-    <link href="/fonts-dsp.css" rel="stylesheet" type="text/css"/>
-     <!-- <%= partial  '/partials/head/font_load' %> -->
+    <!-- <link href="/fonts-dsp.css" rel="stylesheet" type="text/css"/> -->
+    <%= partial  '/partials/head/font_load' %>
     <%= partial  '/partials/head/touch-check' %>
     <%= partial  '/partials/head/js-check' %>
   </head>

@@ -19,7 +19,6 @@ status_link: http://dev.dearty.com/fooddata
   .section-inner
     %h4.color-lighter FoodData
     %h1 Zamawianie posiłków u Pana Kanapki przez aplikację mobilną
-    -# %h4.color-lighter czyli Pan Kanapka online
 
 %section
   .section-inner.align-center
@@ -38,44 +37,27 @@ status_link: http://dev.dearty.com/fooddata
       .column-2
         = mockup(:imac, :scroll, 'img-fooddata-old-s.jpg')
         %span FoodData - wersja „Przed”
-        
-%section.bg-color.bg-grey
-  .section-inner.outset
-    .columns.column-1--1of4.column-2--3of4.align-middle.font-size-18
-      .column-1
-        %h3 Propozycja wartości
-        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil nobis cum ipsa. Sapiente repudiandae, voluptatem saepe delectus culpa molestias ducimus labore maxime, hic, dolores architecto tempora impedit beatae accusantium nisi?
-      .column-2.order-1 
-        = figure_lazy(:l, 'img-value.jpg')  
+
+= bgimg('img-headline.jpg', class: "bg-img bg-height-2 color-inverted align-center align-middle") do 
+  .section-inner
+    %h3 Propozycja wartości
+    %p Wymyśliliśmy hasło <strong>„Pan Kanapka online”</strong>, które doskonale oddaje charakter tworzonej aplikacji. Pod nagłówkiem, umieściliśmy jasny opis czym jest FoodData oraz jeden z głównych problemów jaki rozwiązuje. 
 
 %section
   .section-inner.outset
-    .columns.column-1--1of3.column-2--2of3.align-middle.font-size-18
-      .column-1
-        %h3 Imitacja aplikacji
-        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil nobis cum ipsa. Sapiente repudiandae, voluptatem saepe delectus culpa molestias ducimus labore maxime, hic, dolores architecto tempora impedit beatae accusantium nisi?
-      .column-2 
-        = figure_lazy(:l, 'img-value.jpg')      
-
-%section
-  .section-inner.outset
-    .columns.column-1--1of4.column-2--3of4.align-middle.font-size-18
-      .column-1
-        %h3 Ikony
-        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil nobis cum ipsa. Sapiente repudiandae, voluptatem saepe delectus culpa molestias ducimus labore maxime, hic, dolores architecto tempora impedit beatae accusantium nisi?
-      .column-2.order-1 
-        = figure_lazy(:direct, 'fooddata-icons.png')      
-      
-%section
-  .section-inner.fullwidth
-    = figure_lazy(:l, 'img-zainteresowanie.jpg')       
+    = figure_lazy(:direct, 'fooddata-icons.png', nil, nil)    
+  .section-inner.align-center  
+    %h3 Wezwania do akcji
+    %p Wezwania do działania to zdecydowanie najważniejszy element na tego typu stronach. Mimo, że strona jest krótka, umieściliśmy dwa CTA (call to action), tak żeby odwiedzający wiedział czego od niego oczekujemy.
+  .section-inner.outset  
+    = figure_lazy(:l, 'img-zainteresowanie.jpg', nil, nil)   
 
 %section 
-  .section-inner.outset.align-center
+  .section-inner.align-center
     %h2 Efekt końcowy
-    %p.color-lighter Nie zapomnieliśmy oczywiście o wersji responsywnej
-    = br
-
+    %p.color-lighter Znacznie uprosćiliśmy stronę, zarówno w warstwie tekstu jak i designu. Skupiliśmy się tylko na tym, co może być istotne dla odwiedzającego. Nie zapomnieliśmy oczywiście o wersji responsywnej.
+    
+  .section-inner.outset
     .columns.column-1--3of4.column-2--1of4.align-bottom
       .column-1
         = mockup(:imac, :scroll, 'img-fooddata-l.jpg', id: 'compare-1')

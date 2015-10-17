@@ -145,7 +145,7 @@ function SynchDivScroll()
  this.enableAll = function()
  {
     var ee = this.divTable;
-   // for( var i in this.divTable ) 
+   // for( var i in this.divTable ) //to bylo zjebane
    for( var i = 0; this.divTable[ i ]; i++ )  
      this.divTable[ i ].elem.scrollEnabled = !!this.viab; 
  }

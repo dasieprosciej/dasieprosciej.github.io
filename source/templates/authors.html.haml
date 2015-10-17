@@ -6,33 +6,28 @@ blog: blog
 
 - content_for(:title, "da się prościej - autor #{author}")
 
--# - content_for :header do
--#   = partial 'partials/components/_header.haml', :locals => { :header_class => current_page.data.header } do
--#     %h1 
--#       Zobacz jak myśli #{author} 
 
 %section.section.section-blog
   .container--wide
-    %h1 Zobacz jak myśli #{author} 
-    .grid-s.grid-s--1of2.grid-s--gutters-l
-      - page_articles.each_with_index do |article, i|
-        %article.post-teaser.grid-cell
-          %a{:href => "#{article.url}", class: 'post-teaser__link'}
-            - $current_listed_article = article    
-            %img{:src => imgpath(article.data.thumbnail), :alt => ""}/
-            %header.blog-article__header
-              %h1=article.title
-            = link_to article.data.author, author_path(article.data.author)
+    %h1 Zobacz jak myśli #{author}
+    - page_articles.each_with_index do |article, i|
+      %article.post-teaser.grid-cell.group
+        %a{:href => "#{article.url}", class: 'post-teaser__link'}
+          - $current_listed_article = article
+          %img{:src => imgpath(article.data.thumbnail), :alt => ""}/
+          
+        %header.post-teaser__header  
+          %h2
+            %a{:href => "#{article.url}"} #{article.title}
+          .post-teaser__meta
+            %time.post-time= article.date.strftime('%d.%m.%Y')+','
+            = link_to article.data.author, author_path(article.data.author), class: "article-author"
+            %span.reading-time Czas czytania : #{reading_time(article.body)}
             
-            - if article.data.summary
-              .post-teaser__body
-                %p= smart_truncate(article.data.summary, :words => 25)
-            -# - else 
-            -#   = article.summary(250, '...')
-            %time.post-time=article.date.strftime('%d.%m.%Y')  
-            %p.reading-time Czas czytania : #{reading_time(article.body)}
-            - $current_listed_article = nil
-      
+        - if article.data.summary
+          .post-teaser__summary
+            %p= smart_truncate(article.data.summary, :words => 100)
+        - $current_listed_article = nil   
       
     - if paginate && num_pages >1
       %p Page #{page_number} of #{num_pages}

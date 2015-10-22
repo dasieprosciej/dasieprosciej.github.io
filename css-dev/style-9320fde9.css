@@ -459,6 +459,7 @@ html.turbolinks-progress-bar::before {
 
 #back-to-top {
 	position: fixed;
+	z-index: 999;
 	visibility: hidden;
 	opacity: 0;
 	-webkit-transform: translateZ(0);
@@ -475,13 +476,13 @@ html.turbolinks-progress-bar::before {
 	transition: all .5s;
 }
 
-/* line 74, /Users/adrian/Projekty/dsp-website/source/css/_layout.scss */
+/* line 75, /Users/adrian/Projekty/dsp-website/source/css/_layout.scss */
 
 #back-to-top:hover:before {
 	color: #333;
 }
 
-/* line 77, /Users/adrian/Projekty/dsp-website/source/css/_layout.scss */
+/* line 78, /Users/adrian/Projekty/dsp-website/source/css/_layout.scss */
 
 #back-to-top:before {
 	content: '\2191';
@@ -494,26 +495,26 @@ html.turbolinks-progress-bar::before {
 	transition: color .25s;
 }
 
-/* line 90, /Users/adrian/Projekty/dsp-website/source/css/_layout.scss */
+/* line 91, /Users/adrian/Projekty/dsp-website/source/css/_layout.scss */
 
 #back-to-top.is-visible {
 	visibility: visible;
 	opacity: 1;
 }
 
-/* line 95, /Users/adrian/Projekty/dsp-website/source/css/_layout.scss */
+/* line 96, /Users/adrian/Projekty/dsp-website/source/css/_layout.scss */
 
 .artwork::-webkit-scrollbar {
 	display: none;
 }
 
-/* line 100, /Users/adrian/Projekty/dsp-website/source/css/_layout.scss */
+/* line 101, /Users/adrian/Projekty/dsp-website/source/css/_layout.scss */
 
 .touch .artwork::-webkit-scrollbar {
 	display: initial;
 }
 
-/* line 104, /Users/adrian/Projekty/dsp-website/source/css/_layout.scss */
+/* line 105, /Users/adrian/Projekty/dsp-website/source/css/_layout.scss */
 
 .artwork {
 	-ms-overflow-style: -ms-autohiding-scrollbar;
@@ -2060,7 +2061,7 @@ hr.container {
 	display: none;
 }
 
-/* line 101, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
+/* line 97, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
 
 .menu-link {
 	position: absolute;
@@ -2069,7 +2070,7 @@ hr.container {
 	z-index: 5;
 }
 
-/* line 112, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
+/* line 108, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
 
 .menu-link div {
 	-webkit-transform: translate3d(0, 0, 0);
@@ -2083,26 +2084,26 @@ hr.container {
 	background: #eee;
 }
 
-/* line 124, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
+/* line 120, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
 
 .header--inverted .menu-link div {
 	background: #010101;
 }
 
-/* line 131, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
+/* line 127, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
 
 .show-menu .menu-link div:nth-child(1) {
 	-webkit-transform: rotate(45deg) translate3d(6px, 5px, 0);
 	transform: rotate(45deg) translate3d(6px, 5px, 0);
 }
 
-/* line 135, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
+/* line 131, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
 
 .show-menu .menu-link div:nth-child(2) {
 	opacity: 0;
 }
 
-/* line 138, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
+/* line 134, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
 
 .show-menu .menu-link div:nth-child(3) {
 	-webkit-transform: rotate(-45deg) translate3d(6px, -5px, 0);
@@ -3902,6 +3903,12 @@ section.section-projekt-nav {
 
 /* line 71, /Users/adrian/Projekty/dsp-website/source/css/modules/_mockups.scss */
 
+.no-js .artwork .aspect-ratio {
+	display: none;
+}
+
+/* line 75, /Users/adrian/Projekty/dsp-website/source/css/modules/_mockups.scss */
+
 .mockup-scroll .artwork {
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
@@ -3909,7 +3916,7 @@ section.section-projekt-nav {
 	transform: translateZ(0);
 }
 
-/* line 78, /Users/adrian/Projekty/dsp-website/source/css/modules/_mockups.scss */
+/* line 82, /Users/adrian/Projekty/dsp-website/source/css/modules/_mockups.scss */
 
 .mockup-shade {
 	position: absolute;
@@ -3920,13 +3927,13 @@ section.section-projekt-nav {
 	visibility: visible;
 }
 
-/* line 84, /Users/adrian/Projekty/dsp-website/source/css/modules/_mockups.scss */
+/* line 88, /Users/adrian/Projekty/dsp-website/source/css/modules/_mockups.scss */
 
 .no-js .mockup-shade {
 	display: none;
 }
 
-/* line 90, /Users/adrian/Projekty/dsp-website/source/css/modules/_mockups.scss */
+/* line 94, /Users/adrian/Projekty/dsp-website/source/css/modules/_mockups.scss */
 
 .mockup-imac .artwork,
 .mockup-imac .mockup-shade {
@@ -3936,13 +3943,13 @@ section.section-projekt-nav {
 	left: 3.9%;
 }
 
-/* line 97, /Users/adrian/Projekty/dsp-website/source/css/modules/_mockups.scss */
+/* line 101, /Users/adrian/Projekty/dsp-website/source/css/modules/_mockups.scss */
 
 .mockup-imac .mockup-shade {
 	height: calc(63% + 1px);
 }
 
-/* line 103, /Users/adrian/Projekty/dsp-website/source/css/modules/_mockups.scss */
+/* line 107, /Users/adrian/Projekty/dsp-website/source/css/modules/_mockups.scss */
 
 .mockup-laptop .artwork,
 .mockup-laptop .mockup-shade {
@@ -3952,13 +3959,13 @@ section.section-projekt-nav {
 	left: 11.9%;
 }
 
-/* line 110, /Users/adrian/Projekty/dsp-website/source/css/modules/_mockups.scss */
+/* line 114, /Users/adrian/Projekty/dsp-website/source/css/modules/_mockups.scss */
 
 .mockup-laptop .mockup-shade {
 	height: calc(81.9% + 1px);
 }
 
-/* line 116, /Users/adrian/Projekty/dsp-website/source/css/modules/_mockups.scss */
+/* line 120, /Users/adrian/Projekty/dsp-website/source/css/modules/_mockups.scss */
 
 .mockup-iphone .artwork,
 .mockup-iphone .mockup-shade {
@@ -3968,7 +3975,7 @@ section.section-projekt-nav {
 	height: 76%;
 }
 
-/* line 127, /Users/adrian/Projekty/dsp-website/source/css/modules/_mockups.scss */
+/* line 131, /Users/adrian/Projekty/dsp-website/source/css/modules/_mockups.scss */
 
 .mockup-iphone .mockup-shade {
 	height: calc(76% + 1px);
@@ -4437,7 +4444,7 @@ h3 {
 	padding-bottom: 5px;
 }
 
-/* line 101, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
+/* line 97, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
 
 .menu-link {
 	display: none;
@@ -6051,27 +6058,23 @@ blockquote.pullquote {
 	visibility: hidden;
 	text-align: center;
 	z-index: 4;
-	-webkit-transition: opacity 0.9s;
-	transition: opacity 0.9s;
+	-webkit-transition: opacity 0.5s, visibility .5s;
+	transition: opacity 0.5s, visibility .5s;
 	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 
-/* line 21, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
+/* line 17, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
 
 .nav--main li {
 	background: #0C216C;
 	display: block;
 	margin: 0;
-	opacity: 0;
-	visibility: hidden;
 	border: 10px solid #fff;
 	border-top: 0;
-	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 
-/* line 31, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
+/* line 27, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
 
 .nav--main li:hover a,
 .nav--main li:focus a,
@@ -6079,36 +6082,13 @@ blockquote.pullquote {
 	background: #fff;
 }
 
-/* line 36, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
+/* line 32, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
 
 .nav--main li:nth-of-type(2) {
-	-webkit-transition-delay: 0.1s;
-	transition-delay: 0.1s;
 	border-top: 10px solid #fff;
 }
 
-/* line 40, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
-
-.nav--main li:nth-of-type(3) {
-	-webkit-transition-delay: 0.2s;
-	transition-delay: 0.2s;
-}
-
-/* line 43, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
-
-.nav--main li:nth-of-type(4) {
-	-webkit-transition-delay: 0.3s;
-	transition-delay: 0.3s;
-}
-
 /* line 46, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
-
-.nav--main li:nth-of-type(5) {
-	-webkit-transition-delay: 0.4s;
-	transition-delay: 0.4s;
-}
-
-/* line 50, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
 
 .nav--main li a {
 	min-height: 30px;
@@ -6118,14 +6098,14 @@ blockquote.pullquote {
 	line-height: calc(25vh - 40px);
 }
 
-/* line 65, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
+/* line 61, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
 
 .header--inverted .nav--main,
 .header--absolute .nav--main {
 	border-color: #0C216C;
 }
 
-/* line 69, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
+/* line 65, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
 
 .header--inverted .nav--main li,
 .header--absolute .nav--main li {
@@ -6133,7 +6113,7 @@ blockquote.pullquote {
 	background: #fff;
 }
 
-/* line 72, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
+/* line 68, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
 
 .header--inverted .nav--main li:hover a,
 .header--inverted .nav--main li:focus a,
@@ -6144,24 +6124,15 @@ blockquote.pullquote {
 	background: #0C216C;
 }
 
-/* line 82, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
+/* line 78, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
 
 .header--absolute {
 	color: #010101;
 }
 
-/* line 88, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
+/* line 84, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
 
 .show-menu .nav--main {
-	opacity: 1;
-	visibility: visible;
-	-webkit-transition: opacity .1s, visibility .5s;
-	transition: opacity .1s, visibility .5s;
-}
-
-/* line 93, /Users/adrian/Projekty/dsp-website/source/css/modules/_menu.scss */
-
-.show-menu .nav--main li {
 	opacity: 1;
 	visibility: visible;
 }

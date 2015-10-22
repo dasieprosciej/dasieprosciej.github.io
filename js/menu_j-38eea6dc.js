@@ -1,0 +1,1 @@
+var menu_mobile=function(){function e(){n()}function n(){c.addEventListener("click",function(e){e.preventDefault(),t()})}function t(){u?classie.remove(o,"show-menu"):classie.add(o,"show-menu"),u=!u}var o=document.body,c=(document.querySelector("section"),document.getElementById("menu-link")),u=!1;e()};

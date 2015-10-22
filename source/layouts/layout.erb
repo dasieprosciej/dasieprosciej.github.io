@@ -16,6 +16,7 @@
     <%= partial  '/partials/head/font_load' %>
     <%= partial  '/partials/head/touch-check' %>
     <%= partial  '/partials/head/js-check' %>
+    <%= partial 'partials/head/analytics' %>
   </head>
   
   <body class="<%= page_classes %>">
@@ -30,8 +31,9 @@
       <%= partial 'partials/components/footer' %>
       <div id="back-to-top"></div>
     <!-- <div class="stripe"></div> -->
-    <%= javascript_include_tag  "all" %>  
-    <%= partial 'partials/head/analytics' %>
+    <%= javascript_include_tag  "all", 'data-turbolinks-eval' => "false" %>  
+    
+    
   </body>
 
 </html>

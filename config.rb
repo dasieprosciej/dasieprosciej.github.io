@@ -278,10 +278,10 @@ configure :build do
   # activate :minify_css
 
   # ignore 'projekty.html.erb'
-  ignore 'test.html.erb'
   # ignore 'blog.html.erb'
   # ignore 'blog2.html.erb'
   # ignore 'blog/*'
+
 
   # Minify Javascript on build
   activate :minify_javascript, :inline => true

@@ -229,7 +229,8 @@ module ImagesHelper
       content = content_tag(:img ,nil, 'data-src' => imgpath(real_path), :alt => alt) + noscript_responsive
     else        
       # content = content_tag :img ,nil, :src => imgpath(real_path), :alt => alt
-      content = content_tag(:img ,nil, 'data-layzr' => imgpath(real_path), :alt => alt) + noscript
+      # content = content_tag(:img ,nil, 'data-layzr' => imgpath(real_path), :alt => alt) + noscript
+      content = content_tag(:img ,nil, 'data-aload' => imgpath(real_path), :alt => alt) + noscript
     end      
 
 

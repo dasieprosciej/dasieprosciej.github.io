@@ -9,7 +9,7 @@ var touchStartY = 0;
 var element1StartScrollTop = 0;
 var element2scrollSyncFactor = 0;
 
-document.addEventListener('touchstart', function(event) {
+element1.addEventListener('touchstart', function(event) {
     event.preventDefault();
     
     var touch = event.changedTouches[0];
@@ -28,8 +28,8 @@ function calcSyncFactor()
     element2scrollSyncFactor = (element2.scrollHeight - element2.clientHeight) / (element1.scrollHeight - element1.clientHeight);    
 }
 
-document.addEventListener('touchend', touchEnd);
-document.addEventListener('touchcancel', touchEnd);
+element1.addEventListener('touchend', touchEnd);
+element1.addEventListener('touchcancel', touchEnd);
 
 function touchEnd(event)
 {
@@ -42,7 +42,7 @@ function touchEnd(event)
     }    
 }
 
-document.addEventListener('touchmove', function() {
+element1.addEventListener('touchmove', function() {
     for ( var i = 0; i < event.changedTouches.length; i++ ) {
         var touch = event.changedTouches[i];
         

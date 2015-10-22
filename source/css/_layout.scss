@@ -58,6 +58,7 @@ html.turbolinks-progress-bar::before {
 
 #back-to-top {
 	position: fixed;
+	z-index: 999;
 	visibility: hidden;
 	opacity: 0;
 	transform:translateZ(0);

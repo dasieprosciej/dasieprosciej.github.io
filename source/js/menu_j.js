@@ -1,4 +1,4 @@
-(function() {
+var menu_mobile = function(){
 
 	var bodyEl = document.body,
 		content = document.querySelector( 'section' ),
@@ -15,20 +15,6 @@
 			evt.preventDefault();
 			toggleMenu();
 		} );
-		// if( closebtn ) {
-		// 	closebtn.addEventListener( 'click', toggleMenu );
-		// }
-
-
-		// close the menu element if the target it´s not the menu element or one of its descendants..
-		// if (content) {
-		// 	content.addEventListener( 'click', function(ev) {
-		// 		var target = ev.target;
-		// 		if( isOpen && target !== openbtn ) {
-		// 			toggleMenu();
-		// 		}
-		// 	} );
-		// }
 	}
 
 	function toggleMenu() {
@@ -44,7 +30,10 @@
 
 	init();
 
-})();
+};
+
+
+
 
 // (function() {
 // 	var bodyEl = $('body'),

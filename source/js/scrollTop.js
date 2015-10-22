@@ -1,6 +1,7 @@
-(function(){
-  // var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+var scroll_top = function(){
 
+
+  // var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
   // first add raf shim
 // http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
   window.requestAnimFrame = (function(){
@@ -11,28 +12,6 @@
               window.setTimeout(callback, 1000 / 60);
             };
   })();
-
-//tez dziala dobrze, ale drugi ma easing
-  // function scrollToTop(scrollDuration) {
-  //   var     scrollHeight = window.pageYOffset,
-  //           scrollStep = Math.PI / ( scrollDuration / 15 ),
-  //           cosParameter = scrollHeight / 2;
-  //   var     scrollCount = 0,
-  //           scrollMargin;
-  //   requestAnimationFrame(step);        
-  //   function step () {
-  //       setTimeout(function() {
-  //           if ( window.pageYOffset != 0 ) {
-  //               requestAnimationFrame(step);
-  //               scrollCount = scrollCount + 1;  
-  //               scrollMargin = cosParameter - cosParameter * Math.cos( scrollCount * scrollStep );
-  //               window.scrollTo( 0, ( scrollHeight - scrollMargin ) );
-  //           }
-  //       }, 15 );
-  //   }
-  // }
-  // scrollToTop(750);
-
 
 //pojawianie sie buttona back to top
   var offset = 1500
@@ -48,6 +27,9 @@
     scrollToY(0, 1500, 'easeInOutQuint');
   });
 // main function
+// function is_touch_device() {
+//         return 'ontouchstart' in window || 'onmsgesturechange' in window; // works on ie10
+//     };
 function scrollToY(scrollTargetY, speed, easing) {
     // scrollTargetY: the target scrollY property of the window
     // speed: time in pixels per second
@@ -55,12 +37,21 @@ function scrollToY(scrollTargetY, speed, easing) {
 
     var scrollY = window.pageYOffset,
         scrollTargetY = scrollTargetY || 0,
-        speed = speed || 2000,
+        speed = speed || 2000,        
         easing = easing || 'easeOutSine',
         currentTime = 0;
 
     // min time .1, max time .8 seconds
-    var time = Math.max(.1, Math.min(Math.abs(scrollY - scrollTargetY) / speed, .8));
+    if ('ontouchstart' in window || 'onmsgesturechange' in window)  {
+      var time = 0;
+    }
+    else {
+      var time = Math.max(.1, Math.min(Math.abs(scrollY - scrollTargetY) / speed, .8));  
+    }
+
+
+    
+
 
     // easing equations from https://github.com/danro/easing-js/blob/master/easing.js
     var PI_D2 = Math.PI / 2,
@@ -98,10 +89,10 @@ function scrollToY(scrollTargetY, speed, easing) {
 
     // call it once to get started
     tick();
-}
+  }
+
+
+};
 
 
 
-
-
-})();

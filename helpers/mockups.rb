@@ -31,8 +31,8 @@ module Mockups
     width, height = FastImage.size(@site + imgpath(content_url), :raise_on_failure => true)
     aspect_ratio = number_to_percentage(height.to_f / width * 100, precision: 4)
 
-    
-    img_content = content_tag(:img ,nil, 'data-layzr' => imgpath(content_url), :alt => "")
+        
+    img_content = content_tag(:img ,nil, 'data-aload' => imgpath(content_url), :alt => "")
     noscript = content_tag(:noscript, content_tag(:img ,nil, 'src' => imgpath(content_url), :alt => ""))
 
     

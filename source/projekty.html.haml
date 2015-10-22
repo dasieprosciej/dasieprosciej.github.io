@@ -10,12 +10,15 @@ header: header--inverted
   -# .container--wide
 - page_articles.each_with_index do |article, i|
   -# %a{:href => "#{article.url}"}
-  %article{class: "projekt-index #{article.data.projekt_class}"}
-    .projekt-index-info
-      %h1
-        %span=article.data.index_firm   
-        #{article.data.index_title}  
-      = partial 'partials/components/button-default', :locals => {btn_link: article.url} do
-        Zobacz
+  -# %article{class: "projekt-index #{article.data.projekt_class}"}
+  %article.projekt-teaser
+    .projekt-index{class: "#{article.data.projekt_class}"}
+      .projekt-index-info
+        %h1
+          %span=article.data.index_firm   
+          #{article.data.index_title}  
+        = partial 'partials/components/button-default', :locals => {btn_link: article.url} do
+          Zobacz
+
 
     

@@ -3,12 +3,13 @@
 //= require rimg-breakpoints
 //= require rimg.min
 //= require turbolinks
-//= require synchdivscroll
 //= require classie
 //= require debounce
 //= require scrollTop
 //= require menu_j
 //= require orphan
+//= require shoestring
+//= require scrollsync
 
 //aload
 // window.onload = function () {
@@ -100,7 +101,7 @@ if(cta_link_1) {   //if the element exists add the click event
   }
   function WidthChange(mq) {
     if(mq.matches && comp_1 && comp_2) {  
-      new SynchDivScroll('compare-1', 'compare-2'); //synchscroll init
+      syncscroll('compare-1', 'compare-2'); //sync function 
     }
   }
 })();

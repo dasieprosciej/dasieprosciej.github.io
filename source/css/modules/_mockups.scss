@@ -68,8 +68,12 @@
   }
 }
 
+.no-js .artwork .aspect-ratio {
+  display: none;;
+}
+
 .mockup-scroll .artwork {
-  overflow-y: auto;
+  overflow-y: scroll;
 
   -webkit-overflow-scrolling: touch;
   transform: translateZ(0);
@@ -90,8 +94,8 @@
   .artwork,
   .mockup-shade {
     width: 92.5%;
-    height: 63%;
-    top: 4.7%;
+    height: 63.1%;
+    top: 4.6%;
     left: 3.9%;
   }
   .mockup-shade {

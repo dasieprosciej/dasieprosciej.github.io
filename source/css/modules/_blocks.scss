@@ -53,7 +53,8 @@
     background: $primary-color;
     max-width:none;
     width: 50%;
-    display: flex; //do wysrodkowania tekstu
+    // display: flex; //do wysrodkowania tekstu
+    display: table; //bo ie nie dziala z flex
     order:-1;
     padding:0 100px;
   } 
@@ -64,6 +65,8 @@
     color:#fff;
     text-align: center;
     font-size: 24px;
+    display: table-cell; //bo ie nie dziala z flex
+    vertical-align: middle; //bo ie nie dziala z flex
     @include mq($bp1) {
 
     } 

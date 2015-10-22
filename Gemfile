@@ -2,9 +2,9 @@
 # the following line to use "http://" instead
 source 'https://rubygems.org'
 
-gem "middleman", "~>3.3.12"
+gem "middleman", "~>3.4.0"
 gem "turbolinks", require: false
-gem "nokogiri"
+# gem "nokogiri"
 gem "middleman-autoprefixer"
 gem "middleman-blog"
 gem "middleman-deploy"

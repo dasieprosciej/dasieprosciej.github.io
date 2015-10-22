@@ -47,7 +47,7 @@ function SynchDivScroll()
 {
 
 
- this.constructor.timedAssist = false;  
+ this.constructor.timedAssist = true;  
  this.logged = 0;
  this.divTable = [];
  this.enableTimer = null;

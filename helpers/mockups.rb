@@ -27,12 +27,21 @@ module Mockups
     when :scroll
       mock_class += ' mockup-scroll'
     end  
-    
 
+    width, height = FastImage.size(@site + imgpath(content_url), :raise_on_failure => true)
+    aspect_ratio = number_to_percentage(height.to_f / width * 100, precision: 4)
+
+    
     img_content = content_tag(:img ,nil, 'data-layzr' => imgpath(content_url), :alt => "")
     noscript = content_tag(:noscript, content_tag(:img ,nil, 'src' => imgpath(content_url), :alt => ""))
 
-    content = img_content + noscript
+    
+    ratio_content = content_tag(:span, img_content, :class => "aspect-ratio", :style => "padding-bottom: #{aspect_ratio}")
+
+
+
+    # content = img_content + noscript
+    content = ratio_content + noscript
     
 
 

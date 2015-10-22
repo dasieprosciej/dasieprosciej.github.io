@@ -7,10 +7,17 @@
 .projekty_index .footer-inner {
 	border-top: 0;
 }
-
+.projekt-teaser {
+	padding:10px;
+	padding-bottom: 0;
+	&:first-of-type {
+		padding-top: 0;
+	}
+}
 .projekt-index {
-	border:10px solid #fff;
-	border-bottom: 0;
+	// border:10px solid #fff;
+	
+	// border-bottom: 0;
 	position: relative;
 	height: 400px;
 	text-align: center;
@@ -27,9 +34,9 @@
 	// 	opacity: .4;
 	// 	transition:opacity 1s;
 	// }
-	&:first-of-type {
-		border-top: 0;
-	}
+	// &:first-of-type {
+	// 	border-top: 0;
+	// }
 	@include mq($bp2) {
 		height: 600px;
 	} 
@@ -66,7 +73,6 @@
 // 	background:#000;
 // 	opacity: 0;
 // 	transition:opacity 1s;
-
 // }
 
 .projekt-index-info {

@@ -106,6 +106,7 @@ $proces-bg: #fff;
     content:attr(data-number);
     position: absolute;
     font-size: 200px;
+    width: 100%; //IE hack
     line-height: .6;
     font-family: $sans-font;
     font-weight: 700;
@@ -158,8 +159,14 @@ $proces-bg: #fff;
   color:#fff;
   padding-top: 0;
   padding-bottom: 0;
+  margin-bottom: -1px;
   @include mq($bp1) {
-    background: $primary-color url("../images/dsp_footer.svg") center bottom no-repeat;  
+    background: $primary-color url("../images/dsp_long.svg") center bottom no-repeat;  
+    
+    background-size:contain;
+  } 
+  @include mq($bp4) {
+    background-position: center bottom -30px;
   } 
   .container--wide {
     padding-top: 100px;
@@ -202,7 +209,7 @@ $proces-bg: #fff;
         width: 62.5px;
         height: 62.5px;
         background:$kwadrat;
-        opacity: .3;
+        // opacity: .3;
         z-index: -1;
       }
     } 
@@ -225,6 +232,13 @@ $proces-bg: #fff;
     padding-left: 50px;
     padding-right: 10px;
   } 
+}
+
+.ways-item-1 {
+  h3:before {
+    background:$kwadrat;
+    opacity: .3;
+  }
 }
 
 .ways-item-2 {

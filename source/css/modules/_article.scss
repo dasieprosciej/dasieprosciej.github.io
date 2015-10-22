@@ -388,12 +388,21 @@ p + br {
 }  
   .align-middle {
     align-items:center;
+    // &>* {
+    //   align-self:center; //na ie bo przez parent nie dziala
+    // }
   }
   .align-top {
     align-items: flex-start;
+    // &>* {
+    //   align-self:flex-start; //na ie bo przez parent nie dziala
+    // }
   }
   .align-bottom {
     align-items: flex-end;
+    // &>* {
+    //   align-self:flex-end; //na ie bo przez parent nie dziala
+    // }
   }
 
 
@@ -599,6 +608,7 @@ figure.bordered {
 
 //bg section height
   .bg-height-1 {
+    height: 100px; //IE hack do flexbox align
     min-height: 300px;
     @include mq($bp1) {
       min-height: 500px;  
@@ -607,6 +617,7 @@ figure.bordered {
   }
 
   .bg-height-2 {
+    height: 100px; //IE hack do flexbox align
     min-height: 400px;
     @include mq($bp1){
       min-height: 600px;  
@@ -615,6 +626,7 @@ figure.bordered {
   
 
   .bg-height-3 {
+    height: 100px; //IE hack do flexbox align
     min-height: 500px;
     @include mq($bp1){
       min-height: 800px;  
@@ -713,6 +725,8 @@ figure.bordered {
 // .single {
   .columns {
       margin-bottom: 30px;
+      // width:800px;
+      // max-width:100%;
     @include mq($bp1) { 
       display: flex;
       justify-content: space-between;

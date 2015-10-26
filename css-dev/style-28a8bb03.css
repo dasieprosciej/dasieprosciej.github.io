@@ -3546,7 +3546,7 @@ h4 + .p--empty + h4 {
 /* line 83, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .projekt-food {
-	background-color: #010101;
+	background-color: #3EB577;
 	background-image: url(../images/projekty/fooddata-8c9acc5c.jpg);
 	background-position: bottom center;
 }
@@ -3554,7 +3554,7 @@ h4 + .p--empty + h4 {
 /* line 90, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .projekt-senti {
-	background-color: #010101;
+	background-color: #73CEF7;
 	background-image: url(../images/projekty/sentione-d96439e0.png);
 	background-position: bottom center;
 }
@@ -3562,7 +3562,7 @@ h4 + .p--empty + h4 {
 /* line 97, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .projekt-milush {
-	background-color: #010101;
+	background-color: #DD7DAE;
 	background-image: url(../images/projekty/milush-7ff55f89.jpg);
 }
 

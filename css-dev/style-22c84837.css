@@ -3546,24 +3546,27 @@ h4 + .p--empty + h4 {
 /* line 83, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .projekt-food {
+	background-color: #010101;
 	background-image: url(../images/projekty/fooddata-8c9acc5c.jpg);
 	background-position: bottom center;
 }
 
-/* line 89, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 90, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .projekt-senti {
+	background-color: #010101;
 	background-image: url(../images/projekty/sentione-d96439e0.png);
 	background-position: bottom center;
 }
 
-/* line 95, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 97, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .projekt-milush {
+	background-color: #010101;
 	background-image: url(../images/projekty/milush-7ff55f89.jpg);
 }
 
-/* line 103, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 106, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .single .section-projekt-info {
 	background: #f5f5f5;
@@ -3571,14 +3574,14 @@ h4 + .p--empty + h4 {
 	font-family: "geo", Helvetica, sans-serif;
 }
 
-/* line 107, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 110, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .single .section-projekt-info h3 {
 	font-size: 18px;
 	line-height: 1.5;
 }
 
-/* line 111, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 114, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .single .section-projekt-info a {
 	display: inline-block;
@@ -3587,64 +3590,64 @@ h4 + .p--empty + h4 {
 	transition: all .25s;
 }
 
-/* line 115, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 118, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .single .section-projekt-info a:hover {
 	border-color: #F44336;
 }
 
-/* line 119, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 122, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .single .section-projekt-info .columns {
 	border: 3px solid #fff;
 }
 
-/* line 123, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 126, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .single .section-projekt-info .column-1,
 .single .section-projekt-info .column-2 {
 	padding: 50px;
 }
 
-/* line 130, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 133, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .single .section-projekt-info .column-1 {
 	border-bottom: 1px solid #fff;
 }
 
-/* line 138, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 141, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .single .section-projekt-info ul > li {
 	padding-left: 0;
 }
 
-/* line 140, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 143, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .single .section-projekt-info ul > li:before {
 	content: none;
 }
 
-/* line 147, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 150, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .projekt-info-content {
 	float: left;
 	margin-left: 40px;
 }
 
-/* line 152, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 155, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 section.section-projekt-nav {
 	padding-top: 0;
 }
 
-/* line 156, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 159, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .projekt-info {
 	border-top: 1px solid #ddd;
 	background: #f5f5f5;
 }
 
-/* line 166, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 169, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .projekt-nav {
 	position: relative;
@@ -3653,25 +3656,25 @@ section.section-projekt-nav {
 	padding-top: 50px;
 }
 
-/* line 171, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 174, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .projekt-nav a span {
 	display: none;
 }
 
-/* line 180, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 183, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .projekt-nav a:hover i {
 	opacity: 1;
 }
 
-/* line 184, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 187, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .projekt-nav .nextnav {
 	text-align: right;
 }
 
-/* line 187, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 190, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .projekt-nav .home {
 	position: absolute;
@@ -3682,7 +3685,7 @@ section.section-projekt-nav {
 	right: 0;
 }
 
-/* line 197, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 200, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .icon-nav {
 	background-image: url(../images/icons-projectnav-d194ca29.svg);
@@ -3695,25 +3698,25 @@ section.section-projekt-nav {
 	transition: opacity .25s;
 }
 
-/* line 207, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 210, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .icon-prevnav {
 	background-position: -53px 0px;
 }
 
-/* line 211, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 214, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .icon-nexnav {
 	background-position: -106px 0px;
 }
 
-/* line 215, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 218, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .icon-home {
 	background-position: 0 0;
 }
 
-/* line 219, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 222, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .projekt-nav {
 	display: -webkit-box;
@@ -4919,21 +4922,21 @@ blockquote.pull-right {
 	width: 40%;
 }
 
-/* line 123, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 126, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .single .section-projekt-info .column-1,
 .single .section-projekt-info .column-2 {
 	width: 50%;
 }
 
-/* line 130, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 133, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .single .section-projekt-info .column-1 {
 	border-bottom: none;
 	border-right: 2px solid #fff;
 }
 
-/* line 171, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
+/* line 174, /Users/adrian/Projekty/dsp-website/source/css/modules/_projekty.scss */
 
 .projekt-nav a span {
 	display: block;

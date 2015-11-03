@@ -9,6 +9,7 @@ module.exports = function(grunt) {
         },
         // src: ['source/images/**/*.png'] //zdjecia glowne        
         src: ['build/**/images/*.png', '!build/images/*.png'] //zdjecia w build w projektach i blogu, ale nie original
+        
       },
       jpg: {
         options: {

@@ -1,7 +1,22 @@
 // (function($, window, document, undefined) {
-(function() {
+var kreski = function() {
+    var entities = {
+        nbsp: '\u00A0' // non-breaking space, &nbsp;
+    };    
 
-    'use strict';
+     var defaults = {
+        forbidden: ['a', 'i', 'o', 'u', 'w', 'z', 'ale', 'od', 'do', 'na', 'nad', 'pod', 'przed', 'po', 'to', 'tej', 'we', 'za', 'ze', 'że', 'by', 'gdy', 'np.'],
+        ignoreTags: ['pre', 'code'],
+    };
+
+    // $[plugin.fullName] = {
+    //     deorphanize: Deorphanator.deorphanize
+    // };
+
+    var Entities = entities;
+
+
+
     //pure js equivalents
     function extend(){
         for(var i=1; i<arguments.length; i++)
@@ -11,19 +26,7 @@
         return arguments[0];
     }
 
-    function data() {
-        if (typeof key === 'string' && typeof value === 'undefined') {
-            var element = this.nodeType ? this : this[0];
-        }
-        return this;
-    }
-
-    ////
-
-    var plugin = 'orphan';  
-
-
-    var getTextNodesIn = function(node, includeWhitespaceNodes) {
+    function getTextNodesIn (node, includeWhitespaceNodes) {
         var textNodes = [], onlyWhitespaces = /^\s*$/;
         var TEXT_NODE = 3;
 
@@ -109,28 +112,18 @@
     }
 
     // $.fn[plugin.fullName] = function(options) {
-    Object.prototype[plugin] = function(options) {
-            if (!data(this, plugin)) {
-                data(this, plugin, new Deorphanator(this, options));
-            }     
-    };
-
-
-
-    var entities = {
-        nbsp: '\u00A0' // non-breaking space, &nbsp;
-    };    
-
-     var defaults = {
-        forbidden: ['a', 'i', 'o', '\\(o', 'u', 'w', 'z', 'ale', 'od', 'do', 'na', 'nad', 'pod', 'przed', 'po', 'to', 'tej', 'we', 'za', 'ze', 'że', 'by', 'gdy', 'np.'],
-        ignoreTags: ['pre', 'code'],
-    };
-
-    // $[plugin.fullName] = {
-    //     deorphanize: Deorphanator.deorphanize
+    // Object.prototype[plugin] = function(options) {
+    //         if (!data(this, plugin)) {
+    //             data(this, plugin, new Deorphanator(this, options));
+    //         }     
     // };
 
-    var Entities = entities;
+    return {
+        orphan: Deorphanator
+    }
 
-})();
+
+    
+
+}();
 // })(jQuery, window, document);

@@ -11,6 +11,23 @@
 //= require shoestring
 //= require scrollsync
 
+
+
+//turbolinks
+Turbolinks.enableProgressBar();
+
+//turbolinks counter
+document.addEventListener('page:load', function(){
+   Turbolinks.counter = Turbolinks.counter || 0;
+    Turbolinks.counter++;
+    if (Turbolinks.counter > 50) {
+         console.log('Clense thy browser from your memory leak sins!');
+         document.body.setAttribute('data-no-turbolink', true);
+    }
+  });
+
+
+
 //aload
 window.onload = function () {
   aload();
@@ -39,6 +56,8 @@ addListenerMulti(document, 'DOMContentLoaded page:load', function(){ //tylko tut
 });
 
 
+
+
 //scroll top
   //initial
   scroll_top();
@@ -62,8 +81,7 @@ addListenerMulti(document, 'DOMContentLoaded page:load', function(){ //tylko tut
 //   el.orphan();
 // });
 
-//turbolinks
-Turbolinks.enableProgressBar();
+
 
 
 
@@ -172,20 +190,6 @@ document.addEventListener('page:load', function(){
 });
 
 
-// (function(){
-//   var comp_1 = document.getElementById('compare-1');
-//   var comp_2 = document.getElementById('compare-2');  
-//   if(window.matchMedia) {
-//     var mq = window.matchMedia("(min-width: 700px)");
-//     mq.addListener(WidthChange);
-//     WidthChange(mq);  
-//   }
-//   function WidthChange(mq) {
-//     if(mq.matches && comp_1 && comp_2) {  
-//       syncscroll('compare-1', 'compare-2'); //sync function 
-//     }
-//   }
-// })();
 
 //add hover on mockup
 var mockup_hover = function(){
@@ -236,52 +240,8 @@ document.addEventListener('page:load', function(){
   mockup_hover();
 });
 
-// (function(){
-
-//   var mockups = document.querySelectorAll('.mockup');
-//   var mockups_shade = document.querySelectorAll('.mockup-shade');
-//   var comp_1 = document.getElementById('compare-1');
-//   var comp_2 = document.getElementById('compare-2');
-
-  
-//   if(mockups_shade) {
-//     [].forEach.call(mockups, function(mockup) {
-//       addListener(mockup, 'mouseover', function(){
-//         classie.add( this, 'is-hovered' );
-//       });
-//       addListener(mockup, 'mouseout', function(){
-//         classie.remove( this, 'is-hovered' );
-//       });
-//       addListener(mockup, 'touchstart', function(){
-//         classie.add( this, 'is-hidden' );
-//       });
-//     });
-//   }
-//   if(comp_1 && comp_2)  {
-//     var compare_1 = comp_1.parentNode;
-//     var compare_2 = comp_2.parentNode;
-
-//     addListenerMulti(compare_1, 'mouseover touchstart', function(){
-//       classie.add( compare_2, 'is-hovered' );
-//     });
-//     addListener(compare_1, 'mouseout', function(){
-//       classie.remove( compare_2, 'is-hovered' );
-//     });
-
-//     addListenerMulti(compare_2, 'mouseover touchstart', function(){
-//       classie.add( compare_1, 'is-hovered' );
-//     });
-//     addListener(compare_2, 'mouseout', function(){
-//       classie.remove( compare_1, 'is-hovered' );
-//     });
-
-//   }
-
-// })();
 
 
-//vivus
-// odpowiada = new Vivus('odpowiada', {type: 'delayed', duration: 150});
-// wzmacnia = new Vivus('wzmacnia', {type: 'delayed', duration: 150});
-// buduje = new Vivus('buduje', {type: 'delayed', duration: 150});
-// czyni = new Vivus('czyni', {type: 'delayed', duration: 150});
+
+
+

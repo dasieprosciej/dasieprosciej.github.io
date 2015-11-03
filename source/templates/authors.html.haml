@@ -1,6 +1,6 @@
 ---
-pageable: true
-per_page: 10
+pageable: false
+-# per_page: 10
 blog: blog
 ---
 
@@ -10,24 +10,27 @@ blog: blog
 %section.section.section-blog
   .container--wide
     %h1 Zobacz jak myśli #{author}
-    - page_articles.each_with_index do |article, i|
-      %article.post-teaser.grid-cell.group
-        %a{:href => "#{article.url}", class: 'post-teaser__link'}
-          - $current_listed_article = article
-          %img{:src => imgpath(article.data.thumbnail), :alt => ""}/
+    .articles
+      - page_articles.each_with_index do |article, i|      
+        %article.post-teaser.grid-cell.group
           
-        %header.post-teaser__header  
-          %h2
-            %a{:href => "#{article.url}"} #{article.title}
-          .post-teaser__meta
-            %time.post-time= article.date.strftime('%d.%m.%Y')+','
-            = link_to article.data.author, author_path(article.data.author), class: "article-author"
-            %span.reading-time Czas czytania : #{reading_time(article.body)}
-            
-        - if article.data.summary
-          .post-teaser__summary
-            %p= smart_truncate(article.data.summary, :words => 100)
-        - $current_listed_article = nil   
+          %a{:href => "#{article.url}", class: 'post-teaser__link'}
+            - $current_listed_article = article
+            - if article.data.thumbnail?
+              %img{:src => imgpath(article.data.thumbnail), :alt => ""}/
+    
+          %header.post-teaser__header  
+            %h2
+              %a{:href => "#{article.url}"} #{article.title}
+            .post-teaser__meta
+              %time.post-time= article.date.strftime('%d.%m.%Y')+','
+              = link_to article.data.author, author_path(article.data.author), class: "article-author"
+              %span.reading-time Czas czytania : #{reading_time(article.body)}
+              
+          -# - if article.data.summary
+          -#   .post-teaser__summary
+          -#     %p= smart_truncate(article.data.summary, :words => 100)
+          -# - $current_listed_article = nil   
       
     - if paginate && num_pages >1
       %p Page #{page_number} of #{num_pages}

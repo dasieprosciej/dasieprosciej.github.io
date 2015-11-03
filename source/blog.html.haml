@@ -18,7 +18,8 @@ header:
       %article.post-teaser.grid-cell.group
         %a{:href => "#{article.url}", class: 'post-teaser__link'}
           - $current_listed_article = article
-          %img{:src => imgpath(article.data.thumbnail), :alt => ""}/
+          - if article.data.thumbnail?
+            %img{:src => imgpath(article.data.thumbnail), :alt => ""}/
           
         %header.post-teaser__header  
           %h2

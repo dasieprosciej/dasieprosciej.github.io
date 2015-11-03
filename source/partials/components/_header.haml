@@ -10,7 +10,7 @@
       %a.logo{:href => "/"}
         - if header_class.include?("header--inverted")
           = image_tag('logo.svg')
-        - elsif header_class == "x404"
+        - elsif page_classes == "x404"
           %img{:src => "/images/logo-inverted.svg", :alt => ""}/          
         - else
           = image_tag('logo-inverted.svg')

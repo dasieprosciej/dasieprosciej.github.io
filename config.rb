@@ -186,11 +186,23 @@ helpers do
   end
 
   def reading_time(input)
-    words_per_minute = 180
+    words_per_minute = 200
     words = input.split.size
-    minutes = (words/words_per_minute).floor
+    minutes = (words/words_per_minute).round
+    seconds = ((words.to_f/words_per_minute) * 60).round
+    seconds_s = seconds.to_s
     minutes_label = minutes === 1 ? ' min.' : ' min.'
-    minutes > 0 ? "około #{minutes} #{minutes_label}" : 'mniej niż 1 min.'
+    # minutes > 0 ? "około #{minutes} #{minutes_label}" : 'mniej niż 1 min.'
+    # minutes > 0 ? "około #{minutes} #{minutes_label}" : "#{seconds} sekund"
+    if minutes > 0
+      "około #{minutes} #{minutes_label}"
+    else
+      if ["2", "3", "4"].include?( seconds_s[-1,1] )  
+        "#{seconds} sekundy"
+      else 
+        "#{seconds} sekund"
+      end
+    end  
   end
 
   def time_ago_in_words(from_time, options = {})
@@ -281,6 +293,7 @@ configure :build do
   # ignore 'blog.html.erb'
   # ignore 'blog2.html.erb'
   # ignore 'blog/*'
+ 
 
 
   # Minify Javascript on build

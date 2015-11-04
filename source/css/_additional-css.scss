@@ -1,4 +1,5 @@
-.bg-borderbottom {
+.bg-bordered {
+  border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
 }
 
@@ -56,10 +57,13 @@ $senti: #3FB3E3;
   }
 }
 
+//bg
+
+
+
+
 
 //aidca
-
-
 .aidca {
   font-size: 16px;
 }

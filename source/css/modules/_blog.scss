@@ -148,4 +148,10 @@
   span {
     display: block;
   }
+  a {
+    border-bottom: 1px solid  $text-color;
+    &:hover {
+      border-bottom-color: $link-color;
+    }
+  }
 }

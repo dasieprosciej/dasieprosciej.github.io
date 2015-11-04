@@ -49,7 +49,7 @@ document.addEventListener("page:load", function () {
 
 // orphan
 addListenerMulti(document, 'DOMContentLoaded page:load', function(){ //tylko tutaj tego uzylem bo jakbym chcial dodac async do js to wtedy nie dziala i trzeba tak jak w ponizszych funkcjach
-    var single = document.querySelectorAll('p, li, blockquote');
+    var single = document.querySelectorAll('p, li, blockquote, h1, h2, h3, h4');
   [].forEach.call(single, function(el){
     el.orphan();
   });

@@ -5,7 +5,6 @@
   position: relative;
   background: $primary-color;
   width: 100%;
-  // padding: 70px 20px;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
@@ -18,13 +17,15 @@
       height: 375px;
       z-index: 0;
       position: absolute;
-      background: $kwadrat;      
+      background: $kwadrat; 
+      background:#ddd;     
       left: 100%;
       top: -125px;
       z-index: -1;
       opacity: .3;
     }  
     @include mq($bp3) {
+      // content:none;
       opacity: .5;
     } 
   }
@@ -34,16 +35,18 @@
       width: 300%;
       height: 250px;
       position: absolute;
-      background: $kwadrat;
-      opacity: .2;
+      // background: $kwadrat;
+      background:#ddd;  
+      opacity: .5;
       left: -100%;
       top: 0;
       z-index: -1;
     }  
     @include mq($bp2) {
-      right: 100%;
-      left: auto;
-      // content:none;
+      
+      // right: 100%;
+      // left: auto;
+      content:none;
     } 
   }
   @include mq($bp1) {

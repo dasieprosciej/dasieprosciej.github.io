@@ -28,9 +28,35 @@ html.turbolinks-progress-bar::before {
     padding-right:40px;
   }
 }
+.container {
+	position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left:10px; 
+  padding-right: 10px;
+
+  @include mq($bp1){
+    padding-left:40px;
+    padding-right:40px;
+  }	
+}
 
 .container--narrow {
-	max-width: 600px;
+	max-width: 500px;
+}
+
+.dsp-quote {
+  position: relative;
+  font-style: italic;
+  font-size: 24px;
+  text-align: center;
+  color:#999;
+  @include mq($bp2){
+    font-size: 30px;
+  } 
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .pad-0 {

@@ -268,8 +268,8 @@ p + br {
 //lists
 .single ul,
 .single ol,
-.content ul,
-.content ol {
+ul.list,
+ol.list {
   counter-reset: post;
   margin-bottom: 30px;
   &:last-child {
@@ -290,27 +290,43 @@ p + br {
   }
 }
 
-.single,
-.content {
-  ul {
-    &>li:before {
+.single ul,
+ul.list {
+  &>li:before {
       content:'\2022';   
       padding-top: 1px;
       padding-left: 4px;
     }
-  }
-  ol {
-    &>li:before {
+}
+
+.single ol,
+ol.list {
+  &>li:before {
       counter-increment: post;
       content: counter(post) ".";
       padding-left: 4px;
     }
-  }
+}
+
+.single {
+  // ul {
+  //   &>li:before {
+  //     content:'\2022';   
+  //     padding-top: 1px;
+  //     padding-left: 4px;
+  //   }
+  // }
+  // ol {
+  //   &>li:before {
+  //     counter-increment: post;
+  //     content: counter(post) ".";
+  //     padding-left: 4px;
+  //   }
+  // }
   li > ul,
   li > ol,
   {
   margin-top:10px;
-  
   }
 }
 

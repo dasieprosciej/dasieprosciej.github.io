@@ -1,0 +1,367 @@
+.section-uslugi {
+  font-size: 18px;
+  position: relative;
+  h3 {
+    font-size: 22px;
+    font-weight: 400;
+    color:#999;
+    margin-bottom: 30px;
+  }
+  @include mq($bp2) { 
+    &:before,
+    &:after {
+      content:'';
+      position: absolute;
+    }
+    &:before {
+      width: 200px;
+      height: 200px;
+      background:#f4f4f4;
+      transform:translateX(-50%) rotate(45deg);
+      left: 0;
+      top: 30%;
+    }
+    &:after {
+      width: 300px;
+      height: 300px;
+      background:#f4f4f4;
+      transform:translateX(50%) rotate(45deg);
+      right: 0;
+      top: 60%;
+    }
+  }  
+}
+
+.hero-uslugi {
+  text-align: center;
+  background:$primary-color;
+  padding-top:150px;
+  padding-bottom: 150px;
+  background:$primary-color image-url('hero-uslugi.png') center center no-repeat;
+  h1 {
+    color:#fafafa;
+  }
+}
+
+.get-block {
+  margin-top: 100px;
+  @include mq($bp1) {
+    margin-top: 60px;
+  } 
+}
+
+.uslugi-block {
+  position: relative;
+  &:first-child{
+    margin-bottom: 100px;
+  }
+  p {
+    margin-bottom: 30px;
+  }
+}
+
+.get-list {
+  font-size: 16px;
+  li {
+    margin-bottom: 30px;
+    @include clearfix();
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  h4 {
+    text-transform: uppercase;
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+  p {
+    font-family: $sans-font;
+  }
+}
+
+.pre-title {
+    font-style:italic;
+    color:$kwadrat;
+    font-size: 30px;
+    display: inline-block;
+    margin-bottom: 10px;
+  @include mq($bp1) { 
+    position: absolute;
+    left: -100px;
+    top: 0;
+    line-height: .5;
+    font-size: 40px;
+    font-style:italic;
+    color:$kwadrat;
+  }
+}
+
+.icon-uslugi {
+  width: 150px;
+  height: 150px;
+  background:image-url('uslugi-icons.svg') 0 0 no-repeat;
+  background-size:150;  
+  margin-bottom: 30px;
+  // margin-top: 20px;
+  @include mq(em(400)) {
+    margin-bottom: 0;
+    margin-right: 50px;
+    // margin-top: 0;
+    float: left;
+    clear: both;
+  } 
+}
+
+.icon-wzmacnia {
+  background-position:0 -159px;
+}
+.icon-buduje {
+ background-position:0 -319px; 
+}
+.icon-czyni {
+ background-position:0 -480px; 
+}
+
+// .uslugi-block blockquote {
+//   font-size: 20px;
+//   font-style: italic;
+//   margin-top: 100px;
+// }
+
+// po co upraszczac
+.section-simplify {
+  background: #f4f4f4 image-url('dsp_long.svg') bottom center no-repeat;
+  background-position:bottom -1px center;
+  // background:#f4f4f4 image-url('uslugi-test.png') center center no-repeat;
+  // background:#f4f4f4;
+  text-align: center;
+  position: relative;
+  // &:before {
+  //   content:'';
+  //   position: absolute;
+  //   left: 0;
+  //   right: 0;
+  //   top: 0;
+  //   bottom: 0;
+  //   width: 500px;
+  //   margin:auto;
+  //   background: #f4f4f4 image-url('uslugi-test.png') center center no-repeat;
+  //   background-size:100%;
+  // }
+  @include mq($bp2){
+    padding-top: 150px;
+    padding-bottom: 150px;
+  } 
+  h1 {
+    margin-bottom: 20px;
+    color:$primary-color;
+    span {
+      font-size: .5em;
+      display: block;
+    }
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.8;
+    @include mq($bp2) {
+      font-size: 22px;
+    } 
+  }
+}
+
+
+// PROCES
+
+.section-proces { 
+  position: relative;  
+  p {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }  
+  p + ul {
+    margin-top: -15px;
+  } 
+}
+
+
+
+
+.proces-number {
+  position: absolute;
+  font-size: 200px;
+  // width: 100%; //IE hack
+  line-height: .7;
+  font-family: $sans-font;
+  font-weight: 700;
+  left:0;
+  top:-80px;
+  letter-spacing:-0.1em;
+  color:#ddd;
+  // padding-right: 30px;
+  z-index: -1;
+}
+
+
+.section-proces-title {
+  text-align: center;
+  @include mq($bp1) {
+    // text-align: center;  
+  } 
+  
+}
+
+.proces-list {
+  margin:-1em 0 0 -1em;
+}
+.proces-item {
+  position: relative; 
+  padding:1em 0 0 1em;
+  margin-bottom: 10px;
+  
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  @include mq($bp1) {
+    margin-bottom: 0;
+    max-width: none;
+    width: 50%;
+
+    &:nth-child(1),
+    &:nth-child(4) {
+      float: left;
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      float: right;
+    }
+  }  
+}
+
+.proces-item--inner {
+  border:1px solid #ddd;
+  background:#fff;
+  padding:100px 20px;
+  overflow: hidden;
+  transition:box-shadow .2s linear;
+  &:hover {
+    box-shadow:0 0 2px #ccc, 0 0 10px #ddd;
+  }
+  @include mq($bp1) {
+    padding:100px 20px;
+  } 
+  @include mq($bp3) {
+    padding: 100px;
+  } 
+}
+
+.proces-header {
+  width: 100%;
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 2;
+  &:before {
+    content:attr(data-number);
+    position: absolute;
+    font-size: 200px;
+    width: 100%; //IE hack
+    line-height: .6;
+    font-family: $sans-font;
+    font-weight: 700;
+    left: -85px;
+    top:-60px;
+    letter-spacing:-0.1em;
+    z-index: -1;
+    color:#eee;
+    transition:color .5s linear;
+    @include mq($bp3) {
+      left: -150px;
+    } 
+  }
+  @include mq($bp1){
+    margin-bottom: 75px;
+  } 
+
+}
+
+
+.proces-title {
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0;
+  color:$primary-color;
+}
+
+.proces-subtitle {
+  font-style: italic;
+  color:#999;
+}
+
+
+
+// sposoby wspolpracy
+.section-ways {
+  background:#f4f4f4;
+  @include mq($bp2) {
+    background:none;
+    padding-top: 0;
+  } 
+  h2 {
+    padding-bottom: 30px;
+    @include mq($bp1){
+      padding-bottom: 100px;
+    } 
+    @include mq($bp2) {
+      text-align: center;
+    } 
+  }
+  h3 {
+    font-weight: 400;
+    font-size: 24px;
+    padding-bottom:10px;
+    color:#999;
+    @include mq($bp1){
+      padding-bottom: 30px;
+      font-size: 28px;
+    }   
+  }
+}
+
+.section-ways {
+  .container {
+    @include mq-max($bp1-max) {
+      max-width: 500px;  
+    }
+  }
+}
+.ways-item {
+  @include mq-max($bp1-max) {
+    margin-bottom: 70px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  } 
+  @include mq($bp2) {
+    padding-right: 10px;
+  } 
+}
+
+//inne
+.section-cta p {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+
+
+//quote 
+
+.section-quote {
+  border-top:1px solid #ddd;
+  padding:75px 0;
+  blockquote {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+}

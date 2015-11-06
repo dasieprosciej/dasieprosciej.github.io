@@ -8,9 +8,13 @@ $proces-bg: #fff;
 
 .section-proces {
   position: relative;
-  background:$proces-bg;
+  background:#fff;
+  // background:linear-gradient(to bottom, #f2f2f2, #fff);
+  
   @include mq($bp2) {
     font-size: 18px;
+    padding-top: 150px;
+    border-top: 1px solid #ddd;
   } 
   p + ul {
     margin-top: -15px;
@@ -24,9 +28,14 @@ $proces-bg: #fff;
   
 }
 
+.section-proces {
+  .grid-cell {
+    display: flex;
+  }
+}
 
 .proces-list {
-  border:1px solid #ddd; 
+  // border:1px solid #eee; 
   @include mq($bp3) {
     margin-left: -80px;
     margin-right: -80px;
@@ -34,27 +43,31 @@ $proces-bg: #fff;
 }
 
 .proces-item {
+  // background:#f3f3f3;
   background:#fff;
+  border:1px solid #eee;
   position: relative;
+  margin-bottom: 20px;
   &:hover {
     .proces-header:before {
       color:$kwadrat;
     }
   }
-  border-top: 1px solid #ddd;
+  // border-top: 1px solid #eee;
   &:first-child {
-    border-top: 0;
+    // border-top: 0;
   }
   @include mq($bp1) {
-    border-top: 0;
+    margin-bottom: 0;
+    // border-top: 0;
     //1 i 3     
     &:nth-of-type(odd) {
-      border-right: 1px solid #ddd;
+      // border-right: 1px solid #eee;
     }
     
     //first two
     &:nth-of-type(-n+2){
-      border-bottom:1px solid #ddd;
+      // border-bottom:1px solid #eee;
     }
 
     
@@ -114,8 +127,8 @@ $proces-bg: #fff;
     top:-60px;
     letter-spacing:-0.1em;
     z-index: -1;
-    color:#f5f5f5;
-    transition:color 1s linear;
+    color:#eee;
+    transition:color .5s linear;
     @include mq($bp3) {
       left: -150px;
     } 
@@ -159,21 +172,21 @@ $proces-bg: #fff;
   color:#fff;
   padding-top: 0;
   padding-bottom: 0;
-  margin-bottom: -1px;
+  // margin-bottom: -1px;
   @include mq($bp1) {
-    background: $primary-color url("../images/dsp_long.svg") center bottom no-repeat;  
+    // background: $primary-color url("../images/dsp_long.svg") center bottom no-repeat;  
     
-    background-size:contain;
+    // background-size:contain;
   } 
   @include mq($bp4) {
-    background-position: center bottom -30px;
+    // background-position: center bottom -30px;
   } 
   .container--wide {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     @include mq($bp2){
-      padding-top: 200px;
-      padding-bottom: 200px;  
+      padding-top: 50px;
+      padding-bottom: 50px;  
     }   
   }
 }
@@ -305,7 +318,7 @@ $proces-bg: #fff;
   
   padding-bottom: 40px;
   @include mq($bp1) {
-    border-right: 1px solid #ddd;  
+    // border-right: 1px solid #ddd;  
     padding-bottom: 80px;
     padding-left: 0;
     padding-right: 40px;
@@ -334,46 +347,33 @@ $proces-bg: #fff;
   position: relative;
   // z-index: -1;
   color:#eee;
-  background:$primary-color;
-  // background: $primary-color url("../images/logo-uslugi.svg") center center no-repeat;  
-  // background-size:auto 170%;
+  background:darken($primary-color,10);
+  @include mq($bp2) {
+    background:#fff;
+    color:$text-color;
+  } 
+
   h1 {
     color:#fff;
     padding-bottom: 30px;
+    @include mq($bp2) {
+      color:$primary-color;
+    } 
   }
   @include mq($bp2) {
-    // background:#f5f5f5;
-    // background:linear-gradient(to bottom, #fff 5%, rgba(#fff,0) 20%), image-url('get-bg.jpg') top center no-repeat;
-    // background-size:cover;  
-    // margin-top: -700px;
-    // padding-top: 700px;
+    &:before {
+      content:'';
+      position: absolute;
+      width: 200px;
+      height: 80%;
+      border:10px solid rgba($kwadrat,.2);
+      top: 10%;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
   } 
-  // &:before {
-  //   content:'da się';
-  //   position: absolute;
-  //   margin:auto;
-  //   left: 0;
-  //   right: 0;
-  //   top: -150px;
-  //   font-size:200px;
-  //   font-family: $sans-font;
-  //   font-weight: 700;
-  //   text-align: center;
-  //   color:$primary-color;
-  // }
-  // &:after {
-  //   content:'prościej';
-  //   position: absolute;
-  //   margin:auto;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: -120px;
-  //   font-size:200px;
-  //   font-family: $sans-font;
-  //   font-weight: 700;
-  //   text-align: center;
-  //   color:$primary-color;
-  // }
+  
 }
 
 
@@ -388,6 +388,12 @@ $proces-bg: #fff;
       text-align: left;
     }
   } 
+  h1 {
+    span {
+      display: block;
+      font-size: .5em;
+    }
+  }
   @include mq($bp2) {
     font-size: 22px;
     padding-top: 150px;
@@ -424,14 +430,28 @@ $proces-bg: #fff;
   position: relative;
   background:#efefef;
   // padding-bottom: 100px;
+  padding-bottom: 50px;
   @include mq($bp1) {
     background:none;
     padding-bottom: 100px;
   }  
   @include mq($bp2) {
+    padding-bottom: 150px;
     background:linear-gradient(to bottom, #fff 5%, rgba(#fff,0) 20%), image-url('get-bg.jpg') top center no-repeat;
     background-size:cover;
+    border-bottom: 1px solid #ddd;
     // background: none;
+    &:before {
+      position: absolute;
+      content:'';
+      width: 100%;
+      height: 150px;
+      background: url("../images/dsp_long.svg") center bottom no-repeat;  
+      background-size:contain;
+      bottom: 0;
+      left: 0;
+      opacity: .5;
+    }
   } 
   h2 {
     text-align: center;
@@ -442,6 +462,7 @@ $proces-bg: #fff;
     font-weight: 400;
     color:#999;
     margin-top: 0;
+    border-top: 1px solid #ddd;
     @include mq($bp1) {      
       padding-top: 20px;
     } 
@@ -449,9 +470,14 @@ $proces-bg: #fff;
 }
 
 .site-block-list {
-  @include mq($bp1) {
-    border:1px solid #ddd;  
-  } 
+  .grid-cell {
+    
+    @include mq-max($bp1-max) {
+      width: 100%;
+    }   
+
+  }
+  
   
 }
 
@@ -462,7 +488,7 @@ $proces-bg: #fff;
   margin-bottom: 20px;
   padding-top: 100px;
   padding-bottom: 100px;
-  border:1px solid #ddd;
+  // border:1px solid #ddd;
   @include mq($bp1) {
     padding: 0;
     margin-bottom: 0;
@@ -470,12 +496,12 @@ $proces-bg: #fff;
     height: 500px;
     display: flex;
     align-items:center; 
-    border:0; 
+    border:1px solid #ddd; 
     &:nth-of-type(2n+1) {
-      border-right:1px solid #ddd;
+      // border-right:1px solid #ddd;
     }
     &:nth-of-type(-n+2) {
-      border-bottom:1px solid #ddd;
+      // border-bottom:1px solid #ddd;
     }
   } 
 
@@ -511,7 +537,8 @@ $proces-bg: #fff;
     }
   }
   h3 {
-    color:$kwadrat;
+    color:$primary-color;
+    text-transform: uppercase;
   }
   p {
     font-family: $sans-font;

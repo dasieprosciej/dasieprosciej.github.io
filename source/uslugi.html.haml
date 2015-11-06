@@ -11,7 +11,7 @@ title: da się prościej - usługi
         .grid.grid-s--1of2
           .grid-cell.uslugi-block-1
             %span.pre-title Ty
-            %h2
+            %h3
               Planujesz przebudować stronę i&nbsp;chcesz, aby jej nowa wersja:
             %ul
               %li skutecznie przekonywała odbiorców do Twojej oferty
@@ -19,45 +19,48 @@ title: da się prościej - usługi
               %li dobrze odzwierciedlała to, kim jesteś i co robisz
           .grid-cell.uslugi-block-2
             %span.pre-title My
-            %h2 Upraszczamy strony internetowe
+            %h3 Upraszczamy strony internetowe
             %p W zależności od potrzeby, odświeżamy lub gruntownie przebudowujemy strony www. Upraszczamy przekaz zarówno w zakresie treści jak i warstwy wizualnej, by wydobyć to co najcenniejsze w Twoim biznesie.
     
     .uslugi-site
       .container--wide
         %h2 Chcemy dać Ci stronę, która:
-        .grid.grid-s--1of2.site-block-list         
-          .site-block.grid-cell
-            .site-block-inner
-              .icon-block.icon-odpowiada
-              %h3 Odpowiada
-              %p na pytania Twoich odbiorców, rozwiewa ich wątpliwości i&nbsp;inspiruje do podjęcia akcji
-            %span.effect-shine
-            -# .uslugi-pseudo-1
-          .site-block.grid-cell
-            .site-block-inner
-              .icon-block.icon-wzmacnia
-              %h3 Wzmacnia
-              %p wiarygodność i wizerunek Twojego biznesu
-            %span.effect-shine
+        .grid.grid-s--1of2.grid-s--gutters.site-block-list         
+          .grid-cell
+            .site-block
+              .site-block-inner
+                .icon-block.icon-odpowiada
+                %h3 Odpowiada
+                %p na pytania Twoich odbiorców, rozwiewa ich wątpliwości i&nbsp;inspiruje do podjęcia akcji
+              %span.effect-shine
+          .grid-cell
+            .site-block
+              .site-block-inner
+                .icon-block.icon-wzmacnia
+                %h3 Wzmacnia
+                %p wiarygodność i wizerunek Twojego biznesu
+              %span.effect-shine
 
-          .site-block.grid-cell
-            .site-block-inner
-              .icon-block.icon-buduje
-              %h3 Buduje
-              %p zaufanie i lojalność, zamieniając odwiedzających w klientów, a&nbsp;klientów w fanów  
-            %span.effect-shine
+          .grid-cell
+            .site-block
+              .site-block-inner
+                .icon-block.icon-buduje
+                %h3 Buduje
+                %p zaufanie i lojalność, zamieniając odwiedzających w klientów, a&nbsp;klientów w fanów  
+              %span.effect-shine
           
-          .site-block.grid-cell
-            .site-block-inner
-              .icon-block.icon-czyni
-              %h3 Czyni
-              %p rzeczy skomplikowane prostymi i&nbsp;łatwymi w użyciu  
-            %span.effect-shine
-            -# .uslugi-pseudo-3        
+          .grid-cell
+            .site-block
+              .site-block-inner
+                .icon-block.icon-czyni
+                %h3 Czyni
+                %p rzeczy skomplikowane prostymi i&nbsp;łatwymi w użyciu  
+              %span.effect-shine
+       
     .uslugi-panel-2
       .container--wide     
         .uslugi-block-3
-          %h1 No dobrze, ale po co upraszczać?
+          %h1 <span>No dobrze, ale </span>po co upraszczać?
           %hr.inline.orange/
           %p  Odpowiedź jest prosta - proste oznacza zrozumiałe. W upraszczaniu nie chodzi o mniej, ale o <strong>wystarczająco</strong>. Wystarczająco, by Twoi odbiorcy zrozumieli to, co chcesz im przekazać i podjęli działania, jakich od nich oczekujesz. To oni wyznaczają granicę prostoty. Skupiamy się na Twoich mocnych stronach i usuwamy wszystko co zbędne, by pokazać <strong> nie to co chcesz im sprzedać, ale to, co chcieliby od Ciebie kupić</strong>.   
 
@@ -67,48 +70,53 @@ title: da się prościej - usługi
   -#     %p Pracujemy tak, jak chcielibyśmy, by pracowano dla nas. Twój sukces jest tak samo ważny dla Ciebie jak i dla nas - w&nbsp;końcu to również nasza reputacja.     
 
   %section.section.section-proces
+
     .container--wide
       %h2.section-proces-title A robimy to mniej więcej tak
-      .grid-s.grid-s--1of2.proces-list
-        .grid-cell.proces-item
-          .proces-item--inner
-            .proces-header.proces-first{"data-number" => "01"}             
-              %h3.proces-title Na początku
-              %span.proces-subtitle Strategia i analiza          
-            %p Wszystko zaczyna się od Twojej historii:
-            %ul
-              %li  Dlaczego robisz to, co robisz?
-              %li Co czyni Cię unikalnym?
-              %li Czyją uwagę chcesz przyciągnąć?
-              %li Czego chcą lub potrzebują Twoi odbiorcy?
-              %li Co chcesz osiągnąć?
-            %p W pełni zanurzamy się w świecie Twojego biznesu, badamy aktualne trendy, analizujemy Twoją konkurencję i rynek, na którym działasz. Docieramy do sedna tego, co sprawia, że Twoja oferta jest wyjątkowa.  
-        .grid-cell.proces-item
-          .proces-item--inner
-            .proces-header{"data-number" => "02"}             
-              %h3.proces-title Następnie
-              %span.proces-subtitle Treść i struktura
-            %p Przeglądamy i dostosowujemy dotychczasową zawartość strony . W zależności od potrzeb Twoich odbiorców tworzymy również nową treść. Projektujemy nowy układ informacji i interakcje z użytkownikami.
+      .grid-s.grid-s--1of2.grid-s--gutters.proces-list
+        .grid-cell
+          .proces-item
+            .proces-item--inner
+              .proces-header.proces-first{"data-number" => "01"}             
+                %h3.proces-title Na początku
+                %span.proces-subtitle Strategia i analiza          
+              %p Wszystko zaczyna się od Twojej historii:
+              %ul
+                %li  Dlaczego robisz to, co robisz?
+                %li Co czyni Cię unikalnym?
+                %li Czyją uwagę chcesz przyciągnąć?
+                %li Czego chcą lub potrzebują Twoi odbiorcy?
+                %li Co chcesz osiągnąć?
+              %p W pełni zanurzamy się w świecie Twojego biznesu, badamy aktualne trendy, analizujemy Twoją konkurencję i rynek, na którym działasz. Docieramy do sedna tego, co sprawia, że Twoja oferta jest wyjątkowa.  
+        .grid-cell
+          .proces-item
+            .proces-item--inner
+              .proces-header{"data-number" => "02"}             
+                %h3.proces-title Następnie
+                %span.proces-subtitle Treść i struktura
+              %p Przeglądamy i dostosowujemy dotychczasową zawartość strony . W zależności od potrzeb Twoich odbiorców tworzymy również nową treść. Projektujemy nowy układ informacji i interakcje z użytkownikami.
 
-        .grid-cell.proces-item
-          .proces-item--inner
-            .proces-header{"data-number" => "03"} 
-              %h3.proces-title By w końcu
-              %span.proces-subtitle Design i technologia
-            %p Prezentujemy treść w przejrzysty i zrozumiały sposób oraz opracowujemy właściwą oprawę wizualną dla Twojego biznesu.
-            %p.strong Budujemy stronę tak by była:
-            %ul
-              %li łatwa do znalezienia 
-              %li szybka
-              %li responsywna (dostosowana do ekranu)            
-          -# .uslugi-pseudo-5
+        .grid-cell
+          .proces-item
+            .proces-item--inner
+              .proces-header{"data-number" => "03"} 
+                %h3.proces-title By w końcu
+                %span.proces-subtitle Design i technologia
+              %p Prezentujemy treść w przejrzysty i zrozumiały sposób oraz opracowujemy właściwą oprawę wizualną dla Twojego biznesu.
+              %p.strong Budujemy stronę tak by była:
+              %ul
+                %li łatwa do znalezienia 
+                %li szybka
+                %li responsywna (dostosowana do ekranu)            
           
-        .grid-cell.proces-item
-          .proces-item--inner
-            .proces-header{"data-number" => "04"} 
-              %h3.proces-title Ale to nie koniec
-              %span.proces-subtitle Efekty
-            %p Po uruchomieniu strony, badamy jej efektywność. Mierzymy jej sukces, żebyś wiedział jak wiele zyskałeś dzięki tej inwestycji.       
+          
+        .grid-cell
+          .proces-item
+            .proces-item--inner
+              .proces-header{"data-number" => "04"} 
+                %h3.proces-title Ale to nie koniec
+                %span.proces-subtitle Efekty
+              %p Po uruchomieniu strony, badamy jej efektywność. Mierzymy jej sukces, żebyś wiedział jak wiele zyskałeś dzięki tej inwestycji.       
     
   %section.section.section-ways
     .container--wide

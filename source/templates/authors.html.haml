@@ -30,7 +30,7 @@ blog: blog
           -# - if article.data.summary
           -#   .post-teaser__summary
           -#     %p= smart_truncate(article.data.summary, :words => 100)
-          -# - $current_listed_article = nil   
+          - $current_listed_article = nil   
       
     - if paginate && num_pages >1
       %p Page #{page_number} of #{num_pages}

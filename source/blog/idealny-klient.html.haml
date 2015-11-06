@@ -3,7 +3,7 @@ title: Kim jest idealny klient twórców stron www
 date: 2015-10-28
 tags: example
 summary: 
-thumbnail: 
+thumbnail: thumb.png
 header: header--inverted header--borderbottom-full
 author: Adrian
 author_name: Adrian Sowirka
@@ -15,6 +15,7 @@ author_name: Adrian Sowirka
 
 %section
   .section-inner
+    = figure(:direct, 'thumb.png', nil, nil, class: "img-right")
     :markdown
       #### Idealny Klient:
         1. Rozumie swój biznes i swoich klientów.
@@ -36,5 +37,3 @@ author_name: Adrian Sowirka
     = br  
     %h4 A Ty? Jakim jesteś klientem?  
 
-- digit = 36
-= digit.to_s[-1,1]

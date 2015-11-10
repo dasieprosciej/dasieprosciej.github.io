@@ -5,6 +5,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://dasieprosciej.pl/blog/idealny-klient</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://dasieprosciej.pl/blog/spraw-by-przestali-ziewac</loc>
     <priority>0.7</priority>
   </url>
@@ -14,6 +18,14 @@
   </url>
   <url>
     <loc>http://dasieprosciej.pl/blog/autorzy/milena</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://dasieprosciej.pl/blog/autorzy/adrian</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://dasieprosciej.pl/uslugi2</loc>
     <priority>0.7</priority>
   </url>
   <url>

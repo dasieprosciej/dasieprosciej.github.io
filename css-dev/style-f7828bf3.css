@@ -3219,18 +3219,20 @@ ol.list > li:before {
 	outline: 0;
 }
 
-/* line 583, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 584, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .section-inner.fullwidth img,
 .section-inner.fullwidth-pad img,
+.section-inner.outset img,
 .section-inner.outset-img img {
 	width: 100%;
 }
 
-/* line 586, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 587, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .section-inner.fullwidth figcaption,
 .section-inner.fullwidth-pad figcaption,
+.section-inner.outset figcaption,
 .section-inner.outset-img figcaption {
 	position: relative;
 	width: 100%;
@@ -3241,15 +3243,16 @@ ol.list > li:before {
 	padding-right: 20px;
 }
 
-/* line 594, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 595, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .section-inner.fullwidth figcaption:before,
 .section-inner.fullwidth-pad figcaption:before,
+.section-inner.outset figcaption:before,
 .section-inner.outset-img figcaption:before {
 	content: none;
 }
 
-/* line 605, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 606, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .section-inner.fullwidth figcaption,
 .section-inner.fullwidth-pad figcaption {
@@ -3258,14 +3261,14 @@ ol.list > li:before {
 	margin-right: auto;
 }
 
-/* line 613, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 614, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 figure.bordered {
 	border: 4px solid #eee;
 	border-radius: 4px;
 }
 
-/* line 619, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 620, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .bg-img {
 	background-repeat: no-repeat;
@@ -3273,70 +3276,70 @@ figure.bordered {
 	background-size: cover;
 }
 
-/* line 627, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 628, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .bg-height-1 {
 	height: 100px;
 	min-height: 300px;
 }
 
-/* line 636, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 637, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .bg-height-2 {
 	height: 100px;
 	min-height: 400px;
 }
 
-/* line 645, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 646, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .bg-height-3 {
 	height: 100px;
 	min-height: 500px;
 }
 
-/* line 717, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 718, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .single .line-height-smaller {
 	line-height: 1.2;
 }
 
-/* line 721, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 722, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .single .line-height-small {
 	line-height: 1.4;
 }
 
-/* line 725, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 726, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .single .line-height-normal {
 	line-height: 1.6;
 }
 
-/* line 729, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 730, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .single .line-height-large {
 	line-height: 1.8;
 }
 
-/* line 733, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 734, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .single .line-height-huge {
 	line-height: 2;
 }
 
-/* line 743, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 744, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .columns {
 	margin-bottom: 30px;
 }
 
-/* line 758, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 759, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .columns .column-1 {
 	margin-bottom: 30px;
 }
 
-/* line 857, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 858, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 blockquote.pullquote {
 	margin: 43px 0;
@@ -3351,19 +3354,20 @@ blockquote.pullquote {
 	background: none;
 }
 
-/* line 879, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
-
-blockquote.pull-right {
-	width: 100%;
-}
-
-/* line 892, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 880, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 blockquote.no-quote {
 	background: none;
 }
 
-/* line 899, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 883, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+
+blockquote.pull-right {
+	width: 100%;
+	display: none;
+}
+
+/* line 906, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .aspect-ratio {
 	display: block;
@@ -3372,7 +3376,7 @@ blockquote.no-quote {
 	outline: none;
 }
 
-/* line 907, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 914, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .aspect-ratio img,
 .aspect-ratio > div {
@@ -3384,7 +3388,7 @@ blockquote.no-quote {
 	display: block;
 }
 
-/* line 921, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 928, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 h1 + .p--empty,
 h2 + .p--empty,
@@ -3394,7 +3398,7 @@ h4 + .p--empty {
 	margin-bottom: -7px;
 }
 
-/* line 930, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 937, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 h2 + .p--empty + h2,
 h3 + .p--empty + h2,
@@ -3402,7 +3406,7 @@ h4 + .p--empty + h2 {
 	margin-top: -5px;
 }
 
-/* line 935, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 942, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 h2 + .p--empty + h3,
 h3 + .p--empty + h3,
@@ -3776,7 +3780,8 @@ section.section-projekt-nav {
 /* line 141, /Users/adrian/Projekty/dsp-website/source/css/modules/_blog.scss */
 
 .article-meta {
-	background: #f5f5f5;
+	color: #fafafa;
+	background: #333;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	font-size: 16px;
@@ -3784,19 +3789,19 @@ section.section-projekt-nav {
 	margin-top: 50px;
 }
 
-/* line 158, /Users/adrian/Projekty/dsp-website/source/css/modules/_blog.scss */
+/* line 160, /Users/adrian/Projekty/dsp-website/source/css/modules/_blog.scss */
 
 .article-meta__content span {
 	display: block;
 }
 
-/* line 161, /Users/adrian/Projekty/dsp-website/source/css/modules/_blog.scss */
+/* line 163, /Users/adrian/Projekty/dsp-website/source/css/modules/_blog.scss */
 
 .article-meta__content a {
-	border-bottom: 1px solid #333;
+	border-bottom: 1px solid  #fafafa;
 }
 
-/* line 163, /Users/adrian/Projekty/dsp-website/source/css/modules/_blog.scss */
+/* line 165, /Users/adrian/Projekty/dsp-website/source/css/modules/_blog.scss */
 
 .article-meta__content a:hover {
 	border-bottom-color: #F44336;
@@ -4006,19 +4011,31 @@ section.section-projekt-nav {
 	background-color: #f5f5f5;
 }
 
-/* line 69, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+/* line 66, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+
+.bg-light-2 {
+	background-color: #e8e8e8;
+}
+
+/* line 70, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+
+.bg-dark {
+	background-color: #333;
+}
+
+/* line 76, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
 
 .aidca {
 	font-size: 16px;
 }
 
-/* line 73, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+/* line 80, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
 
 .aidca-img {
 	position: relative;
 }
 
-/* line 76, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+/* line 83, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
 
 .aidca-shade {
 	position: absolute;
@@ -4027,7 +4044,7 @@ section.section-projekt-nav {
 	left: 0;
 }
 
-/* line 85, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+/* line 92, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
 
 .aidca-shade:before {
 	content: '';
@@ -4040,7 +4057,7 @@ section.section-projekt-nav {
 	opacity: .4;
 }
 
-/* line 98, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+/* line 105, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
 
 .aidca-shade:after {
 	position: absolute;
@@ -4061,54 +4078,54 @@ section.section-projekt-nav {
 	border-radius: 50%;
 }
 
-/* line 116, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+/* line 123, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
 
 .aidca-shade:hover:before {
 	opacity: 0 !important;
 }
 
-/* line 119, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+/* line 126, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
 
 .aidca-shade:hover:after {
 	color: #fff;
 	background: #3FB3E3;
 }
 
-/* line 124, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+/* line 131, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
 
 .aidca-shade:nth-of-type(1) {
 	height: 18.7%;
 }
 
-/* line 127, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+/* line 134, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
 
 .aidca-shade:nth-of-type(2) {
 	top: 18.7%;
 	height: 29%;
 }
 
-/* line 134, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+/* line 141, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
 
 .aidca-shade:nth-of-type(3) {
 	top: 47.7%;
 	height: 18.2%;
 }
 
-/* line 141, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+/* line 148, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
 
 .aidca-shade:nth-of-type(4) {
 	top: 65.9%;
 	height: 19.3%;
 }
 
-/* line 148, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+/* line 155, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
 
 .aidca-shade:nth-of-type(5) {
 	top: 85.2%;
 	height: 14.8%;
 }
 
-/* line 157, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+/* line 164, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
 
 .aidca-heading {
 	font-family: "geo", Helvetica, sans-serif;
@@ -4121,14 +4138,14 @@ section.section-projekt-nav {
 	font-size: 20px;
 }
 
-/* line 174, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+/* line 181, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
 
 .aidca-info {
 	padding-top: 10px;
 	padding-bottom: 30px;
 }
 
-/* line 177, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+/* line 184, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
 
 .aidca-info:last-child {
 	padding-bottom: 0;
@@ -4675,25 +4692,25 @@ h3 {
 	margin-left: 30px;
 }
 
-/* line 627, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 628, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .bg-height-1 {
 	min-height: 500px;
 }
 
-/* line 636, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 637, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .bg-height-2 {
 	min-height: 600px;
 }
 
-/* line 645, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 646, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .bg-height-3 {
 	min-height: 800px;
 }
 
-/* line 656, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 657, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .columns-text-2 {
 	-webkit-column-count: 2;
@@ -4705,7 +4722,7 @@ h3 {
 	column-gap: 50px;
 }
 
-/* line 666, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 667, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .columns-text-3 {
 	-webkit-column-count: 3;
@@ -4717,7 +4734,7 @@ h3 {
 	column-gap: 30px;
 }
 
-/* line 680, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 681, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .columns-rule {
 	-webkit-column-rule: 3px dotted #ddd;
@@ -4725,25 +4742,25 @@ h3 {
 	column-rule: 1px dotted #ddd;
 }
 
-/* line 689, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 690, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .single .font-size-16 {
 	font-size: 16px;
 }
 
-/* line 695, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 696, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .single .font-size-18 {
 	font-size: 18px;
 }
 
-/* line 701, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 702, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .single .font-size-20 {
 	font-size: 20px;
 }
 
-/* line 743, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 744, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .columns {
 	display: -webkit-box;
@@ -4759,75 +4776,75 @@ h3 {
 	flex-wrap: wrap;
 }
 
-/* line 752, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 753, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .columns .column-1,
 .columns .column-2 {
 	width: 48%;
 }
 
-/* line 758, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 759, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .columns .column-1 {
 	margin-bottom: 0;
 }
 
-/* line 765, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 766, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .columns.column-1--1of4 .column-1 {
 	width: 25%;
 }
 
-/* line 772, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 773, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .columns.column-2--3of4 .column-2 {
 	width: 70%;
 }
 
-/* line 780, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 781, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .columns.column-1--1of3 .column-1 {
 	width: 33%;
 }
 
-/* line 787, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 788, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .columns.column-2--2of3 .column-2 {
 	width: 60%;
 }
 
-/* line 797, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 798, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .columns.column-1--2of3 .column-1 {
 	width: 60%;
 }
 
-/* line 804, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 805, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .columns.column-2--1of3 .column-2 {
 	width: 33%;
 }
 
-/* line 812, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 813, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .columns.column-1--3of4 .column-1 {
 	width: 70%;
 }
 
-/* line 819, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 820, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .columns.column-2--1of4 .column-2 {
 	width: 25%;
 }
 
-/* line 827, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 828, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .columns figure {
 	margin-bottom: 10px;
 	margin-top: 10px;
 }
 
-/* line 838, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 839, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .columns-3 .column-1,
 .columns-3 .column-2,
@@ -4835,7 +4852,7 @@ h3 {
 	width: 32%;
 }
 
-/* line 849, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 850, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .order-1 {
 	-webkit-box-ordinal-group: 0;
@@ -4844,13 +4861,17 @@ h3 {
 	order: -1;
 }
 
-/* line 879, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 883, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 blockquote.pull-right {
+	display: block;
 	line-height: 1.4;
 	float: right;
 	margin-bottom: 20px;
 	margin-left: 30px;
+	padding: 20px;
+	background: #aaa;
+	color: #fff;
 	width: 40%;
 }
 
@@ -4876,7 +4897,7 @@ blockquote.pull-right {
 	font-size: 14px;
 }
 
-/* line 153, /Users/adrian/Projekty/dsp-website/source/css/modules/_blog.scss */
+/* line 155, /Users/adrian/Projekty/dsp-website/source/css/modules/_blog.scss */
 
 .article-meta__content {
 	display: -webkit-box;
@@ -4889,7 +4910,7 @@ blockquote.pull-right {
 	justify-content: space-between;
 }
 
-/* line 157, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+/* line 164, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
 
 .aidca-heading {
 	font-size: 16px;
@@ -5353,20 +5374,20 @@ blockquote.pull-right {
 	margin-top: -12px;
 }
 
-/* line 707, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 708, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .single .font-size-large {
 	font-size: 28px;
 	line-height: 1.4;
 }
 
-/* line 857, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 858, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 blockquote.pullquote {
 	font-size: 32px;
 }
 
-/* line 879, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 883, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 blockquote.pull-right {
 	margin-right: -150px;
@@ -5434,14 +5455,14 @@ blockquote.pull-right {
 	margin-top: 100px;
 }
 
-/* line 157, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+/* line 164, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
 
 .aidca-heading {
 	width: 40%;
 	font-size: 20px;
 }
 
-/* line 174, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
+/* line 181, /Users/adrian/Projekty/dsp-website/source/css/_additional-css.scss */
 
 .aidca-info {
 	width: 60%;
@@ -5769,16 +5790,17 @@ blockquote.pull-right {
 	margin-bottom: 10px;
 }
 
-/* line 586, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 587, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 .section-inner.fullwidth figcaption,
 .section-inner.fullwidth-pad figcaption,
+.section-inner.outset figcaption,
 .section-inner.outset-img figcaption {
 	padding-left: 0;
 	padding-right: 0;
 }
 
-/* line 857, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
+/* line 858, /Users/adrian/Projekty/dsp-website/source/css/modules/_article.scss */
 
 blockquote.pullquote {
 	margin: 48px -150px;

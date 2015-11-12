@@ -5,7 +5,19 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://dasieprosciej.pl/blog/idealny-klient</loc>
+    <loc>http://dasieprosciej.pl/blog/02-idealny-klient</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://dasieprosciej.pl/blog/03-slaba-strona-kiepski-biznes</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://dasieprosciej.pl/blog/04-prostota</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://dasieprosciej.pl/blog/05-prostota-vs-minimalizm</loc>
     <priority>0.7</priority>
   </url>
   <url>

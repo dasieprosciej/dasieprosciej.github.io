@@ -49,7 +49,7 @@
   &:after {
     content:'';
     position: absolute;
-    background:$kwadrat; 
+    background:tint($kwadrat,60); 
     opacity: .6;
   }
 }

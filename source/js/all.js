@@ -10,6 +10,7 @@
 //= require orphan
 //= require shoestring
 //= require scrollsync
+//= require widowtamer
 
 
 
@@ -55,8 +56,24 @@ addListenerMulti(document, 'DOMContentLoaded page:load', function(){ //tylko tut
   });
 });
 
+//widows
+var widows = function(){
+  wt.fix({
+    elements: '.single p, .single h1',
+    chars: 14,
+    method: 'nbsp'
+    // event: 'resize'
+  }); 
+}
+//on init
+widows();
+//turbo
+document.addEventListener('page:load', function(){
+  widows();
+});
 
 
+ 
 
 //scroll top
   //initial

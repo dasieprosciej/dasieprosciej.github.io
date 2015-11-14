@@ -32,6 +32,7 @@ $section-inner-width: 800px;
     } 
   }
 
+  header + section,
   section:first-of-type{
     padding-top: 40px;
   }
@@ -42,7 +43,7 @@ $section-inner-width: 800px;
     } 
   }
 
-  
+
   // .inverted {
   //   h1,h2,h3,h4,p,li,a {
   //     color:$white-color;
@@ -578,6 +579,7 @@ ol.list {
   }
   &.fullwidth,
   &.fullwidth-pad,
+  &.outset,
   &.outset-img {
     img {
       width: 100%;
@@ -875,22 +877,28 @@ blockquote {
       padding: 0;
     }  
   }
+  &.no-quote {
+    background: none;
+  }  
   &.pull-right {   
     width: 100%;
+    display: none;
     @include mq($bp1) {
+      display: block;
       line-height: 1.4;
       float: right;
       margin-bottom: 20px;
       margin-left: 30px;
+      padding:20px;
+      background:#aaa;
+      color:#fff;
       width: 40%;
     }
     @include mq($bp2) {
       margin-right: -150px; 
     } 
   }
-  &.no-quote {
-    background: none;
-  }
+
 }
 
 

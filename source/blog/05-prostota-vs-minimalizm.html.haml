@@ -1,0 +1,170 @@
+---
+title: Prosto czy minimalistycznie?
+date: 2015-11-12
+tags: example
+summary: 
+thumbnail: thumb.png
+header: header--inverted
+author: Adrian
+---
+
+%header.bg-color.bg-dark.bg-height-2.align-middle.align-center.bg-bordered.color-inverted
+  .section-inner.outset
+    %h1
+      Prosto czy minimalistycznie?
+
+-# = bgimg_header('', class: 'bg-img bg-grey bg-borderbottom bg-height-2 align-middle align-center bg-bordered') do
+-#   .section-inner.outset
+-#     %h1
+-#       -# Mniej nie zawsze znaczy więcej
+-#       Prosto czy minimalistycznie?
+
+%section
+  .section-inner 
+    %p Minimalizm stał się dziś synonimem stylu, dobrego smaku i wyrafinowania. Można przyjąć, że jego symbolem stała się firma Apple, która zapoczątkowała współczesną modę na prostotę. No właśnie. Przyjęło się, że coś co jest minimalistyczne, musi być jednocześnie proste. Czy te pojęcia są jednoznaczne?
+
+
+    -# Minimalizm moze byc prosty, ale prosty nie zawsze jest minimalistyczny.
+    -# Nie są to jednak pojęcia jednoznaczne. Minimalizm nie zawsze bowiem prowadzi do prostoty, mimo że jest w pewnym sensie jej manifestacją. W czym tkwi różnica?
+    -# %p Prostota i minimalizm są ze sobą często utożsamiane. Nie są to jednak pojęcia jednoznaczne. Minimalizm nie zawsze bowiem prowadzi do prostoty, mimo że jest w pewnym sensie jej manifestacją. W czym tkwi różnica?
+
+
+    -# Przyjęło się, że coś co jest minimalistyczne jest równocześnie proste.
+    -# Proste rzeczy nie zawsze musza miec minimalistyczna estetyke. 
+
+    -# Punktem wyjscia jest zrozumienie portrzeb i oczekiwan uzytkownikow.
+    -# Przyjęło się, że coś co jest minimalistyczne jest równocześnie proste.
+    -# %p Proste rzeczy nie zawsze musza miec minimalistyczna estetyke.
+    -# %p Minimalizm nie zawsze prowadzi do prostoty, mimo że jest w pewnym sensie jej manifestacją. Można powiedzieć, że minimalistyczny zawsze jest uproszczony, ale prosty nie zawsze jest minimalistyczny. W czym tkwi różnica?
+    
+    %h3 Czym właściwie jest minimalizm?
+    
+    %p Motto minimalizmu to „mniej znaczy więcej”. On sam często rozumiany jest jako „okrojenie przedmiotu do samej esencji”. Odpowiada na pytanie, jak wiele można odjąć lub usunąć niepotrzebnych elementów, zachowując podstawowy cel, funkcję i identyfikację produktu. Minimalizm kładzie nacisk na maksymalne uproszczenie formy, obiektywność i anonimowość stylu.
+    
+    = figure(:direct, 'japan_house.jpg', "Wnętrze tradycyjnego domu japońskiego", nil, class: 'img-right')
+    %p Za przodka minimalizmu można uznać tradycyjny styl japoński, którego charakterystycznym wyznacznikiem jest prostota, perfekcja i wyciszenie. To odzwierciedlenie kultury Japonii, gdzie prostota była niezwykle ceniona, a wszystko to, co nie było niezbędne do prawidłowego funkcjonowania danej rzeczy, nie było włączane w design.
+
+    %h3 Prostota vs minimalizm
+    
+    %p Tim Brown, szef słynnej globalnej firmy projektowej IDEO i autor książki „Design thinking”, tak przedstawia różnicę między prostotą i minimalizmem:
+      
+    %blockquote
+      W mojej ocenie, minimalizm reprezentuje styl i jako taki jest ograniczony w swojej przydatności. Reprezentuje reakcję na złożoność, podczas gdy prostota opiera się na zrozumieniu złożoności. To ważna różnica. Jedno dotyczy powierzchowności. W drugim chodzi o nasze doświadczenie i wymaga głębokiego zrozumienia jak to wszystko działa, aby uczynić to dostatecznie prostym.
+      %cite Tim Brown, IDEO
+
+    %p Całkowicie zgadzam się z tym twierdzeniem. W skrócie powiedziałbym, że minimalizm to styl, <a href="/blog/04-prostota/"> prostota to zrozumienie</a>. W obu przypadkach powinno jednak chodzić o ten sam efekt - komunikowanie esencji. Tyle że esencja różni się w zależności od tego, kto i jak ją postrzega.
+    -# %p Zgadzam się z tym twierdzeniem. Powiedziałbym nawet, że <strong>minimalizm to styl, a prostota to sposób myślenia</strong>. W obu przypadkach powinno jednak chodzić o ten sam efekt - komunikowanie esencji. Tyle że esencja różni się w zależności od tego, kto, jak i kiedy ją postrzega.
+    
+    %p 
+  
+    %h4 Styl vs Zrozumienie
+    
+    -# %p Proste rzeczy nie zawsze muszą mieć minimalistyczną estetykę. Szybkim przykładem może być prezentacja danych liczbowych.
+
+    %p Weźmy za przykład prezentację danych liczbowych. Gdybym miał przedstawić tabelę w wersji minimalistycznej, efekt wyglądałby tak jak poniżej:
+
+  .section-inner.outset    
+    = figure_lazy(:direct, 'tables.png', "Prezentacja tabeli danych (po lewej) w wersji minimalistycznej (po prawej)")
+  
+  .section-inner
+    %p Obie wersje wydają się jednakowo proste i zrozumiałe. Różni je jedynie styl, którego ocena może zależeć od osobistych preferencji. Zachowaliśmy więc funkcjonalność, dodając nieco elegancji.
+    
+    %p Drugie zadanie to prezentacja danych w najprostszy możliwy sposób. Odrazu nasuwa się pytanie „proste dla kogo?”. Załóżmy więc, że odbiorcą naszych danych jest zarząd spółki X, a miejsce prezentacji to zebranie zarządu. Ważna jest więc możliwość szybkiego zrozumienia danych, tak by na ich podstawie można było podejmować decyzje. W tej sytuacji, najprostszym rozwiązaniem wydaje się przedstawienie tabeli w formie wykresu. Wykres obrazuje bowiem trend wartości wskaźników w czasie, dzięki czemu dane są łatwiejsze do przyswojenia i do wyciągania wniosków.
+
+    = figure_lazy(:direct, 'chart.png', 'Prezentacja danych liczbowych w formie wykresu')  
+
+    %p Jak widać, uczynienie designu prostszym nie zawsze sprowadza się do decyzji odnośnie stylu. Wszystko zależy od tego, jak definiowany jest sukces dla projektu, jaki jest jego cel, kto jest odbiorcą i na czym się skupiamy.
+    
+    %p Prostota odzwierciedla zrozumienie użytkownika, podczas gdy minimalizm oddaje podejście projektanta. W prostocie zawsze mamy pytanie „dla 
+    kogo”, minimalizm zaś to styl, który może być dla jednych prosty, dla innych bywa trudny.
+
+    -# %h4 Czy mniej znaczy więcej?
+    -# = figure_lazy(:direct, 'minimal-room.jpg', 'Minimalistyczny wystrój mieszkania', nil, class: 'img-right')
+    -# %p Przykład z życia wzięty, czyli wystrój mieszkania. O ile minimalistyczny styl bardzo mi sie podoba, to w codziennym uzytkowaniu bywa dla mnie trudny. Sterylna czytosc, pochowane przedmioty. W moim przypadku to sie po prostu nie sprawdza. Lubie jak mieszkanie urzadzone jest prosto, ale prostota to w tym wypadku synonim wygody. Dla kogos innego, to moze byc strzal w dziesiatke.  
+
+    -# %p Podoba sytuacja  jest ze stronami  interentowymi. Mamy w tej chwili trend minimalistyczny. Wlascicielom witryn sie to podoba. i mysla ze spodoba sie to tez ich odbiorcom. w praktyce jednak jest tak jak z wystrojem mieszkania. wyglada ladnie, ale gdy chcemy z tego skorzytac, nie jest juz tak fajnie.  Brak wygody w mieszkaniu to analogia slabej uzytrecznosci i nieprzemyslanej architektury informajci na stronie www.  Minimalizm bywa trudny i z pewnością nie jest odpowiedni dla każdego typu strony.  
+    -# Sytuacji mieszkania rozni sie jednak od swiata internetu. Bo jestli odwiedzajacy nie moze czegos znalezc na stronie, to idzie dalej - do konkurencji. 
+    -# %p To samo dotyczy tesktu na stronach www. Myślimy, że przez używanie list zamiast paragrafów, więcej ludzi to przeczyta. Lub przez skrócenie tekstu o połowę, to stanie się bardziej przejrzyste. Ale czasami informacja, jaką chcesz przekazać nie jest oczywista, jeśli jest jej za malo na stronie. Proste nie oznacza „mniej”, oznacza „wystarczajaco”. (link do artykulu)
+    
+    
+%section.bg-color.bg-light
+  .section-inner
+    %h3 Prostota vs minimalizm, na przykładzie stron internetowych
+    
+    %p Wiele z dzisiejszych trendów na stronach www (flat design, duże zdjęcia na cały ekran, ukrywanie nawigacji) są pośrednio lub bespośrednio pochodną minimalizmu.
+    
+    = figure_lazy(:direct, 'minimal-sites.jpg', 'Kilka przykładowych stron „minimalistycznych”')
+    %p Jego główne wyznaczniki widoczne na ekranie to:
+    
+    %ul
+      %li odczucie przestronności i porządku dzięki wykorzystaniu negatywnej przestrzeni i siatek projektowania,
+      %li uproszczone, często monochromatyczne palety kolorów,
+      %li użycie podstawowych form,
+      %li położenie nacisku na treść, kontrastując go z mniej ważnymi informacjami,
+      %li brak ozdobników i rezygnacja z wszelkich dekoracji.
+    
+    =br
+    %p Wszystkie powyższe elementy mogą, ale nie muszą być częścią tzw. prostej strony. Prostota to zrozumienie, a zrozumiała strona to strona, która:
+  
+    %ul
+      %li ma treść, której użytkownicy chcą lub potrzebują,
+      %li jest zorganizowana i uporządkowana w taki sposób, który jest istotny dla odbiorców,
+      %li dobrze odzwierciedla biznes (to kim jesteś i co robisz),
+      %li ma warstwę wizualną, która pozwala użytkownikowi czytać szybko, przeglądać i skanować tekst,
+      %li używa słów, które odbiorcy rozumieją.
+    
+%section.bg-color.bg-light-2
+  .section-inner    
+    %p Minimalizm często bywa zbyt oczywisty, podczas gdy prostota może być praktycznie niewidoczna. Kluczem do udanej strony jest zachowanie balansu pomiędzy funkcjonalnością i doświadczeniem dla odwiedzającego. Trendy bywają i mijają, prostota nigdy nie wyjdzie z mody.
+
+%section
+  .section-inner
+    -# %h2 Upraszczanie dla upraszczania
+
+    
+
+    -# %p To w końcu zrozumiałe - designerzy mają wielkie uznanie dla estetyki. Chcą, by ich rzeczy były nie tylko funkcjonalne, muszą również dobrze wyglądać. Niestety, zbyt często dzieje się tak, że to pragnienie idzie za daleko, gdzie w imię estetyki i stylu, użytecznosc dla grupy odbiorczej zostaje naruszona. Kuszące jest usuwanie rzeczy tak, by coś wyglądało prosto, w rzeczywistości jednak staje się to trudniejsze w użyciu.
+
+
+
+    
+
+
+
+
+    %h3 Podsumowanie
+
+    %p Na początku wpisu wspomniałem o firmie Apple, która fenomenalnie połączyła prostotę ze stylem minimalistycznym. Wielu projektantów usilnie naśladuje ich podejście, zapominając jednak, że tu nie chodzi tylko o wizualną strategię. Efekt jest taki, że w imię estetyki i stylu, potrzeby grupy odbiorczej nie są w pełni zaspokojone lub, co gorsze, rozwiązanie staje się trudne w użyciu.
+
+
+    -# , zapominają o użyteczności wielu projektantów błędnie interpretuje minimalizm jako czysto wizualną strategię. 
+    
+    -# %p Projektujac cos minimalistycznie, upewnijmy sie ze jest to jednoczesnie proste. Proste moze byc minimalistyczne, ale minimalistyczne nie zawsze jest proste. 
+
+    -# %p Prostota i minimalizm moga byc synonimami, jesli wezeminy pod uwage kontekst. 
+    -# %p Minimalizm może tworzyć skuteczne doświadczenie dla użytkowników, tak długo jak nie tracimy z widoku głównego celu, jakim jest pomaganie użytkownikom wykonać zadanie. Sprostanie informacyjnym wymogom i potrzebom klientów jest najważniejsze.
+    -# %p Gdy projektujemy minimalistycznie, upewnijmy sie ze jest prosto.
+    %p Zgadzam się, że minimalizm jest często najlepszą drogą by uczynić coś prostym. Musimy się jednak upewnić, żeby nie upraszczać kosztem przejrzystości i zrozumienia. Proste może być minimalistyczne, ale minimalizm nie zawsze prowadzi do prostoty. 
+
+    -# Projektujac cos minimalistycznie, upewnijmy sie ze jest to jednoczesnie proste. Proste moze byc minimalistyczne, ale minimalistyczne nie zawsze prowadzi do prostoty. 
+    -# %p Bardzo często minimalizm to najlepsza droga, by uczynić coś prostym. Czasami jednak może po prostu brakować opcji, które są niezbędne do łatwego zaspokojenia potrzeb uzytkowników. Zbyt często dążymy do prostoty i stylu kosztem przejrzystości, zrozumienia.
+
+    -# %p Wszyscy powinniśmy dążyć do prostoty, ale musimy się też upewnić, żeby nie uprościć zbytnio w imię minimalizmu.
+    -# %p Minimalizm bywa trudny i z pewnością nie jest odpowiedni dla każdej strony.    
+    -# %p Minimalizm nie zawsze bowiem prowadzi do prostoty, mimo że jest w pewnym sensie jej manifestacją. Minimalizm moze byc prosty, ale prosty nie zawsze jest minimalistyczny. Punktem wyjscia jest zrozumienie portrzeb i oczekiwan uzytkownikow.
+
+    %blockquote.font-larger
+      Wszystko trzeba robić tak prosto, jak to tylko możliwe, ale nie&nbsp;prościej.
+      %cite Albert Einstein
+    
+    %p Granicę prostoty zawsze wyznaczają odbiorcy. Punktem wyjścia jest zrozumienie ich potrzeb i oczekiwań. Dlatego tak ważne w każdym procesie projektowym, nie tylko na stronach www, jest poświęcenie czasu na analizę czy badania. Nie można bowiem uprościć czegoś, czego nie rozumiesz.
+
+    -# %p Najnowszy trend w projektowaniu to minimalizm. Trzeba na to spojrzeć z przymrużeniem oka, bo trendy są i mijają. Prostota jako synonim zrozumienia nigdy nie wyjdzie z mody.
+    
+    =br
+    %h4 p.s. A jak to wygląda w „da się prosciej”?
+    %p W „da się prościej” stawiamy na prostotę jako synonim funkcjonalności i zrozumienia. Zawsze dążymy do tego, by strona była prosta w użyciu, co nie zawsze oznacza, że ma być minimalistyczna. Minimalizm nie jest bowiem warunkiem koniecznym, prostota owszem. Pamiętamy również, że:
+    %blockquote.font-larger
+      Prostota nie jest celem samym w sobie. Jest wypadkową dobrego pomysłu i rozsądnych oczekiwań.
+      %cite Paul Rand
+
